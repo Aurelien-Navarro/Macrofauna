@@ -1,0 +1,813 @@
+id_sample;method;Replicate number;Sample name in project;id_plot;id_Site;Year;Begining;Class;Order;Family;Valid Name;abundance;stade;etat;sexe;remarque;Mass
+ANI-21-0541;barber;1;ARG-1420-BA1;ARG_1420;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Carabidae;Notiophilus Dumeril  1806;1;adulte;;;;3
+ANI-21-0552;barber;1;ARG-1620-BA1;ARG_1620;Orchamp_Argentiere;2021;;Insecta;;;Larves campodeiformes;1;larve;;;;
+ANI-21-0552;barber;1;ARG-1620-BA1;ARG_1620;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) multipunctatus (Dejean  1828);1;adulte;;femelle;;89
+ANI-21-0552;barber;1;ARG-1620-BA1;ARG_1620;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Geotrupidae;Geotrupidae;1;adulte;;;;
+ANI-21-0552;barber;1;ARG-1620-BA1;ARG_1620;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Staphylinidae;Staphylinidae;1;adulte;;;;
+ANI-21-0552;barber;1;ARG-1620-BA1;ARG_1620;Orchamp_Argentiere;2021;;Insecta;Homoptera;Cicadellidae;Cicadellidae;1;;;;;
+ANI-21-0552;barber;1;ARG-1620-BA1;ARG_1620;Orchamp_Argentiere;2021;;Oligochaeta;Opistophora;Lumbricidae;Lumbricidae;1;juvenile;;;;5
+ANI-21-0563;barber;1;ARG-1790-BA1;ARG_1790;Orchamp_Argentiere;2021;;Arachnida;Araneae;;Araneae;4;;;;;
+ANI-21-0563;barber;1;ARG-1790-BA1;ARG_1790;Orchamp_Argentiere;2021;;Entognatha;Collembola;;Collembola;4;;;;;
+ANI-21-0563;barber;1;ARG-1790-BA1;ARG_1790;Orchamp_Argentiere;2021;;Insecta;Coleoptera;;Polyphaga;3;adulte;;;;
+ANI-21-0563;barber;1;ARG-1790-BA1;ARG_1790;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Staphylinidae;Staphylinidae;1;adulte;;;;
+ANI-21-0563;barber;1;ARG-1790-BA1;ARG_1790;Orchamp_Argentiere;2021;;Insecta;Diptera;Tipulidae;Tipulidae;1;larve;;;;
+ANI-21-0563;barber;1;ARG-1790-BA1;ARG_1790;Orchamp_Argentiere;2021;;Insecta;Hymenoptera;;Hymenoptera;1;adulte;;;;
+ANI-21-0563;barber;1;ARG-1790-BA1;ARG_1790;Orchamp_Argentiere;2021;;Insecta;Hymenoptera;Formicidae;Formicidae;2;adulte;;;;
+ANI-21-0574;barber;1;ARG-2000-BA1;ARG_2000;Orchamp_Argentiere;2021;;Arachnida;Araneae;;Araneae;5;;;;;
+ANI-21-0574;barber;1;ARG-2000-BA1;ARG_2000;Orchamp_Argentiere;2021;;Diplopoda;;;Diplopoda;1;;;;;
+ANI-21-0574;barber;1;ARG-2000-BA1;ARG_2000;Orchamp_Argentiere;2021;;Entognatha;Collembola;;Collembola;1;;;;;
+ANI-21-0574;barber;1;ARG-2000-BA1;ARG_2000;Orchamp_Argentiere;2021;;Insecta;Coleoptera;;Polyphaga;1;adulte;;;;
+ANI-21-0574;barber;1;ARG-2000-BA1;ARG_2000;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) multipunctatus (Dejean  1828);1;adulte;;male;;58
+ANI-21-0574;barber;1;ARG-2000-BA1;ARG_2000;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Staphylinidae;Staphylinidae;7;adulte;;;;
+ANI-21-0574;barber;1;ARG-2000-BA1;ARG_2000;Orchamp_Argentiere;2021;;Insecta;Hymenoptera;Formicidae;Formicidae;18;;;;;
+ANI-21-0585;barber;1;ARG-2230-BA1;ARG_2230;Orchamp_Argentiere;2021;;Arachnida;Araneae;;Araneae;1;adulte;;;;
+ANI-21-0585;barber;1;ARG-2230-BA1;ARG_2230;Orchamp_Argentiere;2021;;Entognatha;Collembola;;Collembola;4;;;;;
+ANI-21-0585;barber;1;ARG-2230-BA1;ARG_2230;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Carabidae;Metallina (Metallina) lampros (Herbst  1784);1;adulte;;femelle;;1
+ANI-21-0585;barber;1;ARG-2230-BA1;ARG_2230;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Staphylinidae;Staphylinidae;1;adulte;;;;
+ANI-21-0585;barber;1;ARG-2230-BA1;ARG_2230;Orchamp_Argentiere;2021;;Insecta;Hymenoptera;Formicidae;Formicidae;13;adulte;;;;
+ANI-21-0585;barber;1;ARG-2230-BA1;ARG_2230;Orchamp_Argentiere;2021;;Insecta;Orthoptera;;Orthoptera;1;;;;;
+ANI-21-0596;barber;1;ARG-2400-BA1;ARG_2400;Orchamp_Argentiere;2021;;;;;;1;;;;;
+ANI-21-0596;barber;1;ARG-2400-BA1;ARG_2400;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Carabidae;Carabidae;1;larve;;;;
+ANI-21-0596;barber;1;ARG-2400-BA1;ARG_2400;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Carabidae;Platyderus (Platyderus) depressus (Audinet-Serville  1821);1;adulte;;femelle;;3
+ANI-21-0596;barber;1;ARG-2400-BA1;ARG_2400;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) multipunctatus (Dejean  1828);1;adulte;;femelle;;22
+ANI-21-0596;barber;1;ARG-2400-BA1;ARG_2400;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) multipunctatus (Dejean  1828);1;adulte;;femelle;;35
+ANI-21-0596;barber;1;ARG-2400-BA1;ARG_2400;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) multipunctatus (Dejean  1828);1;adulte;;femelle;;67
+ANI-21-0596;barber;1;ARG-2400-BA1;ARG_2400;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) multipunctatus (Dejean  1828);1;adulte;;femelle;;68
+ANI-21-0596;barber;1;ARG-2400-BA1;ARG_2400;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) multipunctatus (Dejean  1828);1;adulte;;femelle;;69
+ANI-21-0596;barber;1;ARG-2400-BA1;ARG_2400;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) multipunctatus (Dejean  1828);1;adulte;;femelle;;0 09
+ANI-21-0596;barber;1;ARG-2400-BA1;ARG_2400;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) multipunctatus (Dejean  1828);1;adulte;;femelle;;104
+ANI-21-0596;barber;1;ARG-2400-BA1;ARG_2400;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) multipunctatus (Dejean  1828);1;adulte;;femelle;;114
+ANI-21-0596;barber;1;ARG-2400-BA1;ARG_2400;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) multipunctatus (Dejean  1828);1;adulte;;male;;18
+ANI-21-0596;barber;1;ARG-2400-BA1;ARG_2400;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) multipunctatus (Dejean  1828);1;adulte;;male;;44
+ANI-21-0596;barber;1;ARG-2400-BA1;ARG_2400;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) multipunctatus (Dejean  1828);1;adulte;;male;;49
+ANI-21-0596;barber;1;ARG-2400-BA1;ARG_2400;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) multipunctatus (Dejean  1828);1;adulte;;male;;57
+ANI-21-0596;barber;1;ARG-2400-BA1;ARG_2400;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) multipunctatus (Dejean  1828);1;adulte;;male;;61
+ANI-21-0596;barber;1;ARG-2400-BA1;ARG_2400;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) multipunctatus (Dejean  1828);1;adulte;;male;;73
+ANI-21-0596;barber;1;ARG-2400-BA1;ARG_2400;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) multipunctatus (Dejean  1828);9;adulte;;femelle;;
+ANI-21-0596;barber;1;ARG-2400-BA1;ARG_2400;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Staphylinidae;Staphylinidae;1;adulte;;;;
+ANI-21-0596;barber;1;ARG-2400-BA1;ARG_2400;Orchamp_Argentiere;2021;;Insecta;Hymenoptera;;Hymenoptera;2;adulte;;;;
+ANI-21-0596;barber;1;ARG-2400-BA1;ARG_2400;Orchamp_Argentiere;2021;;Insecta;Hymenoptera;Formicidae;Formicidae;14;adulte;;;;
+ANI-21-0596;barber;1;ARG-2400-BA1;ARG_2400;Orchamp_Argentiere;2021;;Insecta;Orthoptera;;Orthoptera;4;adulte;;;;
+ANI-21-0542;barber;2;ARG-1420-BA2;ARG_1420;Orchamp_Argentiere;2021;;Arachnida;Araneae;;Araneae;1;;;;;
+ANI-21-0542;barber;2;ARG-1420-BA2;ARG_1420;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Staphylinidae;Staphylinidae;1;adulte;;;;
+ANI-21-0553;barber;2;ARG-1620-BA2;ARG_1620;Orchamp_Argentiere;2021;;Arachnida;Araneae;;Araneae;1;;;;;
+ANI-21-0553;barber;2;ARG-1620-BA2;ARG_1620;Orchamp_Argentiere;2021;;Entognatha;Collembola;;Collembola;1;;;;;
+ANI-21-0553;barber;2;ARG-1620-BA2;ARG_1620;Orchamp_Argentiere;2021;;Gastropoda;Pulmonata;;Gastropoda;1;;;;;
+ANI-21-0553;barber;2;ARG-1620-BA2;ARG_1620;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) multipunctatus (Dejean  1828);1;adulte;;femelle;;64
+ANI-21-0553;barber;2;ARG-1620-BA2;ARG_1620;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Staphylinidae;Staphylinidae;1;adulte;;;;
+ANI-21-0564;barber;2;ARG-1790-BA2;ARG_1790;Orchamp_Argentiere;2021;;Arachnida;Araneae;;Araneae;4;;;;;
+ANI-21-0564;barber;2;ARG-1790-BA2;ARG_1790;Orchamp_Argentiere;2021;;Chilopoda;;;Chilopoda;1;;;;;
+ANI-21-0564;barber;2;ARG-1790-BA2;ARG_1790;Orchamp_Argentiere;2021;;Entognatha;Collembola;;Collembola;5;;;;;
+ANI-21-0564;barber;2;ARG-1790-BA2;ARG_1790;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) multipunctatus (Dejean  1828);1;;;male;;46
+ANI-21-0564;barber;2;ARG-1790-BA2;ARG_1790;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) multipunctatus (Dejean  1828);1;;;male;;63
+ANI-21-0564;barber;2;ARG-1790-BA2;ARG_1790;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) multipunctatus (Dejean  1828);1;;;male;;69
+ANI-21-0564;barber;2;ARG-1790-BA2;ARG_1790;Orchamp_Argentiere;2021;;Insecta;Hymenoptera;Formicidae;Formicidae;15;;;;;
+ANI-21-0575;barber;2;ARG-2000-BA2;ARG_2000;Orchamp_Argentiere;2021;;Arachnida;Araneae;;Araneae;2;;;;;
+ANI-21-0575;barber;2;ARG-2000-BA2;ARG_2000;Orchamp_Argentiere;2021;;Entognatha;Collembola;;Collembola;3;;;;;
+ANI-21-0575;barber;2;ARG-2000-BA2;ARG_2000;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Staphylinidae;Staphylinidae;3;adulte;;;;
+ANI-21-0575;barber;2;ARG-2000-BA2;ARG_2000;Orchamp_Argentiere;2021;;Insecta;Hemiptera;;Heteroptera;1;;;;;
+ANI-21-0575;barber;2;ARG-2000-BA2;ARG_2000;Orchamp_Argentiere;2021;;Insecta;Hymenoptera;Formicidae;Formicidae;500;adulte;;;;
+ANI-21-0586;barber;2;ARG-2230-BA2;ARG_2230;Orchamp_Argentiere;2021;;Arachnida;Araneae;;Araneae;1;;;;;
+ANI-21-0586;barber;2;ARG-2230-BA2;ARG_2230;Orchamp_Argentiere;2021;;Insecta;;;Insecta;1;larve;;;;
+ANI-21-0586;barber;2;ARG-2230-BA2;ARG_2230;Orchamp_Argentiere;2021;;Insecta;;;Larve eruciforme;2;larve;;;;
+ANI-21-0586;barber;2;ARG-2230-BA2;ARG_2230;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Carabidae;Cymindis (Cymindis) coadunata Dejean  1825;1;adulte;;femelle;;8
+ANI-21-0586;barber;2;ARG-2230-BA2;ARG_2230;Orchamp_Argentiere;2021;;Insecta;Homoptera;Cicadellidae;Cicadellidae;1;;;;;
+ANI-21-0586;barber;2;ARG-2230-BA2;ARG_2230;Orchamp_Argentiere;2021;;Insecta;Hymenoptera;Formicidae;Formicidae;13;adulte;;;;
+ANI-21-0586;barber;2;ARG-2230-BA2;ARG_2230;Orchamp_Argentiere;2021;;Insecta;Orthoptera;;Orthoptera;3;;;;;
+ANI-21-0597;barber;2;ARG-2400-BA2;ARG_2400;Orchamp_Argentiere;2021;;;;;;1;;en morceaux;;;
+ANI-21-0597;barber;2;ARG-2400-BA2;ARG_2400;Orchamp_Argentiere;2021;;Arachnida;Araneae;;Araneae;3;;;;;
+ANI-21-0597;barber;2;ARG-2400-BA2;ARG_2400;Orchamp_Argentiere;2021;;Entognatha;Collembola;;Collembola;3;;;;;
+ANI-21-0597;barber;2;ARG-2400-BA2;ARG_2400;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Carabidae;Amara (Percosia) equestris (Duftschmid  1812);1;adulte;;male;;38
+ANI-21-0597;barber;2;ARG-2400-BA2;ARG_2400;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Carabidae;Amara (Percosia) equestris (Duftschmid  1812);1;adulte;;male;;54
+ANI-21-0597;barber;2;ARG-2400-BA2;ARG_2400;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Carabidae;Carabidae;2;larve;;;;
+ANI-21-0597;barber;2;ARG-2400-BA2;ARG_2400;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Carabidae;Platyderus (Platyderus) depressus (Audinet-Serville  1821);1;adulte;;male;;13
+ANI-21-0597;barber;2;ARG-2400-BA2;ARG_2400;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) multipunctatus (Dejean  1828);1;adulte;;femelle;;76
+ANI-21-0597;barber;2;ARG-2400-BA2;ARG_2400;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) multipunctatus (Dejean  1828);1;adulte;;male;;45
+ANI-21-0597;barber;2;ARG-2400-BA2;ARG_2400;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) multipunctatus (Dejean  1828);1;adulte;;male;;84
+ANI-21-0597;barber;2;ARG-2400-BA2;ARG_2400;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Curculionidae;Curculionidae;1;adulte;;;;
+ANI-21-0597;barber;2;ARG-2400-BA2;ARG_2400;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Silphidae;Silphidae;4;adulte;;;;
+ANI-21-0597;barber;2;ARG-2400-BA2;ARG_2400;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Staphylinidae;Staphylinidae;6;adulte;;;;
+ANI-21-0597;barber;2;ARG-2400-BA2;ARG_2400;Orchamp_Argentiere;2021;;Insecta;Homoptera;Cicadellidae;Cicadellidae;1;;;;;
+ANI-21-0597;barber;2;ARG-2400-BA2;ARG_2400;Orchamp_Argentiere;2021;;Insecta;Hymenoptera;;Hymenoptera;3;adulte;;;;
+ANI-21-0597;barber;2;ARG-2400-BA2;ARG_2400;Orchamp_Argentiere;2021;;Insecta;Hymenoptera;Formicidae;Formicidae;3;adulte;;;;
+ANI-21-0597;barber;2;ARG-2400-BA2;ARG_2400;Orchamp_Argentiere;2021;;Insecta;Orthoptera;;Orthoptera;10;;;;;
+ANI-21-0543;barber;3;ARG-1420-BA3;ARG_1420;Orchamp_Argentiere;2021;;Arachnida;Araneae;;Araneae;1;;;;;
+ANI-21-0543;barber;3;ARG-1420-BA3;ARG_1420;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Carabidae;Calathus (Neocalathus) micropterus (Duftschmid  1812);1;adulte;;femelle;;13
+ANI-21-0543;barber;3;ARG-1420-BA3;ARG_1420;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Carabidae;Carabidae;1;larve;;;;
+ANI-21-0543;barber;3;ARG-1420-BA3;ARG_1420;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Staphylinidae;Staphylinidae;5;adulte;;;;
+ANI-21-0554;barber;3;ARG-1620-BA3;ARG_1620;Orchamp_Argentiere;2021;;Arachnida;Araneae;;Araneae;1;;;;;
+ANI-21-0554;barber;3;ARG-1620-BA3;ARG_1620;Orchamp_Argentiere;2021;;Diplopoda;;;Diplopoda;1;;;;;
+ANI-21-0554;barber;3;ARG-1620-BA3;ARG_1620;Orchamp_Argentiere;2021;;Gastropoda;Pulmonata;;Gastropoda;2;;;;;
+ANI-21-0554;barber;3;ARG-1620-BA3;ARG_1620;Orchamp_Argentiere;2021;;Insecta;;;Larves campodeiformes;1;larve;;;;
+ANI-21-0554;barber;3;ARG-1620-BA3;ARG_1620;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) multipunctatus (Dejean  1828);1;adulte;;male;;
+ANI-21-0554;barber;3;ARG-1620-BA3;ARG_1620;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Curculionidae;Curculionidae;1;adulte;;;;
+ANI-21-0554;barber;3;ARG-1620-BA3;ARG_1620;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Staphylinidae;Staphylinidae;1;adulte;;;;
+ANI-21-0565;barber;3;ARG-1790-BA3;ARG_1790;Orchamp_Argentiere;2021;;Diplopoda;;;Diplopoda;1;;;;;
+ANI-21-0565;barber;3;ARG-1790-BA3;ARG_1790;Orchamp_Argentiere;2021;;Entognatha;Collembola;;Collembola;2;;;;;
+ANI-21-0565;barber;3;ARG-1790-BA3;ARG_1790;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) multipunctatus (Dejean  1828);2;adulte;;femelle;;48
+ANI-21-0565;barber;3;ARG-1790-BA3;ARG_1790;Orchamp_Argentiere;2021;;Insecta;Hymenoptera;Formicidae;Formicidae;1;adulte;;;;
+ANI-21-0565;barber;3;ARG-1790-BA3;ARG_1790;Orchamp_Argentiere;2021;;Pseudoscorpionida;;;Pseudoscorpionida;1;;;;;
+ANI-21-0576;barber;3;ARG-2000-BA3;ARG_2000;Orchamp_Argentiere;2021;;Insecta;;;Larves campodeiformes;1;larve;;;;
+ANI-21-0576;barber;3;ARG-2000-BA3;ARG_2000;Orchamp_Argentiere;2021;;Insecta;Coleoptera;;Polyphaga;1;adulte;;;;
+ANI-21-0576;barber;3;ARG-2000-BA3;ARG_2000;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Carabidae;Calathus (Neocalathus) micropterus (Duftschmid  1812);1;adulte;;femelle;;3
+ANI-21-0576;barber;3;ARG-2000-BA3;ARG_2000;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Carabidae;Calathus (Neocalathus) micropterus (Duftschmid  1812);1;adulte;;male;;8
+ANI-21-0576;barber;3;ARG-2000-BA3;ARG_2000;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) multipunctatus (Dejean  1828);1;adulte;;male;;59
+ANI-21-0576;barber;3;ARG-2000-BA3;ARG_2000;Orchamp_Argentiere;2021;;Insecta;Dermaptera;;Dermaptera;1;;;;;
+ANI-21-0576;barber;3;ARG-2000-BA3;ARG_2000;Orchamp_Argentiere;2021;;Insecta;Hymenoptera;Formicidae;Formicidae;29;adulte;;;;
+ANI-21-0576;barber;3;ARG-2000-BA3;ARG_2000;Orchamp_Argentiere;2021;;Insecta;Orthoptera;;Orthoptera;1;;;;;
+ANI-21-0587;barber;3;ARG-2230-BA3;ARG_2230;Orchamp_Argentiere;2021;;Arachnida;Araneae;;Araneae;1;;;;;
+ANI-21-0587;barber;3;ARG-2230-BA3;ARG_2230;Orchamp_Argentiere;2021;;Insecta;;;Insecta;1;;;;;
+ANI-21-0587;barber;3;ARG-2230-BA3;ARG_2230;Orchamp_Argentiere;2021;;Insecta;Hymenoptera;Formicidae;Formicidae;23;;;;;
+ANI-21-0598;barber;3;ARG-2400-BA3;ARG_2400;Orchamp_Argentiere;2021;;Arachnida;Araneae;;Araneae;1;;;;;
+ANI-21-0598;barber;3;ARG-2400-BA3;ARG_2400;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Carabidae;Carabidae;1;larve;;;;
+ANI-21-0598;barber;3;ARG-2400-BA3;ARG_2400;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Carabidae;Platyderus (Platyderus) depressus (Audinet-Serville  1821);2;adulte;;femelle;;12
+ANI-21-0598;barber;3;ARG-2400-BA3;ARG_2400;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) multipunctatus (Dejean  1828);1;adulte;;femelle;;
+ANI-21-0598;barber;3;ARG-2400-BA3;ARG_2400;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) multipunctatus (Dejean  1828);1;adulte;;femelle;;46
+ANI-21-0598;barber;3;ARG-2400-BA3;ARG_2400;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) multipunctatus (Dejean  1828);1;adulte;;femelle;;56
+ANI-21-0598;barber;3;ARG-2400-BA3;ARG_2400;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) multipunctatus (Dejean  1828);1;adulte;;femelle;;69
+ANI-21-0598;barber;3;ARG-2400-BA3;ARG_2400;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) multipunctatus (Dejean  1828);1;adulte;;femelle;;76
+ANI-21-0598;barber;3;ARG-2400-BA3;ARG_2400;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) multipunctatus (Dejean  1828);1;adulte;;femelle;;81
+ANI-21-0598;barber;3;ARG-2400-BA3;ARG_2400;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) multipunctatus (Dejean  1828);1;adulte;;femelle;;85
+ANI-21-0598;barber;3;ARG-2400-BA3;ARG_2400;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) multipunctatus (Dejean  1828);1;adulte;;femelle;;92
+ANI-21-0598;barber;3;ARG-2400-BA3;ARG_2400;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) multipunctatus (Dejean  1828);1;adulte;;femelle;;93
+ANI-21-0598;barber;3;ARG-2400-BA3;ARG_2400;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) multipunctatus (Dejean  1828);1;adulte;;femelle;;102
+ANI-21-0598;barber;3;ARG-2400-BA3;ARG_2400;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) multipunctatus (Dejean  1828);1;adulte;;femelle;;116
+ANI-21-0598;barber;3;ARG-2400-BA3;ARG_2400;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) multipunctatus (Dejean  1828);1;adulte;;male;;66
+ANI-21-0598;barber;3;ARG-2400-BA3;ARG_2400;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) multipunctatus (Dejean  1828);1;adulte;;male;;69
+ANI-21-0598;barber;3;ARG-2400-BA3;ARG_2400;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) multipunctatus (Dejean  1828);1;adulte;;male;;88
+ANI-21-0598;barber;3;ARG-2400-BA3;ARG_2400;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Curculionidae;Curculionidae;1;adulte;;;;
+ANI-21-0598;barber;3;ARG-2400-BA3;ARG_2400;Orchamp_Argentiere;2021;;Insecta;Hemiptera;;Heteroptera;1;;;;;
+ANI-21-0598;barber;3;ARG-2400-BA3;ARG_2400;Orchamp_Argentiere;2021;;Insecta;Homoptera;Cicadellidae;Cicadellidae;1;;;;;
+ANI-21-0598;barber;3;ARG-2400-BA3;ARG_2400;Orchamp_Argentiere;2021;;Insecta;Hymenoptera;Formicidae;Formicidae;31;adulte;;;;
+ANI-21-0598;barber;3;ARG-2400-BA3;ARG_2400;Orchamp_Argentiere;2021;;Insecta;Orthoptera;;Orthoptera;5;;;;;
+ANI-21-0544;barber;4;ARG-1420-BA4;ARG_1420;Orchamp_Argentiere;2021;;Arachnida;Araneae;;Araneae;3;;;;;
+ANI-21-0544;barber;4;ARG-1420-BA4;ARG_1420;Orchamp_Argentiere;2021;;Gastropoda;Pulmonata;;Gastropoda;1;;;;;
+ANI-21-0544;barber;4;ARG-1420-BA4;ARG_1420;Orchamp_Argentiere;2021;;Insecta;Coleoptera;;Polyphaga;2;;;;;
+ANI-21-0544;barber;4;ARG-1420-BA4;ARG_1420;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Staphylinidae;Staphylinidae;2;;;;;
+ANI-21-0555;barber;4;ARG-1620-BA4;ARG_1620;Orchamp_Argentiere;2021;;Arachnida;Araneae;;Araneae;1;;;;;
+ANI-21-0555;barber;4;ARG-1620-BA4;ARG_1620;Orchamp_Argentiere;2021;;Insecta;;;Larves campodeiformes;1;larve;;;;
+ANI-21-0555;barber;4;ARG-1620-BA4;ARG_1620;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Staphylinidae;Staphylinidae;1;adulte;;;;
+ANI-21-0555;barber;4;ARG-1620-BA4;ARG_1620;Orchamp_Argentiere;2021;;Insecta;Diptera;Tipulidae;Tipulidae;1;larve;;;;
+ANI-21-0555;barber;4;ARG-1620-BA4;ARG_1620;Orchamp_Argentiere;2021;;Insecta;Hymenoptera;Formicidae;Formicidae;2;adulte;;;;
+ANI-21-0566;barber;4;ARG-1790-BA4;ARG_1790;Orchamp_Argentiere;2021;;Arachnida;Araneae;;Araneae;2;;;;;
+ANI-21-0566;barber;4;ARG-1790-BA4;ARG_1790;Orchamp_Argentiere;2021;;Insecta;Hymenoptera;Formicidae;Formicidae;4;;;;;
+ANI-21-0577;barber;4;ARG-2000-BA4;ARG_2000;Orchamp_Argentiere;2021;;Arachnida;Araneae;;Araneae;6;;;;;
+ANI-21-0577;barber;4;ARG-2000-BA4;ARG_2000;Orchamp_Argentiere;2021;;Insecta;;;Larves campodeiformes;1;larve;;;;
+ANI-21-0577;barber;4;ARG-2000-BA4;ARG_2000;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Carabidae;Calathus (Neocalathus) micropterus (Duftschmid  1812);1;adulte;;femelle;;7
+ANI-21-0577;barber;4;ARG-2000-BA4;ARG_2000;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Carabidae;Calathus (Neocalathus) micropterus (Duftschmid  1812);1;adulte;;femelle;;16
+ANI-21-0577;barber;4;ARG-2000-BA4;ARG_2000;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) multipunctatus (Dejean  1828);1;adulte;;femelle;;62
+ANI-21-0577;barber;4;ARG-2000-BA4;ARG_2000;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) multipunctatus (Dejean  1828);1;adulte;;male;;
+ANI-21-0577;barber;4;ARG-2000-BA4;ARG_2000;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Staphylinidae;Staphylinidae;4;adulte;;;;
+ANI-21-0577;barber;4;ARG-2000-BA4;ARG_2000;Orchamp_Argentiere;2021;;Insecta;Hemiptera;;Heteroptera;1;;;;;
+ANI-21-0577;barber;4;ARG-2000-BA4;ARG_2000;Orchamp_Argentiere;2021;;Insecta;Homoptera;Cicadellidae;Cicadellidae;2;;;;;
+ANI-21-0577;barber;4;ARG-2000-BA4;ARG_2000;Orchamp_Argentiere;2021;;Insecta;Hymenoptera;;Hymenoptera;1;;;;;
+ANI-21-0577;barber;4;ARG-2000-BA4;ARG_2000;Orchamp_Argentiere;2021;;Insecta;Hymenoptera;Formicidae;Formicidae;17;adulte;;;;
+ANI-21-0577;barber;4;ARG-2000-BA4;ARG_2000;Orchamp_Argentiere;2021;;Insecta;Orthoptera;;Orthoptera;1;;;;;
+ANI-21-0588;barber;4;ARG-2230-BA4;ARG_2230;Orchamp_Argentiere;2021;;Arachnida;Araneae;;Araneae;9;;;;;
+ANI-21-0588;barber;4;ARG-2230-BA4;ARG_2230;Orchamp_Argentiere;2021;;Insecta;;;Insecta;3;;;;;
+ANI-21-0588;barber;4;ARG-2230-BA4;ARG_2230;Orchamp_Argentiere;2021;;Insecta;Hymenoptera;Formicidae;Formicidae;19;adulte;;;;
+ANI-21-0599;barber;4;ARG-2400-BA4;ARG_2400;Orchamp_Argentiere;2021;;Arachnida;Araneae;;Araneae;4;;;;;
+ANI-21-0599;barber;4;ARG-2400-BA4;ARG_2400;Orchamp_Argentiere;2021;;Insecta;;;Larve eruciforme;1;larve;;;;
+ANI-21-0599;barber;4;ARG-2400-BA4;ARG_2400;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Carabidae;Carabidae;1;larve;;;;
+ANI-21-0599;barber;4;ARG-2400-BA4;ARG_2400;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) multipunctatus (Dejean  1828);1;adulte;;male;;
+ANI-21-0599;barber;4;ARG-2400-BA4;ARG_2400;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) multipunctatus (Dejean  1828);5;adulte;;femelle;;
+ANI-21-0599;barber;4;ARG-2400-BA4;ARG_2400;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Silphidae;Silphidae;1;adulte;;;;
+ANI-21-0599;barber;4;ARG-2400-BA4;ARG_2400;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Staphylinidae;Staphylinidae;1;adulte;;;;
+ANI-21-0599;barber;4;ARG-2400-BA4;ARG_2400;Orchamp_Argentiere;2021;;Insecta;Hymenoptera;Formicidae;Formicidae;5;adulte;;;;
+ANI-21-0599;barber;4;ARG-2400-BA4;ARG_2400;Orchamp_Argentiere;2021;;Insecta;Orthoptera;;Orthoptera;9;;;;;
+ANI-21-0545;barber;5;ARG-1420-BA5;ARG_1420;Orchamp_Argentiere;2021;;Insecta;;;Insecta;1;adulte;;;;
+ANI-21-0545;barber;5;ARG-1420-BA5;ARG_1420;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Carabidae;Notiophilus Dumeril  1806;1;adulte;;;;6
+ANI-21-0545;barber;5;ARG-1420-BA5;ARG_1420;Orchamp_Argentiere;2021;;Oligochaeta;Opistophora;Lumbricidae;Lumbricidae;1;juvenile;morceaux;;;78
+ANI-21-0556;barber;5;ARG-1620-BA5;ARG_1620;Orchamp_Argentiere;2021;;Arachnida;Araneae;;Araneae;3;;;;;
+ANI-21-0556;barber;5;ARG-1620-BA5;ARG_1620;Orchamp_Argentiere;2021;;Entognatha;Collembola;;Collembola;3;;;;;
+ANI-21-0556;barber;5;ARG-1620-BA5;ARG_1620;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) multipunctatus (Dejean  1828);1;adulte;;femelle;;136
+ANI-21-0556;barber;5;ARG-1620-BA5;ARG_1620;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Geotrupidae;Geotrupidae;1;adulte;;;;
+ANI-21-0556;barber;5;ARG-1620-BA5;ARG_1620;Orchamp_Argentiere;2021;;Insecta;Hymenoptera;Formicidae;Formicidae;7;adulte;;;;
+ANI-21-0567;barber;5;ARG-1790-BA5;ARG_1790;Orchamp_Argentiere;2021;;Arachnida;Araneae;;Araneae;6;;;;;
+ANI-21-0567;barber;5;ARG-1790-BA5;ARG_1790;Orchamp_Argentiere;2021;;Chilopoda;;;Chilopoda;1;;;;;
+ANI-21-0567;barber;5;ARG-1790-BA5;ARG_1790;Orchamp_Argentiere;2021;;Insecta;Coleoptera;;Polyphaga;1;adulte;;;;
+ANI-21-0567;barber;5;ARG-1790-BA5;ARG_1790;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) multipunctatus (Dejean  1828);1;adulte;;femelle;;0 05
+ANI-21-0567;barber;5;ARG-1790-BA5;ARG_1790;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) multipunctatus (Dejean  1828);1;adulte;;femelle;;59
+ANI-21-0567;barber;5;ARG-1790-BA5;ARG_1790;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) multipunctatus (Dejean  1828);1;adulte;;femelle;;63
+ANI-21-0567;barber;5;ARG-1790-BA5;ARG_1790;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) multipunctatus (Dejean  1828);1;adulte;;femelle;;0 08
+ANI-21-0567;barber;5;ARG-1790-BA5;ARG_1790;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) multipunctatus (Dejean  1828);1;adulte;;male;;59
+ANI-21-0567;barber;5;ARG-1790-BA5;ARG_1790;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) multipunctatus (Dejean  1828);1;adulte;;male;;0 06
+ANI-21-0567;barber;5;ARG-1790-BA5;ARG_1790;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) multipunctatus (Dejean  1828);1;adulte;;male;;64
+ANI-21-0567;barber;5;ARG-1790-BA5;ARG_1790;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Staphylinidae;Staphylinidae;2;adulte;;;;
+ANI-21-0567;barber;5;ARG-1790-BA5;ARG_1790;Orchamp_Argentiere;2021;;Insecta;Homoptera;Cicadellidae;Cicadellidae;2;;;;;
+ANI-21-0567;barber;5;ARG-1790-BA5;ARG_1790;Orchamp_Argentiere;2021;;Insecta;Hymenoptera;Formicidae;Formicidae;4;adulte;;;;
+ANI-21-0578;barber;5;ARG-2000-BA5;ARG_2000;Orchamp_Argentiere;2021;;Insecta;Coleoptera;;Polyphaga;1;adulte;;;;
+ANI-21-0578;barber;5;ARG-2000-BA5;ARG_2000;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Staphylinidae;Staphylinidae;2;adulte;;;;
+ANI-21-0578;barber;5;ARG-2000-BA5;ARG_2000;Orchamp_Argentiere;2021;;Insecta;Hymenoptera;Formicidae;Formicidae;29;adulte;;;;
+ANI-21-0589;barber;5;ARG-2230-BA5;ARG_2230;Orchamp_Argentiere;2021;;Arachnida;Araneae;;Araneae;5;;;;;
+ANI-21-0589;barber;5;ARG-2230-BA5;ARG_2230;Orchamp_Argentiere;2021;;Insecta;Hemiptera;;Heteroptera;2;;;;;
+ANI-21-0589;barber;5;ARG-2230-BA5;ARG_2230;Orchamp_Argentiere;2021;;Insecta;Homoptera;Cicadellidae;Cicadellidae;2;;;;;
+ANI-21-0589;barber;5;ARG-2230-BA5;ARG_2230;Orchamp_Argentiere;2021;;Insecta;Hymenoptera;;Hymenoptera;3;;;;;
+ANI-21-0589;barber;5;ARG-2230-BA5;ARG_2230;Orchamp_Argentiere;2021;;Insecta;Hymenoptera;Formicidae;Formicidae;96;;;;;
+ANI-21-0589;barber;5;ARG-2230-BA5;ARG_2230;Orchamp_Argentiere;2021;;Insecta;Orthoptera;;Orthoptera;2;;;;;
+ANI-21-0600;barber;5;ARG-2400-BA5;ARG_2400;Orchamp_Argentiere;2021;;;;;;1;;;;;
+ANI-21-0600;barber;5;ARG-2400-BA5;ARG_2400;Orchamp_Argentiere;2021;;Arachnida;Araneae;;Araneae;4;;;;;
+ANI-21-0600;barber;5;ARG-2400-BA5;ARG_2400;Orchamp_Argentiere;2021;;Insecta;Coleoptera;;Polyphaga;1;adulte;;;;
+ANI-21-0600;barber;5;ARG-2400-BA5;ARG_2400;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Carabidae;Platyderus (Platyderus) depressus (Audinet-Serville  1821);1;adulte;;femelle;;11
+ANI-21-0600;barber;5;ARG-2400-BA5;ARG_2400;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) multipunctatus (Dejean  1828);3;adulte;;femelle;;
+ANI-21-0600;barber;5;ARG-2400-BA5;ARG_2400;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Staphylinidae;Staphylinidae;4;adulte;;;;
+ANI-21-0600;barber;5;ARG-2400-BA5;ARG_2400;Orchamp_Argentiere;2021;;Insecta;Hemiptera;;Heteroptera;1;;;;;
+ANI-21-0600;barber;5;ARG-2400-BA5;ARG_2400;Orchamp_Argentiere;2021;;Insecta;Hymenoptera;;Hymenoptera;3;adulte;;;;
+ANI-21-0600;barber;5;ARG-2400-BA5;ARG_2400;Orchamp_Argentiere;2021;;Insecta;Hymenoptera;Formicidae;Formicidae;16;adulte;;;;
+ANI-21-0600;barber;5;ARG-2400-BA5;ARG_2400;Orchamp_Argentiere;2021;;Insecta;Orthoptera;;Orthoptera;15;;;;;
+ANI-21-0546;barber;6;ARG-1420-BA6;ARG_1420;Orchamp_Argentiere;2021;;;;;;1;;;;;
+ANI-21-0546;barber;6;ARG-1420-BA6;ARG_1420;Orchamp_Argentiere;2021;;Arachnida;Araneae;;Araneae;2;;;;;
+ANI-21-0546;barber;6;ARG-1420-BA6;ARG_1420;Orchamp_Argentiere;2021;;Entognatha;Collembola;;Collembola;1;;;;;
+ANI-21-0546;barber;6;ARG-1420-BA6;ARG_1420;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Staphylinidae;Staphylinidae;6;;;;;
+ANI-21-0557;barber;6;ARG-1620-BA6;ARG_1620;Orchamp_Argentiere;2021;;;;;;1;;;;;
+ANI-21-0557;barber;6;ARG-1620-BA6;ARG_1620;Orchamp_Argentiere;2021;;Arachnida;Araneae;;Araneae;4;;;;;
+ANI-21-0557;barber;6;ARG-1620-BA6;ARG_1620;Orchamp_Argentiere;2021;;Gastropoda;Pulmonata;;Gastropoda;3;;;;;
+ANI-21-0557;barber;6;ARG-1620-BA6;ARG_1620;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Carabidae;Calathus (Neocalathus) micropterus (Duftschmid  1812);2;adulte;;femelle;;13
+ANI-21-0557;barber;6;ARG-1620-BA6;ARG_1620;Orchamp_Argentiere;2021;;Insecta;Homoptera;Cicadellidae;Cicadellidae;1;;;;;
+ANI-21-0568;barber;6;ARG-1790-BA6;ARG_1790;Orchamp_Argentiere;2021;;Arachnida;Araneae;;Araneae;4;;;;;
+ANI-21-0568;barber;6;ARG-1790-BA6;ARG_1790;Orchamp_Argentiere;2021;;Diplopoda;;;Diplopoda;1;;casse;;;
+ANI-21-0568;barber;6;ARG-1790-BA6;ARG_1790;Orchamp_Argentiere;2021;;Gastropoda;Pulmonata;;Gastropoda;1;;;;;
+ANI-21-0568;barber;6;ARG-1790-BA6;ARG_1790;Orchamp_Argentiere;2021;;Insecta;;;Larve eruciforme;1;larve;;;;
+ANI-21-0568;barber;6;ARG-1790-BA6;ARG_1790;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) multipunctatus (Dejean  1828);1;adulte;;femelle;;33
+ANI-21-0568;barber;6;ARG-1790-BA6;ARG_1790;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) multipunctatus (Dejean  1828);1;adulte;;femelle;;48
+ANI-21-0568;barber;6;ARG-1790-BA6;ARG_1790;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) multipunctatus (Dejean  1828);1;adulte;;femelle;;53
+ANI-21-0568;barber;6;ARG-1790-BA6;ARG_1790;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) multipunctatus (Dejean  1828);1;adulte;;femelle;;58
+ANI-21-0568;barber;6;ARG-1790-BA6;ARG_1790;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) multipunctatus (Dejean  1828);1;adulte;;femelle;;89
+ANI-21-0568;barber;6;ARG-1790-BA6;ARG_1790;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) multipunctatus (Dejean  1828);1;adulte;;femelle;;99
+ANI-21-0568;barber;6;ARG-1790-BA6;ARG_1790;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) multipunctatus (Dejean  1828);1;adulte;;male;;41
+ANI-21-0568;barber;6;ARG-1790-BA6;ARG_1790;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) multipunctatus (Dejean  1828);1;adulte;;male;;43
+ANI-21-0568;barber;6;ARG-1790-BA6;ARG_1790;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) multipunctatus (Dejean  1828);1;adulte;;male;;51
+ANI-21-0568;barber;6;ARG-1790-BA6;ARG_1790;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Staphylinidae;Staphylinidae;1;adulte;;;;
+ANI-21-0568;barber;6;ARG-1790-BA6;ARG_1790;Orchamp_Argentiere;2021;;Insecta;Homoptera;Cicadellidae;Cicadellidae;2;;;;;
+ANI-21-0568;barber;6;ARG-1790-BA6;ARG_1790;Orchamp_Argentiere;2021;;Insecta;Hymenoptera;Formicidae;Formicidae;15;adulte;;;;
+ANI-21-0568;barber;6;ARG-1790-BA6;ARG_1790;Orchamp_Argentiere;2021;;Insecta;Orthoptera;;Orthoptera;3;;;;;
+ANI-21-0579;barber;6;ARG-2000-BA6;ARG_2000;Orchamp_Argentiere;2021;;Arachnida;Araneae;;Araneae;1;;;;;
+ANI-21-0579;barber;6;ARG-2000-BA6;ARG_2000;Orchamp_Argentiere;2021;;Insecta;Coleoptera;;Polyphaga;1;adulte;;;;
+ANI-21-0579;barber;6;ARG-2000-BA6;ARG_2000;Orchamp_Argentiere;2021;;Insecta;Hemiptera;;Heteroptera;1;;;;;
+ANI-21-0579;barber;6;ARG-2000-BA6;ARG_2000;Orchamp_Argentiere;2021;;Insecta;Homoptera;Cicadellidae;Cicadellidae;2;;;;;
+ANI-21-0579;barber;6;ARG-2000-BA6;ARG_2000;Orchamp_Argentiere;2021;;Insecta;Hymenoptera;;Hymenoptera;1;adulte;;;;
+ANI-21-0579;barber;6;ARG-2000-BA6;ARG_2000;Orchamp_Argentiere;2021;;Insecta;Hymenoptera;Formicidae;Formicidae;6;adulte;;;;
+ANI-21-0590;barber;6;ARG-2230-BA6;ARG_2230;Orchamp_Argentiere;2021;;Arachnida;Araneae;;Araneae;19;;;;;
+ANI-21-0590;barber;6;ARG-2230-BA6;ARG_2230;Orchamp_Argentiere;2021;;Insecta;Hymenoptera;Formicidae;Formicidae;1;adulte;;;;
+ANI-21-0590;barber;6;ARG-2230-BA6;ARG_2230;Orchamp_Argentiere;2021;;Insecta;Orthoptera;;Orthoptera;5;;;;;
+ANI-21-0601;barber;6;ARG-2400-BA6;ARG_2400;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Carabidae;Platyderus (Platyderus) depressus (Audinet-Serville  1821);1;adulte;;femelle;;
+ANI-21-0601;barber;6;ARG-2400-BA6;ARG_2400;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) multipunctatus (Dejean  1828);5;adulte;;male;;
+ANI-21-0601;barber;6;ARG-2400-BA6;ARG_2400;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) multipunctatus (Dejean  1828);9;adulte;;femelle;;
+ANI-21-0601;barber;6;ARG-2400-BA6;ARG_2400;Orchamp_Argentiere;2021;;Insecta;Hemiptera;;Heteroptera;2;;;;;
+ANI-21-0601;barber;6;ARG-2400-BA6;ARG_2400;Orchamp_Argentiere;2021;;Insecta;Hymenoptera;;Hymenoptera;1;adulte;;;;
+ANI-21-0601;barber;6;ARG-2400-BA6;ARG_2400;Orchamp_Argentiere;2021;;Insecta;Hymenoptera;Formicidae;Formicidae;63;adulte;;;;
+ANI-21-0601;barber;6;ARG-2400-BA6;ARG_2400;Orchamp_Argentiere;2021;;Insecta;Orthoptera;;Orthoptera;6;;;;;
+ANI-21-0547;chasse a vue;;ARG-1420-CAV;ARG_1420;Orchamp_Argentiere;2021;;;;;;9;;;;;
+ANI-21-0547;chasse a vue;;ARG-1420-CAV;ARG_1420;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Carabidae;Carabus (Chrysocarabus) auronitens Fabricius  1792;1;adulte;;male;;
+ANI-21-0547;chasse a vue;;ARG-1420-CAV;ARG_1420;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Staphylinidae;Staphylinidae;1;adulte;;;;
+ANI-21-0547;chasse a vue;;ARG-1420-CAV;ARG_1420;Orchamp_Argentiere;2021;;Oligochaeta;Opistophora;Lumbricidae;Lumbricidae;3;juvenile;;;;611
+ANI-21-0558;chasse a vue;;ARG-1620-CAV;ARG_1620;Orchamp_Argentiere;2021;;;;;;6;;;;;
+ANI-21-0558;chasse a vue;;ARG-1620-CAV;ARG_1620;Orchamp_Argentiere;2021;;Gastropoda;Pulmonata;;Gastropoda;1;;;hermaphrodite;;
+ANI-21-0558;chasse a vue;;ARG-1620-CAV;ARG_1620;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) multipunctatus (Dejean  1828);1;adulte;;femelle;;87
+ANI-21-0558;chasse a vue;;ARG-1620-CAV;ARG_1620;Orchamp_Argentiere;2021;;Insecta;Diptera;Tipulidae;Tipulidae;1;larve;;;;
+ANI-21-0558;chasse a vue;;ARG-1620-CAV;ARG_1620;Orchamp_Argentiere;2021;;Insecta;Hymenoptera;Formicidae;Formicidae;7;adulte;;;;
+ANI-21-0558;chasse a vue;;ARG-1620-CAV;ARG_1620;Orchamp_Argentiere;2021;;Oligochaeta;Opistophora;Lumbricidae;Lumbricus terrestris L. 1758;1;adulte;;hermaphrodite;;2181
+ANI-21-0569;chasse a vue;;ARG-1790-CAV;ARG_1790;Orchamp_Argentiere;2021;;Arachnida;Araneae;;Araneae;1;;;;;
+ANI-21-0569;chasse a vue;;ARG-1790-CAV;ARG_1790;Orchamp_Argentiere;2021;;Insecta;Diptera;Tipulidae;Tipulidae;2;larve;;;;
+ANI-21-0569;chasse a vue;;ARG-1790-CAV;ARG_1790;Orchamp_Argentiere;2021;;Insecta;Hymenoptera;Formicidae;Formicidae;7;adulte;;;;
+ANI-21-0569;chasse a vue;;ARG-1790-CAV;ARG_1790;Orchamp_Argentiere;2021;;Oligochaeta;Opistophora;Lumbricidae;Lumbricidae;1;juvenile;casse;;;116
+ANI-21-0580;chasse a vue;;ARG-2000-CAV;ARG_2000;Orchamp_Argentiere;2021;;;;;;1;;;;;
+ANI-21-0580;chasse a vue;;ARG-2000-CAV;ARG_2000;Orchamp_Argentiere;2021;;Insecta;;;Insecta;1;adulte;;;;
+ANI-21-0580;chasse a vue;;ARG-2000-CAV;ARG_2000;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) multipunctatus (Dejean  1828);1;adulte;;femelle;;32
+ANI-21-0591;chasse a vue;;ARG-2230-CAV;ARG_2230;Orchamp_Argentiere;2021;;Chilopoda;;;Chilopoda;1;;;;;
+ANI-21-0591;chasse a vue;;ARG-2230-CAV;ARG_2230;Orchamp_Argentiere;2021;;Insecta;Hymenoptera;Formicidae;Formicidae;20;;;;;
+ANI-21-0559;tri manuel;1;ARG-1620-TM1;ARG_1620;Orchamp_Argentiere;2021;;Diplopoda;;;Diplopoda;1;;;;;
+ANI-21-0559;tri manuel;1;ARG-1620-TM1;ARG_1620;Orchamp_Argentiere;2021;;Insecta;Coleoptera;;Coleoptera;2;larve;;;;
+ANI-21-0570;tri manuel;1;ARG-1790-TM1;ARG_1790;Orchamp_Argentiere;2021;;;;;;4;;;;;
+ANI-21-0570;tri manuel;1;ARG-1790-TM1;ARG_1790;Orchamp_Argentiere;2021;;Gastropoda;Pulmonata;;Gastropoda;1;;;;;
+ANI-21-0570;tri manuel;1;ARG-1790-TM1;ARG_1790;Orchamp_Argentiere;2021;;Insecta;;;Insecta;2;;;;;
+ANI-21-0581;tri manuel;1;ARG-2000-TM1;ARG_2000;Orchamp_Argentiere;2021;;;;;;4;;;;;
+ANI-21-0581;tri manuel;1;ARG-2000-TM1;ARG_2000;Orchamp_Argentiere;2021;;Oligochaeta;Opistophora;Lumbricidae;Lumbricidae;1;juvenile;;;;39
+ANI-21-0581;tri manuel;1;ARG-2000-TM1;ARG_2000;Orchamp_Argentiere;2021;;Oligochaeta;Opistophora;Lumbricidae;Lumbricidae;1;juvenile;2 morcceaux;;;0 05
+ANI-21-0549;tri manuel;3;ARG-1420-TM3;ARG_1420;Orchamp_Argentiere;2021;;;;;;2;;;;;
+ANI-21-0549;tri manuel;3;ARG-1420-TM3;ARG_1420;Orchamp_Argentiere;2021;;Oligochaeta;Opistophora;Lumbricidae;Dendrobaena octaedra (Savigny 1826);1;adulte;;;;29
+ANI-21-0560;tri manuel;3;ARG-1620-TM3;ARG_1620;Orchamp_Argentiere;2021;;Insecta;Coleoptera;;Coleoptera;1;larve;;;;
+ANI-21-0582;tri manuel;3;ARG-2000-TM3;ARG_2000;Orchamp_Argentiere;2021;;;;;;5;;;;;
+ANI-21-0582;tri manuel;3;ARG-2000-TM3;ARG_2000;Orchamp_Argentiere;2021;;Gastropoda;Pulmonata;;Gastropoda;1;;;;;
+ANI-21-0582;tri manuel;3;ARG-2000-TM3;ARG_2000;Orchamp_Argentiere;2021;;Insecta;;;Insecta;1;;;;;
+ANI-21-0550;tri manuel;4;ARG-1420-TM4;ARG_1420;Orchamp_Argentiere;2021;;Arachnida;Araneae;;Araneae;1;;;;;
+ANI-21-0561;tri manuel;4;ARG-1620-TM4;ARG_1620;Orchamp_Argentiere;2021;;Insecta;Coleoptera;;Coleoptera;2;larve;;;;
+ANI-21-0572;tri manuel;4;ARG-1790-TM4;ARG_1790;Orchamp_Argentiere;2021;;Insecta;;;Insecta;1;adulte;;;;
+ANI-21-0583;tri manuel;4;ARG-2000-TM4;ARG_2000;Orchamp_Argentiere;2021;;;;;;1;;;;;
+ANI-21-0562;tri manuel;6;ARG-1620-TM6;ARG_1620;Orchamp_Argentiere;2021;;Oligochaeta;Opistophora;Lumbricidae;Eisenia fetida (Savigny  1826);1;adulte;;;;106
+ANI-21-0573;tri manuel;6;ARG-1790-TM6;ARG_1790;Orchamp_Argentiere;2021;;;;;;1;;;;;
+ANI-21-0573;tri manuel;6;ARG-1790-TM6;ARG_1790;Orchamp_Argentiere;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) multipunctatus (Dejean  1828);1;adulte;;femelle;;
+ANI-21-0584;tri manuel;6;ARG-2000-TM6;ARG_2000;Orchamp_Argentiere;2021;;;;;;1;;;;;
+ANI-21-0584;tri manuel;6;ARG-2000-TM6;ARG_2000;Orchamp_Argentiere;2021;;Insecta;;;Insecta;1;adulte;;;;
+ANI-21-0584;tri manuel;6;ARG-2000-TM6;ARG_2000;Orchamp_Argentiere;2021;;Insecta;;;Insecta;1;larve;;;;
+ANI-22-0008;tri manuel;1;ARM_1520-tm1;ARM_1520;Orchamp_Armenaz;2022;;Gastropoda;Pulmonata;;Gastropoda;1;;;;;
+ANI-22-0019;tri manuel;1;ARM_1750-tm1;ARM_1750;Orchamp_Armenaz;2022;;Oligochaeta;Opistophora;Lumbricidae;Aporrectodea caliginosa caliginosa (Savigny 1826);1;adulte;entier;hermaphrodite;;864
+ANI-22-0019;tri manuel;1;ARM_1750-tm1;ARM_1750;Orchamp_Armenaz;2022;;Oligochaeta;Opistophora;Lumbricidae;Aporrectodea caliginosa caliginosa (Savigny 1826);1;adulte;entier;hermaphrodite;;1439
+ANI-22-0019;tri manuel;1;ARM_1750-tm1;ARM_1750;Orchamp_Armenaz;2022;;Oligochaeta;Opistophora;Lumbricidae;Aporrectodea caliginosa caliginosa (Savigny 1826);1;subadulte;entier;hermaphrodite;;380
+ANI-22-0019;tri manuel;1;ARM_1750-tm1;ARM_1750;Orchamp_Armenaz;2022;;Oligochaeta;Opistophora;Lumbricidae;Aporrectodea icterica icterica (Savigny 1826);1;adulte;entier;hermaphrodite;;430
+ANI-22-0019;tri manuel;1;ARM_1750-tm1;ARM_1750;Orchamp_Armenaz;2022;;Oligochaeta;Opistophora;Lumbricidae;Aporrectodea icterica icterica (Savigny 1826);1;adulte;entier;hermaphrodite;;517
+ANI-22-0019;tri manuel;1;ARM_1750-tm1;ARM_1750;Orchamp_Armenaz;2022;;Oligochaeta;Opistophora;Lumbricidae;Aporrectodea rosea rosea (Savigny 1826);1;adulte;entier;hermaphrodite;;261
+ANI-22-0019;tri manuel;1;ARM_1750-tm1;ARM_1750;Orchamp_Armenaz;2022;;Oligochaeta;Opistophora;Lumbricidae;Lumbricidae;4;juvenile;entier;hermaphrodite;;850
+ANI-22-0019;tri manuel;1;ARM_1750-tm1;ARM_1750;Orchamp_Armenaz;2022;;Oligochaeta;Opistophora;Lumbricidae;Lumbricidae;5;indetermine;morceau;hermaphrodite;;2581
+ANI-22-0019;tri manuel;1;ARM_1750-tm1;ARM_1750;Orchamp_Armenaz;2022;;Oligochaeta;Opistophora;Lumbricidae;Octolasion lacteum (Orley  1885);1;adulte;entier;hermaphrodite;;291
+ANI-22-0019;tri manuel;1;ARM_1750-tm1;ARM_1750;Orchamp_Armenaz;2022;;Oligochaeta;Opistophora;Lumbricidae;Octolasion lacteum (Orley  1885);1;adulte;entier;hermaphrodite;;380
+ANI-22-0009;tri manuel;3;ARM_1520-tm3;ARM_1520;Orchamp_Armenaz;2022;;Insecta;Hymenoptera;Formicidae;Myrmicinae;2;adulte;;femelle;;
+ANI-22-0009;tri manuel;3;ARM_1520-tm3;ARM_1520;Orchamp_Armenaz;2022;;Oligochaeta;Opistophora;Lumbricidae;Lumbricidae;1;juvenile;morceau;hermaphrodite;;24
+ANI-22-0009;tri manuel;3;ARM_1520-tm3;ARM_1520;Orchamp_Armenaz;2022;;Oligochaeta;Opistophora;Lumbricidae;Lumbricidae;3;indetermine;morceau;hermaphrodite;;123
+ANI-22-0009;tri manuel;3;ARM_1520-tm3;ARM_1520;Orchamp_Armenaz;2022;;Oligochaeta;Opistophora;Lumbricidae;Lumbricus Linnaeus 1758;1;juvenile;entier;hermaphrodite;;122
+ANI-22-0020;tri manuel;3;ARM_1750-tm3;ARM_1750;Orchamp_Armenaz;2022;;Oligochaeta;Opistophora;Lumbricidae;Aporrectodea rosea rosea (Savigny 1826);1;adulte;entier;hermaphrodite;;88
+ANI-22-0020;tri manuel;3;ARM_1750-tm3;ARM_1750;Orchamp_Armenaz;2022;;Oligochaeta;Opistophora;Lumbricidae;Lumbricidae;3;juvenile;entier;hermaphrodite;;675
+ANI-22-0020;tri manuel;3;ARM_1750-tm3;ARM_1750;Orchamp_Armenaz;2022;;Oligochaeta;Opistophora;Lumbricidae;Lumbricidae;8;indetermine;morceau;hermaphrodite;;2185
+ANI-22-0020;tri manuel;3;ARM_1750-tm3;ARM_1750;Orchamp_Armenaz;2022;;Oligochaeta;Opistophora;Lumbricidae;Lumbricus terrestris L. 1758;1;adulte;entier;hermaphrodite;;3410
+ANI-22-0020;tri manuel;3;ARM_1750-tm3;ARM_1750;Orchamp_Armenaz;2022;;Oligochaeta;Opistophora;Lumbricidae;Lumbricus terrestris L. 1758;1;adulte;entier;hermaphrodite;petit;1070
+ANI-22-0020;tri manuel;3;ARM_1750-tm3;ARM_1750;Orchamp_Armenaz;2022;;Oligochaeta;Opistophora;Lumbricidae;Octolasion lacteum (Orley  1885);1;adulte;morceau;hermaphrodite;;520
+ANI-22-0021;tri manuel;4;ARM_1750-tm4;ARM_1750;Orchamp_Armenaz;2022;;Oligochaeta;Opistophora;Lumbricidae;Aporrectodea caliginosa caliginosa (Savigny 1826);1;subadulte;entier;hermaphrodite;;289
+ANI-22-0021;tri manuel;4;ARM_1750-tm4;ARM_1750;Orchamp_Armenaz;2022;;Oligochaeta;Opistophora;Lumbricidae;Lumbricidae;1;indetermine;morceau;hermaphrodite;;457
+ANI-22-0021;tri manuel;4;ARM_1750-tm4;ARM_1750;Orchamp_Armenaz;2022;;Oligochaeta;Opistophora;Lumbricidae;Lumbricus Linnaeus 1758;1;juvenile;entier;hermaphrodite;;130
+ANI-22-0021;tri manuel;4;ARM_1750-tm4;ARM_1750;Orchamp_Armenaz;2022;;Oligochaeta;Opistophora;Lumbricidae;Lumbricus Linnaeus 1758;1;juvenile;entier;hermaphrodite;;162
+ANI-22-0021;tri manuel;4;ARM_1750-tm4;ARM_1750;Orchamp_Armenaz;2022;;Oligochaeta;Opistophora;Lumbricidae;Lumbricus Linnaeus 1758;1;juvenile;entier;hermaphrodite;;599
+ANI-22-0021;tri manuel;4;ARM_1750-tm4;ARM_1750;Orchamp_Armenaz;2022;;Oligochaeta;Opistophora;Lumbricidae;Lumbricus Linnaeus 1758;1;juvenile;morceau;hermaphrodite;;1043
+ANI-22-0011;tri manuel;6;ARM_1520-tm6;ARM_1520;Orchamp_Armenaz;2022;;Diplopoda;Glomerida;Glomeridae;Glomeris Latreille 1803;1;;;;;
+ANI-22-0011;tri manuel;6;ARM_1520-tm6;ARM_1520;Orchamp_Armenaz;2022;;Gastropoda;Pulmonata;;Gastropoda;5;indetermine;;;;
+ANI-22-0011;tri manuel;6;ARM_1520-tm6;ARM_1520;Orchamp_Armenaz;2022;;Insecta;Homoptera;Cicadellidae;Cicadellidae;1;;;;;
+ANI-22-0011;tri manuel;6;ARM_1520-tm6;ARM_1520;Orchamp_Armenaz;2022;;Insecta;Hymenoptera;Formicidae;Lasius Fabricius  1804;1;adulte;;femelle;;
+ANI-22-0011;tri manuel;6;ARM_1520-tm6;ARM_1520;Orchamp_Armenaz;2022;;Oligochaeta;Opistophora;Lumbricidae;Lumbricus Linnaeus 1758;1;juvenile;entier;hermaphrodite;;409
+ANI-22-0022;tri manuel;6;ARM_1750-tm6;ARM_1750;Orchamp_Armenaz;2022;;Chilopoda;Geophilomorpha;;Geophilomorpha;1;;;;;
+ANI-22-0022;tri manuel;6;ARM_1750-tm6;ARM_1750;Orchamp_Armenaz;2022;;Insecta;Coleoptera;Elateridae ;Elateridae;1;larve;;;;
+ANI-22-0022;tri manuel;6;ARM_1750-tm6;ARM_1750;Orchamp_Armenaz;2022;;Oligochaeta;Opistophora;Lumbricidae;Aporrectodea caliginosa caliginosa (Savigny 1826);1;subadulte;entier;hermaphrodite;;256
+ANI-22-0022;tri manuel;6;ARM_1750-tm6;ARM_1750;Orchamp_Armenaz;2022;;Oligochaeta;Opistophora;Lumbricidae;Lumbricidae;1;indetermine;morceau;hermaphrodite;;844
+ANI-22-0022;tri manuel;6;ARM_1750-tm6;ARM_1750;Orchamp_Armenaz;2022;;Oligochaeta;Opistophora;Lumbricidae;Lumbricus terrestris L. 1758;1;subadulte;entier;hermaphrodite;;2156
+ANI-22-0206;tri manuel;1;VER_1200-tm1;VER_1200;Orchamp_LacVert;2022;;Arachnida;Araneae;;Araneae;2;;;;;
+ANI-22-0206;tri manuel;1;VER_1200-tm1;VER_1200;Orchamp_LacVert;2022;;Chilopoda;Geophilomorpha;;Geophilomorpha;1;;;;;
+ANI-22-0206;tri manuel;1;VER_1200-tm1;VER_1200;Orchamp_LacVert;2022;;Insecta;Coleoptera;Elateridae ;Elateridae;1;adulte;;;;
+ANI-22-0206;tri manuel;1;VER_1200-tm1;VER_1200;Orchamp_LacVert;2022;;Oligochaeta;Opistophora;Enchytraeidae;Enchytraeidae;1;;;;;
+ANI-22-0206;tri manuel;1;VER_1200-tm1;VER_1200;Orchamp_LacVert;2022;;Oligochaeta;Opistophora;Lumbricidae;Lumbricidae;1;juvenile;morceau;hermaphrodite;;19
+ANI-22-0217;tri manuel;1;VER_1400-tm1;VER_1400F;Orchamp_LacVert;2022;;Diplopoda;Julida;Julidae;Julidae;1;;;;;
+ANI-22-0228;tri manuel;1;VER_1400-tm1;VER_1400P;Orchamp_LacVert;2022;;Diplopoda;Julida;Julidae;Julidae;3;;;;;
+ANI-22-0228;tri manuel;1;VER_1400-tm1;VER_1400P;Orchamp_LacVert;2022;;Insecta;Coleoptera;;Scarabaeoidae;1;larve;;;;
+ANI-22-0228;tri manuel;1;VER_1400-tm1;VER_1400P;Orchamp_LacVert;2022;;Insecta;Coleoptera;Elateridae ;Elateridae;1;larve;;;;
+ANI-22-0228;tri manuel;1;VER_1400-tm1;VER_1400P;Orchamp_LacVert;2022;;Insecta;Dermaptera;;Dermaptera;1;;;;;
+ANI-22-0228;tri manuel;1;VER_1400-tm1;VER_1400P;Orchamp_LacVert;2022;;Oligochaeta;Opistophora;Lumbricidae;Lumbricidae;1;juvenile;entier;hermaphrodite;;8
+ANI-22-0228;tri manuel;1;VER_1400-tm1;VER_1400P;Orchamp_LacVert;2022;;Oligochaeta;Opistophora;Lumbricidae;Octolasion lacteum (Orley  1885);1;subadulte;entier;hermaphrodite;;367
+ANI-22-0239;tri manuel;1;VER_1800-tm1;VER_1800;Orchamp_LacVert;2022;;Diplopoda;Polydesmida;Polydesmidae;Polydesmus Latreille  1803;1;;;;;
+ANI-22-0239;tri manuel;1;VER_1800-tm1;VER_1800;Orchamp_LacVert;2022;;Insecta;Diptera;;Diptera;1;larve;;;;
+ANI-22-0239;tri manuel;1;VER_1800-tm1;VER_1800;Orchamp_LacVert;2022;;Oligochaeta;Opistophora;Lumbricidae;Lumbricidae;2;indetermine;morceau;hermaphrodite;;50
+ANI-22-0239;tri manuel;1;VER_1800-tm1;VER_1800;Orchamp_LacVert;2022;;Oligochaeta;Opistophora;Lumbricidae;Lumbricidae;4;juvenile;;hermaphrodite;;105
+ANI-22-0250;tri manuel;1;VER_2000-tm1;VER_2000;Orchamp_LacVert;2022;;Diplopoda;Julida;Julidae;Julidae;1;;;;;
+ANI-22-0250;tri manuel;1;VER_2000-tm1;VER_2000;Orchamp_LacVert;2022;;Oligochaeta;Opistophora;Enchytraeidae;Enchytraeidae;6;;;;;
+ANI-22-0250;tri manuel;1;VER_2000-tm1;VER_2000;Orchamp_LacVert;2022;;Oligochaeta;Opistophora;Lumbricidae;Lumbricidae;2;juvenile;;hermaphrodite;;207
+ANI-22-0207;tri manuel;3;VER_1200-tm3;VER_1200;Orchamp_LacVert;2022;;Insecta;Coleoptera;Elateridae ;Elateridae;1;larve;;;;
+ANI-22-0207;tri manuel;3;VER_1200-tm3;VER_1200;Orchamp_LacVert;2022;;Oligochaeta;Opistophora;Lumbricidae;Lumbricidae;1;juvenile;;hermaphrodite;;8
+ANI-22-0218;tri manuel;3;VER_1400-tm3;VER_1400F;Orchamp_LacVert;2022;;Diplopoda;Julida;Julidae;Julidae;1;;;;;
+ANI-22-0218;tri manuel;3;VER_1400-tm3;VER_1400F;Orchamp_LacVert;2022;;Insecta;Coleoptera;Elateridae ;Elateridae;1;adulte;;;;
+ANI-22-0229;tri manuel;3;VER_1400-tm3;VER_1400P;Orchamp_LacVert;2022;;Arachnida;;;Acari;4;;;;;
+ANI-22-0229;tri manuel;3;VER_1400-tm3;VER_1400P;Orchamp_LacVert;2022;;Insecta;Hymenoptera;Formicidae;Lasius Fabricius  1804;1;adulte;;femelle;;
+ANI-22-0229;tri manuel;3;VER_1400-tm3;VER_1400P;Orchamp_LacVert;2022;;Oligochaeta;Opistophora;Enchytraeidae;Enchytraeidae;1;;;;;
+ANI-22-0229;tri manuel;3;VER_1400-tm3;VER_1400P;Orchamp_LacVert;2022;;Oligochaeta;Opistophora;Lumbricidae;Dendrobaena octaedra (Savigny 1826);1;adulte;entier;hermaphrodite;;37
+ANI-22-0229;tri manuel;3;VER_1400-tm3;VER_1400P;Orchamp_LacVert;2022;;Oligochaeta;Opistophora;Lumbricidae;Dendrobaena octaedra (Savigny 1826);1;adulte;entier;hermaphrodite;;42
+ANI-22-0229;tri manuel;3;VER_1400-tm3;VER_1400P;Orchamp_LacVert;2022;;Oligochaeta;Opistophora;Lumbricidae;Dendrobaena octaedra (Savigny 1826);1;subadulte;entier;hermaphrodite;;47
+ANI-22-0229;tri manuel;3;VER_1400-tm3;VER_1400P;Orchamp_LacVert;2022;;Oligochaeta;Opistophora;Lumbricidae;Lumbricidae;5;juvenile;morceau;hermaphrodite;;257
+ANI-22-0229;tri manuel;3;VER_1400-tm3;VER_1400P;Orchamp_LacVert;2022;;Oligochaeta;Opistophora;Lumbricidae;Lumbricidae;7;indetermine;morceau;hermaphrodite;;160
+ANI-22-0229;tri manuel;3;VER_1400-tm3;VER_1400P;Orchamp_LacVert;2022;;Oligochaeta;Opistophora;Lumbricidae;Lumbricidae;37;juvenile;entier;hermaphrodite;;1313
+ANI-22-0229;tri manuel;3;VER_1400-tm3;VER_1400P;Orchamp_LacVert;2022;;Oligochaeta;Opistophora;Lumbricidae;Lumbricus Linnaeus 1758;1;juvenile;entier;hermaphrodite;;121
+ANI-22-0240;tri manuel;3;VER_1800-tm3;VER_1800;Orchamp_LacVert;2022;;Insecta;Coleoptera;Elateridae ;Elateridae;1;larve;;;;
+ANI-22-0240;tri manuel;3;VER_1800-tm3;VER_1800;Orchamp_LacVert;2022;;Insecta;Hymenoptera;;Hymenoptera;6;adulte;;;;
+ANI-22-0251;tri manuel;3;VER_2000-tm3;VER_2000;Orchamp_LacVert;2022;;Diplopoda;Julida;Julidae;Julidae;1;;;;;
+ANI-22-0251;tri manuel;3;VER_2000-tm3;VER_2000;Orchamp_LacVert;2022;;Oligochaeta;Opistophora;Enchytraeidae;Enchytraeidae;4;;;;;
+ANI-22-0251;tri manuel;3;VER_2000-tm3;VER_2000;Orchamp_LacVert;2022;;Oligochaeta;Opistophora;Lumbricidae;Lumbricidae;1;adulte;entier;hermaphrodite;Orodrilus?;131
+ANI-22-0251;tri manuel;3;VER_2000-tm3;VER_2000;Orchamp_LacVert;2022;;Oligochaeta;Opistophora;Lumbricidae;Lumbricidae;1;indetermine;morceau;hermaphrodite;;19
+ANI-22-0251;tri manuel;3;VER_2000-tm3;VER_2000;Orchamp_LacVert;2022;;Oligochaeta;Opistophora;Lumbricidae;Lumbricidae;3;juvenile;entier;hermaphrodite;;195
+ANI-22-0219;tri manuel;4;VER_1400-tm4;VER_1400F;Orchamp_LacVert;2022;;Chilopoda;Geophilomorpha;;Geophilomorpha;1;;;;;
+ANI-22-0219;tri manuel;4;VER_1400-tm4;VER_1400F;Orchamp_LacVert;2022;;Insecta;Coleoptera;Staphylinidae;Staphylinidae;1;adulte;;;;
+ANI-22-0219;tri manuel;4;VER_1400-tm4;VER_1400F;Orchamp_LacVert;2022;;Oligochaeta;Opistophora;Lumbricidae;Lumbricidae;1;juvenile;;hermaphrodite;;246
+ANI-22-0230;tri manuel;4;VER_1400-tm4;VER_1400P;Orchamp_LacVert;2022;;Diplopoda;Julida;Julidae;Julidae;2;;;;;
+ANI-22-0230;tri manuel;4;VER_1400-tm4;VER_1400P;Orchamp_LacVert;2022;;Insecta;Coleoptera;Elateridae ;Elateridae;1;larve;;;;
+ANI-22-0230;tri manuel;4;VER_1400-tm4;VER_1400P;Orchamp_LacVert;2022;;Insecta;Diptera;;Diptera;2;larve;;;;
+ANI-22-0230;tri manuel;4;VER_1400-tm4;VER_1400P;Orchamp_LacVert;2022;;Insecta;Hymenoptera;Formicidae;Lasius Fabricius  1804;3;adulte;;femelle;;
+ANI-22-0230;tri manuel;4;VER_1400-tm4;VER_1400P;Orchamp_LacVert;2022;;Insecta;Lepidoptera;;Lepidoptera;1;chenille;;;;
+ANI-22-0241;tri manuel;4;VER_1800-tm4;VER_1800;Orchamp_LacVert;2022;;Diplopoda;Julida;Julidae;Julidae;2;;;;;
+ANI-22-0241;tri manuel;4;VER_1800-tm4;VER_1800;Orchamp_LacVert;2022;;Oligochaeta;Opistophora;Lumbricidae;Lumbricidae;1;adulte;entier;hermaphrodite;Orodrilus?;114
+ANI-22-0241;tri manuel;4;VER_1800-tm4;VER_1800;Orchamp_LacVert;2022;;Oligochaeta;Opistophora;Lumbricidae;Lumbricidae;2;indetermine;entier;hermaphrodite;morceau;240
+ANI-22-0252;tri manuel;4;VER_2000-tm4;VER_2000;Orchamp_LacVert;2022;;Diplopoda;Julida;Julidae;Julidae;2;;;;;
+ANI-22-0252;tri manuel;4;VER_2000-tm4;VER_2000;Orchamp_LacVert;2022;;Oligochaeta;Opistophora;Lumbricidae;Lumbricidae;1;indetermine;morceau;hermaphrodite;;1607
+ANI-22-0220;tri manuel;6;VER_1400-tm6;VER_1400F;Orchamp_LacVert;2022;;Diplopoda;Julida;Julidae;Julidae;1;;;;;
+ANI-22-0231;tri manuel;6;VER_1400-tm6;VER_1400P;Orchamp_LacVert;2022;;Insecta;Coleoptera;;Chrysomeloidea;1;adulte;;;;
+ANI-22-0231;tri manuel;6;VER_1400-tm6;VER_1400P;Orchamp_LacVert;2022;;Insecta;Coleoptera;Elateridae ;Elateridae;1;larve;;;;
+ANI-22-0231;tri manuel;6;VER_1400-tm6;VER_1400P;Orchamp_LacVert;2022;;Insecta;Coleoptera;Scirtidae;Scirtidae;1;adulte;;;;
+ANI-22-0231;tri manuel;6;VER_1400-tm6;VER_1400P;Orchamp_LacVert;2022;;Insecta;Hymenoptera;Formicidae;Lasius Fabricius  1804;20;adulte;;femelle;;
+ANI-22-0231;tri manuel;6;VER_1400-tm6;VER_1400P;Orchamp_LacVert;2022;;Oligochaeta;Opistophora;Lumbricidae;Lumbricidae;1;juvenile;entier;hermaphrodite;Dendrobaena ?;12
+ANI-22-0231;tri manuel;6;VER_1400-tm6;VER_1400P;Orchamp_LacVert;2022;;Oligochaeta;Opistophora;Lumbricidae;Lumbricus Linnaeus 1758;1;juvenile;entier;hermaphrodite;;30
+ANI-22-0253;tri manuel;6;VER_2000-tm6;VER_2000;Orchamp_LacVert;2022;;Diplopoda;Julida;Julidae;Julidae;5;;;;;
+ANI-22-0253;tri manuel;6;VER_2000-tm6;VER_2000;Orchamp_LacVert;2022;;Insecta;Coleoptera;Elateridae ;Elateridae;1;larve;;;;
+ANI-22-0205;tri manuel qualitatif;;VER_1200-Q;VER_1200;Orchamp_LacVert;2022;;Arachnida;Araneae;;Araneae;1;;;;;
+ANI-22-0205;tri manuel qualitatif;;VER_1200-Q;VER_1200;Orchamp_LacVert;2022;;Chilopoda;Lithobiomorpha;Lithobiidae;Lithobius Leach  1814;1;;;;;
+ANI-22-0205;tri manuel qualitatif;;VER_1200-Q;VER_1200;Orchamp_LacVert;2022;;Diplopoda;Julida;Julidae;Julidae;2;;;;;
+ANI-22-0205;tri manuel qualitatif;;VER_1200-Q;VER_1200;Orchamp_LacVert;2022;;Oligochaeta;Opistophora;Enchytraeidae;Enchytraeidae;3;;;;;
+ANI-22-0205;tri manuel qualitatif;;VER_1200-Q;VER_1200;Orchamp_LacVert;2022;;Oligochaeta;Opistophora;Lumbricidae;Dendrobaena octaedra (Savigny 1826);1;;;hermaphrodite;;47
+ANI-22-0216;tri manuel qualitatif;;VER_1400-Q;VER_1400F;Orchamp_LacVert;2022;;Insecta;Coleoptera;Carabidae;Carabus (Chrysocarabus) splendens Olivier  1790;1;adulte;entier;femelle;carabe desseche;0 28628
+ANI-22-0216;tri manuel qualitatif;;VER_1400-Q;VER_1400F;Orchamp_LacVert;2022;;Insecta;Lepidoptera;;Lepidoptera;1;chrysalide;;;;
+ANI-22-0216;tri manuel qualitatif;;VER_1400-Q;VER_1400F;Orchamp_LacVert;2022;;Oligochaeta;Opistophora;Lumbricidae;Lumbricidae;1;juvenile;;hermaphrodite;;413
+ANI-22-0119;tri manuel;3;PEC_1375-tm3;PEC_1375;Orchamp_Pecloz;2022;;Diplopoda;Julida;Julidae;Julidae;2;;;;;
+ANI-22-0119;tri manuel;3;PEC_1375-tm3;PEC_1375;Orchamp_Pecloz;2022;;Gastropoda;Pulmonata;;Gastropoda;1;;;;Discidae;
+ANI-22-0119;tri manuel;3;PEC_1375-tm3;PEC_1375;Orchamp_Pecloz;2022;;Oligochaeta;Opistophora;Enchytraeidae;Enchytraeidae;1;;;;;
+ANI-22-0120;tri manuel;4;PEC_1375-tm4;PEC_1375;Orchamp_Pecloz;2022;;Diplopoda;Julida;Julidae;Julidae;2;;;;;
+ANI-22-0120;tri manuel;4;PEC_1375-tm4;PEC_1375;Orchamp_Pecloz;2022;;Oligochaeta;Opistophora;Lumbricidae;Lumbricidae;2;indetermine;morceau;hermaphrodite;tres abimes;774
+ANI-22-0120;tri manuel;4;PEC_1375-tm4;PEC_1375;Orchamp_Pecloz;2022;;Oligochaeta;Opistophora;Lumbricidae;Lumbricidae;2;juvenile;entier;hermaphrodite;;508
+ANI-22-0121;tri manuel;6;PEC_1375-tm6;PEC_1375;Orchamp_Pecloz;2022;;Insecta;Hymenoptera;Formicidae;Formicidae;1;adulte;;femelle;;
+ANI-22-0121;tri manuel;6;PEC_1375-tm6;PEC_1375;Orchamp_Pecloz;2022;;Oligochaeta;Opistophora;Lumbricidae;Lumbricidae;1;juvenile;entier;hermaphrodite;;119
+ANI-22-0121;tri manuel;6;PEC_1375-tm6;PEC_1375;Orchamp_Pecloz;2022;;Oligochaeta;Opistophora;Lumbricidae;Lumbricidae;2;cocon;;;;
+ANI-22-0106;tri manuel qualitatif;;PEC_1152-Q;PEC_1152;Orchamp_Pecloz;2022;;Oligochaeta;Opistophora;Lumbricidae;Aporrectodea giardi giardi (Ribaucourt 1910);1;subadulte;entier;hermaphrodite;en 2 morceaux;1002
+ANI-22-0117;tri manuel qualitatif;;PEC_1375-Q;PEC_1375;Orchamp_Pecloz;2022;;Oligochaeta;Opistophora;Lumbricidae;Allolobophora chlorotica chlorotica (Savigny 1826);1;subadulte;entier;hermaphrodite;;129
+ANI-22-0117;tri manuel qualitatif;;PEC_1375-Q;PEC_1375;Orchamp_Pecloz;2022;;Oligochaeta;Opistophora;Lumbricidae;Aporrectodea rosea rosea (Savigny 1826);1;subadulte;entier;hermaphrodite;;91
+ANI-22-0117;tri manuel qualitatif;;PEC_1375-Q;PEC_1375;Orchamp_Pecloz;2022;;Oligochaeta;Opistophora;Lumbricidae;Lumbricidae;1;juvenile;entier;hermaphrodite;;246
+ANI-22-0117;tri manuel qualitatif;;PEC_1375-Q;PEC_1375;Orchamp_Pecloz;2022;;Oligochaeta;Opistophora;Lumbricidae;Lumbricidae;3;indetermine;morceau;hermaphrodite;;394
+ANI-22-0117;tri manuel qualitatif;;PEC_1375-Q;PEC_1375;Orchamp_Pecloz;2022;;Oligochaeta;Opistophora;Lumbricidae;Lumbricus Linnaeus 1758;1;juvenile;morceau;hermaphrodite;;1013
+ANI-22-0052;tri manuel;1;MSB_1370-tm1;MSB_1370;Orchamp_StBarthelemy;2022;;Arachnida;Araneae;Linyphiidae;Linyphiidae Blackwall  1859;1;adulte;;male;;
+ANI-22-0052;tri manuel;1;MSB_1370-tm1;MSB_1370;Orchamp_StBarthelemy;2022;;Diplopoda;Julida;Julidae;Julidae;1;;;;;
+ANI-22-0085;tri manuel;1;MSB_2020-tm1;MSB_2020;Orchamp_StBarthelemy;2022;;Insecta;Diptera;;Diptera;4;larve;;;;
+ANI-22-0085;tri manuel;1;MSB_2020-tm1;MSB_2020;Orchamp_StBarthelemy;2022;;Oligochaeta;Opistophora;Enchytraeidae;Enchytraeidae;1;;;;;
+ANI-22-0096;tri manuel;1;MSB_2260-tm1;MSB_2260;Orchamp_StBarthelemy;2022;;Insecta;Diptera;;Diptera;1;larve;;;;
+ANI-22-0053;tri manuel;3;MSB_1370-tm3;MSB_1370;Orchamp_StBarthelemy;2022;;Oligochaeta;Opistophora;Enchytraeidae;Enchytraeidae;3;;;;;
+ANI-22-0064;tri manuel;3;MSB_1420-tm3;MSB_1420;Orchamp_StBarthelemy;2022;;Insecta;Lepidoptera;;Lepidoptera;1;chenille;;;;
+ANI-22-0075;tri manuel;3;MSB_1890-tm3;MSB_1890;Orchamp_StBarthelemy;2022;;Insecta;Hymenoptera;Formicidae;Formicidae;2;adulte;;femelle;;
+ANI-22-0086;tri manuel;3;MSB_2020-tm3;MSB_2020;Orchamp_StBarthelemy;2022;;Insecta;Hymenoptera;Formicidae;Formicidae;1;adulte;;femelle;;
+ANI-22-0065;tri manuel;4;MSB_1420-tm4;MSB_1420;Orchamp_StBarthelemy;2022;;Insecta;Coleoptera;Elateridae ;Elateridae;1;adulte;;;;
+ANI-22-0065;tri manuel;4;MSB_1420-tm4;MSB_1420;Orchamp_StBarthelemy;2022;;Insecta;Coleoptera;Elateridae ;Elateridae;1;larve;;;;
+ANI-22-0065;tri manuel;4;MSB_1420-tm4;MSB_1420;Orchamp_StBarthelemy;2022;;Insecta;Coleoptera;Elateridae ;Elateridae;1;larve;;;mue de larve;
+ANI-22-0065;tri manuel;4;MSB_1420-tm4;MSB_1420;Orchamp_StBarthelemy;2022;;Insecta;Coleoptera;Staphylinidae;Staphylinidae;1;adulte;;;;
+ANI-22-0065;tri manuel;4;MSB_1420-tm4;MSB_1420;Orchamp_StBarthelemy;2022;;Insecta;Hymenoptera;Formicidae;Formicidae;22;adulte;;femelle;;
+ANI-22-0065;tri manuel;4;MSB_1420-tm4;MSB_1420;Orchamp_StBarthelemy;2022;;Insecta;Hymenoptera;Formicidae;Lasius Fabricius  1804;1;adulte;;femelle;;
+ANI-22-0076;tri manuel;4;MSB_1890-tm4;MSB_1890;Orchamp_StBarthelemy;2022;;Diplopoda;Julida;Julidae;Julidae;1;;;;;
+ANI-22-0098;tri manuel;4;MSB_2260-tm4;MSB_2260;Orchamp_StBarthelemy;2022;;Diplopoda;Polydesmida;Polydesmidae;Polydesmus Latreille  1803;1;;;;en 3 morceaux;
+ANI-22-0098;tri manuel;4;MSB_2260-tm4;MSB_2260;Orchamp_StBarthelemy;2022;;Insecta;Diptera;;Diptera;1;larve;;;;
+ANI-22-0055;tri manuel;6;MSB_1370-tm6;MSB_1370;Orchamp_StBarthelemy;2022;;Chilopoda;Geophilomorpha;;Geophilomorpha;1;;;;;
+ANI-22-0055;tri manuel;6;MSB_1370-tm6;MSB_1370;Orchamp_StBarthelemy;2022;;Diplopoda;Polydesmida;Polydesmidae;Polydesmus Latreille  1803;1;;;;;
+ANI-22-0066;tri manuel;6;MSB_1420-tm6;MSB_1420;Orchamp_StBarthelemy;2022;;Gastropoda;Pulmonata;Arionidae;Arion Ferussac 1819;1;;;;;
+ANI-22-0066;tri manuel;6;MSB_1420-tm6;MSB_1420;Orchamp_StBarthelemy;2022;;Insecta;Coleoptera;Elateridae ;Elateridae;1;larve;;;;
+ANI-22-0066;tri manuel;6;MSB_1420-tm6;MSB_1420;Orchamp_StBarthelemy;2022;;Insecta;Diptera;;Diptera;4;larve;;;;
+ANI-22-0066;tri manuel;6;MSB_1420-tm6;MSB_1420;Orchamp_StBarthelemy;2022;;Insecta;Homoptera;Cicadellidae;Cicadellidae;1;;;;;
+ANI-22-0099;tri manuel;6;MSB_2260-tm6;MSB_2260;Orchamp_StBarthelemy;2022;;Insecta;Coleoptera;;Scarabaeoidae;1;adulte;;;;
+ANI-22-0051;tri manuel qualitatif;;MSB_1370-Q;MSB_1370;Orchamp_StBarthelemy;2022;;Chilopoda;Geophilomorpha;;Geophilomorpha;1;;;;;
+ANI-22-0051;tri manuel qualitatif;;MSB_1370-Q;MSB_1370;Orchamp_StBarthelemy;2022;;Chilopoda;Lithobiomorpha;Lithobiidae;Lithobius Leach  1814;2;;;;;
+ANI-22-0051;tri manuel qualitatif;;MSB_1370-Q;MSB_1370;Orchamp_StBarthelemy;2022;;Insecta;Coleoptera;Elateridae ;Elateridae;1;larve;;;;
+ANI-22-0051;tri manuel qualitatif;;MSB_1370-Q;MSB_1370;Orchamp_StBarthelemy;2022;;Oligochaeta;Opistophora;Lumbricidae;Aporrectodea caliginosa caliginosa (Savigny 1826);1;adulte;entier;hermaphrodite;;207
+ANI-21-0882;barber;1;TAN-1420-BA1;TAN_1420;Orchamp_Tania;2021;;;;;;2;;;;;
+ANI-21-0882;barber;1;TAN-1420-BA1;TAN_1420;Orchamp_Tania;2021;;Arachnida;Araneae;;Araneae;7;;;;;
+ANI-21-0882;barber;1;TAN-1420-BA1;TAN_1420;Orchamp_Tania;2021;;Entognatha;Collembola;;Collembola;4;;;;;
+ANI-21-0882;barber;1;TAN-1420-BA1;TAN_1420;Orchamp_Tania;2021;;Gastropoda;Pulmonata;;Gastropoda;3;;;;;
+ANI-21-0882;barber;1;TAN-1420-BA1;TAN_1420;Orchamp_Tania;2021;;Insecta;Coleoptera;;Polyphaga;1;adulte;;;;
+ANI-21-0882;barber;1;TAN-1420-BA1;TAN_1420;Orchamp_Tania;2021;;Insecta;Coleoptera;Carabidae;Notiophilus marginatus Gene  1839;1;adulte;;male;;4
+ANI-21-0882;barber;1;TAN-1420-BA1;TAN_1420;Orchamp_Tania;2021;;Insecta;Coleoptera;Carabidae;Notiophilus marginatus Gene  1839;1;adulte;;male;;5
+ANI-21-0882;barber;1;TAN-1420-BA1;TAN_1420;Orchamp_Tania;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) externepunctatus (Dejean  1828);1;adulte;;male;;92
+ANI-21-0882;barber;1;TAN-1420-BA1;TAN_1420;Orchamp_Tania;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) externepunctatus (Dejean  1828);1;adulte;;male;;95
+ANI-21-0882;barber;1;TAN-1420-BA1;TAN_1420;Orchamp_Tania;2021;;Insecta;Coleoptera;Staphylinidae;Staphylinidae;1;adulte;;;;
+ANI-21-0882;barber;1;TAN-1420-BA1;TAN_1420;Orchamp_Tania;2021;;Insecta;Homoptera;Cicadellidae;Cicadellidae;1;;;;;
+ANI-21-0882;barber;1;TAN-1420-BA1;TAN_1420;Orchamp_Tania;2021;;Insecta;Hymenoptera;;Hymenoptera;1;adulte;;;;
+ANI-21-0882;barber;1;TAN-1420-BA1;TAN_1420;Orchamp_Tania;2021;;Insecta;Hymenoptera;Formicidae;Formicidae;2;adulte;;;;
+ANI-21-0893;barber;1;TAN-1700-BA1;TAN_1700;Orchamp_Tania;2021;;Arachnida;Araneae;;Araneae;3;;;;;
+ANI-21-0893;barber;1;TAN-1700-BA1;TAN_1700;Orchamp_Tania;2021;;Entognatha;Collembola;;Collembola;3;;;;;
+ANI-21-0893;barber;1;TAN-1700-BA1;TAN_1700;Orchamp_Tania;2021;;Insecta;Coleoptera;Curculionidae;Curculionidae;1;adulte;;;;
+ANI-21-0893;barber;1;TAN-1700-BA1;TAN_1700;Orchamp_Tania;2021;;Insecta;Coleoptera;Staphylinidae;Staphylinidae;31;adulte;;;;
+ANI-21-0893;barber;1;TAN-1700-BA1;TAN_1700;Orchamp_Tania;2021;;Insecta;Hymenoptera;;Hymenoptera;1;adulte;;;;
+ANI-21-0893;barber;1;TAN-1700-BA1;TAN_1700;Orchamp_Tania;2021;;Insecta;Hymenoptera;Formicidae;Formicidae;136;adulte;;;;
+ANI-21-0904;barber;1;TAN-1890-BA1;TAN_1890;Orchamp_Tania;2021;;;;;;1;;;;;
+ANI-21-0904;barber;1;TAN-1890-BA1;TAN_1890;Orchamp_Tania;2021;;Arachnida;Araneae;;Araneae;1;;;;;
+ANI-21-0904;barber;1;TAN-1890-BA1;TAN_1890;Orchamp_Tania;2021;;Entognatha;Collembola;;Collembola;2;;;;;
+ANI-21-0904;barber;1;TAN-1890-BA1;TAN_1890;Orchamp_Tania;2021;;Insecta;;;Larves campodeiformes;9;larve;;;;
+ANI-21-0904;barber;1;TAN-1890-BA1;TAN_1890;Orchamp_Tania;2021;;Insecta;Coleoptera;Carabidae;Calathus (Neocalathus) micropterus (Duftschmid  1812);1;adulte;;femelle;;16
+ANI-21-0904;barber;1;TAN-1890-BA1;TAN_1890;Orchamp_Tania;2021;;Insecta;Coleoptera;Carabidae;Calathus (Neocalathus) micropterus (Duftschmid  1812);1;adulte;;male;;15
+ANI-21-0904;barber;1;TAN-1890-BA1;TAN_1890;Orchamp_Tania;2021;;Insecta;Coleoptera;Carabidae;Calathus (Neocalathus) micropterus (Duftschmid  1812);1;adulte;;male;;3
+ANI-21-0904;barber;1;TAN-1890-BA1;TAN_1890;Orchamp_Tania;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) externepunctatus (Dejean  1828);1;adulte;;femelle;;
+ANI-21-0904;barber;1;TAN-1890-BA1;TAN_1890;Orchamp_Tania;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) externepunctatus (Dejean  1828);1;adulte;;femelle;;102
+ANI-21-0904;barber;1;TAN-1890-BA1;TAN_1890;Orchamp_Tania;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) externepunctatus (Dejean  1828);1;adulte;;femelle;;25
+ANI-21-0904;barber;1;TAN-1890-BA1;TAN_1890;Orchamp_Tania;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) externepunctatus (Dejean  1828);1;adulte;;femelle;;28
+ANI-21-0904;barber;1;TAN-1890-BA1;TAN_1890;Orchamp_Tania;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) externepunctatus (Dejean  1828);1;adulte;;femelle;;29
+ANI-21-0904;barber;1;TAN-1890-BA1;TAN_1890;Orchamp_Tania;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) externepunctatus (Dejean  1828);1;adulte;;femelle;;37
+ANI-21-0904;barber;1;TAN-1890-BA1;TAN_1890;Orchamp_Tania;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) externepunctatus (Dejean  1828);1;adulte;;femelle;;40
+ANI-21-0904;barber;1;TAN-1890-BA1;TAN_1890;Orchamp_Tania;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) externepunctatus (Dejean  1828);1;adulte;;femelle;;47
+ANI-21-0904;barber;1;TAN-1890-BA1;TAN_1890;Orchamp_Tania;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) externepunctatus (Dejean  1828);1;adulte;;femelle;;477
+ANI-21-0904;barber;1;TAN-1890-BA1;TAN_1890;Orchamp_Tania;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) externepunctatus (Dejean  1828);1;adulte;;femelle;;67
+ANI-21-0904;barber;1;TAN-1890-BA1;TAN_1890;Orchamp_Tania;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) externepunctatus (Dejean  1828);1;adulte;;femelle;;70
+ANI-21-0904;barber;1;TAN-1890-BA1;TAN_1890;Orchamp_Tania;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) externepunctatus (Dejean  1828);1;adulte;;femelle;;72
+ANI-21-0904;barber;1;TAN-1890-BA1;TAN_1890;Orchamp_Tania;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) externepunctatus (Dejean  1828);1;adulte;;femelle;;76
+ANI-21-0904;barber;1;TAN-1890-BA1;TAN_1890;Orchamp_Tania;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) externepunctatus (Dejean  1828);1;adulte;;femelle;;78
+ANI-21-0904;barber;1;TAN-1890-BA1;TAN_1890;Orchamp_Tania;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) externepunctatus (Dejean  1828);1;adulte;;femelle;;84
+ANI-21-0904;barber;1;TAN-1890-BA1;TAN_1890;Orchamp_Tania;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) externepunctatus (Dejean  1828);1;adulte;;femelle;;89
+ANI-21-0904;barber;1;TAN-1890-BA1;TAN_1890;Orchamp_Tania;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) externepunctatus (Dejean  1828);1;adulte;;male;;15
+ANI-21-0904;barber;1;TAN-1890-BA1;TAN_1890;Orchamp_Tania;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) externepunctatus (Dejean  1828);1;adulte;;male;;23
+ANI-21-0904;barber;1;TAN-1890-BA1;TAN_1890;Orchamp_Tania;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) externepunctatus (Dejean  1828);1;adulte;;male;;43
+ANI-21-0904;barber;1;TAN-1890-BA1;TAN_1890;Orchamp_Tania;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) externepunctatus (Dejean  1828);1;adulte;;male;;45
+ANI-21-0904;barber;1;TAN-1890-BA1;TAN_1890;Orchamp_Tania;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) externepunctatus (Dejean  1828);1;adulte;;male;;70
+ANI-21-0904;barber;1;TAN-1890-BA1;TAN_1890;Orchamp_Tania;2021;;Insecta;Coleoptera;Staphylinidae;Staphylinidae;6;adulte;;;;
+ANI-21-0904;barber;1;TAN-1890-BA1;TAN_1890;Orchamp_Tania;2021;;Insecta;Hymenoptera;;Hymenoptera;1;adulte;;;;
+ANI-21-0904;barber;1;TAN-1890-BA1;TAN_1890;Orchamp_Tania;2021;;Insecta;Hymenoptera;Formicidae;Formicidae;3;adulte;;;;
+ANI-21-0915;barber;1;TAN-2100-BA1;TAN_2100;Orchamp_Tania;2021;;;;;;1;;;;;
+ANI-21-0915;barber;1;TAN-2100-BA1;TAN_2100;Orchamp_Tania;2021;;Arachnida;Araneae;;Araneae;6;;;;;
+ANI-21-0915;barber;1;TAN-2100-BA1;TAN_2100;Orchamp_Tania;2021;;Insecta;Coleoptera;;Polyphaga;1;adulte;;;;
+ANI-21-0915;barber;1;TAN-2100-BA1;TAN_2100;Orchamp_Tania;2021;;Insecta;Coleoptera;Staphylinidae;Staphylinidae;9;adulte;;;;
+ANI-21-0915;barber;1;TAN-2100-BA1;TAN_2100;Orchamp_Tania;2021;;Insecta;Hymenoptera;;Hymenoptera;1;adulte;;;;
+ANI-21-0915;barber;1;TAN-2100-BA1;TAN_2100;Orchamp_Tania;2021;;Insecta;Hymenoptera;Formicidae;Formicidae;1;adulte;;;;
+ANI-21-0883;barber;2;TAN-1420-BA2;TAN_1420;Orchamp_Tania;2021;;;;;;1;;;;;
+ANI-21-0883;barber;2;TAN-1420-BA2;TAN_1420;Orchamp_Tania;2021;;Arachnida;Araneae;;Araneae;8;;;;;
+ANI-21-0883;barber;2;TAN-1420-BA2;TAN_1420;Orchamp_Tania;2021;;Entognatha;Collembola;;Collembola;8;;;;;
+ANI-21-0883;barber;2;TAN-1420-BA2;TAN_1420;Orchamp_Tania;2021;;Insecta;Coleoptera;Carabidae;Carabus (Chrysocarabus) auronitens Fabricius  1792;1;adulte;;;;
+ANI-21-0883;barber;2;TAN-1420-BA2;TAN_1420;Orchamp_Tania;2021;;Insecta;Diptera;Tipulidae;Tipulidae;1;larve;;;;
+ANI-21-0883;barber;2;TAN-1420-BA2;TAN_1420;Orchamp_Tania;2021;;Insecta;Homoptera;Cicadellidae;Cicadellidae;2;;;;;
+ANI-21-0883;barber;2;TAN-1420-BA2;TAN_1420;Orchamp_Tania;2021;;Malacostracea;Isopoda;;Isopoda;1;;;;;
+ANI-21-0894;barber;2;TAN-1700-BA2;TAN_1700;Orchamp_Tania;2021;;;;;;6;;;;;
+ANI-21-0894;barber;2;TAN-1700-BA2;TAN_1700;Orchamp_Tania;2021;;Arachnida;Araneae;;Araneae;77;;;;;
+ANI-21-0894;barber;2;TAN-1700-BA2;TAN_1700;Orchamp_Tania;2021;;Insecta;Blattoptera;;Blattoptera;2;;;;;
+ANI-21-0894;barber;2;TAN-1700-BA2;TAN_1700;Orchamp_Tania;2021;;Insecta;Coleoptera;;Polyphaga;6;adulte;;;;
+ANI-21-0894;barber;2;TAN-1700-BA2;TAN_1700;Orchamp_Tania;2021;;Insecta;Coleoptera;Staphylinidae;Staphylinidae;6;adulte;;;;
+ANI-21-0894;barber;2;TAN-1700-BA2;TAN_1700;Orchamp_Tania;2021;;Insecta;Hemiptera;;Heteroptera;15;;;;;
+ANI-21-0894;barber;2;TAN-1700-BA2;TAN_1700;Orchamp_Tania;2021;;Insecta;Hemiptera;Aphididae;Aphididae;6;;;;;
+ANI-21-0894;barber;2;TAN-1700-BA2;TAN_1700;Orchamp_Tania;2021;;Insecta;Hymenoptera;;Hymenoptera;3;adulte;;;;
+ANI-21-0894;barber;2;TAN-1700-BA2;TAN_1700;Orchamp_Tania;2021;;Insecta;Hymenoptera;Formicidae;Formicidae;500;adulte;;;;
+ANI-21-0905;barber;2;TAN-1890-BA2;TAN_1890;Orchamp_Tania;2021;;Insecta;Coleoptera;Carabidae;Cychrus attenuatus (Fabricius  1792);1;adulte;;femelle;;
+ANI-21-0916;barber;2;TAN-2100-BA2;TAN_2100;Orchamp_Tania;2021;;;;;;4;;;;;
+ANI-21-0916;barber;2;TAN-2100-BA2;TAN_2100;Orchamp_Tania;2021;;Arachnida;Araneae;;Araneae;11;;;;;
+ANI-21-0916;barber;2;TAN-2100-BA2;TAN_2100;Orchamp_Tania;2021;;Entognatha;Collembola;;Collembola;3;;;;;
+ANI-21-0916;barber;2;TAN-2100-BA2;TAN_2100;Orchamp_Tania;2021;;Insecta;;;Larves campodeiformes;2;larve;;;;
+ANI-21-0916;barber;2;TAN-2100-BA2;TAN_2100;Orchamp_Tania;2021;;Insecta;Coleoptera;;Polyphaga;1;adulte;;;;
+ANI-21-0916;barber;2;TAN-2100-BA2;TAN_2100;Orchamp_Tania;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) externepunctatus (Dejean  1828);1;adulte;;femelle;;58
+ANI-21-0916;barber;2;TAN-2100-BA2;TAN_2100;Orchamp_Tania;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) externepunctatus (Dejean  1828);1;adulte;;femelle;;60
+ANI-21-0916;barber;2;TAN-2100-BA2;TAN_2100;Orchamp_Tania;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) externepunctatus (Dejean  1828);1;adulte;;femelle;;78
+ANI-21-0916;barber;2;TAN-2100-BA2;TAN_2100;Orchamp_Tania;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) externepunctatus (Dejean  1828);1;adulte;;male;;41
+ANI-21-0916;barber;2;TAN-2100-BA2;TAN_2100;Orchamp_Tania;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) externepunctatus (Dejean  1828);1;adulte;;male;;43
+ANI-21-0916;barber;2;TAN-2100-BA2;TAN_2100;Orchamp_Tania;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) externepunctatus (Dejean  1828);1;adulte;;male;;54
+ANI-21-0916;barber;2;TAN-2100-BA2;TAN_2100;Orchamp_Tania;2021;;Insecta;Coleoptera;Staphylinidae;Staphylinidae;6;adulte;;;;
+ANI-21-0916;barber;2;TAN-2100-BA2;TAN_2100;Orchamp_Tania;2021;;Insecta;Hemiptera;;Heteroptera;2;;;;;
+ANI-21-0916;barber;2;TAN-2100-BA2;TAN_2100;Orchamp_Tania;2021;;Insecta;Hymenoptera;Formicidae;Formicidae;6;adulte;;;;
+ANI-21-0916;barber;2;TAN-2100-BA2;TAN_2100;Orchamp_Tania;2021;;Oligochaeta;Opistophora;Lumbricidae;Lumbricus rubellus castanoides Bouche 1972;1;adulte;;;;133
+ANI-21-0884;barber;3;TAN-1420-BA3;TAN_1420;Orchamp_Tania;2021;;;;;;4;;;;;
+ANI-21-0884;barber;3;TAN-1420-BA3;TAN_1420;Orchamp_Tania;2021;;Arachnida;Araneae;;Araneae;1;;;;;
+ANI-21-0884;barber;3;TAN-1420-BA3;TAN_1420;Orchamp_Tania;2021;;Entognatha;Collembola;;Collembola;1;;;;;
+ANI-21-0884;barber;3;TAN-1420-BA3;TAN_1420;Orchamp_Tania;2021;;Insecta;;;Larves campodeiformes;1;larve;;;;
+ANI-21-0884;barber;3;TAN-1420-BA3;TAN_1420;Orchamp_Tania;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) externepunctatus (Dejean  1828);1;adulte;;male;;37
+ANI-21-0884;barber;3;TAN-1420-BA3;TAN_1420;Orchamp_Tania;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) externepunctatus (Dejean  1828);1;adulte;;male;;58
+ANI-21-0884;barber;3;TAN-1420-BA3;TAN_1420;Orchamp_Tania;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) externepunctatus (Dejean  1828);1;adulte;;male;;75
+ANI-21-0884;barber;3;TAN-1420-BA3;TAN_1420;Orchamp_Tania;2021;;Insecta;Coleoptera;Curculionidae;Curculionidae;1;adulte;;;;
+ANI-21-0884;barber;3;TAN-1420-BA3;TAN_1420;Orchamp_Tania;2021;;Insecta;Hymenoptera;Formicidae;Formicidae;3;adulte;;;;
+ANI-21-0895;barber;3;TAN-1700-BA3;TAN_1700;Orchamp_Tania;2021;;Arachnida;Araneae;;Araneae;1;;;;;
+ANI-21-0895;barber;3;TAN-1700-BA3;TAN_1700;Orchamp_Tania;2021;;Insecta;Coleoptera;Staphylinidae;Staphylinidae;1;adulte;;;;
+ANI-21-0895;barber;3;TAN-1700-BA3;TAN_1700;Orchamp_Tania;2021;;Insecta;Homoptera;Cicadellidae;Cicadellidae;1;;;;;
+ANI-21-0895;barber;3;TAN-1700-BA3;TAN_1700;Orchamp_Tania;2021;;Insecta;Hymenoptera;Formicidae;Formicidae;127;adulte;;;;
+ANI-21-0906;barber;3;TAN-1890-BA3;TAN_1890;Orchamp_Tania;2021;;Arachnida;Araneae;;Araneae;3;;;;;
+ANI-21-0906;barber;3;TAN-1890-BA3;TAN_1890;Orchamp_Tania;2021;;Entognatha;Collembola;;Collembola;1;;;;;
+ANI-21-0906;barber;3;TAN-1890-BA3;TAN_1890;Orchamp_Tania;2021;;Insecta;;;Larves campodeiformes;1;larve;;;;
+ANI-21-0906;barber;3;TAN-1890-BA3;TAN_1890;Orchamp_Tania;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) externepunctatus (Dejean  1828);1;adulte;;male;;30
+ANI-21-0906;barber;3;TAN-1890-BA3;TAN_1890;Orchamp_Tania;2021;;Insecta;Coleoptera;Staphylinidae;Staphylinidae;3;adulte;;;;
+ANI-21-0906;barber;3;TAN-1890-BA3;TAN_1890;Orchamp_Tania;2021;;Insecta;Hymenoptera;;Hymenoptera;2;adulte;;;;
+ANI-21-0906;barber;3;TAN-1890-BA3;TAN_1890;Orchamp_Tania;2021;;Insecta;Hymenoptera;Formicidae;Formicidae;2;adulte;;;;
+ANI-21-0917;barber;3;TAN-2100-BA3;TAN_2100;Orchamp_Tania;2021;;;;;;2;;;;;
+ANI-21-0917;barber;3;TAN-2100-BA3;TAN_2100;Orchamp_Tania;2021;;Arachnida;Araneae;;Araneae;10;;;;;
+ANI-21-0917;barber;3;TAN-2100-BA3;TAN_2100;Orchamp_Tania;2021;;Insecta;Coleoptera;;Polyphaga;1;adulte;;;;
+ANI-21-0917;barber;3;TAN-2100-BA3;TAN_2100;Orchamp_Tania;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) externepunctatus (Dejean  1828);1;adulte;;male;;31
+ANI-21-0917;barber;3;TAN-2100-BA3;TAN_2100;Orchamp_Tania;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) externepunctatus (Dejean  1828);1;adulte;;male;;52
+ANI-21-0917;barber;3;TAN-2100-BA3;TAN_2100;Orchamp_Tania;2021;;Insecta;Coleoptera;Staphylinidae;Staphylinidae;1;adulte;;;;
+ANI-21-0917;barber;3;TAN-2100-BA3;TAN_2100;Orchamp_Tania;2021;;Insecta;Homoptera;Cicadellidae;Cicadellidae;1;;;;;
+ANI-21-0917;barber;3;TAN-2100-BA3;TAN_2100;Orchamp_Tania;2021;;Insecta;Hymenoptera;;Hymenoptera;2;adulte;;;;
+ANI-21-0917;barber;3;TAN-2100-BA3;TAN_2100;Orchamp_Tania;2021;;Insecta;Hymenoptera;Formicidae;Formicidae;12;adulte;;;;
+ANI-21-0885;barber;4;TAN-1420-BA4;TAN_1420;Orchamp_Tania;2021;;Arachnida;Araneae;;Araneae;6;;;;;
+ANI-21-0885;barber;4;TAN-1420-BA4;TAN_1420;Orchamp_Tania;2021;;Entognatha;Collembola;;Collembola;2;;;;;
+ANI-21-0885;barber;4;TAN-1420-BA4;TAN_1420;Orchamp_Tania;2021;;Insecta;Coleoptera;;Polyphaga;4;adulte;;;;
+ANI-21-0885;barber;4;TAN-1420-BA4;TAN_1420;Orchamp_Tania;2021;;Insecta;Coleoptera;Carabidae;Carabidae;2;larve;;;;
+ANI-21-0885;barber;4;TAN-1420-BA4;TAN_1420;Orchamp_Tania;2021;;Insecta;Hemiptera;;Heteroptera;1;;;;;
+ANI-21-0896;barber;4;TAN-1700-BA4;TAN_1700;Orchamp_Tania;2021;;;;;;1;;;;;
+ANI-21-0896;barber;4;TAN-1700-BA4;TAN_1700;Orchamp_Tania;2021;;Arachnida;Araneae;;Araneae;4;;;;;
+ANI-21-0896;barber;4;TAN-1700-BA4;TAN_1700;Orchamp_Tania;2021;;Insecta;;;Larves campodeiformes;1;larve;;;;
+ANI-21-0896;barber;4;TAN-1700-BA4;TAN_1700;Orchamp_Tania;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) externepunctatus (Dejean  1828);1;adulte;;male;;
+ANI-21-0896;barber;4;TAN-1700-BA4;TAN_1700;Orchamp_Tania;2021;;Insecta;Coleoptera;Staphylinidae;Staphylinidae;3;adulte;;;;
+ANI-21-0896;barber;4;TAN-1700-BA4;TAN_1700;Orchamp_Tania;2021;;Insecta;Homoptera;Cicadellidae;Cicadellidae;2;;;;;
+ANI-21-0896;barber;4;TAN-1700-BA4;TAN_1700;Orchamp_Tania;2021;;Insecta;Hymenoptera;;Hymenoptera;2;adulte;;;;
+ANI-21-0896;barber;4;TAN-1700-BA4;TAN_1700;Orchamp_Tania;2021;;Insecta;Hymenoptera;Formicidae;Formicidae;30;adulte;;;;
+ANI-21-0896;barber;4;TAN-1700-BA4;TAN_1700;Orchamp_Tania;2021;;Oligochaeta;Opistophora;Lumbricidae;Dendrodrilus subrubicundus (Eisen  1874);1;adulte;;72;;
+ANI-21-0907;barber;4;TAN-1890-BA4;TAN_1890;Orchamp_Tania;2021;;;;;;1;;;;;
+ANI-21-0907;barber;4;TAN-1890-BA4;TAN_1890;Orchamp_Tania;2021;;Entognatha;Collembola;;Collembola;2;;;;;
+ANI-21-0907;barber;4;TAN-1890-BA4;TAN_1890;Orchamp_Tania;2021;;Insecta;Coleoptera;;Polyphaga;5;adulte;;;;
+ANI-21-0907;barber;4;TAN-1890-BA4;TAN_1890;Orchamp_Tania;2021;;Insecta;Coleoptera;Carabidae;Cychrus attenuatus (Fabricius  1792);1;adulte;;femelle;;92
+ANI-21-0907;barber;4;TAN-1890-BA4;TAN_1890;Orchamp_Tania;2021;;Insecta;Coleoptera;Staphylinidae;Staphylinidae;33;adulte;;;;
+ANI-21-0918;barber;4;TAN-2100-BA4;TAN_2100;Orchamp_Tania;2021;;Arachnida;Araneae;;Araneae;10;;;;;
+ANI-21-0918;barber;4;TAN-2100-BA4;TAN_2100;Orchamp_Tania;2021;;Entognatha;Collembola;;Collembola;1;;;;;
+ANI-21-0918;barber;4;TAN-2100-BA4;TAN_2100;Orchamp_Tania;2021;;Insecta;;;Insecta;1;larve;;;;
+ANI-21-0918;barber;4;TAN-2100-BA4;TAN_2100;Orchamp_Tania;2021;;Insecta;;;Larves campodeiformes;3;larve;;;;
+ANI-21-0918;barber;4;TAN-2100-BA4;TAN_2100;Orchamp_Tania;2021;;Insecta;Coleoptera;;Polyphaga;3;adulte;;;;
+ANI-21-0918;barber;4;TAN-2100-BA4;TAN_2100;Orchamp_Tania;2021;;Insecta;Coleoptera;Staphylinidae;Staphylinidae;3;adulte;;;;
+ANI-21-0918;barber;4;TAN-2100-BA4;TAN_2100;Orchamp_Tania;2021;;Insecta;Homoptera;Cicadellidae;Cicadellidae;1;;;;;
+ANI-21-0918;barber;4;TAN-2100-BA4;TAN_2100;Orchamp_Tania;2021;;Insecta;Hymenoptera;;Hymenoptera;4;adulte;;;;
+ANI-21-0918;barber;4;TAN-2100-BA4;TAN_2100;Orchamp_Tania;2021;;Insecta;Hymenoptera;Formicidae;Formicidae;2;adulte;;;;
+ANI-21-0929;barber;4;TAN-2300-BA4;TAN_2300;Orchamp_Tania;2021;;;;;;1;;;;;
+ANI-21-0929;barber;4;TAN-2300-BA4;TAN_2300;Orchamp_Tania;2021;;Arachnida;Araneae;;Araneae;7;;;;;
+ANI-21-0929;barber;4;TAN-2300-BA4;TAN_2300;Orchamp_Tania;2021;;Insecta;Diptera;Tipulidae;Tipulidae;1;larve;;;;
+ANI-21-0929;barber;4;TAN-2300-BA4;TAN_2300;Orchamp_Tania;2021;;Insecta;Hymenoptera;;Hymenoptera;1;adulte;;;;
+ANI-21-0929;barber;4;TAN-2300-BA4;TAN_2300;Orchamp_Tania;2021;;Insecta;Hymenoptera;Formicidae;Formicidae;25;adulte;;;;
+ANI-21-0886;barber;5;TAN-1420-BA5;TAN_1420;Orchamp_Tania;2021;;;;;;2;;;;;
+ANI-21-0886;barber;5;TAN-1420-BA5;TAN_1420;Orchamp_Tania;2021;;Arachnida;Araneae;;Araneae;7;;;;;
+ANI-21-0886;barber;5;TAN-1420-BA5;TAN_1420;Orchamp_Tania;2021;;Entognatha;Collembola;;Collembola;3;;;;;
+ANI-21-0886;barber;5;TAN-1420-BA5;TAN_1420;Orchamp_Tania;2021;;Insecta;Coleoptera;;Polyphaga;2;adulte;;;;
+ANI-21-0886;barber;5;TAN-1420-BA5;TAN_1420;Orchamp_Tania;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) externepunctatus (Dejean  1828);1;adulte;;femelle;;122
+ANI-21-0886;barber;5;TAN-1420-BA5;TAN_1420;Orchamp_Tania;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) externepunctatus (Dejean  1828);1;adulte;;male;;90
+ANI-21-0886;barber;5;TAN-1420-BA5;TAN_1420;Orchamp_Tania;2021;;Insecta;Homoptera;Cicadellidae;Cicadellidae;11;;;;;
+ANI-21-0897;barber;5;TAN-1700-BA5;TAN_1700;Orchamp_Tania;2021;;;;;;7;;;;;
+ANI-21-0897;barber;5;TAN-1700-BA5;TAN_1700;Orchamp_Tania;2021;;Arachnida;Araneae;;Araneae;9;;;;;
+ANI-21-0897;barber;5;TAN-1700-BA5;TAN_1700;Orchamp_Tania;2021;;Gastropoda;Pulmonata;;Gastropoda;1;;;;;
+ANI-21-0897;barber;5;TAN-1700-BA5;TAN_1700;Orchamp_Tania;2021;;Insecta;Coleoptera;Staphylinidae;Staphylinidae;9;adulte;;;;
+ANI-21-0897;barber;5;TAN-1700-BA5;TAN_1700;Orchamp_Tania;2021;;Insecta;Hemiptera;;Heteroptera;1;;;;;
+ANI-21-0897;barber;5;TAN-1700-BA5;TAN_1700;Orchamp_Tania;2021;;Insecta;Hymenoptera;Formicidae;Formicidae;500;adulte;;;;
+ANI-21-0908;barber;5;TAN-1890-BA5;TAN_1890;Orchamp_Tania;2021;;;;;;3;;;;;
+ANI-21-0908;barber;5;TAN-1890-BA5;TAN_1890;Orchamp_Tania;2021;;Arachnida;Araneae;;Araneae;1;;;;;
+ANI-21-0908;barber;5;TAN-1890-BA5;TAN_1890;Orchamp_Tania;2021;;Insecta;;;Larves campodeiformes;2;larve;;;;
+ANI-21-0908;barber;5;TAN-1890-BA5;TAN_1890;Orchamp_Tania;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) externepunctatus (Dejean  1828);1;adulte;;femelle;;30
+ANI-21-0908;barber;5;TAN-1890-BA5;TAN_1890;Orchamp_Tania;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) externepunctatus (Dejean  1828);1;adulte;;femelle;;46
+ANI-21-0908;barber;5;TAN-1890-BA5;TAN_1890;Orchamp_Tania;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) externepunctatus (Dejean  1828);1;adulte;;femelle;;54
+ANI-21-0908;barber;5;TAN-1890-BA5;TAN_1890;Orchamp_Tania;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) externepunctatus (Dejean  1828);1;adulte;;femelle;;62
+ANI-21-0908;barber;5;TAN-1890-BA5;TAN_1890;Orchamp_Tania;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) externepunctatus (Dejean  1828);1;adulte;;femelle;;70
+ANI-21-0908;barber;5;TAN-1890-BA5;TAN_1890;Orchamp_Tania;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) externepunctatus (Dejean  1828);1;adulte;;femelle;;75
+ANI-21-0908;barber;5;TAN-1890-BA5;TAN_1890;Orchamp_Tania;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) externepunctatus (Dejean  1828);1;adulte;;femelle;;85
+ANI-21-0908;barber;5;TAN-1890-BA5;TAN_1890;Orchamp_Tania;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) externepunctatus (Dejean  1828);1;adulte;;femelle;;93
+ANI-21-0908;barber;5;TAN-1890-BA5;TAN_1890;Orchamp_Tania;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) externepunctatus (Dejean  1828);1;adulte;;femelle;;98
+ANI-21-0908;barber;5;TAN-1890-BA5;TAN_1890;Orchamp_Tania;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) externepunctatus (Dejean  1828);1;adulte;;male;;
+ANI-21-0908;barber;5;TAN-1890-BA5;TAN_1890;Orchamp_Tania;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) externepunctatus (Dejean  1828);1;adulte;;male;;29
+ANI-21-0908;barber;5;TAN-1890-BA5;TAN_1890;Orchamp_Tania;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) externepunctatus (Dejean  1828);1;adulte;;male;;33
+ANI-21-0908;barber;5;TAN-1890-BA5;TAN_1890;Orchamp_Tania;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) externepunctatus (Dejean  1828);1;adulte;;male;;49
+ANI-21-0908;barber;5;TAN-1890-BA5;TAN_1890;Orchamp_Tania;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) externepunctatus (Dejean  1828);1;adulte;;male;;63
+ANI-21-0908;barber;5;TAN-1890-BA5;TAN_1890;Orchamp_Tania;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) externepunctatus (Dejean  1828);1;adulte;;male;;64
+ANI-21-0908;barber;5;TAN-1890-BA5;TAN_1890;Orchamp_Tania;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) externepunctatus (Dejean  1828);1;adulte;;male;;65
+ANI-21-0908;barber;5;TAN-1890-BA5;TAN_1890;Orchamp_Tania;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) externepunctatus (Dejean  1828);1;adulte;;male;;67
+ANI-21-0908;barber;5;TAN-1890-BA5;TAN_1890;Orchamp_Tania;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) externepunctatus (Dejean  1828);1;adulte;;male;;68
+ANI-21-0908;barber;5;TAN-1890-BA5;TAN_1890;Orchamp_Tania;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) externepunctatus (Dejean  1828);1;adulte;;male;;69
+ANI-21-0908;barber;5;TAN-1890-BA5;TAN_1890;Orchamp_Tania;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) externepunctatus (Dejean  1828);1;adulte;;male;;70
+ANI-21-0908;barber;5;TAN-1890-BA5;TAN_1890;Orchamp_Tania;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) externepunctatus (Dejean  1828);1;adulte;;male;;74
+ANI-21-0908;barber;5;TAN-1890-BA5;TAN_1890;Orchamp_Tania;2021;;Insecta;Coleoptera;Staphylinidae;Staphylinidae;2;adulte;;;;
+ANI-21-0908;barber;5;TAN-1890-BA5;TAN_1890;Orchamp_Tania;2021;;Insecta;Hymenoptera;;Hymenoptera;1;adulte;;;;
+ANI-21-0908;barber;5;TAN-1890-BA5;TAN_1890;Orchamp_Tania;2021;;Insecta;Hymenoptera;Formicidae;Formicidae;2;adulte;;;;
+ANI-21-0919;barber;5;TAN-2100-BA5;TAN_2100;Orchamp_Tania;2021;;Arachnida;Araneae;;Araneae;3;;;;;
+ANI-21-0919;barber;5;TAN-2100-BA5;TAN_2100;Orchamp_Tania;2021;;Insecta;Coleoptera;Staphylinidae;Staphylinidae;3;adulte;;;;
+ANI-21-0919;barber;5;TAN-2100-BA5;TAN_2100;Orchamp_Tania;2021;;Insecta;Hymenoptera;;Hymenoptera;1;adulte;;;;
+ANI-21-0887;barber;6;TAN-1420-BA6;TAN_1420;Orchamp_Tania;2021;;;;;;3;;;;;
+ANI-21-0887;barber;6;TAN-1420-BA6;TAN_1420;Orchamp_Tania;2021;;Arachnida;Araneae;;Araneae;3;;;;;
+ANI-21-0887;barber;6;TAN-1420-BA6;TAN_1420;Orchamp_Tania;2021;;Entognatha;Collembola;;Collembola;4;;;;;
+ANI-21-0887;barber;6;TAN-1420-BA6;TAN_1420;Orchamp_Tania;2021;;Insecta;Coleoptera;;Polyphaga;6;adulte;;;;
+ANI-21-0887;barber;6;TAN-1420-BA6;TAN_1420;Orchamp_Tania;2021;;Insecta;Coleoptera;Staphylinidae;Staphylinidae;2;adulte;;;;
+ANI-21-0887;barber;6;TAN-1420-BA6;TAN_1420;Orchamp_Tania;2021;;Insecta;Diptera;Tipulidae;Tipulidae;2;larve;;;;
+ANI-21-0887;barber;6;TAN-1420-BA6;TAN_1420;Orchamp_Tania;2021;;Insecta;Hymenoptera;;Hymenoptera;2;adulte;;;;
+ANI-21-0887;barber;6;TAN-1420-BA6;TAN_1420;Orchamp_Tania;2021;;Insecta;Hymenoptera;Formicidae;Formicidae;1;adulte;;;;
+ANI-21-0898;barber;6;TAN-1700-BA6;TAN_1700;Orchamp_Tania;2021;;;;;;1;;;;;
+ANI-21-0898;barber;6;TAN-1700-BA6;TAN_1700;Orchamp_Tania;2021;;Arachnida;Araneae;;Araneae;1;;;;;
+ANI-21-0898;barber;6;TAN-1700-BA6;TAN_1700;Orchamp_Tania;2021;;Gastropoda;Pulmonata;;Gastropoda;1;;;;;
+ANI-21-0898;barber;6;TAN-1700-BA6;TAN_1700;Orchamp_Tania;2021;;Insecta;Coleoptera;;Polyphaga;3;adulte;;;;
+ANI-21-0898;barber;6;TAN-1700-BA6;TAN_1700;Orchamp_Tania;2021;;Insecta;Coleoptera;Curculionidae;Curculionidae;1;adulte;;;;
+ANI-21-0898;barber;6;TAN-1700-BA6;TAN_1700;Orchamp_Tania;2021;;Insecta;Coleoptera;Staphylinidae;Staphylinidae;12;adulte;;;;
+ANI-21-0898;barber;6;TAN-1700-BA6;TAN_1700;Orchamp_Tania;2021;;Insecta;Hemiptera;;Heteroptera;6;;;;;
+ANI-21-0898;barber;6;TAN-1700-BA6;TAN_1700;Orchamp_Tania;2021;;Insecta;Hemiptera;Aphididae;Aphididae;1;;;;;
+ANI-21-0898;barber;6;TAN-1700-BA6;TAN_1700;Orchamp_Tania;2021;;Insecta;Hymenoptera;Formicidae;Formicidae;500;adulte;;;;
+ANI-21-0909;barber;6;TAN-1890-BA6;TAN_1890;Orchamp_Tania;2021;;Arachnida;Araneae;;Araneae;4;;;;;
+ANI-21-0909;barber;6;TAN-1890-BA6;TAN_1890;Orchamp_Tania;2021;;Entognatha;Collembola;;Collembola;5;;;;;
+ANI-21-0909;barber;6;TAN-1890-BA6;TAN_1890;Orchamp_Tania;2021;;Insecta;;;Larves campodeiformes;9;larve;;;;
+ANI-21-0909;barber;6;TAN-1890-BA6;TAN_1890;Orchamp_Tania;2021;;Insecta;Coleoptera;;Polyphaga;1;adulte;;;;
+ANI-21-0909;barber;6;TAN-1890-BA6;TAN_1890;Orchamp_Tania;2021;;Insecta;Coleoptera;Carabidae;Calathus (Neocalathus) micropterus (Duftschmid  1812);1;adulte;;male;;16
+ANI-21-0909;barber;6;TAN-1890-BA6;TAN_1890;Orchamp_Tania;2021;;Insecta;Coleoptera;Carabidae;Calathus (Neocalathus) micropterus (Duftschmid  1812);1;adulte;;male;;17
+ANI-21-0909;barber;6;TAN-1890-BA6;TAN_1890;Orchamp_Tania;2021;;Insecta;Coleoptera;Carabidae;Calathus (Neocalathus) micropterus (Duftschmid  1812);1;adulte;;male;;19
+ANI-21-0909;barber;6;TAN-1890-BA6;TAN_1890;Orchamp_Tania;2021;;Insecta;Coleoptera;Carabidae;Cychrus attenuatus (Fabricius  1792);1;adulte;;male;;77
+ANI-21-0909;barber;6;TAN-1890-BA6;TAN_1890;Orchamp_Tania;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) externepunctatus (Dejean  1828);1;adulte;;femelle;;42
+ANI-21-0909;barber;6;TAN-1890-BA6;TAN_1890;Orchamp_Tania;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) externepunctatus (Dejean  1828);1;adulte;;femelle;;49
+ANI-21-0909;barber;6;TAN-1890-BA6;TAN_1890;Orchamp_Tania;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) externepunctatus (Dejean  1828);1;adulte;;male;;23
+ANI-21-0909;barber;6;TAN-1890-BA6;TAN_1890;Orchamp_Tania;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) externepunctatus (Dejean  1828);1;adulte;;male;;31
+ANI-21-0909;barber;6;TAN-1890-BA6;TAN_1890;Orchamp_Tania;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) externepunctatus (Dejean  1828);1;adulte;;male;;34
+ANI-21-0909;barber;6;TAN-1890-BA6;TAN_1890;Orchamp_Tania;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) externepunctatus (Dejean  1828);1;adulte;;male;;47
+ANI-21-0909;barber;6;TAN-1890-BA6;TAN_1890;Orchamp_Tania;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) externepunctatus (Dejean  1828);1;adulte;;male;;60
+ANI-21-0909;barber;6;TAN-1890-BA6;TAN_1890;Orchamp_Tania;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) externepunctatus (Dejean  1828);2;adulte;;femelle;;
+ANI-21-0909;barber;6;TAN-1890-BA6;TAN_1890;Orchamp_Tania;2021;;Insecta;Coleoptera;Staphylinidae;Staphylinidae;8;adulte;;;;
+ANI-21-0909;barber;6;TAN-1890-BA6;TAN_1890;Orchamp_Tania;2021;;Insecta;Hymenoptera;Formicidae;Formicidae;19;adulte;;;;
+ANI-21-0909;barber;6;TAN-1890-BA6;TAN_1890;Orchamp_Tania;2021;;Insecta;Orthoptera;;Orthoptera;2;;;;;
+ANI-21-0920;barber;6;TAN-2100-BA6;TAN_2100;Orchamp_Tania;2021;;Arachnida;Araneae;;Araneae;1;;;;;
+ANI-21-0920;barber;6;TAN-2100-BA6;TAN_2100;Orchamp_Tania;2021;;Insecta;Coleoptera;Carabidae;Pterostichus (Oreophilus) externepunctatus (Dejean  1828);1;adulte;;femelle;;60
+ANI-21-0920;barber;6;TAN-2100-BA6;TAN_2100;Orchamp_Tania;2021;;Insecta;Coleoptera;Staphylinidae;Staphylinidae;1;adulte;;;;
+ANI-21-0920;barber;6;TAN-2100-BA6;TAN_2100;Orchamp_Tania;2021;;Insecta;Hymenoptera;;Hymenoptera;3;adulte;;;;
+ANI-21-0920;barber;6;TAN-2100-BA6;TAN_2100;Orchamp_Tania;2021;;Insecta;Hymenoptera;Formicidae;Formicidae;2;adulte;;;;
+ANI-21-0888;chasse a vue;;TAN-1420-CAV;TAN_1420;Orchamp_Tania;2021;;;;;;4;;;;;
+ANI-21-0888;chasse a vue;;TAN-1420-CAV;TAN_1420;Orchamp_Tania;2021;;Arachnida;Araneae;;Araneae;1;;;;;
+ANI-21-0888;chasse a vue;;TAN-1420-CAV;TAN_1420;Orchamp_Tania;2021;;Gastropoda;Pulmonata;;Gastropoda;1;;;;;
+ANI-21-0888;chasse a vue;;TAN-1420-CAV;TAN_1420;Orchamp_Tania;2021;;Insecta;;;Insecta;3;larve;;;;
+ANI-21-0888;chasse a vue;;TAN-1420-CAV;TAN_1420;Orchamp_Tania;2021;;Oligochaeta;Opistophora;Lumbricidae;Aporrectodea caliginosa caliginosa (Savigny 1826);1;adulte;;;;384
+ANI-21-0888;chasse a vue;;TAN-1420-CAV;TAN_1420;Orchamp_Tania;2021;;Oligochaeta;Opistophora;Lumbricidae;Aporrectodea caliginosa caliginosa (Savigny 1826);1;adulte;;;;452
+ANI-21-0888;chasse a vue;;TAN-1420-CAV;TAN_1420;Orchamp_Tania;2021;;Oligochaeta;Opistophora;Lumbricidae;Aporrectodea icterica icterica (Savigny 1826);1;adulte;;;;1174
+ANI-21-0888;chasse a vue;;TAN-1420-CAV;TAN_1420;Orchamp_Tania;2021;;Oligochaeta;Opistophora;Lumbricidae;Lumbricidae;1;subadulte;morceau;;;41
+ANI-21-0888;chasse a vue;;TAN-1420-CAV;TAN_1420;Orchamp_Tania;2021;;Oligochaeta;Opistophora;Lumbricidae;Lumbricidae;3;juvenile;;;;191
+ANI-21-0888;chasse a vue;;TAN-1420-CAV;TAN_1420;Orchamp_Tania;2021;;Oligochaeta;Opistophora;Lumbricidae;Lumbricus Linnaeus 1758;5;juvenile;;;;1164
+ANI-21-0888;chasse a vue;;TAN-1420-CAV;TAN_1420;Orchamp_Tania;2021;;Oligochaeta;Opistophora;Lumbricidae;Lumbricus rubellus rubellus Hoffmeister 1843;1;subadulte;;;;505
+ANI-21-0888;chasse a vue;;TAN-1420-CAV;TAN_1420;Orchamp_Tania;2021;;Oligochaeta;Opistophora;Lumbricidae;Lumbricus rubellus rubellus Hoffmeister 1843;1;subadulte;;;;587
+ANI-21-0899;chasse a vue;;TAN-1700-CAV;TAN_1700;Orchamp_Tania;2021;;Diplopoda;;;Diplopoda;3;;;;;
+ANI-21-0899;chasse a vue;;TAN-1700-CAV;TAN_1700;Orchamp_Tania;2021;;Gastropoda;Pulmonata;;Gastropoda;1;;;;;
+ANI-21-0899;chasse a vue;;TAN-1700-CAV;TAN_1700;Orchamp_Tania;2021;;Insecta;;;Insecta;4;adulte;;;;
+ANI-21-0899;chasse a vue;;TAN-1700-CAV;TAN_1700;Orchamp_Tania;2021;;Oligochaeta;Opistophora;Lumbricidae;Dendrodrilus subrubicundus (Eisen  1874);1;adulte;;;;112
+ANI-21-0899;chasse a vue;;TAN-1700-CAV;TAN_1700;Orchamp_Tania;2021;;Oligochaeta;Opistophora;Lumbricidae;Lumbricidae;1;juvenile;;;;84
+ANI-21-0899;chasse a vue;;TAN-1700-CAV;TAN_1700;Orchamp_Tania;2021;;Oligochaeta;Opistophora;Lumbricidae;Lumbricus castaneus (Savigny 1826);1;adulte;;;;60
+ANI-21-0889;tri manuel;1;TAN-1420-TM1;TAN_1420;Orchamp_Tania;2021;;;;;;2;;;;;
+ANI-21-0889;tri manuel;1;TAN-1420-TM1;TAN_1420;Orchamp_Tania;2021;;Insecta;;;Insecta;1;adulte;;;;
+ANI-21-0889;tri manuel;1;TAN-1420-TM1;TAN_1420;Orchamp_Tania;2021;;Oligochaeta;Opistophora;Lumbricidae;Lumbricidae;1;juvenile;;;;28
+ANI-21-0900;tri manuel;1;TAN-1700-TM1;TAN_1700;Orchamp_Tania;2021;;;;;;2;;;;;
+ANI-21-0900;tri manuel;1;TAN-1700-TM1;TAN_1700;Orchamp_Tania;2021;;Oligochaeta;Opistophora;Lumbricidae;Dendrodrilus subrubicundus (Eisen  1874);1;adulte;;;;131
+ANI-21-0900;tri manuel;1;TAN-1700-TM1;TAN_1700;Orchamp_Tania;2021;;Oligochaeta;Opistophora;Lumbricidae;Lumbricidae;1;juvenile;;;;33
+ANI-21-0911;tri manuel;1;TAN-1890-TM1;TAN_1890;Orchamp_Tania;2021;;Diplopoda;;;Diplopoda;6;;;;;
+ANI-21-0890;tri manuel;3;TAN-1420-TM3;TAN_1420;Orchamp_Tania;2021;;Diplopoda;;;Diplopoda;4;;;;;
+ANI-21-0890;tri manuel;3;TAN-1420-TM3;TAN_1420;Orchamp_Tania;2021;;Insecta;;;Insecta;1;adulte;;;;
+ANI-21-0890;tri manuel;3;TAN-1420-TM3;TAN_1420;Orchamp_Tania;2021;;Insecta;;;Insecta;3;larve;;;;
+ANI-21-0890;tri manuel;3;TAN-1420-TM3;TAN_1420;Orchamp_Tania;2021;;Oligochaeta;Opistophora;Lumbricidae;Dendrodrilus subrubicundus (Eisen  1874);1;subadulte;;53;;
+ANI-21-0901;tri manuel;3;TAN-1700-TM3;TAN_1700;Orchamp_Tania;2021;;;;;;3;;;;;
+ANI-21-0901;tri manuel;3;TAN-1700-TM3;TAN_1700;Orchamp_Tania;2021;;Oligochaeta;Opistophora;Lumbricidae;Dendrodrilus subrubicundus (Eisen  1874);1;adulte;;;;84
+ANI-21-0912;tri manuel;3;TAN-1890-TM3;TAN_1890;Orchamp_Tania;2021;;;;;;2;;;;;
+ANI-21-0923;tri manuel;3;TAN-2100-TM3;TAN_2100;Orchamp_Tania;2021;;;;;;1;;;;;
+ANI-21-0923;tri manuel;3;TAN-2100-TM3;TAN_2100;Orchamp_Tania;2021;;Oligochaeta;Opistophora;Lumbricidae;Lumbricidae;1;juvenile;;;;
+ANI-21-0923;tri manuel;3;TAN-2100-TM3;TAN_2100;Orchamp_Tania;2021;;Oligochaeta;Opistophora;Lumbricidae;Lumbricus rubellus castanoides Bouche 1972;1;adulte;;;;
+ANI-21-0891;tri manuel;4;TAN-1420-TM4;TAN_1420;Orchamp_Tania;2021;;Insecta;;;Insecta;1;larve;;;;
+ANI-21-0902;tri manuel;4;TAN-1700-TM4;TAN_1700;Orchamp_Tania;2021;;;;;;1;;;;;
+ANI-21-0902;tri manuel;4;TAN-1700-TM4;TAN_1700;Orchamp_Tania;2021;;Insecta;;;Insecta;1;larve;;;;
+ANI-21-0913;tri manuel;4;TAN-1890-TM4;TAN_1890;Orchamp_Tania;2021;;;;;;2;;;;;
+ANI-21-0913;tri manuel;4;TAN-1890-TM4;TAN_1890;Orchamp_Tania;2021;;Arachnida;Araneae;;Araneae;1;;;;;
+ANI-21-0913;tri manuel;4;TAN-1890-TM4;TAN_1890;Orchamp_Tania;2021;;Entognatha;Collembola;;Collembola;1;;;;;
+ANI-21-0913;tri manuel;4;TAN-1890-TM4;TAN_1890;Orchamp_Tania;2021;;Insecta;;;Insecta;1;adulte;;;;
+ANI-21-0924;tri manuel;4;TAN-2100-TM4;TAN_2100;Orchamp_Tania;2021;;Oligochaeta;Opistophora;Lumbricidae;Lumbricidae;1;subadulte;;;;
+ANI-21-0924;tri manuel;4;TAN-2100-TM4;TAN_2100;Orchamp_Tania;2021;;Oligochaeta;Opistophora;Lumbricidae;Lumbricidae;2;;morceaux;;;
+ANI-21-0924;tri manuel;4;TAN-2100-TM4;TAN_2100;Orchamp_Tania;2021;;Oligochaeta;Opistophora;Lumbricidae;Lumbricidae;2;juvenile;;;;
+ANI-21-0935;tri manuel;4;TAN-2300-TM4;TAN_2300;Orchamp_Tania;2021;;Oligochaeta;Opistophora;Lumbricidae;Lumbricidae;1;juvenile;;;;
+ANI-21-0935;tri manuel;4;TAN-2300-TM4;TAN_2300;Orchamp_Tania;2021;;Oligochaeta;Opistophora;Lumbricidae;Lumbricidae;2;juvenile;;;;
+ANI-21-0892;tri manuel;6;TAN-1420-TM6;TAN_1420;Orchamp_Tania;2021;;Insecta;;;Insecta;3;larve;;;;
+ANI-21-0892;tri manuel;6;TAN-1420-TM6;TAN_1420;Orchamp_Tania;2021;;Oligochaeta;Opistophora;Lumbricidae;Lumbricidae;1;adulte;;;;52
+ANI-21-0892;tri manuel;6;TAN-1420-TM6;TAN_1420;Orchamp_Tania;2021;;Oligochaeta;Opistophora;Lumbricidae;Lumbricidae;1;juvenile;;;;19
+ANI-21-0892;tri manuel;6;TAN-1420-TM6;TAN_1420;Orchamp_Tania;2021;;Oligochaeta;Opistophora;Lumbricidae;Lumbricus Linnaeus 1758;1;juvenile;;;;108
+ANI-21-0914;tri manuel;6;TAN-1890-TM6;TAN_1890;Orchamp_Tania;2021;;Diplopoda;;;Diplopoda;3;;;;;
+ANI-21-0914;tri manuel;6;TAN-1890-TM6;TAN_1890;Orchamp_Tania;2021;;Insecta;;;Insecta;1;adulte;;;;
+ANI-21-0925;tri manuel;6;TAN-2100-TM6;TAN_2100;Orchamp_Tania;2021;;Diplopoda;;;Diplopoda;4;;;;;
+ANI-21-0925;tri manuel;6;TAN-2100-TM6;TAN_2100;Orchamp_Tania;2021;;Insecta;;;Insecta;1;larve;;;;
+ANI-22-0151;tri manuel;1;VAL_1860-tm1;VAL_1860;Orchamp_Valloire;2022;;Oligochaeta;Opistophora;Lumbricidae;Aporrectodea caliginosa caliginosa (Savigny 1826);1;subadulte;entier;hermaphrodite;;316
+ANI-22-0151;tri manuel;1;VAL_1860-tm1;VAL_1860;Orchamp_Valloire;2022;;Oligochaeta;Opistophora;Lumbricidae;Aporrectodea rosea rosea (Savigny 1826);1;adulte;entier;hermaphrodite;;183
+ANI-22-0151;tri manuel;1;VAL_1860-tm1;VAL_1860;Orchamp_Valloire;2022;;Oligochaeta;Opistophora;Lumbricidae;Aporrectodea rosea rosea (Savigny 1826);1;adulte;morceau;hermaphrodite;;153
+ANI-22-0151;tri manuel;1;VAL_1860-tm1;VAL_1860;Orchamp_Valloire;2022;;Oligochaeta;Opistophora;Lumbricidae;Aporrectodea rosea rosea (Savigny 1826);1;subadulte;entier;hermaphrodite;;90
+ANI-22-0151;tri manuel;1;VAL_1860-tm1;VAL_1860;Orchamp_Valloire;2022;;Oligochaeta;Opistophora;Lumbricidae;Lumbricidae;1;juvenile;entier;hermaphrodite;;60
+ANI-22-0173;tri manuel;1;VAL_2250-tm1;VAL_2250;Orchamp_Valloire;2022;;Diplopoda;Julida;Julidae;Julidae;1;;;;;
+ANI-22-0152;tri manuel;3;VAL_1860-tm3;VAL_1860;Orchamp_Valloire;2022;;Oligochaeta;Opistophora;Lumbricidae;Allolobophora chlorotica chlorotica (Savigny 1826);1;subadulte;morceau;hermaphrodite;;244
+ANI-22-0152;tri manuel;3;VAL_1860-tm3;VAL_1860;Orchamp_Valloire;2022;;Oligochaeta;Opistophora;Lumbricidae;Aporrectodea rosea rosea (Savigny 1826);1;subadulte;entier;hermaphrodite;;84
+ANI-22-0152;tri manuel;3;VAL_1860-tm3;VAL_1860;Orchamp_Valloire;2022;;Oligochaeta;Opistophora;Lumbricidae;Lumbricidae;6;juvenile;entier;hermaphrodite;;453
+ANI-22-0174;tri manuel;3;VAL_2250-tm3;VAL_2250;Orchamp_Valloire;2022;;Oligochaeta;Opistophora;Lumbricidae;Aporrectodea caliginosa caliginosa (Savigny 1826);1;subadulte;;hermaphrodite;;380
+ANI-22-0174;tri manuel;3;VAL_2250-tm3;VAL_2250;Orchamp_Valloire;2022;;Oligochaeta;Opistophora;Lumbricidae;Aporrectodea rosea rosea (Savigny 1826);1;adulte;;hermaphrodite;;221
+ANI-22-0174;tri manuel;3;VAL_2250-tm3;VAL_2250;Orchamp_Valloire;2022;;Oligochaeta;Opistophora;Lumbricidae;Lumbricidae;1;juvenile;;hermaphrodite;;11
+ANI-22-0153;tri manuel;4;VAL_1860-tm4;VAL_1860;Orchamp_Valloire;2022;;Insecta;Coleoptera;Carabidae;Amara (Amara) aenea (De Geer  1774);1;adulte;entier;male;;0 02094
+ANI-22-0153;tri manuel;4;VAL_1860-tm4;VAL_1860;Orchamp_Valloire;2022;;Oligochaeta;Opistophora;Lumbricidae;Aporrectodea caliginosa caliginosa (Savigny 1826);1;adulte;morceau;hermaphrodite;;271
+ANI-22-0153;tri manuel;4;VAL_1860-tm4;VAL_1860;Orchamp_Valloire;2022;;Oligochaeta;Opistophora;Lumbricidae;Lumbricidae;3;indetermine;morceau;hermaphrodite;;204
+ANI-22-0153;tri manuel;4;VAL_1860-tm4;VAL_1860;Orchamp_Valloire;2022;;Oligochaeta;Opistophora;Lumbricidae;Lumbricidae;4;juvenile;morceau;hermaphrodite;;217
+ANI-22-0153;tri manuel;4;VAL_1860-tm4;VAL_1860;Orchamp_Valloire;2022;;Oligochaeta;Opistophora;Lumbricidae;Lumbricidae;5;juvenile;entier;hermaphrodite;;452
+ANI-22-0153;tri manuel;4;VAL_1860-tm4;VAL_1860;Orchamp_Valloire;2022;;Oligochaeta;Opistophora;Lumbricidae;Lumbricus Linnaeus 1758;1;juvenile;morceau;hermaphrodite;;48
+ANI-22-0154;tri manuel;6;VAL_1860-tm6;VAL_1860;Orchamp_Valloire;2022;;Arachnida;Araneae;;Araneae;1;adulte;;femelle;;
+ANI-22-0154;tri manuel;6;VAL_1860-tm6;VAL_1860;Orchamp_Valloire;2022;;Insecta;Coleoptera;Elateridae ;Elateridae;1;larve;;;;
+ANI-22-0154;tri manuel;6;VAL_1860-tm6;VAL_1860;Orchamp_Valloire;2022;;Oligochaeta;Opistophora;Lumbricidae;Allolobophora chlorotica chlorotica (Savigny 1826);1;adulte;;hermaphrodite;;216
+ANI-22-0154;tri manuel;6;VAL_1860-tm6;VAL_1860;Orchamp_Valloire;2022;;Oligochaeta;Opistophora;Lumbricidae;Allolobophora chlorotica chlorotica (Savigny 1826);1;subadulte;;hermaphrodite;;102
+ANI-22-0154;tri manuel;6;VAL_1860-tm6;VAL_1860;Orchamp_Valloire;2022;;Oligochaeta;Opistophora;Lumbricidae;Lumbricidae;1;cocon;;;;
+ANI-22-0154;tri manuel;6;VAL_1860-tm6;VAL_1860;Orchamp_Valloire;2022;;Oligochaeta;Opistophora;Lumbricidae;Lumbricidae;2;juvenile;;hermaphrodite;;165
+ANI-22-0165;tri manuel;6;VAL_2050-tm6;VAL_2050;Orchamp_Valloire;2022;;Arachnida;Araneae;Lycosidae;Lycosidae;1;adulte;;femelle;;
+ANI-22-0176;tri manuel;6;VAL_2250-tm6;VAL_2250;Orchamp_Valloire;2022;;Insecta;Coleoptera;;Coleoptera;1;larve;;;;
+ANI-22-0176;tri manuel;6;VAL_2250-tm6;VAL_2250;Orchamp_Valloire;2022;;Insecta;Coleoptera;Curculionidae;Curculionidae;1;larve;;;;
+ANI-22-0176;tri manuel;6;VAL_2250-tm6;VAL_2250;Orchamp_Valloire;2022;;Oligochaeta;Opistophora;Lumbricidae;Aporrectodea caliginosa caliginosa (Savigny 1826);1;subadulte;morceau;hermaphrodite;;146
+ANI-22-0176;tri manuel;6;VAL_2250-tm6;VAL_2250;Orchamp_Valloire;2022;;Oligochaeta;Opistophora;Lumbricidae;Lumbricidae;2;indetermine;morceau;hermaphrodite;;196
+ANI-22-0161;tri manuel qualitatif;;VAL_2050-Q;VAL_2050;Orchamp_Valloire;2022;;Insecta;;;Insecta;1;larve;;;;
+ANI-22-0261;tri manuel;1;VTN_1130-tm1;VTN_1130;Orchamp_Ventoux;2022;;Insecta;Coleoptera;Elateridae ;Elateridae;1;larve;;;;
+ANI-22-0261;tri manuel;1;VTN_1130-tm1;VTN_1130;Orchamp_Ventoux;2022;;Insecta;Homoptera;Cicadellidae;Cicadellidae;1;;;;;
+ANI-22-0261;tri manuel;1;VTN_1130-tm1;VTN_1130;Orchamp_Ventoux;2022;;Oligochaeta;Opistophora;Lumbricidae;Lumbricidae;1;juvenile;entier;hermaphrodite;;280
+ANI-22-0272;tri manuel;1;VTN_1340-tm1;VTN_1340;Orchamp_Ventoux;2022;;Insecta;Diptera;;Diptera;1;larve;;;;
+ANI-22-0283;tri manuel;1;VTN_1510-tm1;VTN_1510;Orchamp_Ventoux;2022;;Oligochaeta;Opistophora;Lumbricidae;Lumbricidae;1;indetermine;morceau;hermaphrodite;;388
+ANI-22-0283;tri manuel;1;VTN_1510-tm1;VTN_1510;Orchamp_Ventoux;2022;;Oligochaeta;Opistophora;Lumbricidae;Lumbricidae;1;juvenile;morceau;hermaphrodite;;94
+ANI-22-0294;tri manuel;1;VTN_1675-tm1;VTN_1675;Orchamp_Ventoux;2022;;Chilopoda;Geophilomorpha;;Geophilomorpha;2;;;;dont 1 morceau;
+ANI-22-0294;tri manuel;1;VTN_1675-tm1;VTN_1675;Orchamp_Ventoux;2022;;Gastropoda;Pulmonata;;Gastropoda;1;;;;;
+ANI-22-0294;tri manuel;1;VTN_1675-tm1;VTN_1675;Orchamp_Ventoux;2022;;Gastropoda;Pulmonata;Diplommatinidae;;5;;;;;
+ANI-22-0294;tri manuel;1;VTN_1675-tm1;VTN_1675;Orchamp_Ventoux;2022;;Malacostracea;Isopoda;Porcellionidae;Porcellionidae;1;;;;;
+ANI-22-0273;tri manuel;3;VTN_1340-tm3;VTN_1340;Orchamp_Ventoux;2022;;Oligochaeta;Opistophora;Lumbricidae;;1;subadulte;entier;hermaphrodite;;434
+ANI-22-0273;tri manuel;3;VTN_1340-tm3;VTN_1340;Orchamp_Ventoux;2022;;Oligochaeta;Opistophora;Lumbricidae;Lumbricidae;1;juvenile;entier;hermaphrodite;tres abime;273
+ANI-22-0295;tri manuel;3;VTN_1675-tm3;VTN_1675;Orchamp_Ventoux;2022;;Arachnida;Araneae;;Araneae;1;juvenile;;;;
+ANI-22-0295;tri manuel;3;VTN_1675-tm3;VTN_1675;Orchamp_Ventoux;2022;;Chilopoda;Lithobiomorpha;Lithobiidae;Lithobius Leach  1814;1;;;;;
+ANI-22-0295;tri manuel;3;VTN_1675-tm3;VTN_1675;Orchamp_Ventoux;2022;;Oligochaeta;Opistophora;Lumbricidae;;1;subadulte;entier;hermaphrodite;;405
+ANI-22-0263;tri manuel;4;VTN_1130-tm4;VTN_1130;Orchamp_Ventoux;2022;;Chilopoda;Lithobiomorpha;Lithobiidae;Lithobius Leach  1814;1;;;;;
+ANI-22-0274;tri manuel;4;VTN_1340-tm4;VTN_1340;Orchamp_Ventoux;2022;;Oligochaeta;Opistophora;Lumbricidae;;1;subadulte;;hermaphrodite;;809
+ANI-22-0285;tri manuel;4;VTN_1510-tm4;VTN_1510;Orchamp_Ventoux;2022;;Malacostracea;Isopoda;Porcellionidae;Porcellionidae;1;;;;;
+ANI-22-0285;tri manuel;4;VTN_1510-tm4;VTN_1510;Orchamp_Ventoux;2022;;Oligochaeta;Opistophora;Lumbricidae;Lumbricidae;1;juvenile;entier;hermaphrodite;;105
+ANI-22-0285;tri manuel;4;VTN_1510-tm4;VTN_1510;Orchamp_Ventoux;2022;;Oligochaeta;Opistophora;Lumbricidae;Lumbricidae;1;juvenile;morceau;hermaphrodite;;326
+ANI-22-0285;tri manuel;4;VTN_1510-tm4;VTN_1510;Orchamp_Ventoux;2022;;Oligochaeta;Opistophora;Lumbricidae;Lumbricus Linnaeus 1758;1;juvenile;entier;hermaphrodite;;1764
+ANI-22-0296;tri manuel;4;VTN_1675-tm4;VTN_1675;Orchamp_Ventoux;2022;;Arachnida;Araneae;;Araneae;1;juvenile;;;;
+ANI-22-0296;tri manuel;4;VTN_1675-tm4;VTN_1675;Orchamp_Ventoux;2022;;Chilopoda;Geophilomorpha;;Geophilomorpha;2;;;;;
+ANI-22-0296;tri manuel;4;VTN_1675-tm4;VTN_1675;Orchamp_Ventoux;2022;;Gastropoda;Pulmonata;;Gastropoda;3;;;;;
+ANI-22-0296;tri manuel;4;VTN_1675-tm4;VTN_1675;Orchamp_Ventoux;2022;;Gastropoda;Pulmonata;Clausiliidae;Clausiliidae;1;;;;;
+ANI-22-0296;tri manuel;4;VTN_1675-tm4;VTN_1675;Orchamp_Ventoux;2022;;Oligochaeta;Opistophora;Lumbricidae;Lumbricidae;4;indetermine;entier;hermaphrodite;;488
+ANI-22-0307;tri manuel;4;VTN_1860-tm4;VTN_1860;Orchamp_Ventoux;2022;;Gastropoda;Pulmonata;;Gastropoda;1;;;;;
+ANI-22-0264;tri manuel;6;VTN_1130-tm6;VTN_1130;Orchamp_Ventoux;2022;;Chilopoda;Geophilomorpha;;Geophilomorpha;3;;;;;
+ANI-22-0275;tri manuel;6;VTN_1340-tm6;VTN_1340;Orchamp_Ventoux;2022;;Chilopoda;Geophilomorpha;;Geophilomorpha;1;;;;;
+ANI-22-0275;tri manuel;6;VTN_1340-tm6;VTN_1340;Orchamp_Ventoux;2022;;Insecta;Coleoptera;Elateridae ;Elateridae;1;larve;;;;
+ANI-22-0275;tri manuel;6;VTN_1340-tm6;VTN_1340;Orchamp_Ventoux;2022;;Insecta;Diptera;;Diptera;1;larve;;;;
+ANI-22-0275;tri manuel;6;VTN_1340-tm6;VTN_1340;Orchamp_Ventoux;2022;;Insecta;Hymenoptera;Formicidae;Formicidae;2;adulte;;femelle;;
+ANI-22-0286;tri manuel;6;VTN_1510-tm6;VTN_1510;Orchamp_Ventoux;2022;;Gastropoda;Pulmonata;Oxychilidae;Oxychilus Fitzinger 1833;1;;;;;
+ANI-22-0286;tri manuel;6;VTN_1510-tm6;VTN_1510;Orchamp_Ventoux;2022;;Insecta;Coleoptera;Carabidae;Pterostichus (Adelosia) macer (Marsham  1802);1;adulte;;male;;0 07607
+ANI-22-0286;tri manuel;6;VTN_1510-tm6;VTN_1510;Orchamp_Ventoux;2022;;Malacostracea;Isopoda;Porcellionidae;Porcellionidae;1;;;;;
+ANI-22-0286;tri manuel;6;VTN_1510-tm6;VTN_1510;Orchamp_Ventoux;2022;;Oligochaeta;Opistophora;Lumbricidae;Lumbricidae;2;juvenile;entier;hermaphrodite;;380
+ANI-22-0260;tri manuel qualitatif;;VTN_1130-Q;VTN_1130;Orchamp_Ventoux;2022;;Oligochaeta;Opistophora;Lumbricidae;Lumbricidae;1;subadulte;morceau;hermaphrodite;probablement Lumbricus;704
+ANI-22-0271;tri manuel qualitatif;;VTN_1340-Q;VTN_1340;Orchamp_Ventoux;2022;;Oligochaeta;Opistophora;Lumbricidae;Lumbricidae;1;juvenile;entier;hermaphrodite;;326
+ANI-22-0282;tri manuel qualitatif;;VTN_1510-Q;VTN_1510;Orchamp_Ventoux;2022;;Oligochaeta;Opistophora;Lumbricidae;Lumbricidae;1;juvenile;entier;hermaphrodite;;390
+ANI-22-0282;tri manuel qualitatif;;VTN_1510-Q;VTN_1510;Orchamp_Ventoux;2022;;Oligochaeta;Opistophora;Lumbricidae;Octolasium cyaneum (Savigny 1826);1;adulte;entier;hermaphrodite;;1703
+ANI-22-0282;tri manuel qualitatif;;VTN_1510-Q;VTN_1510;Orchamp_Ventoux;2022;;Oligochaeta;Opistophora;Lumbricidae;Octolasium cyaneum (Savigny 1826);1;adulte;entier;hermaphrodite;;1840
