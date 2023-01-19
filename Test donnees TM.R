@@ -83,7 +83,17 @@ data%>%
   distinct(Valid.Name)%>%
   dplyr::summarize(nb=n())%>%
   slice(21:23)->VAL;
-ggplot(VAL, aes(x=id_plot, y=nb))+geom_bar(stat="identity")
+ggplot(VAL) +
+  aes(x = id_plot, fill = id_plot, colour = id_plot, weight = nb) +
+  geom_bar() +
+  scale_fill_manual(values = c(VAL_1860 = "#F8766D", 
+                               VAL_2050 = "#93AA00", VAL_2250 = "#00C19F")) +
+  scale_color_manual(values = c(VAL_1860 = "#F8766D", 
+                                VAL_2050 = "#93AA00", VAL_2250 = "#00C19F")) +
+  labs(x = "Altitudes Croissantes", 
+       y = "Richesse spécifique", subtitle = "Ventoux", caption = "Altitudes") +
+  theme_minimal()
+
 
 data%>%
   group_by(id_plot)%>%
@@ -98,7 +108,7 @@ ggplot(VER) +
   scale_color_manual(values = c(VER_1200 = "#F8766D", 
                                 VER_1400F = "#93AA00", VER_1400P = "#00C19F", VER_1800 = "#619CFF", VER_2000 = "#FF61C3")) +
   labs(x = "Altitudes Croissantes", 
-       y = "Richesse spécifique", subtitle = "Ventoux", caption = "Altitudes") +
+       y = "Richesse spécifique", subtitle = "Lac Vert", caption = "Altitudes") +
   theme_minimal()
 
 
