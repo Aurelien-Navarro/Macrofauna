@@ -53,7 +53,7 @@ data%>%
   dplyr::summarize(nb=n())%>%
   slice(1:6)->ARG
       ####ggplot####
-ggplot(ARG) +
+PlotARG<-ggplot(ARG) +
   aes(x = id_plot, fill = id_plot, colour = id_plot, weight = nb) +
   geom_bar() +
   scale_fill_manual(values = c(ARG_1420 = "#F8766D", 
@@ -72,7 +72,7 @@ data%>%
   dplyr::summarize(nb=n())%>%
   slice(7,8)->ARM
       ####plot####
-ggplot(ARM) +
+PlotARM<-ggplot(ARM) +
   aes(x = id_plot, fill = id_plot, colour = id_plot, weight = nb) +
   geom_bar() +
   scale_fill_manual(values = c(ARM_1520 = "#F8766D", 
@@ -90,16 +90,16 @@ data%>%
   dplyr::summarize(nb=n())%>%
   slice(9:13)->MSB
       ####ggplot####
-ggplot(MSB) +
+PlotMSB<-ggplot(MSB) +
   aes(x = id_plot, fill = id_plot, colour = id_plot, weight = nb) +
   geom_bar() +
   scale_fill_manual(values = c(MSB_1370 = "#F8766D", 
-                               MBS_1420 = "#93AA00", MSB_1890 = "#00C19F", MSB_2020 = "#619CFF", MSB_2260 = "#FF61C3")) +
+                              MSB_1420 = "#93AA00", MSB_1890 = "#00C19F", MSB_2020 = "#619CFF", MSB_2260 = "#FF61C3")) +
   scale_color_manual(values = c(MSB_1370 = "#F8766D", 
-                                MBS_1420 = "#93AA00", MSB_1890 = "#00C19F", MSB_2020 = "#619CFF", MSB_2260 = "#FF61C3")) +
+                              MSB_1420 = "#93AA00", MSB_1890 = "#00C19F", MSB_2020 = "#619CFF", MSB_2260 = "#FF61C3")) +
   labs(x = "Altitudes Croissantes", 
        y = "Richesse spécifique", subtitle = "Massif Saint Barthelemy", caption = "Altitudes") +
-  theme_minimal()
+  theme_minimal();PlotMSB
 
   ####Pecloz####
 
@@ -109,7 +109,7 @@ data%>%
   dplyr::summarize(nb=n())%>%
   slice(14,15)->PEC
       ####ggplot####
-ggplot(PEC) +
+PlotPEC<-ggplot(PEC) +
   aes(x = id_plot, fill = id_plot, colour = id_plot, weight = nb) +
   geom_bar() +
   scale_fill_manual(values = c(PEC_1152 = "#F8766D", 
@@ -128,7 +128,7 @@ data%>%
   dplyr::summarize(nb=n())%>%
   slice(16:20)->TAN
     ####ggplot####
-ggplot(TAN) +
+PLotTAN<-ggplot(TAN) +
   aes(x = id_plot, fill = id_plot, colour = id_plot, weight = nb) +
   geom_bar() +
   scale_fill_manual(values = c(TAN_1420 = "#F8766D", 
@@ -147,7 +147,7 @@ data%>%
   dplyr::summarize(nb=n())%>%
   slice(21:23)->VAL
       ####ggplot####
-ggplot(VAL) +
+PLotVAL<-ggplot(VAL) +
   aes(x = id_plot, fill = id_plot, colour = id_plot, weight = nb) +
   geom_bar() +
   scale_fill_manual(values = c(VAL_1860 = "#F8766D", 
@@ -166,7 +166,7 @@ data%>%
   dplyr::summarize(nb=n())%>%
   slice(24:28)->VER
       ####ggplot####
-ggplot(VER) +
+PlotVER<-ggplot(VER) +
   aes(x = id_plot, fill = id_plot, colour = id_plot, weight = nb) +
   geom_bar() +
   scale_fill_manual(values = c(VER_1200 = "#F8766D", 
@@ -185,7 +185,7 @@ data%>%
   dplyr::summarize(nb=n())%>%
   slice(29:33)->VTN
         ####ggplot####
-ggplot(VTN) +
+PlotVTN<-ggplot(VTN) +
  aes(x = id_plot, fill = id_plot, colour = id_plot, weight = nb) +
  geom_bar() +
  scale_fill_manual(values = c(VTN_1130 = "#F8766D", 
@@ -201,7 +201,7 @@ VTN_1340 = "#93AA00", VTN_1510 = "#00C19F", VTN_1675 = "#619CFF", VTN_1860 = "#F
 #############################
 #####Diversite de Shannon####
 #############################
-
+compendium
 
 
 
