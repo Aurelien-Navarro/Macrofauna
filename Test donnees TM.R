@@ -8,14 +8,15 @@ library(vegan)
 library(dplyr)
 library(tibble)
 library(ggplot2)
-
+library(rcompendium)
+add_compendium(compendium=".")
 install.packages("esquisse")
 library(esquisse)
 
 
 
 #####Imortation JD#####
-data<-read.csv("Donnees ORCHAMP.csv", sep=";", dec=".",header=TRUE)
+data<-read.csv("C:/AUREL/STAGE/M2/work/Macrofauna/data/raw-data/Donnees ORCHAMP.csv", sep=";", dec=".",header=TRUE)
 str(data)
 
 data%>%
@@ -200,8 +201,7 @@ VTN_1340 = "#93AA00", VTN_1510 = "#00C19F", VTN_1675 = "#619CFF", VTN_1860 = "#F
 
 #############################
 #####Diversite de Shannon####
-#############################
-compendium
+############################
 
 
 
