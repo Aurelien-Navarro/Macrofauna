@@ -1,7 +1,12 @@
-#####Tests avec donnees TM####
-
-#####SETTINGS####
-
+#####Tests avec donnees 2021####
+#-----------------------------
+  #Working directory####
+#----------------------------
+setwd("C:/AUREL/STAGE/M2/Work/Macrofauna/analysis")
+#-------------------------------------------------
+#---------------
+#Librairies#####
+#---------------
 
 install.packages("vegan")
 library(vegan)
@@ -12,28 +17,35 @@ library(rcompendium)
 add_compendium(compendium=".")
 install.packages("esquisse")
 library(esquisse)
+#-----------------------------------
 
+#---------------------
+#Imortation donnes#####
+#---------------------
 
-
-#####Imortation JD#####
 data<-read.csv("C:/AUREL/STAGE/M2/work/Macrofauna/data/raw-data/Donnees ORCHAMP.csv", sep=";", dec=".",header=TRUE)
 str(data)
+
+#----------------------------
+#Mise en forme des donness####
+#-----------------------------
+
 
 data%>%
   distinct(Valid.Name)%>%
   count(Valid.Name)
 
-#############################
-#####Richesse specifique#####
-#############################
+#-------------------------
+#Richesse specifique#####
+#------------------------
    
-#####Creation de la RS
+#####Creation de la RS#####
 RSalt<-data%>%
   group_by(id_plot)%>%
   distinct(Valid.Name)%>%
   dplyr::summarize(nb=n());RSalt
 
-#####Transformation des donnees
+#####Transformation des donnees pour RS#####
 str(RSalt)
 as.numeric(RSalt$nb)->RSalt$nb
 as.vector(RSalt$id_plot)->RSalt$id_plot
@@ -197,7 +209,11 @@ VTN_1340 = "#93AA00", VTN_1510 = "#00C19F", VTN_1675 = "#619CFF", VTN_1860 = "#F
  y = "Richesse spécifique", subtitle = "Ventoux", caption = "Altitudes") +
  theme_minimal()
 
-###########################################
+###############################
+#####Petites manipulations#####
+data$Valid.Name<-as.character(data$Valid.Name)
+
+
 
 #############################
 #####Diversite de Shannon####
