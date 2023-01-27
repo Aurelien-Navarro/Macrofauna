@@ -23,17 +23,17 @@ library(esquisse)
 #Imortation donnes#####
 #---------------------
 
-data<-read.csv("C:/AUREL/STAGE/M2/work/Macrofauna/data/raw-data/Donnees ORCHAMP.csv", sep=";", dec=".",header=TRUE)
+data<-read.csv("C:/AUREL/STAGE/M2/work/Macrofauna/data/derived-data/Donnees_ORCHAMP_esp_propres.csv", sep=",", dec=".",header=TRUE)
 str(data)
 
 #----------------------------
 #Mise en forme des donness####
 #-----------------------------
 
-
+na.omit(data$Valid_Name)->data$Valid_Name
 data%>%
-  distinct(Valid.Name)%>%
-  count(Valid.Name)
+  distinct(Valid_Name)%>%
+  count(Valid_Name)
 
 #-------------------------
 #Richesse specifique#####
@@ -42,7 +42,7 @@ data%>%
 #####Creation de la RS#####
 RSalt<-data%>%
   group_by(id_plot)%>%
-  distinct(Valid.Name)%>%
+  distinct(Valid_Name)%>%
   dplyr::summarize(nb=n());RSalt
 
 #####Transformation des donnees pour RS#####
@@ -62,7 +62,7 @@ bpRSalt+coord_flip()
   ####Argentiere####
 data%>%
   group_by(id_plot)%>%
-  distinct(Valid.Name)%>%
+  distinct(Valid_Name)%>%
   dplyr::summarize(nb=n())%>%
   slice(1:6)->ARG
       ####ggplot####
@@ -75,13 +75,13 @@ PlotARG<-ggplot(ARG) +
                                 ARG_1620 = "#93AA00", ARG_1790 = "#00C19F", ARG_2000 = "#619CFF", ARG_2230 = "#FF61C3", ARG_2400="#CC0033")) +
   labs(x = "Altitudes Croissantes", 
        y = "Richesse spécifique", subtitle = "Argentiere", caption = "Altitudes") +
-  theme_minimal()
+  theme_minimal();PlotARG
 
 
   ####Armenaz####  
 data%>%
   group_by(id_plot)%>%
-  distinct(Valid.Name)%>%
+  distinct(Valid_Name)%>%
   dplyr::summarize(nb=n())%>%
   slice(7,8)->ARM
       ####plot####
@@ -94,12 +94,12 @@ PlotARM<-ggplot(ARM) +
                                 ARM_1750 = "#93AA00")) +
   labs(x = "Altitudes Croissantes", 
        y = "Richesse spécifique", subtitle = "Armenaz", caption = "Altitudes") +
-  theme_minimal()
+  theme_minimal();PlotARM
 
   ####Massif Saint Barthelemy####
 data%>%
   group_by(id_plot)%>%
-  distinct(Valid.Name)%>%
+  distinct(Valid_Name)%>%
   dplyr::summarize(nb=n())%>%
   slice(9:13)->MSB
       ####ggplot####
@@ -118,7 +118,7 @@ PlotMSB<-ggplot(MSB) +
 
 data%>%
   group_by(id_plot)%>%
-  distinct(Valid.Name)%>%
+  distinct(Valid_Name)%>%
   dplyr::summarize(nb=n())%>%
   slice(14,15)->PEC
       ####ggplot####
@@ -131,17 +131,17 @@ PlotPEC<-ggplot(PEC) +
                                 PEC_1375 = "#93AA00")) +
   labs(x = "Altitudes Croissantes", 
        y = "Richesse spécifique", subtitle = "Pecloz", caption = "Altitudes") +
-  theme_minimal()
+  theme_minimal();PlotPEC
 
   #####Tania####
 
 data%>%
   group_by(id_plot)%>%
-  distinct(Valid.Name)%>%
+  distinct(Valid_Name)%>%
   dplyr::summarize(nb=n())%>%
   slice(16:20)->TAN
     ####ggplot####
-PLotTAN<-ggplot(TAN) +
+PlotTAN<-ggplot(TAN) +
   aes(x = id_plot, fill = id_plot, colour = id_plot, weight = nb) +
   geom_bar() +
   scale_fill_manual(values = c(TAN_1420 = "#F8766D", 
@@ -150,17 +150,17 @@ PLotTAN<-ggplot(TAN) +
                                 TAN_1700 = "#93AA00", TAN_1890 = "#00C19F", TAN_2100 = "#619CFF", TAN_2300 = "#FF61C3")) +
   labs(x = "Altitudes Croissantes", 
        y = "Richesse spécifique", subtitle = "Tania", caption = "Altitudes") +
-  theme_minimal()
+  theme_minimal();PlotTAN
 
   #####Valoire####
 
 data%>%
   group_by(id_plot)%>%
-  distinct(Valid.Name)%>%
+  distinct(Valid_Name)%>%
   dplyr::summarize(nb=n())%>%
   slice(21:23)->VAL
       ####ggplot####
-PLotVAL<-ggplot(VAL) +
+PlotVAL<-ggplot(VAL) +
   aes(x = id_plot, fill = id_plot, colour = id_plot, weight = nb) +
   geom_bar() +
   scale_fill_manual(values = c(VAL_1860 = "#F8766D", 
@@ -169,13 +169,13 @@ PLotVAL<-ggplot(VAL) +
                                 VAL_2050 = "#93AA00", VAL_2250 = "#00C19F")) +
   labs(x = "Altitudes Croissantes", 
        y = "Richesse spécifique", subtitle = "Valoire", caption = "Altitudes") +
-  theme_minimal()
+  theme_minimal();PlotVAL
 
   #####Lac vert####
 
 data%>%
   group_by(id_plot)%>%
-  distinct(Valid.Name)%>%
+  distinct(Valid_Name)%>%
   dplyr::summarize(nb=n())%>%
   slice(24:28)->VER
       ####ggplot####
@@ -188,13 +188,13 @@ PlotVER<-ggplot(VER) +
                                 VER_1400F = "#93AA00", VER_1400P = "#00C19F", VER_1800 = "#619CFF", VER_2000 = "#FF61C3")) +
   labs(x = "Altitudes Croissantes", 
        y = "Richesse spécifique", subtitle = "Lac Vert", caption = "Altitudes") +
-  theme_minimal()
+  theme_minimal();PlotVER
 
   #####Ventoux####
 
 data%>%
   group_by(id_plot)%>%
-  distinct(Valid.Name)%>%
+  distinct(Valid_Name)%>%
   dplyr::summarize(nb=n())%>%
   slice(29:33)->VTN
         ####ggplot####
@@ -207,12 +207,17 @@ VTN_1340 = "#93AA00", VTN_1510 = "#00C19F", VTN_1675 = "#619CFF", VTN_1860 = "#F
 VTN_1340 = "#93AA00", VTN_1510 = "#00C19F", VTN_1675 = "#619CFF", VTN_1860 = "#FF61C3")) +
  labs(x = "Altitudes Croissantes", 
  y = "Richesse spécifique", subtitle = "Ventoux", caption = "Altitudes") +
- theme_minimal()
+ theme_minimal();PlotVTN
 
 ###############################
 #####Petites manipulations#####
-data$Valid.Name<-as.character(data$Valid.Name)
+str(data)
+as.character(data$abundance)->data$abundance
+str(data)
 
+data%>%
+  slice(data, abundance=="4")%>%
+  rep(1:n(), each = 4)->data2
 
 
 #############################
