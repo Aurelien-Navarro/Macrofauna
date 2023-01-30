@@ -14,7 +14,7 @@ library(dplyr)
 library(tibble)
 library(ggplot2)
 library(rcompendium)
-add_compendium(compendium=".")
+#add_compendium(compendium=".")
 install.packages("esquisse")
 library(esquisse)
 #-----------------------------------
@@ -209,21 +209,15 @@ VTN_1340 = "#93AA00", VTN_1510 = "#00C19F", VTN_1675 = "#619CFF", VTN_1860 = "#F
  y = "Richesse spécifique", subtitle = "Ventoux", caption = "Altitudes") +
  theme_minimal();PlotVTN
 
-###############################
-#####Petites manipulations#####
-str(data)
-as.character(data$abundance)->data$abundance
-str(data)
-
-data%>%
-  slice(data, abundance=="4")%>%
-  rep(1:n(), each = 4)->data2
 
 
 #############################
 #####Diversite de Shannon####
 ############################
+str(data)
 
 
-
-
+vecteur1 <- c(data$Valid_Name) ; vecteur2 <- c(data$abundance)
+tableau <- data.frame(x = vecteur1, y = vecteur2) 
+as.factor(tableau$x)->tableau$x
+as.numeric(tableau$y)->tableau$y
