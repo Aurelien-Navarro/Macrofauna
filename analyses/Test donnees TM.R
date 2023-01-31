@@ -214,10 +214,25 @@ VTN_1340 = "#93AA00", VTN_1510 = "#00C19F", VTN_1675 = "#619CFF", VTN_1860 = "#F
 #############################
 #####Diversite de Shannon####
 ############################
+data<-read.csv("C:/AUREL/STAGE/M2/work/Macrofauna/data/derived-data/Donnees_ORCHAMP_esp_propres.csv", sep=",", dec=".",header=TRUE)
+na.omit(data$Order)->data$Order
 str(data)
+as.character(data$abundance)->data$abundance
+
+data%>%
+  group_by(id_plot)%>%
+  distinct(data$Order)%>%
+  dplyr::summarise(ab=n())->tp
 
 
-vecteur1 <- c(data$Valid_Name) ; vecteur2 <- c(data$abundance)
-tableau <- data.frame(x = vecteur1, y = vecteur2) 
-as.factor(tableau$x)->tableau$x
-as.numeric(tableau$y)->tableau$y
+
+
+
+
+data%>%
+pivot_wider(id_cols = c("method", "Replicate.number", "Sample.name.in.project", "id_plot", "data$id_Site", "Year","Begining"),
+                   names_from = data$Order, 
+                   value_from=data$abundance,
+                   values_fill = 0)->matrice
+
+
