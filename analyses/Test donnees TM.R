@@ -226,13 +226,37 @@ tp<-all_orchamp21 %>%
   summarise(tot = sum(abundance)) %>%
   separate(id_plot, c("site", "alt"))
 
-str(tp)
-tp%>%
   
 pivot_wider(tp,
-            id_cols= 'site',
+            id_cols = c('id_plot','method'),
             names_from = 'Order2', 
-            values_from = 'tot')->matrice
+            values_from = 'tot',
+            values_fill = 0)->matrice
+str(matrice)
+head(matrice)
+summary(matrice)
 
 
-?pivot_wider
+as.numeric(matrice$Araneae)->matrice$Araneae
+as.numeric(matrice$Coleoptera)->matrice$Coleoptera
+as.numeric(matrice$Collembola)->matrice$Collembola
+as.numeric(matrice$Opistophora)->matrice$Opistophora
+as.numeric(matrice$Pulmonata)->matrice$Pulmonata
+as.numeric(matrice$unid)->matrice$unid
+as.numeric(matrice$Diptera)->matrice$Diptera
+as.numeric(matrice$Homoptera)->matrice$Homoptera
+as.numeric(matrice$Hymenoptera)->matrice$Hymenoptera
+as.numeric(matrice$Orthoptera)->matrice$Orthoptera
+as.numeric(matrice$Dermaptera)->matrice$Dermaptera
+as.numeric(matrice$Hemiptera)->matrice$Hemiptera
+as.numeric(matrice$Glomerida)->matrice$Glomerida
+as.numeric(matrice$Geophilomorpha)->matrice$Geophilomorpha
+as.numeric(matrice$Julida)->matrice$Julida
+as.numeric(matrice$Lithobiomorpha)->matrice$Lithobiomorpha
+as.numeric(matrice$Polydesmida)->matrice$Polydesmida
+as.numeric(matrice$Lepidoptera)->matrice$Lepidoptera
+as.numeric(matrice$Isopoda)->matrice$Isopoda
+as.numeric(matrice$Blattoptera)->matrice$Blattoptera
+
+H<-vegan::diversity(matrice)        
+           
