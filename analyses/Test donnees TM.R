@@ -8,7 +8,7 @@ setwd("C:/AUREL/STAGE/M2/Work/Macrofauna/analysis")
 #Librairies#####
 #---------------
 
-
+library(tidyverse)
 library(vegan)
 library(dplyr)
 library(tibble)
@@ -223,8 +223,7 @@ str(all_orchamp21)
 tp<-all_orchamp21 %>%
   mutate(Order2 = ifelse(Order == "", "unid", Order)) %>% ##supression des vides 
   group_by(id_plot, Order2, method)%>%
-  summarise(tot = sum(abundance)) %>%
-  separate(id_plot, c("site", "alt"))
+  summarise(tot = sum(abundance)) 
 
   
 pivot_wider(tp,
@@ -258,5 +257,11 @@ as.numeric(matrice$Lepidoptera)->matrice$Lepidoptera
 as.numeric(matrice$Isopoda)->matrice$Isopoda
 as.numeric(matrice$Blattoptera)->matrice$Blattoptera
 
-H<-vegan::diversity(matrice)        
-           
+
+
+
+
+matrice2<-matrice[,c(3:22)]
+str(matrice)
+
+vegan::diversity(matrice2, index="shannon")->H;H     
