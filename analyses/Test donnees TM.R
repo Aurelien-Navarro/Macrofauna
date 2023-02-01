@@ -8,7 +8,7 @@ setwd("C:/AUREL/STAGE/M2/Work/Macrofauna/analysis")
 #Librairies#####
 #---------------
 
-install.packages("vegan")
+
 library(vegan)
 library(dplyr)
 library(tibble)
@@ -20,7 +20,7 @@ library(esquisse)
 #-----------------------------------
 
 #---------------------
-#Imortation donnes#####
+#Importation donnes#####
 #---------------------
 
 data<-read.csv("C:/AUREL/STAGE/M2/work/Macrofauna/data/derived-data/Donnees_ORCHAMP_esp_propres.csv", sep=",", dec=".",header=TRUE)
@@ -40,6 +40,7 @@ data%>%
 #------------------------
    
 #####Creation de la RS#####
+
 RSalt<-data%>%
   group_by(id_plot)%>%
   distinct(Valid_Name)%>%
@@ -214,25 +215,24 @@ VTN_1340 = "#93AA00", VTN_1510 = "#00C19F", VTN_1675 = "#619CFF", VTN_1860 = "#F
 #############################
 #####Diversite de Shannon####
 ############################
-data<-read.csv("C:/AUREL/STAGE/M2/work/Macrofauna/data/derived-data/Donnees_ORCHAMP_esp_propres.csv", sep=",", dec=".",header=TRUE)
-na.omit(data$Order)->data$Order
-str(data)
-as.character(data$abundance)->data$abundance
 
-data%>%
-  group_by(id_plot)%>%
-  distinct(data$Order)%>%
-  dplyr::summarise(ab=n())->tp
+all_orchamp21 <-read.csv("data/derived-data/Donnees_ORCHAMP_esp_propres.csv", sep=",", dec=".",header=TRUE)
+str(all_orchamp21)
 
 
+tp<-all_orchamp21 %>%
+  mutate(Order2 = ifelse(Order == "", "unid", Order)) %>% ##supression des vides 
+  group_by(id_plot, Order2, method)%>%
+  summarise(tot = sum(abundance)) %>%
+  separate(id_plot, c("site", "alt"))
+
+str(tp)
+tp%>%
+  
+pivot_wider(tp,
+            id_cols= 'site',
+            names_from = 'Order2', 
+            values_from = 'tot')->matrice
 
 
-
-
-data%>%
-pivot_wider(id_cols = c("method", "Replicate.number", "Sample.name.in.project", "id_plot", "data$id_Site", "Year","Begining"),
-                   names_from = data$Order, 
-                   value_from=data$abundance,
-                   values_fill = 0)->matrice
-
-
+?pivot_wider
