@@ -1,6 +1,6 @@
-#############################
-#####Diversite de Shannon####
-############################
+####################################
+#####INDICES DE DIVERSITE ALPHA####
+###################################
 
 library(ggplot2)
 library(tidyverse)
@@ -11,6 +11,8 @@ library(ggplot2)
 library(rcompendium)
 #add_compendium(compendium=".")
 library(esquisse)
+install.packages("fossil")
+library(fossil)
 #-----------------------------------
 
 #---------------------
@@ -190,7 +192,48 @@ bpvtn+coord_flip()
 ####################################
 #Creation de l'indice de Simpson####
 ####################################
-vegan::diversity(matrice2, index="shannon")->H;H #shannon index pour chaque site et chaque methode     
-Htabl<-matrice[,c(1,2)]
-Htabl%>%
-  add_column(H=H)->Htabl
+
+vegan::diversity(matrice2, index="simpson")->D;D #Simpson index pour chaque site et chaque methode     
+Dtabl<-matrice[,c(1,2)]
+Dtabl%>%
+  add_column(D=D)->Dtabl
+
+
+######################
+#Creation de Chao#####
+######################
+
+#####Chao1
+as.function(chao1, envir= matrice2)->chao1f
+apply(matrice2, 1, chao1f)->S1
+
+S1tabl<-matrice[,c(1,2)]
+S1tabl%>%
+  add_column(S1=S1)->S1tabl
+
+#####Chao2
+as.function(chao2, envir= matrice2)->chao2f
+apply(matrice2, 1, chao2f)->S2
+
+S2tabl<-matrice[,c(1,2)]
+S2tabl%>%
+  add_column(S2=S2)->S2tabl
+
+##################
+
+#########################
+#Richesse specifique#####
+#########################
+
+apply(matrice2, 1, sum)->RS
+RStabl<-matrice[,c(1,2)]
+RStabl%>%
+  add_column(RS=RS)->RStabl
+
+
+
+#Fusion des indices dans un même tableau####
+
+merge(Htabl, Dtabl, by=c("id_plot", "method"))->HD
+merge(S1tabl, RStabl, by=c("id_plot", "method"))->S1RS
+merge(HD, S1RS, by=c("id_plot", "method"))->Orchampsalpha
