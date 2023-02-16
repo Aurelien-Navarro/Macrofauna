@@ -74,7 +74,7 @@ as.numeric(matrice$Blattoptera)->matrice$Blattoptera
 #Creation de la matrice pour analyse Shannon
 #-------------------------------------------
 
-matrice2<-matrice[,c(3:15,17:24)]#conservation uniquement des variables ordre
+matrice2<-matrice[,c(3,4,6:15,17:20, 22:24)]#conservation uniquement des variables ordre
 str(matrice2)
 
 #-------------------------------------------
@@ -187,3 +187,10 @@ ggplot(Hvtn) +
 bpvtn+coord_flip()
 #-------------------
 
+####################################
+#Creation de l'indice de Simpson####
+####################################
+vegan::diversity(matrice2, index="shannon")->H;H #shannon index pour chaque site et chaque methode     
+Htabl<-matrice[,c(1,2)]
+Htabl%>%
+  add_column(H=H)->Htabl
