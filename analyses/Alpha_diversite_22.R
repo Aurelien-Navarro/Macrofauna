@@ -224,13 +224,12 @@ S2tabl%>%
 #########################
 #Richesse specifique#####
 #########################
-
-apply(matrice2, 1, sum)->RS
-RStabl<-matrice[,c(1,2)]
-RStabl%>%
-  add_column(RS=RS)->RStabl
-
-
+all_orchamp22 %>%
+  mutate(Order2 = ifelse(Order == "", "unid", Order))->RSp ##supression des vides
+RStabl<-RSp%>%
+  group_by(id_plot, method)%>%
+  distinct(Order)%>%
+  dplyr::summarize(RS=n());RStabl
 
 #Fusion des indices dans un même tableau####
 
