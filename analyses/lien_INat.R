@@ -12,39 +12,48 @@
 
 
 # Libraries
-librarian::shelf(tidyr, dplyr, ggplot2, rinat, rgbif, "inbo/inborutils")
+librarian::shelf(tidyr, dplyr, ggplot2, rinat, rgbif, "Rekyt/rtaxref", "inbo/inborutils", RODBC)
 
+# Connection to Mike's Access database
+    ## Set up driver info and database path
+    DRIVERINFO <- "Driver={Microsoft Access Driver (*.mdb, *.accdb)};"
+    MDBPATH <- "C:/Users/Hedde/Nextcloud/Hedde M/1. Travaux/AQR/0. Bases de Données/db communautés/fds_230228.accdb"
+    PATH <- paste0(DRIVERINFO, "DBQ=", MDBPATH)
+    
+    ## Establish connection
+    channel <- odbcDriverConnect(PATH)
+    
+    ## Load Orchamp data into R dataframe
+    df <- sqlFetch(channel,"Orchamp_matrix")
+    
+    ## Close and remove channel
+    close(channel)
+    rm(channel)
 
-# En requêtant par le projet INat créé par localité
-ct0 <- get_inat_obs_project(158034, type="observations",raw=T)  # project_id=158034  pour Orchamp_global
+# Connection to Orchamp_global project on INaturalist
+    ## Getting data
+    inat_orchamp <- get_inat_obs_project(158034, type="observations",raw=T)  # project_id=158034  pour Orchamp_global
 
-# En requêtant par les coordonnées géographiques (WGS84) ici par ex pour La Tania
-south_lat <- 45.405840
-west_long <- 6.594312
-north_lat <- 45.433315
-east_long <- 6.618400 
-bounds <- c(south_lat, west_long, north_lat, east_long)
-ct0 <- get_inat_obs(taxon_name = "Animalia", bounds = bounds) 
+    # Data refining
+    inat_orchamp <- inat_orchamp %>%
+      as_tibble() %>%
+      select(taxon.name, taxon.rank, description) %>%
+      rename(INat = description) %>%
+      filter(!is.na(INat))
 
-# Mise en forme des données
-ct <- ct0 %>%
-  as_tibble() %>%
-  select(taxon.name, taxon.rank, description) %>%
-  rename(INat = description)
+# Merging Mike's team and INat identifications
 
-###
-# A continuer: comparer le niveau d'identification gagné sachant qu'il faut ~1h par placette pour faire les photos et les charger sur INat
-
-test <- readxl::read_xlsx("data/raw-data/test_inat_tania.xlsx") 
-
-test2 <- test %>% 
-  left_join(ct) %>%
+test <- df %>% 
+  left_join(inat_orchamp, by = "INat") %>%
   mutate(name = ifelse(is.na(taxon.name), `Valid Name`, taxon.name)) %>%
   gbif_species_name_match(name = "name") %>%
   select("id_sample", "Replicate number", "id_plot", "abundance", "stade" , "Valid Name",  "scientificName", "rank", "order", "class", "family", "genus")
 
-ecosols <- length(unique(test2$`Valid Name`))
-inat <- length(unique(test2$scientificName))
 
-(inat-ecosols)/inat*100   # % augmentation du nb de taxon identifié
+test2 <- df %>% 
+  left_join(inat_orchamp, by = "INat") %>%
+  mutate(name = ifelse(is.na(taxon.name), `Valid Name`, taxon.name)) 
+
+  names_to_chk <- unique(test2$name)
+
 
