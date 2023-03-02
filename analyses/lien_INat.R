@@ -54,6 +54,19 @@ test2 <- df %>%
   left_join(inat_orchamp, by = "INat") %>%
   mutate(name = ifelse(is.na(taxon.name), `Valid Name`, taxon.name)) 
 
-  names_to_chk <- unique(test2$name)
+  taxo_harmo <- as.data.frame(matrix(data=NA, nrow = length(names_to_chk), ncol = 8,
+                       dimnames = list(1:length(names_to_chk),
+                                       c("scientificName", "id", "rankName", "referenceName", "familyName", "orderName", "className", "phylumName"))))
+  taxo_harmo$scientificName <- unique(test2$name)
+  
+  taxref_chk <- function(X){
+    chk <- rt_taxa_search(sciname = X) %>%
+      select(id, rankName, referenceName, familyName, orderName, className, phylumName)
+    chk
+  }
+  
+  for(i in 1:nrow(taxo_harmo)){
+  taxo_harmo[i,2:8] <- taxref_chk(taxo_harmo$scientificName[i])
+  }
 
-
+  
