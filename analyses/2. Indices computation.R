@@ -1,8 +1,8 @@
 # @title
-# IndComm
+# IndComm sur données Orchamp
 # 
 # @description
-# Calcul d'indices de communautés
+# Calcul d'indices de communautés sur les données Orchamp
 # 
 # @objectif
 # Calculer des indices de communautés, globaux ou par taxon
@@ -14,20 +14,15 @@
 ##             - prédateurs : carabiques, araignées, ...(?)
 ##             - herbivores : criquets, ... (?)
 # 1. Calcul de variables de communautés
-#         - abondance, biomasse totale et par Grp
-#         - diversité alpha taxo : 
-##             - diversité équivalente pour q %in% 0, 1, 2
-#         - diversité alpha fonctionnelle 
-##             - définir une métrique fonctionnelle (body size ? trophic niche ?)
 
 
 # Libraries
-librarian::shelf(tidyverse, stringr, hillR, DarkDiv, FD, mFD, cati)
+librarian::shelf(tidyverse)
 
 # Data load 
 df <- read.csv("data/derived-data/clean_data_2023-03-05.csv", 
-                h = T, sep = ",") %>%
-                select(!c(1))
+               h = T, sep = ",") %>%
+        select(!c(1))
 df$rankName <-  fct_recode(df$rankName, "Famille" = "Sous-Famille",
                            "Famille" = "Super-Famille",
                            "Classe" = "Infra-Classe",
@@ -36,136 +31,14 @@ df$rankName <-  fct_recode(df$rankName, "Famille" = "Sous-Famille",
                            "Phylum" = "Sous-Phylum")
 traits <- read.csv("data/raw-data/trait.csv", h = T, sep = ";")
 
-# Create a generic function
-myIndices <- function(DF, traits, IDresol){
-  
-# Data quality
+# Indice computation
+vdt_ind <- myIndices(DF = df[df$orderName == "Crassiclitellata",], 
+                    IDresol = "Espèce", traits = traits)
 
-    ## ID precision
-    rankID <- DF %>% 
-      select(abundance, stade, rankName) %>%
-      filter(abundance>0) %>%
-      group_by(rankName, stade) %>%
-      summarize(rankNb = sum(abundance, na.omit = T)) %>%
-      ungroup() %>%
-      mutate(rankPrc = rankNb/sum(rankNb)*100) %>%
-      arrange(desc(rankPrc))
-    
-    ## INat help
-    INatID <- DF %>% 
-      select(abundance, INat) %>%
-      filter(abundance>0) %>%
-      group_by(INat) %>%
-      summarize(INatNb = sum(abundance, na.omit = T)) %>%
-      mutate(INatPrc = INatNb/sum(INatNb)*100)
-
-# Community parameters
-    ## Ontogenic stages
-    dvpStage <- DF %>% 
-      select(id_sample, abundance, stade) %>%
-      filter(abundance>0) %>%
-      group_by(id_sample, stade) %>%
-      summarize(stdNb = sum(abundance, na.omit = T)) %>%
-      mutate(stdPrc = stdNb/sum(stdNb)*100) %>%
-      pivot_wider(id_cols = id_sample, names_from = stade, 
-                  values_from = stdPrc, values_fill = 0, values_fn = sum)
-
-    ## Community abundance
-    abTot <- DF %>% 
-          select(id_sample, abundance) %>%
-          group_by(id_sample) %>%
-          summarize(ab = sum(abundance, na.omit = T))
-
-    ## Community biomass
-    massTot <- DF %>% 
-          select(id_sample, mass) %>%
-          group_by(id_sample) %>%
-          summarize(mass = sum(mass, na.omit = T))
-
-    ## Species mass
-    indmass <- DF %>% 
-      select(id_sample, canonic, mass, rankName) %>%
-      filter(rankName == IDresol) %>%
-      group_by(id_sample, canonic) %>%
-      summarize(massMean = mean(mass, na.omit = T),
-                massSD = sd(mass),
-                massNb = length(mass))  
-    #### cf cati, get "regional trait" (e.g. mass) by requiring Mike's database 
-    funct<-c("mean(x, na.rm = TRUE)", "kurtosis(x, na.rm = TRUE)",
-             "max(x, na.rm = TRUE) - min(x, na.rm = TRUE)" )
-    par(mfrow = c(1,1))
-    massDistri <- plotDistri(as.data.frame(indmass$massMean), rep("region", times = nrow(indmass)),
-               indmass$canonic, plot.ask = F, multipanel = F)
-    #sp_regional.ind<-ComIndex(traits = data.frame(massMean = indmass$massMean,
-    #                                                 massMean0 = indmass$massMean), 
-    #                          index = funct, 
-    #                          sp = indmass$canonic,
-    #                          nullmodels = "regional.ind", 
-    #                          ind.plot = indmass$id_sample,
-    #                          nperm = 9, print = FALSE)
-    
-# Diversity indices
-    ## Alpha taxonomic diversity
-    com <- DF %>% 
-          select(id_sample, canonic, abundance, rankName) %>%
-          filter(rankName == IDresol) %>%
-          pivot_wider(id_cols = id_sample, names_from = canonic, names_sort = T,
-                      values_from = abundance, values_fill = 0, values_fn = sum) 
-        
-        q0 <- hill_taxa(com[,-1], q = 0)
-        q1 <- hill_taxa(com[,-1], q = 1)
-        q2 <- hill_taxa(com[,-1], q = 2)
-        
-        alphaTaxo <- cbind(com[,1], q0, q1, q2)
-        
-    ## Dark diversity?     ddHyper <- DarkDiv::DarkDiv(x = "data", method = "Hypergeometric")
-        
-        ## Alpha functional diversity
-          ### from mFD package
-          ### need a trait matrix with vectors : 
-              ###            canonic name, 
-              ###            type (trait/strategy)
-              ###            modality
-              ###            value
-          ### reco => use sqrt(Gower) instead of raw Gower distance to stdz PCoA axes
-          ### Compute CWM, CWV, ... trait  FD::functcomp()
-               tr <- traits %>% 
-                 filter(canonic %in% colnames(com)[-1]) %>%
-                 column_to_rownames(var = "canonic")
-               com1 <- com %>%
-                 select(rownames(tr))
-               CWM <- functcomp(as.matrix(tr), as.matrix(com1))
-              ### Compute Gower distance between sp in the trait space : mFD::funct.dist()
-              ### Compute functional diversity indices:  mFD::alpha.fd.hill(asb_sp_w = "abundance", sp_dist  = "gower dist", tau = "mean", q = 1)  # q for Hill number 
-             
-        
-# Releasing all indices
-res <- list(rankID = rankID, iNatID = INatID, dvpStage = dvpStage,
-            abTot = abTot, massTot= massTot, indmass = indmass,
-            alphaTaxo = alphaTaxo, 
-            massDistri = massDistri, 
-            CWM = CWM)
-res
-}
-
-myIndices(DF = df[df$orderName == "Crassiclitellata",], 
-          IDresol = "Espèce", 
-          traits = traits)
+ew_categ <- df %>%
+            select(method, Replicate.number, id_sample, gradient, alti) %>%
+            distinct() %>%
+            left_join(vdt_ind$CWM) %>%
+            replace(is.na(.),0)
 
 
-
-
-
-
-ggplot(data = ab_tot[ab_tot$method == "tri manuel",], 
-       aes(y = ab_mean, x = as.numeric(alti), color = gradient))+
-  geom_point(stat = "identity", fill = "darkorange")+
-  geom_errorbar(
-    aes(ymin = ab_mean - se, ymax = ab_mean + se), 
-    position = position_dodge2(padding = 0.5))+
-  labs(y = "Densité moyenne d'individus \ncollectés par site (individus m-2)", 
-       x = "Altitude (m)")+
-  #scale_y_continuous(trans='log10') +
-  ylim(c(0, 20))+
-  geom_smooth(se = T)+
-  theme_bw()
