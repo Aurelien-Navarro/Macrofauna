@@ -19,8 +19,12 @@
 # Libraries
 librarian::shelf(tidyverse, stringr, hillR, DarkDiv, FD, mFD, cati)
 
-# Create a generic function
-myIndices <- function(DF, traits, IDresol){
+# Create a generic function with
+      # DF = dataframe containing id_sample, canonic (taxon name), abundance and mass
+      # TR = trait file from BETSI
+      # IDresol = rank taxo at wich indices will be computed
+
+myIndices <- function(DF, TR, IDresol){
   
 # Data quality
 
@@ -112,21 +116,52 @@ myIndices <- function(DF, traits, IDresol){
               ###            value
           ### reco => use sqrt(Gower) instead of raw Gower distance to stdz PCoA axes
           ### Compute CWM, CWV, ... trait  FD::functcomp()
-               tr <- traits %>% 
+              TR1 <- TR %>%
+                group_by(taxon_name, trait_name)%>%
+                summarize(codedPrc = coded_trait_value/sum(coded_trait_value),
+                          rawVal = mean(raw_trait_value, na.omit = T))
+                
+              # à finir pour le fuzzy coding
+                            
+              tr0 <- TR %>%
+                 mutate(canonic = gn_parse_tidy(taxon_name)$canonicalsimple) %>%
                  filter(canonic %in% colnames(com)[-1]) %>%
+                 select(canonic, trait_name, attribute_trait, raw_trait_value, coded_trait_value)  %>%
+                 mutate(val = as.numeric(ifelse(is.na(coded_trait_value), 
+                                               raw_trait_value, 
+                                               coded_trait_value))) %>%
+                      #mutate(trait_name = gsub("\_","",trait_name)) %>%
+                      #mutate(trait_name = abbreviate(trait_name, 3, named = F)) %>%
+                 mutate(new_trait_name = ifelse(!is.na(attribute_trait), 
+                                                  paste(trait_name, "_", attribute_trait, sep = ""), 
+                                                  trait_name)) %>%
+                 pivot_wider(id_cols = canonic, names_from = new_trait_name, 
+                            values_from = val, values_fn = mean)
+               
+               tr_completeness <- DF %>% 
+                 filter(rankName == IDresol) %>%
+                 select(canonic) %>%
+                 distinct() %>%
+                 left_join(tr0) %>%
+                 mutate(across(c(2:ncol(.)), ~ifelse(is.na(.), 0, 1)))
+               tr <- tr0 %>%
                  column_to_rownames(var = "canonic")
-               com1 <- com %>%
+               com1 <- com[,-1] %>%
                  select(rownames(tr))
-               CWM <- cbind(id_sample = com$id_sample, functcomp(as.matrix(tr), as.matrix(com1)))
+               CWM <- cbind(com[,1], functcomp(as.matrix(tr), as.matrix(com1)))
               ### Compute Gower distance between sp in the trait space : mFD::funct.dist()
               ### Compute functional diversity indices:  mFD::alpha.fd.hill(asb_sp_w = "abundance", sp_dist  = "gower dist", tau = "mean", q = 1)  # q for Hill number 
              
         
 # Releasing all indices
+alpha <- tibble(id_sample = unique(DF$id_sample)) %>%
+  left_join(abTot) %>%
+  left_join(massTot) %>%
+  left_join(alphaTaxo) %>%
+  left_join(CWM)
 res <- list(rankID = rankID, iNatID = INatID, dvpStage = dvpStage,
-            abTot = abTot, massTot= massTot, indmass = indmass,
-            alphaTaxo = alphaTaxo, 
+            alpha = alpha, indmass = indmass, 
             massDistri = massDistri, 
-            CWM = CWM)
+            tr_completeness = tr_completeness)
 res
 }

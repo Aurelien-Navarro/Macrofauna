@@ -19,7 +19,9 @@ my_taxonChecker <- function(V) {
   
 
   # parse taxon name to clean the list to obtain the most simple canonical name
-  uniqueNames0 <- gn_parse_tidy(V)$canonicalsimple
+  uniqueNames00 <- unique(V)
+  uniqueNames0 <- gn_parse_tidy(uniqueNames00)$canonicalsimple
+  uniqueNames0 <- unique(V)
   nb_unique <- length(uniqueNames0)  
   harmo_colnames <- c("initial", "canonic", "id", "rankName", "referenceName", 
                       "familyName", "orderName", "className", "phylumName")
@@ -29,7 +31,7 @@ my_taxonChecker <- function(V) {
                                      nrow = nb_unique, 
                                      ncol = 9,
                                      dimnames = list(1:nb_unique, harmo_colnames)))
-  taxo_harmo$initial <- V
+  taxo_harmo$initial <- uniqueNames0
   taxo_harmo$canonic <- ifelse(is.na(word(uniqueNames0, 1, 2)), 
                                uniqueNames0, 
                                word(uniqueNames0, 1, 2))  # keep only the canonical binomial name (no subsp) 
@@ -43,17 +45,35 @@ my_taxonChecker <- function(V) {
     ifelse(ncol(chk0) == 1,
            chk <- rep(NA, 7),
            ifelse(R >= 2,
+                  ifelse(!rankName %in% "Espèce",
+                           chk <- rep(NA, 7),
+                           chk <- chk0 %>%
+                             filter(rankName == "Espèce") %>%
+                            select(id, rankName, referenceName, familyName, orderName, className, phylumName),
                   chk <- chk0 %>%
-                    filter(rankName == "Espèce") %>%
-                    select(id, rankName, referenceName, familyName, orderName, className, phylumName),
-                  chk <- chk0 %>%
-                    filter(! rankName %in% c("Espèce", "Sous-Espèce", "Variété")) %>%
-                    filter(scientificName == X) %>%
-                    select(id, rankName, referenceName, familyName, orderName, className, phylumName)
+                      filter(! rankName %in% c("Espèce", "Sous-Espèce", "Variété")) %>%
+                      filter(scientificName == X) %>%
+                      select(id, rankName, referenceName, familyName, orderName, className, phylumName)
            )
-    )
+    ))
     chk
   }
+  
+  
+  taxref_chk <- function(X){
+    chk0 <- rt_taxa_search(sciname = X) 
+    ifelse(ncol(chk0) == 1,
+           chk <- rep(NA, 7),
+           ifelse(nrow(chk0) == 1,
+                  chk <- chk0 %>%
+                           select(id, rankName, referenceName, familyName, orderName, className, phylumName),
+                  chk <- rep(NA, 7)
+                  )
+           )
+    chk
+  }
+  
+  
   
   # loop to attribute TaxRef taxo to all canonical names
   for(i in 1:nb_unique){

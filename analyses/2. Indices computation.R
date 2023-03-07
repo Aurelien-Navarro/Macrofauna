@@ -19,26 +19,40 @@
 # Libraries
 librarian::shelf(tidyverse)
 
-# Data load 
-df <- read.csv("data/derived-data/clean_data_2023-03-05.csv", 
-               h = T, sep = ",") %>%
-        select(!c(1))
-df$rankName <-  fct_recode(df$rankName, "Famille" = "Sous-Famille",
-                           "Famille" = "Super-Famille",
-                           "Classe" = "Infra-Classe",
-                           "Genre" = "Sous-Genre",
-                           "Ordre" = "Sous-Ordre", 
-                           "Phylum" = "Sous-Phylum")
-traits <- read.csv("data/raw-data/trait.csv", h = T, sep = ";")
-
+# Data load
+  ## Community data load 
+    df <- read.csv("data/derived-data/clean_data_2023-03-07.csv", 
+                   h = T, sep = ",") %>%
+            select(!c(1))
+    df$rankName <-  fct_recode(df$rankName, "Famille" = "Sous-Famille",
+                               "Famille" = "Super-Famille",
+                               "Classe" = "Infra-Classe",
+                               "Genre" = "Sous-Genre",
+                               "Ordre" = "Sous-Ordre", 
+                               "Phylum" = "Sous-Phylum")
+  ## Species trait data load 
+    traits <- read.csv("data/raw-data/BETSI_220221.csv", h = T, sep = ";")
+    # if taxonomic homogenization needed (/|\ take hours !!)
+    #traits <- traits %>%
+    #          filter(Taxa %in% c("Arachnida", "Coleoptera", "Dermaptera", "Diplopoda", "Gastropoda",
+    #                             "Isopoda", "Oligochaeta", "Orthoptera"))
+    #trait_taxa_correct0 <- my_taxonChecker(traits$taxon_name)
+    #trait_taxa_correct <- trait_taxa_correct0 %>%
+    #                      mutate(canonic = ifelse(is.na(canonic) == T, scientificName, canonic))
+    #traits <- left_join(traits, trait_taxa_correct0) 
+  
+  ## Selection of trait(s) of interest
+              
 # Indice computation
-vdt_ind <- myIndices(DF = df[df$orderName == "Crassiclitellata",], 
-                    IDresol = "Espèce", traits = traits)
+    lumbricid_traits <- traits %>% 
+                       filter(trait_name %in% c("Body_length", "ecological_strategy"))
+    lumbricid_ind <- myIndices(DF = df[df$orderName == "Crassiclitellata",], 
+                     IDresol = "Espèce", TR = lumbricid_traits)
+    
+    diplopoda_traits <- traits %>% 
+                     filter(trait_name %in% c("Body_length", "Habitat", "Humidity_preference", "Body_diameter" ))  
+    diplopoda_ind <- myIndices(DF = df[df$className == "Diplopoda",], 
+                     IDresol = "Espèce", TR = diplopoda_traits)
 
-ew_categ <- df %>%
-            select(method, Replicate.number, id_sample, gradient, alti) %>%
-            distinct() %>%
-            left_join(vdt_ind$CWM) %>%
-            replace(is.na(.),0)
 
 
