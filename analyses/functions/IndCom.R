@@ -17,7 +17,7 @@
 
 
 # Libraries
-librarian::shelf(dplyr, forcats, stringr, hillR, FD, mFD, rgnparser, textshape)
+librarian::shelf(dplyr, forcats, stringr, hillR, FD, mFD, rgnparser, textshape, tidyr)
 
 # Create a generic function with
       # DF = dataframe containing id_sample, canonic (taxon name), abundance and mass
@@ -66,15 +66,16 @@ myIndices <- function(DF, TR, IDresol){
     ## Community biomass
     massTot <- DF %>% 
           select(id_sample, mass) %>%
+          filter(!is.na(mass)) %>%
           group_by(id_sample) %>%
-          summarize(mass = sum(mass, na.omit = T))
+          summarize(mass = sum(as.numeric(mass), na.omit = T))
 
     ## Species mass
     indmass <- DF %>% 
       select(id_sample, canonic, mass, rankName) %>%
       filter(rankName == IDresol) %>%
       group_by(id_sample, canonic) %>%
-      summarize(massMean = mean(mass, na.omit = T),
+      summarize(massMean = mean(as.numeric(mass), na.omit = T),
                 massSD = sd(mass),
                 massNb = length(mass))  
     #### cf cati, get "regional trait" (e.g. mass) by requiring Mike's database 
@@ -103,7 +104,7 @@ myIndices <- function(DF, TR, IDresol){
         q1 <- hill_taxa(com[,-1], q = 1)
         q2 <- hill_taxa(com[,-1], q = 2)
         
-        alphaTaxo <- cbind(com[,1], q0, q1, q2)
+        alphaHill <- cbind(com[,1], q0, q1, q2)
         
     ## Dark diversity?     ddHyper <- DarkDiv::DarkDiv(x = "data", method = "Hypergeometric")
         
@@ -178,10 +179,10 @@ myIndices <- function(DF, TR, IDresol){
 alpha <- tibble(id_sample = unique(DF$id_sample)) %>%
   left_join(abTot) %>%
   left_join(massTot) %>%
-  left_join(alphaTaxo) %>%
+  left_join(alphaHill) %>%
   left_join(CWM)
-res <- list(rankID = rankID, iNatID = INatID, dvpStage = dvpStage,
-            alpha = alpha, indmass = indmass, 
+res <- list(alpha = alpha, indmass = indmass, 
+            rankID = rankID, iNatID = INatID, dvpStage = dvpStage,
             #massDistri = massDistri, 
             tr_completeness = tr_completeness)
 res

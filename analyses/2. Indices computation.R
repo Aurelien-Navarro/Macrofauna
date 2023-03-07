@@ -22,8 +22,7 @@ librarian::shelf(dplyr, forcats, stringr)
 # Data load
   ## Community data load 
     df <- read.csv("data/derived-data/clean_data_2023-03-07.csv", 
-                   h = T, sep = ",") %>%
-            select(!c(1))
+                   h = T, sep = ";") 
     df$rankName <-  fct_recode(df$rankName, "Famille" = "Sous-Famille",
                                "Famille" = "Super-Famille",
                                "Classe" = "Infra-Classe",
@@ -44,21 +43,32 @@ librarian::shelf(dplyr, forcats, stringr)
   ## Selection of trait(s) of interest
               
 # Indice computation
-    lumbricid_traits <- traits %>% 
+    ## By taxonomic group
+    lumbricid_tr <- traits %>% 
                        filter(trait_name %in% c("Body_length", "Habitat", "ecological_strategy"))
     lumbricid_ind <- myIndices(DF = df[df$orderName == "Crassiclitellata",], 
-                     IDresol = "Espèce", TR = lumbricid_traits)
+                     IDresol = "Espece", TR = lumbricid_tr)
     
-    diplopoda_traits <- traits %>% 
-                     filter(trait_name %in% c("Body_length", "Habitat", "Humidity_preference"))  
-    diplopoda_ind  <- myIndices(DF = df[df$className == "Diplopoda",], 
-                     IDresol = "Espèce", TR = diplopoda_traits)
+    ## By Guild (e.g. detritivores)
+    detritivore_tr <- traits %>% 
+                     filter(trait_name %in% c("Body_length", "Habitat"))  
+    detritivore_ind  <- myIndices(DF = df[df$className %in% c("Diplopoda", "Isopoda", "Clitellata"),], 
+                     IDresol = "Espece", TR = detritivore_tr)
 
-    arachnida_traits <- traits %>% 
-                             filter(trait_name %in% c("Body_length", "Habitat", "Motion_strategies"))  
-    arachnida_ind  <- myIndices(DF = df[df$className == "Arachnida",], 
-                                IDresol = "Espèce", TR = arachnida_traits)
+    ## By trait
+    BL <- filter(traits, trait_name %in% c("Body_length", "Habitat"))  
+    BL_ind  <- myIndices(DF = df, IDresol = "Espece", TR = BL)  
+    
+wrkdataset <- df[, c(1, 3:5)] %>%
+  left_join(lumbricid_ind$alpha) %>%
+  filter(method %in% c("tri manuel")) %>%
+  replace(is.na(.), 0) %>%
+  group_by(gradient, alti) %>%
+  summarise(meanMass = mean(mass))
 
-    
-    
+
+ggplot(wrkdataset, aes(x=as.numeric(alti), y=as.numeric(meanMass), color= gradient))+
+  geom_point()+
+  #facet_wrap(.~gradient, scales = "free_y")+
+  theme_bw()
     
