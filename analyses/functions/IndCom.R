@@ -17,7 +17,7 @@
 
 
 # Libraries
-librarian::shelf(tidyverse, stringr, hillR, DarkDiv, FD, mFD, cati)
+librarian::shelf(dplyr, forcats, stringr, hillR, FD, mFD, rgnparser, textshape)
 
 # Create a generic function with
       # DF = dataframe containing id_sample, canonic (taxon name), abundance and mass
@@ -81,8 +81,8 @@ myIndices <- function(DF, TR, IDresol){
     funct<-c("mean(x, na.rm = TRUE)", "kurtosis(x, na.rm = TRUE)",
              "max(x, na.rm = TRUE) - min(x, na.rm = TRUE)" )
     par(mfrow = c(1,1))
-    massDistri <- plotDistri(as.data.frame(indmass$massMean), rep("region", times = nrow(indmass)),
-               indmass$canonic, plot.ask = F, multipanel = F)
+    #massDistri <- plotDistri(as.data.frame(indmass$massMean), rep("region", times = nrow(indmass)),
+    #           indmass$canonic, plot.ask = F, multipanel = F)
     #sp_regional.ind<-ComIndex(traits = data.frame(massMean = indmass$massMean,
     #                                                 massMean0 = indmass$massMean), 
     #                          index = funct, 
@@ -116,39 +116,60 @@ myIndices <- function(DF, TR, IDresol){
               ###            value
           ### reco => use sqrt(Gower) instead of raw Gower distance to stdz PCoA axes
           ### Compute CWM, CWV, ... trait  FD::functcomp()
-              TR1 <- TR %>%
-                group_by(taxon_name, trait_name)%>%
-                summarize(codedPrc = coded_trait_value/sum(coded_trait_value),
-                          rawVal = mean(raw_trait_value, na.omit = T))
+             tr0 <- TR %>%
+                mutate(canonic = gn_parse_tidy(taxon_name)$canonicalsimple) %>%
+                filter(canonic %in% colnames(com)[-1]) %>%
+                select(canonic, trait_name, raw_trait_value, attribute_trait, coded_trait_value)
+              
+              TR_cont <- tr0 %>%
+                    filter(is.na(coded_trait_value)) %>%
+                    group_by(canonic, trait_name) %>%
+                    summarise(val = mean(as.numeric(raw_trait_value), na.omit = T)) %>%
+                    pivot_wider(id_cols = canonic, names_from = trait_name, 
+                                values_from = val)
+              
+              TR_discr0 <- tr0  %>%
+                filter(!is.na(coded_trait_value)) %>%
+                select(!raw_trait_value) %>%
+                group_by(canonic, trait_name, attribute_trait)%>%
+                summarise(sum_aff = sum(coded_trait_value)) %>%
+                group_by(canonic, trait_name)%>%
+                mutate(codedPrc = sum_aff/sum(sum_aff),
+                       new_trait_name = paste(trait_name, attribute_trait, sep=""))
+              
+              shannon.entropy <- function(p) {
+                  if (min(p) < 0 || sum(p) <= 0)
+                    return(NA)
+                  p.norm <- p[p>0]/sum(p)
+                  -sum(log2(p.norm)*p.norm)
+                }
                 
-              # à finir pour le fuzzy coding
-                            
-              tr0 <- TR %>%
-                 mutate(canonic = gn_parse_tidy(taxon_name)$canonicalsimple) %>%
-                 filter(canonic %in% colnames(com)[-1]) %>%
-                 select(canonic, trait_name, attribute_trait, raw_trait_value, coded_trait_value)  %>%
-                 mutate(val = as.numeric(ifelse(is.na(coded_trait_value), 
-                                               raw_trait_value, 
-                                               coded_trait_value))) %>%
-                      #mutate(trait_name = gsub("\_","",trait_name)) %>%
-                      #mutate(trait_name = abbreviate(trait_name, 3, named = F)) %>%
-                 mutate(new_trait_name = ifelse(!is.na(attribute_trait), 
-                                                  paste(trait_name, "_", attribute_trait, sep = ""), 
-                                                  trait_name)) %>%
-                 pivot_wider(id_cols = canonic, names_from = new_trait_name, 
-                            values_from = val, values_fn = mean)
+              TR_discr_H <- TR_discr0 %>%
+                mutate(trait_name = paste(trait_name, "H", sep = "")) %>%
+                group_by(canonic, trait_name)%>%
+                summarize(H = shannon.entropy(codedPrc)) %>%
+                pivot_wider(id_cols = canonic, names_from = trait_name, 
+                            values_from = H, values_fill = 0) 
+                
+                
+              tr1 <- TR_discr0  %>%
+                  pivot_wider(id_cols = canonic, names_from = new_trait_name, 
+                            values_from = codedPrc, values_fill = 0) %>%
+                  full_join(TR_discr_H) %>%
+                  full_join(TR_cont) 
                
                tr_completeness <- DF %>% 
                  filter(rankName == IDresol) %>%
                  select(canonic) %>%
                  distinct() %>%
-                 left_join(tr0) %>%
-                 mutate(across(c(2:ncol(.)), ~ifelse(is.na(.), 0, 1)))
-               tr <- tr0 %>%
-                 column_to_rownames(var = "canonic")
+                 left_join(tr1) %>%
+                 mutate(across(c(2:ncol(.)), ~ifelse(. == 0, 0, 1)))
+               
+               tr2 <- tr1 %>%
+                 column_to_rownames(1)
                com1 <- com[,-1] %>%
-                 select(rownames(tr))
-               CWM <- cbind(com[,1], functcomp(as.matrix(tr), as.matrix(com1)))
+                 select(rownames(tr2))
+               CWM <- cbind(com[,1], functcomp(as.matrix(tr2), as.matrix(com1)))
               ### Compute Gower distance between sp in the trait space : mFD::funct.dist()
               ### Compute functional diversity indices:  mFD::alpha.fd.hill(asb_sp_w = "abundance", sp_dist  = "gower dist", tau = "mean", q = 1)  # q for Hill number 
              
@@ -161,7 +182,7 @@ alpha <- tibble(id_sample = unique(DF$id_sample)) %>%
   left_join(CWM)
 res <- list(rankID = rankID, iNatID = INatID, dvpStage = dvpStage,
             alpha = alpha, indmass = indmass, 
-            massDistri = massDistri, 
+            #massDistri = massDistri, 
             tr_completeness = tr_completeness)
 res
 }

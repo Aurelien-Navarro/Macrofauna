@@ -1,0 +1,1231 @@
+Order	Suborder	Family	SpeciesID	Author	Body_Size	Dispersal_ability	Feeding_guild	Feeding_guild_short	Feeding_mode	Feeding_specialization	Feeding_tissue	Feeding_plant_part	Endophagous_lifestyle	Stratum_use	Stratum_use_short	Remark
+Araneae	Labidognatha	Anyphaenidae	Anyphaena accentuata	(Walckenaer, 1802)	6.25	1	c	c	e	NA	NA	NA	NA	t	t	
+Araneae	Labidognatha	Araneidae	Aculepeira ceropegia	Walckenaer, 1802	11.00	1	c	c	e	NA	NA	NA	NA	h	h	
+Araneae	Labidognatha	Araneidae	Agalenatea redii	(Scopoli, 1763)	6.93	0.5	c	c	e	NA	NA	NA	NA	h	h	
+Araneae	Labidognatha	Araneidae	Araneus diadematus	Clerck, 1757	11.88	1	c	c	e	NA	NA	NA	NA	(h)-t	u	
+Araneae	Labidognatha	Araneidae	Araneus marmoreus	Clerck, 1757	10.03	0.75	c	c	e	NA	NA	NA	NA	(h)-t	u	
+Araneae	Labidognatha	Araneidae	Araneus quadratus	Clerck, 1757	12.25	1	c	c	e	NA	NA	NA	NA	(h)-t	u	
+Araneae	Labidognatha	Araneidae	Araneus sturmi	(Hahn, 1831)	4.63	0.75	c	c	e	NA	NA	NA	NA	t	t	*
+Araneae	Labidognatha	Araneidae	Araneus triguttatus	Fabricius, 1775	5.25	0.5	c	c	e	NA	NA	NA	NA	t	t	*
+Araneae	Labidognatha	Araneidae	Araniella alpica	(L. Koch, 1869)	6.00	0.75	c	c	e	NA	NA	NA	NA	t	t	*
+Araneae	Labidognatha	Araneidae	Araniella cucurbitina	(Clerck, 1757)	5.50	1	c	c	e	NA	NA	NA	NA	(h)-t	u	
+Araneae	Labidognatha	Araneidae	Araniella opisthographa	(Kulczynski, 1905)	4.38	0.75	c	c	e	NA	NA	NA	NA	(h)-t	u	
+Araneae	Labidognatha	Araneidae	Argiope bruennichi	(Scopoli, 1772)	11.78	1	c	c	e	NA	NA	NA	NA	h	h	
+Araneae	Labidognatha	Araneidae	Cercidia prominens	(Westring, 1851)	5.38	0.5	c	c	e	NA	NA	NA	NA	(g)-h	u	
+Araneae	Labidognatha	Araneidae	Cyclosa conica	(Pallas, 1772)	5.75	0.75	c	c	e	NA	NA	NA	NA	(h)-t	u	
+Araneae	Labidognatha	Araneidae	Cyclosa oculata	(Walckenaer, 1802)	5.08	0.75	c	c	e	NA	NA	NA	NA	h	h	
+Araneae	Labidognatha	Araneidae	Gibbaranea gibbosa	(Walckenaer, 1802)	6.75	0	c	c	e	NA	NA	NA	NA	t	t	
+Araneae	Labidognatha	Araneidae	Gibbaranea omoeda	(Thorell, 1870)	9.13	0.5	c	c	e	NA	NA	NA	NA	t	t	*
+Araneae	Labidognatha	Araneidae	Hypsosinga albovittata	(Westring, 1851)	4.15	0.5	c	c	e	NA	NA	NA	NA	h	h	
+Araneae	Labidognatha	Araneidae	Hypsosinga sanguinea	(C.L. Koch, 1844)	3.75	0.75	c	c	e	NA	NA	NA	NA	h	h	
+Araneae	Labidognatha	Araneidae	Larinioides cornutus	(Clerck, 1757)	10.35	0.75	c	c	e	NA	NA	NA	NA	h-(t)	u	
+Araneae	Labidognatha	Araneidae	Mangora acalypha	(Walckenaer, 1802)	4.50	1	c	c	e	NA	NA	NA	NA	h	h	
+Araneae	Labidognatha	Araneidae	Nuctenea umbratica	(Clerck, 1757)	11.25	1	c	c	e	NA	NA	NA	NA	t	t	*
+Araneae	Labidognatha	Araneidae	Singa hamata	(Clerck, 1757)	5.90	0.75	c	c	e	NA	NA	NA	NA	h	h	
+Araneae	Labidognatha	Clubionidae	Clubiona brevipes	Blackwall, 1841	5.50	0.5	c	c	e	NA	NA	NA	NA	t	t	*
+Araneae	Labidognatha	Clubionidae	Clubiona diversa	O. P.-Cambridge, 1862	4.00	0.5	c	c	e	NA	NA	NA	NA	(s)-(g)-h-(t)	u	
+Araneae	Labidognatha	Clubionidae	Clubiona leucaspis	Simon, 1932	4.05	0.5	c	c	e	NA	NA	NA	NA	t	t	*
+Araneae	Labidognatha	Clubionidae	Clubiona neglecta	O. P.-Cambridge, 1862	6.25	0.75	c	c	e	NA	NA	NA	NA	g-(h)-(t)	u	
+Araneae	Labidognatha	Clubionidae	Clubiona reclusa	O. P.-Cambridge, 1863	5.75	0.75	c	c	e	NA	NA	NA	NA	(g)-h	u	
+Araneae	Labidognatha	Clubionidae	Clubiona stagnatilis	Kulczynski, 1897	6.25	0.5	c	c	e	NA	NA	NA	NA	h	h	
+Araneae	Labidognatha	Dictynidae	Argenna subnigra	(O. P.-Cambridge, 1861)	2.25	0.75	c	c	e	NA	NA	NA	NA	g	g	
+Araneae	Labidognatha	Dictynidae	Dictyna pusilla	Thorell, 1856	2.45	0.5	c	c	e	NA	NA	NA	NA	h-(t)	u	
+Araneae	Labidognatha	Dictynidae	Lathys humilis	(Blackwall, 1855)	2.20	0.5	c	c	e	NA	NA	NA	NA	t	t	*
+Araneae	Labidognatha	Dictynidae	Nigma flavescens	(Walckenaer, 1830)	3.08	0.75	c	c	e	NA	NA	NA	NA	(h)-t	u	*
+Araneae	Labidognatha	Gnaphosidae	Micaria pulicaria	(Sundevall, 1831)	3.55	1	c	c	e	NA	NA	NA	NA	g	g	
+Araneae	Labidognatha	Linyphiidae	Araeoncus humilis	(Blackwall, 1841)	1.60	1	c	c	e	NA	NA	NA	NA	g	g	
+Araneae	Labidognatha	Linyphiidae	Baryphyma pratense	(Blackwall, 1861)	2.20	0.5	c	c	e	NA	NA	NA	NA	g	g	
+Araneae	Labidognatha	Linyphiidae	Bathyphantes approximatus	(O. P.-Cambridge, 1871)	2.63	0.5	c	c	e	NA	NA	NA	NA	(g)-h	u	
+Araneae	Labidognatha	Linyphiidae	Bathyphantes gracilis	(Blackwall, 1841)	1.98	1	c	c	e	NA	NA	NA	NA	g-(h)	u	
+Araneae	Labidognatha	Linyphiidae	Bathyphantes parvulus	(Westring, 1851)	2.15	0.75	c	c	e	NA	NA	NA	NA	g-(h)	u	
+Araneae	Labidognatha	Linyphiidae	Centromerita bicolor	(Blackwall, 1833)	3.25	1	c	c	e	NA	NA	NA	NA	g	g	
+Araneae	Labidognatha	Linyphiidae	Centromerus sylvaticus	(Blackwall, 1841)	3.43	1	c	c	e	NA	NA	NA	NA	g-(h)-(t)	u	
+Araneae	Labidognatha	Linyphiidae	Ceratinella brevipes	(Westring, 1851)	1.45	0.5	c	c	e	NA	NA	NA	NA	g	g	
+Araneae	Labidognatha	Linyphiidae	Ceratinella scabrosa	(O. P.-Cambridge, 1871)	1.88	0.5	c	c	e	NA	NA	NA	NA	g	g	*
+Araneae	Labidognatha	Linyphiidae	Cinetata gradata	(Simon, 1881)	1.45	0.5	c	c	e	NA	NA	NA	NA	t	t	*
+Araneae	Labidognatha	Linyphiidae	Cnephalocotes obscurus	(Blackwall, 1834)	1.73	0.75	c	c	e	NA	NA	NA	NA	g	g	
+Araneae	Labidognatha	Linyphiidae	Collinsia inerrans	(O. P.-Cambridge, 1885)	2.25	1	c	c	e	NA	NA	NA	NA	g-(h)	u	
+Araneae	Labidognatha	Linyphiidae	Dicymbium nigrum brevisetosum	Locket, 1962	2.25	1	c	c	e	NA	NA	NA	NA	g	g	
+Araneae	Labidognatha	Linyphiidae	Diplocephalus picinus	(Blackwall, 1841)	1.83	0.75	c	c	e	NA	NA	NA	NA	g	g	*
+Araneae	Labidognatha	Linyphiidae	Diplostyla concolor	(Wider, 1834)	2.75	1	c	c	e	NA	NA	NA	NA	g-(h)	u	
+Araneae	Labidognatha	Linyphiidae	Dismodicus bifrons	(Blackwall, 1841)	2.11	0.75	c	c	e	NA	NA	NA	NA	h-(t)	u	
+Araneae	Labidognatha	Linyphiidae	Dismodicus elevatus	(C.L. Koch, 1838)	2.48	0.75	c	c	e	NA	NA	NA	NA	t	t	*
+Araneae	Labidognatha	Linyphiidae	Drapetisca socialis	(Sundevall, 1833)	4.05	0.75	c	c	e	NA	NA	NA	NA	t	t	*
+Araneae	Labidognatha	Linyphiidae	Entelecara acuminata	(Wider, 1834)	2.05	0.5	c	c	e	NA	NA	NA	NA	t	t	*
+Araneae	Labidognatha	Linyphiidae	Entelecara congenera	(O. P.-Cambridge, 1879)	1.94	0.5	c	c	e	NA	NA	NA	NA	h-(t)	u	*
+Araneae	Labidognatha	Linyphiidae	Entelecara erythropus	(Westring, 1851)	1.88	0.75	c	c	e	NA	NA	NA	NA	(h)-t	u	*
+Araneae	Labidognatha	Linyphiidae	Entelecara flavipes	(Blackwall, 1834)	1.58	0.5	c	c	e	NA	NA	NA	NA	h-(t)	u	*
+Araneae	Labidognatha	Linyphiidae	Erigone atra	Blackwall, 1833	2.25	1	c	c	e	NA	NA	NA	NA	g	g	
+Araneae	Labidognatha	Linyphiidae	Erigone dentipalpis	(Wider, 1834)	2.33	1	c	c	e	NA	NA	NA	NA	g	g	
+Araneae	Labidognatha	Linyphiidae	Gonatium hilare	(Thorell, 1875)	2.60	0.5	c	c	e	NA	NA	NA	NA	t	t	*
+Araneae	Labidognatha	Linyphiidae	Gongylidiellum latebricola	(O. P.-Cambridge, 1871)	1.50	0.75	c	c	e	NA	NA	NA	NA	g	g	
+Araneae	Labidognatha	Linyphiidae	Gongylidiellum murcidum	Simon, 1884	1.80	0.5	c	c	e	NA	NA	NA	NA	g	g	
+Araneae	Labidognatha	Linyphiidae	Hylyphantes graminicola	(Sundevall, 1830)	2.88	0	c	c	e	NA	NA	NA	NA	h	h	
+Araneae	Labidognatha	Linyphiidae	Hypomma cornutum	(Blackwall, 1833)	2.40	0.5	c	c	e	NA	NA	NA	NA	t	t	*
+Araneae	Labidognatha	Linyphiidae	Kaestneria pullata	(O. P.-Cambridge, 1863)	2.55	0.25	c	c	e	NA	NA	NA	NA	(g)-h	u	
+Araneae	Labidognatha	Linyphiidae	Linyphia triangularis	(Clerck, 1757)	6.00	1	c	c	e	NA	NA	NA	NA	(g)-h-(t)	u	
+Araneae	Labidognatha	Linyphiidae	Mansuphantes mansuetus	(Thorell, 1875)	2.08	0.5	c	c	e	NA	NA	NA	NA	g	g	*
+Araneae	Labidognatha	Linyphiidae	Maso sundevalli	(Westring, 1851)	1.58	0.75	c	c	e	NA	NA	NA	NA	g	g	*
+Araneae	Labidognatha	Linyphiidae	Meioneta affinis	(Kulczynski, 1898)	1.75	1	c	c	e	NA	NA	NA	NA	g	g	
+Araneae	Labidognatha	Linyphiidae	Meioneta rurestris	(C.L.Koch, 1836)	6.23	1	c	c	e	NA	NA	NA	NA	g	g	
+Araneae	Labidognatha	Linyphiidae	Meioneta saxatilis	(Blackwall, 1844)	2.15	1	c	c	e	NA	NA	NA	NA	g	g	
+Araneae	Labidognatha	Linyphiidae	Mermessus trilobatus	(Emerton, 1882)	1.85	1	c	c	e	NA	NA	NA	NA	g-(h)	u	
+Araneae	Labidognatha	Linyphiidae	Micrargus herbigradus	(Blackwall, 1854)	2.08	1	c	c	e	NA	NA	NA	NA	g	g	
+Araneae	Labidognatha	Linyphiidae	Micrargus subaequalis	(Westring, 1851)	1.83	0.75	c	c	e	NA	NA	NA	NA	g-(h)	u	
+Araneae	Labidognatha	Linyphiidae	Microlinyphia pusilla	(Sundevall, 1830)	3.88	1	c	c	e	NA	NA	NA	NA	h	h	
+Araneae	Labidognatha	Linyphiidae	Minyriolus pusillus	(Wider, 1834)	1.25	0.5	c	c	e	NA	NA	NA	NA	g	g	*
+Araneae	Labidognatha	Linyphiidae	Mioxena blanda	(Simon, 1884)	1.55	0.75	c	c	e	NA	NA	NA	NA	g	g	
+Araneae	Labidognatha	Linyphiidae	Moebelia penicillata	(Westring, 1851)	1.60	0.5	c	c	e	NA	NA	NA	NA	t	t	*
+Araneae	Labidognatha	Linyphiidae	Neriene clathrata	(Sundevall, 1830)	4.23	0.75	c	c	e	NA	NA	NA	NA	(g)-h	u	
+Araneae	Labidognatha	Linyphiidae	Neriene emphana	(Walckenaer, 1842)	4.53	0.5	c	c	e	NA	NA	NA	NA	(g)-h-(t)	u	
+Araneae	Labidognatha	Linyphiidae	Nusoncus nasutus	(Wunderlich, 2008)	1.90	0.75	c	c	e	NA	NA	NA	NA	t	t	*
+Araneae	Labidognatha	Linyphiidae	Oedothorax apicatus	(Blackwall, 1850)	2.55	1	c	c	e	NA	NA	NA	NA	g	g	
+Araneae	Labidognatha	Linyphiidae	Oedothorax fuscus	(Blackwall, 1834)	2.35	1	c	c	e	NA	NA	NA	NA	g	g	
+Araneae	Labidognatha	Linyphiidae	Oedothorax gibbosus	(Blackwall, 1841)	2.43	0.75	c	c	e	NA	NA	NA	NA	g	g	
+Araneae	Labidognatha	Linyphiidae	Oedothorax retusus	(Westring, 1851)	2.48	1	c	c	e	NA	NA	NA	NA	g	g	
+Araneae	Labidognatha	Linyphiidae	Palliduphantes pallidus	(O. P.-Cambridge, 1871)	1.95	1	c	c	e	NA	NA	NA	NA	g	g	
+Araneae	Labidognatha	Linyphiidae	Pelecopsis parallela	(Wider, 1834)	1.45	1	c	c	e	NA	NA	NA	NA	g-(h)	u	
+Araneae	Labidognatha	Linyphiidae	Pocadicnemis juncea	Locket & Millidge, 1953	1.85	0.75	c	c	e	NA	NA	NA	NA	g	g	
+Araneae	Labidognatha	Linyphiidae	Poeciloneta variegata	(Blackwall, 1841)	2.45	0.5	c	c	e	NA	NA	NA	NA	t	t	*
+Araneae	Labidognatha	Linyphiidae	Porrhomma microphthalmum	(O. P.-Cambridge, 1871)	1.85	1	c	c	e	NA	NA	NA	NA	(s)-g	u	
+Araneae	Labidognatha	Linyphiidae	Porrhomma oblitum	(O. P.-Cambridge, 1871)	1.65	1	c	c	e	NA	NA	NA	NA	(s)-g-(h)-(t)	u	
+Araneae	Labidognatha	Linyphiidae	Porrhomma pygmaeum	(Blackwall, 1834)	2.28	0.75	c	c	e	NA	NA	NA	NA	(s)-(g)-h	u	
+Araneae	Labidognatha	Linyphiidae	Savignia frontata	Blackwall, 1833	1.75	0.5	c	c	e	NA	NA	NA	NA	g	g	
+Araneae	Labidognatha	Linyphiidae	Styloctetor stativus	(Simon, 1881)	2.13	0.5	c	c	e	NA	NA	NA	NA	g-(h)	u	
+Araneae	Labidognatha	Linyphiidae	Taranucnus setosus	(O. P.-Cambridge, 1863)	3.55	0.25	c	c	e	NA	NA	NA	NA	g	g	
+Araneae	Labidognatha	Linyphiidae	Tenuiphantes flavipes	(Blackwall, 1854)	2.15	0.75	c	c	e	NA	NA	NA	NA	g-(h)-(t)	u	*
+Araneae	Labidognatha	Linyphiidae	Tenuiphantes mengei	(Kulczynski, 1887)	2.03	0.75	c	c	e	NA	NA	NA	NA	g	g	
+Araneae	Labidognatha	Linyphiidae	Tenuiphantes tenebricola	(Wider, 1834)	2.45	0.75	c	c	e	NA	NA	NA	NA	g	g	*
+Araneae	Labidognatha	Linyphiidae	Tenuiphantes tenuis	(Blackwall, 1852)	2.88	1	c	c	e	NA	NA	NA	NA	g	g	
+Araneae	Labidognatha	Linyphiidae	Tiso vagans	(Blackwall, 1834)	2.03	1	c	c	e	NA	NA	NA	NA	g	g	
+Araneae	Labidognatha	Linyphiidae	Trematocephalus cristatus	(Wider, 1834)	2.30	0.75	c	c	e	NA	NA	NA	NA	h-(t)	u	*
+Araneae	Labidognatha	Linyphiidae	Troxochrus scabriculus	(Westring, 1851)	1.85	0.75	c	c	e	NA	NA	NA	NA	g	g	
+Araneae	Labidognatha	Linyphiidae	Walckenaeria antica	(Wider, 1834)	2.13	0.5	c	c	e	NA	NA	NA	NA	g	g	
+Araneae	Labidognatha	Linyphiidae	Walckenaeria capito	(Westring, 1861)	2.65	0	c	c	e	NA	NA	NA	NA	g	g	
+Araneae	Labidognatha	Linyphiidae	Walckenaeria cuspidata	Blackwall, 1833	2.53	0.5	c	c	e	NA	NA	NA	NA	g-(h)-(t)	u	
+Araneae	Labidognatha	Linyphiidae	Walckenaeria unicornis	O. P.-Cambridge, 1861	2.10	0.5	c	c	e	NA	NA	NA	NA	g	g	
+Araneae	Labidognatha	Linyphiidae	Walckenaeria vigilax	(Blackwall, 1853)	2.29	1	c	c	e	NA	NA	NA	NA	g-(h)-(t)	u	
+Araneae	Labidognatha	Lycosidae	Alopecosa cuneata	(Clerck, 1757)	7.25	1	c	c	e	NA	NA	NA	NA	g	g	
+Araneae	Labidognatha	Lycosidae	Alopecosa trabalis	(Clerck, 1757)	10.63	0.75	c	c	e	NA	NA	NA	NA	g	g	
+Araneae	Labidognatha	Lycosidae	Arctosa leopardus	(Sundevall, 1833)	7.63	0.75	c	c	e	NA	NA	NA	NA	g	g	
+Araneae	Labidognatha	Lycosidae	Pardosa amentata	(Clerck, 1757)	6.25	1	c	c	e	NA	NA	NA	NA	g-(h)	u	
+Araneae	Labidognatha	Lycosidae	Pardosa lugubris	(Walckenaer, 1802)	5.60	0.75	c	c	e	NA	NA	NA	NA	g	g	
+Araneae	Labidognatha	Lycosidae	Pardosa paludicola	(Clerck, 1757)	7.63	0.5	c	c	e	NA	NA	NA	NA	g	g	
+Araneae	Labidognatha	Lycosidae	Pardosa palustris	(Linnaeus, 1758)	6.00	1	c	c	e	NA	NA	NA	NA	g	g	
+Araneae	Labidognatha	Lycosidae	Pardosa prativaga	L. Koch, 1870	6.10	1	c	c	e	NA	NA	NA	NA	g	g	
+Araneae	Labidognatha	Lycosidae	Pardosa pullata	(Clerck, 1757)	4.75	1	c	c	e	NA	NA	NA	NA	g	g	
+Araneae	Labidognatha	Lycosidae	Trochosa ruricola	(De Geer, 1778)	9.63	1	c	c	e	NA	NA	NA	NA	g	g	
+Araneae	Labidognatha	Mimetidae	Ero cambridgei	Kulczynski, 1911	2.60	0.5	c	c	e	NA	NA	NA	NA	h-(t)	u	
+Araneae	Labidognatha	Oxypodidae	Oxyopes ramosus	(Martini & Goeze, 1778)	7.00	0.5	c	c	e	NA	NA	NA	NA	h-(t)	u	
+Araneae	Labidognatha	Philodromidae	Philodromus albidus	Kulczynski, 1911	4.12	0.75	c	c	e	NA	NA	NA	NA	(h)-t	u	*
+Araneae	Labidognatha	Philodromidae	Philodromus aureolus	(Clerck, 1757)	5.63	1	c	c	e	NA	NA	NA	NA	(h)-t	u	*
+Araneae	Labidognatha	Philodromidae	Philodromus cespitum	(Walckenaer, 1802)	4.78	1	c	c	e	NA	NA	NA	NA	(h)-t	u	*
+Araneae	Labidognatha	Philodromidae	Philodromus collinus	C.L. Koch, 1835	4.88	0.75	c	c	e	NA	NA	NA	NA	(h)-t	u	*
+Araneae	Labidognatha	Philodromidae	Philodromus praedatus	O. P.-Cambridge, 1871	4.88	0.5	c	c	e	NA	NA	NA	NA	(h)-t	u	*
+Araneae	Labidognatha	Philodromidae	Thanatus formicinus	(Clerck, 1757)	7.88	0.5	c	c	e	NA	NA	NA	NA	(g)-h	u	
+Araneae	Labidognatha	Philodromidae	Tibellus oblongus	(Walckenaer, 1802)	7.63	0.75	c	c	e	NA	NA	NA	NA	h	h	
+Araneae	Labidognatha	Pisauridae	Pisaura mirabilis	(Clerck, 1757)	12.50	1	c	c	e	NA	NA	NA	NA	(g)-h	u	
+Araneae	Labidognatha	Salticidae	Ballus chalybeius	(Walckenaer, 1802)	3.18	0.75	c	c	e	NA	NA	NA	NA	t	t	*
+Araneae	Labidognatha	Salticidae	Evarcha arcuata	(Clerck, 1757)	6.35	0.75	c	c	e	NA	NA	NA	NA	(g)-h-(t)	u	
+Araneae	Labidognatha	Salticidae	Heliophanus cupreus	(Walckenaer, 1802)	4.50	0.75	c	c	e	NA	NA	NA	NA	(g)-h	u	
+Araneae	Labidognatha	Salticidae	Heliophanus flavipes	(Hahn, 1832)	4.50	0.75	c	c	e	NA	NA	NA	NA	(g)-h	u	
+Araneae	Labidognatha	Salticidae	Synageles venator	(Lucas, 1836)	3.50	0.75	c	c	e	NA	NA	NA	NA	g	g	
+Araneae	Labidognatha	Tetragnathidae	Metellina mengei	(Blackwall, 1870)	4.88	1	c	c	e	NA	NA	NA	NA	(h)-t	u	*
+Araneae	Labidognatha	Tetragnathidae	Metellina segmentata	(Clerck, 1757)	7.50	1	c	c	e	NA	NA	NA	NA	(h)-t	u	
+Araneae	Labidognatha	Tetragnathidae	Pachygnatha clercki	Sundevall, 1823	5.25	1	c	c	e	NA	NA	NA	NA	g	g	
+Araneae	Labidognatha	Tetragnathidae	Pachygnatha degeeri	Sundevall, 1830	3.55	1	c	c	e	NA	NA	NA	NA	g	g	
+Araneae	Labidognatha	Tetragnathidae	Tetragnatha extensa	(Linnaeus, 1758)	8.05	1	c	c	e	NA	NA	NA	NA	h-(t)	u	
+Araneae	Labidognatha	Tetragnathidae	Tetragnatha montana	Simon, 1874	8.50	1	c	c	e	NA	NA	NA	NA	t	t	
+Araneae	Labidognatha	Tetragnathidae	Tetragnatha obtusa	C.L. Koch, 1837	5.43	0.75	c	c	e	NA	NA	NA	NA	(h)-t	u	*
+Araneae	Labidognatha	Tetragnathidae	Tetragnatha pinicola	L. Koch, 1870	5.13	0.75	c	c	e	NA	NA	NA	NA	(h)-t	u	
+Araneae	Labidognatha	Tetragnathidae	Tetragnatha reimoseri	(Rosca, 1939)	10.00	0.5	c	c	e	NA	NA	NA	NA	h	h	
+Araneae	Labidognatha	Theridiidae	Anelosimus vittatus	(C.L. Koch, 1836)	3.53	0.5	c	c	e	NA	NA	NA	NA	t	t	*
+Araneae	Labidognatha	Theridiidae	Asagena phalerata	(Panzer, 1801)	4.93	0.75	c	c	e	NA	NA	NA	NA	g	g	
+Araneae	Labidognatha	Theridiidae	Cryptachaea riparia	(Blackwall, 1834)	3.50	0.75	c	c	e	NA	NA	NA	NA	h-(t)	u	
+Araneae	Labidognatha	Theridiidae	Dipoena torva	(Thorell, 1875)	3.25	0.5	c	c	e	NA	NA	NA	NA	t	t	*
+Araneae	Labidognatha	Theridiidae	Enoplognatha latimana	Hippa & Oksala, 1982	4.50	0.5	c	c	e	NA	NA	NA	NA	h	h	
+Araneae	Labidognatha	Theridiidae	Enoplognatha ovata	(Clerck, 1757)	5.30	1	c	c	e	NA	NA	NA	NA	(h)-t	u	
+Araneae	Labidognatha	Theridiidae	Enoplognatha thoracica	(Hahn, 1833)	4.00	0.75	c	c	e	NA	NA	NA	NA	g	g	
+Araneae	Labidognatha	Theridiidae	Lasaeola tristis	(Hahn, 1833)	3.30	0.5	c	c	e	NA	NA	NA	NA	t	t	*
+Araneae	Labidognatha	Theridiidae	Neottiura bimaculata	(Linnaeus, 1767)	2.50	1	c	c	e	NA	NA	NA	NA	h	h	
+Araneae	Labidognatha	Theridiidae	Paidiscura pallens	(Blackwall, 1834)	1.58	0.75	c	c	e	NA	NA	NA	NA	t	t	*
+Araneae	Labidognatha	Theridiidae	Parasteatoda simulans	(Thorell, 1875)	3.53	0.75	c	c	e	NA	NA	NA	NA	t	t	*
+Araneae	Labidognatha	Theridiidae	Phylloneta impressa	(L. Koch, 1881)	4.25	0.75	c	c	e	NA	NA	NA	NA	h-(t)	u	
+Araneae	Labidognatha	Theridiidae	Phylloneta sisyphia	(Clerck, 1757)	3.68	0.5	c	c	e	NA	NA	NA	NA	(h)-t	u	
+Araneae	Labidognatha	Theridiidae	Platnickina tincta	(Walckenaer, 1802)	3.30	0.75	c	c	e	NA	NA	NA	NA	t	t	*
+Araneae	Labidognatha	Theridiidae	Robertus arundineti	(O. P.-Cambridge, 1871)	2.31	0.5	c	c	e	NA	NA	NA	NA	g-(h)	u	
+Araneae	Labidognatha	Theridiidae	Robertus lividus	(Blackwall, 1836)	3.38	0.75	c	c	e	NA	NA	NA	NA	g	g	
+Araneae	Labidognatha	Theridiidae	Robertus neglectus	(O. P.-Cambridge, 1871)	2.13	0.75	c	c	e	NA	NA	NA	NA	g-(h)	u	
+Araneae	Labidognatha	Theridiidae	Simitidion simile	(C.L. Koch, 1836)	2.60	0.5	c	c	e	NA	NA	NA	NA	(g)-h	u	
+Araneae	Labidognatha	Theridiidae	Theridion boesenbergi	Strand, 1904	2.13	1	c	c	e	NA	NA	NA	NA	t	t	*
+Araneae	Labidognatha	Theridiidae	Theridion pictum	(Walckenaer, 1802)	3.53	0.5	c	c	e	NA	NA	NA	NA	h-(t)	u	
+Araneae	Labidognatha	Theridiidae	Theridion pinastri	L. Koch, 1872	3.13	0.75	c	c	e	NA	NA	NA	NA	(h)-t	u	*
+Araneae	Labidognatha	Theridiidae	Theridion varians	Hahn, 1833	3.13	0.75	c	c	e	NA	NA	NA	NA	(h)-t	u	*
+Araneae	Labidognatha	Thomisidae	Coriarachne depressa	(C.L. Koch, 1837)	5.00	0.5	c	c	e	NA	NA	NA	NA	t	t	*
+Araneae	Labidognatha	Thomisidae	Diaea dorsata	(Fabricius, 1777)	4.83	1	c	c	e	NA	NA	NA	NA	(h)-t	u	*
+Araneae	Labidognatha	Thomisidae	Ebrechtella tricuspidata	(Fabricius, 1775)	4.50	0.75	c	c	e	NA	NA	NA	NA	h-(t)	u	
+Araneae	Labidognatha	Thomisidae	Misumena vatia	(Clerck, 1757)	6.63	0.75	c	c	e	NA	NA	NA	NA	h-(t)	u	
+Araneae	Labidognatha	Thomisidae	Ozyptila praticola	(C.L. Koch, 1837)	3.45	1	c	c	e	NA	NA	NA	NA	g	g	
+Araneae	Labidognatha	Thomisidae	Ozyptila simplex	(O. P.-Cambridge, 1862)	3.53	0.75	c	c	e	NA	NA	NA	NA	g	g	
+Araneae	Labidognatha	Thomisidae	Ozyptila trux	(Blackwall, 1846)	4.10	0.75	c	c	e	NA	NA	NA	NA	g	g	
+Araneae	Labidognatha	Thomisidae	Xysticus audax	(Schrank, 1803)	4.98	0.75	c	c	e	NA	NA	NA	NA	t	t	*
+Araneae	Labidognatha	Thomisidae	Xysticus bifasciatus	C.L. Koch, 1837	7.03	0.75	c	c	e	NA	NA	NA	NA	(g)-h-(t)	u	
+Araneae	Labidognatha	Thomisidae	Xysticus cristatus	(Clerck, 1757)	5.58	1	c	c	e	NA	NA	NA	NA	(g)-h-(t)	u	
+Araneae	Labidognatha	Thomisidae	Xysticus erraticus	(Blackwall, 1834)	5.75	0.75	c	c	e	NA	NA	NA	NA	g-(h)	u	
+Araneae	Labidognatha	Thomisidae	Xysticus kochi	Thorell, 1872	6.55	1	c	c	e	NA	NA	NA	NA	(g)-h-(t)	u	
+Araneae	Labidognatha	Thomisidae	Xysticus lanio	C.L. Koch, 1835	6.13	0.75	c	c	e	NA	NA	NA	NA	t	t	*
+Araneae	Labidognatha	Thomisidae	Xysticus striatipes	L. Koch, 1870	6.30	0.5	c	c	e	NA	NA	NA	NA	g	g	
+Araneae	Labidognatha	Thomisidae	Xysticus ulmi	(Hahn, 1832)	5.08	0.75	c	c	e	NA	NA	NA	NA	h	h	
+Coleoptera	Adephaga	Carabidae	Amara aenea	(De Geer, 1774)	7.50	1	c-h	o	c	o	NA	r-ro	NA	g-(h)	g	
+Coleoptera	Adephaga	Carabidae	Amara aulica	(Panzer, 1797)	12.75	1	c-(h)	c	c	p	NA	r-ro	NA	h	h	
+Coleoptera	Adephaga	Carabidae	Amara bifrons	(Gyllenhal, 1810)	6.50	1	c-h	o	c	o	NA	r-ro	NA	g-(h)	g	
+Coleoptera	Adephaga	Carabidae	Amara communis	(Panzer, 1797)	7.00	1	c-h	o	c	o	NA	r-ro	NA	g-(h)	g	
+Coleoptera	Adephaga	Carabidae	Amara familiaris	(Duftschmid, 1812)	6.50	1	c-h	o	c	o	NA	r-ro	NA	g-(h)	g	
+Coleoptera	Adephaga	Carabidae	Amara montivaga	Sturm, 1825	8.50	1	c-h	o	c	p	NA	r-ro	NA	g-(h)	g	*
+Coleoptera	Adephaga	Carabidae	Amara plebeja	(Gyllenhal, 1810)	7.00	1	c-h	o	c	o	NA	r-ro	NA	g-(h)	g	
+Coleoptera	Adephaga	Carabidae	Anisodactylus binotatus	(Fabricius, 1787)	11.00	1	c-h	o	c	p	NA	l	NA	g-(h)	g	
+Coleoptera	Adephaga	Carabidae	Badister bullatus	(Schrank, 1798)	5.40	1	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Adephaga	Carabidae	Bembidion assimile	Gyllenhal, 1810	2.50	0.5	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Adephaga	Carabidae	Bembidion gilvipes	Sturm, 1825	2.75	0.75	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Adephaga	Carabidae	Bembidion guttula	(Fabricius, 1792)	3.15	0.75	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Adephaga	Carabidae	Bembidion obtusum	Serville, 1821	3.20	0.5	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Adephaga	Carabidae	Diachromus germanus	(Linneaus, 1758)	9.00	1	c-h	o	c	p	NA	l-r-se	NA	g-(h)	g	
+Coleoptera	Adephaga	Carabidae	Dyschiriodes tristis	(Stephens 1827)	3.60	1	c	c	c	NA	NA	NA	NA	s	s	
+Coleoptera	Adephaga	Carabidae	Dyschirius aeneus	(Dejean, 1825)	2.50	1	c	c	c	NA	NA	NA	NA	s	s	
+Coleoptera	Adephaga	Carabidae	Dyschirius globosus	(Herbst, 1784)	2.40	0.75	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Adephaga	Carabidae	Ophonus diffinis	Dejean, 1829	11.25	1	c-h	o	c	o	NA	l-r	NA	g-h	u	
+Coleoptera	Adephaga	Carabidae	Ophonus puncticeps	(Stephens, 1828)	8.25	1	c-h	o	c	o	NA	l-r	NA	g-(h)	g	
+Coleoptera	Adephaga	Carabidae	Poecilus cupreus	(Linneaus, 1758)	11.00	1	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Adephaga	Carabidae	Poecilus lepidus	(Leske, 1785)	12.00	1	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Adephaga	Carabidae	Poecilus versicolor	(Sturm, 1824)	9.75	1	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Adephaga	Carabidae	Pterostichus vernalis	(Panzer, 1796)	6.65	0.75	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Adephaga	Carabidae	Syntomus truncatellus	(Linneaus, 1761)	2.95	0.5	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Adephaga	Carabidae	Trechus obtusus	Erichson, 1837	4.00	0.5	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Adephaga	Carabidae	Trechus quadristriatus	(Schrank, 1781)	4.00	0.5	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Adephaga	Carabidae	Trichotichnus nitens	(Heer, 1838)	7.25	0.75	c	c	c	NA	NA	NA	NA	g	g	*
+Coleoptera	Adephaga	Dytiscidae	Scarodytes halensis	(Fabricius, 1787)	4.25	1	c	c	c	NA	NA	NA	NA	w	w	*
+Coleoptera	Polyphaga	Alleculidae	Cteniopus flavus	(Scopoli, 1763)	8.00	1	h	h	c	p	NA	r-ro	NA	h	h	
+Coleoptera	Polyphaga	Anthicidae	Anthicus antherinus	(Linneaus, 1761)	3.25	1	d	d	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Anthicidae	Notoxus monoceros	(Linneaus, 1761)	4.60	1	c-d	o	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Anthicidae	Omonadus floralis	(Linneaus, 1758)	3.25	1	c-d	o	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Anthicidae	Omonadus formicarius	(Goeze, 1777)	3.15	1	c-d	o	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Anthribidae	Brachytarsus nebulosus	(Forster, 1771)	2.75	1	c	c	c	NA	NA	NA	NA	t	t	*
+Coleoptera	Polyphaga	Apionidae	Apion cruentatum	Walton, 1844	3.00	1	h	h	c	m	NA	s-(ro)	ms-(mro)	h	h	
+Coleoptera	Polyphaga	Apionidae	Apion frumentarium	Linneaus, 1758	3.90	1	h	h	c	m	NA	s	ms	h	h	
+Coleoptera	Polyphaga	Apionidae	Apion haematodes	Kirby, 1808	2.65	1	h	h	c	m	NA	l-ro	mro	h	h	
+Coleoptera	Polyphaga	Apionidae	Aspidapion radiolus	(Marshall, 1802)	2.60	1	h	h	c	o	NA	s	ms	h	h	
+Coleoptera	Polyphaga	Apionidae	Catapion pubescens	(Kirby, 1811)	1.95	1	h	h	c	m	NA	s	gs	h	h	
+Coleoptera	Polyphaga	Apionidae	Catapion seniculus	(Kirby, 1808)	1.80	0.5	h	h	c	m	NA	l-s	ms	h	h	
+Coleoptera	Polyphaga	Apionidae	Ceratapion gibbirostre	(Gyllenhal, 1813)	2.55	1	h	h	c	o	NA	s	ms	h	h	
+Coleoptera	Polyphaga	Apionidae	Ceratapion onopordi	(W. Kirby, 1808)	2.65	1	h	h	c	o	NA	ro-s	mro-ms	h	h	
+Coleoptera	Polyphaga	Apionidae	Cyanapion gyllenhalii	Kirby, 1808	2.60	1	h	h	c	m	NA	l-s	gs	h	h	
+Coleoptera	Polyphaga	Apionidae	Cyanapion platalea	(Germar, 1817)	2.10	1	h	h	c	m	NA	l-s	NA	h	h	
+Coleoptera	Polyphaga	Apionidae	Cyanapion spencii	(Kirby, 1808)	2.20	1	h	h	c	m	NA	l-s	NA	h	h	
+Coleoptera	Polyphaga	Apionidae	Diplapion confluens	(Kirby, 1808)	2.05	1	h	h	c	o	NA	ro-s	mro-ms	g-h	u	
+Coleoptera	Polyphaga	Apionidae	Eutrichapion ervi	(Kirby, 1808)	2.20	1	h	h	c	o	NA	r	NA	h	h	
+Coleoptera	Polyphaga	Apionidae	Eutrichapion punctigerum	(Paykull, 1792)	2.70	1	h	h	c	m	NA	r	mr	h	h	
+Coleoptera	Polyphaga	Apionidae	Eutrichapion viciae	(Paykull, 1800)	2.15	1	h	h	c	o	NA	r	NA	h	h	
+Coleoptera	Polyphaga	Apionidae	Exapion difficile	(Herbst, 1797)	2.15	1	h	h	c	m	NA	r	mr	t	t	
+Coleoptera	Polyphaga	Apionidae	Holotrichapion aethiops	(Herbst, 1797)	2.30	1	h	h	c	m	NA	s	ms	h	h	
+Coleoptera	Polyphaga	Apionidae	Holotrichapion ononis	(Kirby, 1808)	2.05	1	h	h	c	m	NA	r	mr	h	h	
+Coleoptera	Polyphaga	Apionidae	Holotrichapion pisi	(Fabricius, 1801)	2.55	1	h	h	c	m	NA	l-s	NA	h	h	
+Coleoptera	Polyphaga	Apionidae	Ischnopterapion loti	(Kirby, 1808)	2.25	1	h	h	c	m	NA	r	mr	h	h	
+Coleoptera	Polyphaga	Apionidae	Ischnopterapion modestum	(Germar, 1817)	2.25	1	h	h	c	m	NA	r	mr	h	h	
+Coleoptera	Polyphaga	Apionidae	Ischnopterapion virens	(Herbst, 1797)	2.20	0.5	h	h	c	m	NA	l-s	ms	h	h	
+Coleoptera	Polyphaga	Apionidae	Nanophyes marmoratus	(Goeze, 1777)	1.75	1	h	h	c	m	NA	r	mr	h	h	
+Coleoptera	Polyphaga	Apionidae	Omphalapion hookerorum	(Kirby, 1808)	2.00	1	h	h	c	m	NA	r	NA	h	h	
+Coleoptera	Polyphaga	Apionidae	Oxystoma cerdo	(Gerstaecker, 1854)	2.70	1	h	h	c	m	NA	r	mr	h	h	
+Coleoptera	Polyphaga	Apionidae	Oxystoma pomonae	(Fabricius, 1798)	3.05	1	h	h	c	o	NA	r	mr	h	h	
+Coleoptera	Polyphaga	Apionidae	Perapion curtirostre	(Germar, 1817)	2.15	1	h	h	c	m	NA	s	ms	h	h	
+Coleoptera	Polyphaga	Apionidae	Perapion marchicum	(Herbst, 1797)	1.95	1	h	h	c	m	NA	s	gs	h	h	
+Coleoptera	Polyphaga	Apionidae	Perapion oblongum	(Gyllenhal, 1839)	2.75	1	h	h	c	m	NA	s	ms	h	h	
+Coleoptera	Polyphaga	Apionidae	Perapion violaceum	(Kirby, 1808)	3.05	1	h	h	c	m	NA	s	ms	h	h	
+Coleoptera	Polyphaga	Apionidae	Phrissotrichum rugicolle	(Germar, 1817)	2.20	1	h	h	c	m	NA	r	mr	h	h	
+Coleoptera	Polyphaga	Apionidae	Protapion apricans	(Herbst, 1797)	2.45	1	h	h	c	m	NA	r	NA	h	h	
+Coleoptera	Polyphaga	Apionidae	Protapion assimile	Kirby, 1808	2.05	1	h	h	c	m	NA	r	NA	h	h	
+Coleoptera	Polyphaga	Apionidae	Protapion filirostre	(Kirby, 1808)	1.75	1	h	h	c	m	NA	r-s	ms-(gs)	h	h	
+Coleoptera	Polyphaga	Apionidae	Protapion fulvipes	(Geoffroy, 1785)	2.00	0.5	h	h	c	m	NA	l-r	NA	h	h	
+Coleoptera	Polyphaga	Apionidae	Protapion interjectum	(Desbrochers, 1895)	2.00	1	h	h	c	m	NA	r	NA	h	h	
+Coleoptera	Polyphaga	Apionidae	Protapion nigritarse	(Kirby, 1808)	1.75	1	h	h	c	m	NA	r	mr	h	h	
+Coleoptera	Polyphaga	Apionidae	Protapion trifolii	(Linneaus, 1768)	1.90	1	h	h	c	m	NA	l-r	NA	h	h	
+Coleoptera	Polyphaga	Apionidae	Pseudoperapion brevirostre	(Herbst, 1797)	2.05	1	h	h	c	m	NA	l-r-s	ms	h	h	
+Coleoptera	Polyphaga	Apionidae	Squamapion atomarium	(Kirby, 1808)	1.40	1	h	h	c	m	NA	s	gs	h	h	
+Coleoptera	Polyphaga	Apionidae	Stenopterapion meliloti	(Kirby, 1808)	2.75	0.5	h	h	c	m	NA	s	ms	h	h	
+Coleoptera	Polyphaga	Apionidae	Stenopterapion tenue	(Kirby, 1808)	1.95	0	h	h	c	m	NA	l-s	ms	h	h	
+Coleoptera	Polyphaga	Apionidae	Synapion ebeninum	(Kirby, 1808)	2.40	1	h	h	c	o	NA	s	ms	h	h	
+Coleoptera	Polyphaga	Apionidae	Taeniapion urticarium	(Herbst, 1784)	2.10	1	h	h	c	m	NA	s	ms	h	h	
+Coleoptera	Polyphaga	Bruchidae	Bruchidius lividimanus	(Gyllenhal, 1833)	2.50	1	h	h	c	o	NA	r	mr	h	h	*
+Coleoptera	Polyphaga	Bruchidae	Bruchidius marginalis	(Fabricius, 1777)	3.00	1	h	h	c	m	NA	r	mr	h	h	
+Coleoptera	Polyphaga	Bruchidae	Bruchidius varius	(Olivier, 1795)	2.60	1	h	h	c	m	NA	r	mr	h	h	
+Coleoptera	Polyphaga	Bruchidae	Bruchidius villosus	(Fabricius, 1792)	2.60	1	h	h	c	o	NA	r	mr	t	t	*
+Coleoptera	Polyphaga	Bruchidae	Bruchus atomarius	(Linneaus, 1761)	2.75	1	h	h	c	o	NA	r	mr	h	h	
+Coleoptera	Polyphaga	Bruchidae	Bruchus luteicornis	Illiger, 1794	2.15	1	h	h	c	m	NA	r	mr	h	h	
+Coleoptera	Polyphaga	Bruchidae	Bruchus rufimanus	Bohemann, 1833	4.50	1	h	h	c	o	NA	r	mr	h	h	
+Coleoptera	Polyphaga	Buprestidae	Anthaxia nitidula	(Linneaus, 1758)	6.13	1	d	d	c	NA	NA	NA	NA	t	t	
+Coleoptera	Polyphaga	Buprestidae	Trachys scrobiculatus	Kiesenwetter, 1857	1.50	1	h	h	c	o	NA	l	ml	h	h	
+Coleoptera	Polyphaga	Byrrhidae	Byrrhus pilula	(Linneaus, 1758)	8.00	1	h	h	c	p	NA	r	NA	g	g	
+Coleoptera	Polyphaga	Byturidae	Byturus ochraceus	(Scriba, 1790)	4.30	1	h	h	c	m	NA	r	NA	h	h	
+Coleoptera	Polyphaga	Cantharidae	Cantharis fulvicollis	Fabricius, 1792	6.25	1	c	c	c	NA	NA	NA	NA	h	h	
+Coleoptera	Polyphaga	Cantharidae	Cantharis fusca	Linneaus, 1758	13.00	1	c	c	c	NA	NA	NA	NA	h	h	
+Coleoptera	Polyphaga	Cantharidae	Cantharis lateralis	Linneaus, 1758	6.00	1	c	c	c	NA	NA	NA	NA	h	h	
+Coleoptera	Polyphaga	Cantharidae	Cantharis livida	Linneaus, 1758	11.25	1	c	c	c	NA	NA	NA	NA	h	h	
+Coleoptera	Polyphaga	Cantharidae	Cantharis nigricans	(Mueller, 1776)	9.50	1	c	c	c	NA	NA	NA	NA	h	h	*
+Coleoptera	Polyphaga	Cantharidae	Cantharis pallida	Goeze, 1777	7.25	1	c	c	c	NA	NA	NA	NA	h	h	*
+Coleoptera	Polyphaga	Cantharidae	Cantharis paludosa	Fallén, 1807	5.50	1	c	c	c	NA	NA	NA	NA	h	h	
+Coleoptera	Polyphaga	Cantharidae	Cantharis pellucida	Fabricius, 1792	11.75	1	c	c	c	NA	NA	NA	NA	h	h	*
+Coleoptera	Polyphaga	Cantharidae	Cantharis rufa	Linneaus, 1758	9.75	1	c	c	c	NA	NA	NA	NA	h	h	
+Coleoptera	Polyphaga	Cantharidae	Cantharis terminata	Letzner, 1847	10.50	1	c	c	c	NA	NA	NA	NA	h	h	*
+Coleoptera	Polyphaga	Cantharidae	Cratosilis denticollis	(Schummel, 1844)	6.50	1	c	c	c	NA	NA	NA	NA	h	h	
+Coleoptera	Polyphaga	Cantharidae	Malthinus punctatus	(Fourcroy, 1785)	5.50	1	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Cantharidae	Malthodes lobatus	Kiesenwetter, 1852	1.00	1	c-d-h	o	c	p	NA	r	NA	g	g	*
+Coleoptera	Polyphaga	Cantharidae	Malthodes pumilus	(Brebisson , 1835)	1.40	1	c-h	o	c	p	NA	r	NA	g	g	*
+Coleoptera	Polyphaga	Cantharidae	Metacantharis clypeata	(Illiger, 1798)	8.25	1	c	c	c	NA	NA	NA	NA	h	h	
+Coleoptera	Polyphaga	Cantharidae	Metacantharis discoidea	(Ahrens, 1812)	10.00	1	c	c	c	NA	NA	NA	NA	h	h	*
+Coleoptera	Polyphaga	Cantharidae	Podistra rufotestacea	(Letzner 1845)	9.10	1	c	c	c	NA	NA	NA	NA	h	h	*
+Coleoptera	Polyphaga	Cantharidae	Rhagonycha fulva	(Scopoli, 1763)	8.50	1	c	c	c	NA	NA	NA	NA	h	h	
+Coleoptera	Polyphaga	Cantharidae	Rhagonycha limbata	Thomson, 1864	5.50	1	c	c	c	NA	NA	NA	NA	h	h	*
+Coleoptera	Polyphaga	Cantharidae	Rhagonycha lutea	(Muller O.F., 1764)	7.50	1	c	c	c	NA	NA	NA	NA	h	h	
+Coleoptera	Polyphaga	Cantharidae	Rhagonycha testacea	(Linneaus, 1758)	5.50	1	c	c	c	NA	NA	NA	NA	h	h	*
+Coleoptera	Polyphaga	Cerambycidae	Alosterna tabacicolor	(De Geer, 1775)	7.00	1	d-h	o	c	p	NA	r	NA	t	t	
+Coleoptera	Polyphaga	Cerambycidae	Corymbia rubra	(Linneaus, 1758)	14.50	1	d-h	o	c	p	NA	r	NA	t	t	
+Coleoptera	Polyphaga	Cerambycidae	Leiopus linnei	Wallin-etaLinneaus, 2009	7.00	1	d	d	c	NA	NA	NA	NA	g	g	*
+Coleoptera	Polyphaga	Cerambycidae	Paracorymbia maculicornis	(De Geer, 1775)	9.00	1	d	d	c	NA	NA	NA	NA	t	t	
+Coleoptera	Polyphaga	Cerambycidae	Phytoecia cylindrica	(Linneaus, 1758)	9.00	1	h	h	c	o	NA	l-s	ms	h	h	
+Coleoptera	Polyphaga	Cerambycidae	Pseudovadonia livida	(Fabricius, 1776)	8.00	1	f-h	o	c	o	NA	r	NA	g-t	u	*
+Coleoptera	Polyphaga	Cerambycidae	Stenurella bifasciata	(Mueller, 1776)	8.50	1	d-h	o	c	p	NA	r	NA	t	t	
+Coleoptera	Polyphaga	Cerambycidae	Stenurella melanura	(Linneaus, 1758)	7.50	1	d-h	o	c	p	NA	r	NA	t	t	
+Coleoptera	Polyphaga	Cholevidae	Apocatops nigritus	(Erichson, 1837)	4.00	0.5	d	d	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Cholevidae	Catops grandicollis	Erichson, 1837	3.75	0.5	d	d	c	NA	NA	NA	NA	i	u	
+Coleoptera	Polyphaga	Cholevidae	Nargus velox	(Spence, 1815)	2.95	1	c-d	o	c	NA	NA	NA	NA	g	g	*
+Coleoptera	Polyphaga	Cholevidae	Ptomaphagus sericatus	(Chaudoir, 1845)	2.40	1	d	d	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Cholevidae	Ptomaphagus subvillosus	(Goeze, 1777)	2.95	0	d	d	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Cholevidae	Ptomaphagus varicornis	(Rosenhauer, 1847)	3.40	0	d	d	c	NA	NA	NA	NA	g	g	*
+Coleoptera	Polyphaga	Cholevidae	Sciodrepoides watsoni	(Spence, 1815)	3.00	1	d	d	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Chrysomelidae	Altica helianthemi	(Allard, 1859)	4.00	1	h	h	c	m	NA	l	NA	h-t	u	
+Coleoptera	Polyphaga	Chrysomelidae	Altica oleracea	(Linneaus, 1758)	3.00	1	h	h	c	o	NA	l	NA	h	h	
+Coleoptera	Polyphaga	Chrysomelidae	Aphthona atrocoerulea	(Stephens, 1831)	2.00	1	h	h	c	m	NA	l	NA	h	h	
+Coleoptera	Polyphaga	Chrysomelidae	Aphthona atrovirens	(Forster, 1849)	1.55	1	h	h	c	m	NA	l	NA	h	h	
+Coleoptera	Polyphaga	Chrysomelidae	Aphthona cyparissiae	(Koch, 1803)	4.00	1	h	h	c	m	NA	l-r	NA	h	h	
+Coleoptera	Polyphaga	Chrysomelidae	Aphthona euphorbiae	(Schrank, 1781)	1.75	1	h	h	c	m	NA	l	NA	h	h	
+Coleoptera	Polyphaga	Chrysomelidae	Aphthona herbigrada	(Curtis, 1837)	1.90	1	h	h	c	m	NA	l	NA	h	h	
+Coleoptera	Polyphaga	Chrysomelidae	Aphthona lutescens	(Gyllenhal, 1808)	2.00	1	h	h	c	m	NA	l	NA	h	h	
+Coleoptera	Polyphaga	Chrysomelidae	Aphthona pallida	(Bach, 1856)	1.65	1	h	h	c	m	NA	l	NA	h	h	
+Coleoptera	Polyphaga	Chrysomelidae	Aphthona pygmaea	(Kutschera, 1861)	3.00	1	h	h	c	m	NA	l	NA	h	h	
+Coleoptera	Polyphaga	Chrysomelidae	Aphthona venustula	(Kutschera, 1861)	2.10	1	h	h	c	m	NA	l	NA	h	h	
+Coleoptera	Polyphaga	Chrysomelidae	Batophila rubi	(Paykull, 1799)	1.70	0	h	h	c	o	NA	l	NA	t	t	*
+Coleoptera	Polyphaga	Chrysomelidae	Cassida denticollis	Suffrian, 1844	6.25	1	h	h	c	o	NA	l	NA	h	h	
+Coleoptera	Polyphaga	Chrysomelidae	Cassida flaveola	Thunberg, 1794	5.00	1	h	h	c	o	NA	l	NA	h	h	
+Coleoptera	Polyphaga	Chrysomelidae	Cassida hemisphaerica	Herbst, 1799	4.50	1	h	h	c	o	NA	l	NA	h	h	
+Coleoptera	Polyphaga	Chrysomelidae	Cassida nebulosa	Linneaus, 1758	6.50	1	h	h	c	m	NA	l	NA	h-t	u	
+Coleoptera	Polyphaga	Chrysomelidae	Cassida panzeri	Weise, 1907	6.50	1	h	h	c	o	NA	l	NA	h	h	
+Coleoptera	Polyphaga	Chrysomelidae	Cassida rubiginosa	Muller, 1776	6.75	1	h	h	c	o	NA	l	NA	h	h	
+Coleoptera	Polyphaga	Chrysomelidae	Cassida sanguinolenta	Mueller, 1776	4.75	1	h	h	c	m	NA	l	NA	h	h	
+Coleoptera	Polyphaga	Chrysomelidae	Cassida stigmatica	Suffrian, 1844	5.75	1	h	h	c	m	NA	l	NA	h	h	
+Coleoptera	Polyphaga	Chrysomelidae	Cassida vibex	Linneaus, 1767	6.25	1	h	h	c	o	NA	l	NA	h	h	
+Coleoptera	Polyphaga	Chrysomelidae	Chaetocnema aridula	(Gyllenhal, 1827)	2.00	1	h	h	c	o	NA	l-s	ms	h	h	
+Coleoptera	Polyphaga	Chrysomelidae	Chaetocnema concinna	(Marsham, 1802)	2.10	1	h	h	c	o	NA	l-s	ms	h	h	
+Coleoptera	Polyphaga	Chrysomelidae	Chaetocnema hortensis	(Geoffroy, 1785)	1.90	1	h	h	c	o	NA	l	NA	h	h	
+Coleoptera	Polyphaga	Chrysomelidae	Chaetocnema laevicollis	(Thomson, 1866)	2.00	1	h	h	c	o	NA	l	NA	h	h	
+Coleoptera	Polyphaga	Chrysomelidae	Chaetocnema mannerheimi	(Gyllenhal, 1827)	2.50	1	h	h	c	m	NA	l	NA	h	h	
+Coleoptera	Polyphaga	Chrysomelidae	Chaetocnema subcoerulea	(Kutschera, 1864)	2.00	1	h	h	c	o	NA	l	NA	h	h	
+Coleoptera	Polyphaga	Chrysomelidae	Chrysolina fastuosa	(Scopoli, 1763)	5.50	1	h	h	c	o	NA	l	NA	h	h	
+Coleoptera	Polyphaga	Chrysomelidae	Chrysolina oricalcia	(Muller O.F., 1776)	7.50	1	h	h	c	o	NA	l	NA	h	h	
+Coleoptera	Polyphaga	Chrysomelidae	Chrysolina varians	(Schaller, 1783)	5.25	0	h	h	c	m	NA	l	NA	h	h	
+Coleoptera	Polyphaga	Chrysomelidae	Clytra laeviuscula	Ratzeburg, 1837	9.00	1	h	h	c	o	NA	l	NA	t	t	*
+Coleoptera	Polyphaga	Chrysomelidae	Colaphus sophiae	(Schaller, 1783)	5.00	1	h	h	c	o	NA	l	NA	h	h	
+Coleoptera	Polyphaga	Chrysomelidae	Coptocephala rubicunda	(Laicharting, 1781)	5.25	1	h	h	c	o	NA	l-r	NA	h	h	
+Coleoptera	Polyphaga	Chrysomelidae	Cryptocephalus aureolus	Suffrian, 1847	6.00	1	h	h	c	o	NA	l-r	NA	h	h	
+Coleoptera	Polyphaga	Chrysomelidae	Cryptocephalus flavipes	Fabricius, 1781	4.25	1	h	h	c	o	NA	l	NA	t	t	*
+Coleoptera	Polyphaga	Chrysomelidae	Cryptocephalus fulvus	Goeze, 1777	2.50	1	h	h	c	p	NA	l-r	NA	h	h	
+Coleoptera	Polyphaga	Chrysomelidae	Cryptocephalus hypochaeridis	(Linneaus, 1758)	5.00	1	h	h	c	o	NA	l-r	NA	h	h	
+Coleoptera	Polyphaga	Chrysomelidae	Cryptocephalus labiatus	(Linneaus, 1761)	2.40	1	h	h	c	m	NA	l	NA	t	t	*
+Coleoptera	Polyphaga	Chrysomelidae	Cryptocephalus moraei	(Linneaus, 1758)	4.00	1	h	h	c	m	NA	l	NA	h	h	
+Coleoptera	Polyphaga	Chrysomelidae	Cryptocephalus primarius	Harold, 1872	5.75	1	h	h	c	m	NA	l	NA	t	t	*
+Coleoptera	Polyphaga	Chrysomelidae	Cryptocephalus sericeus	(Linneaus, 1758)	6.10	1	h	h	c	o	NA	l-r	NA	h	h	
+Coleoptera	Polyphaga	Chrysomelidae	Cryptocephalus vittatus	Fabricius, 1775	3.75	1	h	h	c	m	NA	l-r	NA	h	h	
+Coleoptera	Polyphaga	Chrysomelidae	Derocrepis rufipes	(Linneaus, 1758)	3.30	0	h	h	c	o	NA	l	NA	h	h	
+Coleoptera	Polyphaga	Chrysomelidae	Dibolia cryptocephala	(Koch, 1803)	1.90	1	h	h	c	m	NA	l	ml	h	h	
+Coleoptera	Polyphaga	Chrysomelidae	Dibolia occultans	(Koch, 1803)	3.00	1	h	h	c	m	NA	l	ml	h	h	
+Coleoptera	Polyphaga	Chrysomelidae	Galeruca pomonae	(Scopoli, 1763)	9.50	1	h	h	c	p	NA	l	NA	h	h	
+Coleoptera	Polyphaga	Chrysomelidae	Galeruca tanaceti	(Linneaus, 1758)	8.00	1	h	h	c	o	NA	l	NA	h	h	
+Coleoptera	Polyphaga	Chrysomelidae	Gastrophysa polygoni	(Linneaus, 1758)	4.50	1	h	h	c	o	NA	l	NA	h	h	
+Coleoptera	Polyphaga	Chrysomelidae	Gastrophysa viridula	(De Geer, 1775)	5.00	1	h	h	c	m	NA	l	NA	h	h	
+Coleoptera	Polyphaga	Chrysomelidae	Hermaeophaga mercurialis	(Fabricius, 1792)	2.65	1	h	h	c	m	NA	l	NA	h	h	*
+Coleoptera	Polyphaga	Chrysomelidae	Hispa atra	Linneaus, 1767	3.50	1	h	h	c	o	NA	l	ml	h	h	
+Coleoptera	Polyphaga	Chrysomelidae	Hypocassida subferruginea	(Schrank, 1776)	5.00	1	h	h	c	m	NA	l	NA	h	h	
+Coleoptera	Polyphaga	Chrysomelidae	Labidostomis longimana	(Linneaus, 1761)	5.25	1	h	h	c	o	NA	l	NA	h	h	
+Coleoptera	Polyphaga	Chrysomelidae	Longitarsus atricillus	(Linneaus, 1761)	2.50	1	h	h	c	p	NA	l	NA	h	h	
+Coleoptera	Polyphaga	Chrysomelidae	Longitarsus ganglbaueri	Heikertinger, 1912	2.00	1	h	h	c	m	NA	l	NA	h	h	
+Coleoptera	Polyphaga	Chrysomelidae	Longitarsus jacobaeae	(Waterhouse, 1858)	3.00	1	h	h	c	m	NA	l	NA	h	h	
+Coleoptera	Polyphaga	Chrysomelidae	Longitarsus kutscherae	Rye, 1872	2.00	1	h	h	c	o	NA	l	NA	h	h	
+Coleoptera	Polyphaga	Chrysomelidae	Longitarsus luridus	(Scopoli, 1763)	1.85	0.25	h	h	c	m	NA	l	mr	h	h	
+Coleoptera	Polyphaga	Chrysomelidae	Longitarsus lycopi	(Foudras, 1860)	2.00	0.5	h	h	c	m	NA	l	NA	h	h	
+Coleoptera	Polyphaga	Chrysomelidae	Longitarsus melanocephalus	(De Geer, 1775)	2.50	1	h	h	c	m	NA	l	NA	h	h	
+Coleoptera	Polyphaga	Chrysomelidae	Longitarsus nasturtii	(Fabricius, 1792)	1.75	1	h	h	c	o	NA	l	NA	h	h	
+Coleoptera	Polyphaga	Chrysomelidae	Longitarsus noricus	Leonardi, 1976	2.10	1	h	h	c	o	NA	l	NA	h	h	
+Coleoptera	Polyphaga	Chrysomelidae	Longitarsus obliteratus	(Rosenhauer, 1847)	1.40	1	h	h	c	o	NA	l	NA	h	h	
+Coleoptera	Polyphaga	Chrysomelidae	Longitarsus pellucidus	(Foudras, 1860)	2.00	1	h	h	c	m	NA	l	NA	h	h	
+Coleoptera	Polyphaga	Chrysomelidae	Longitarsus pratensis	(Panzer, 1794)	1.60	1	h	h	c	m	NA	l	NA	h	h	
+Coleoptera	Polyphaga	Chrysomelidae	Longitarsus rubiginosus	(Foudras, 1860)	1.25	1	h	h	c	m	NA	l	NA	h	h	
+Coleoptera	Polyphaga	Chrysomelidae	Longitarsus scutellaris	(Rey, 1873)	1.75	1	h	h	c	m	NA	l	NA	h	h	
+Coleoptera	Polyphaga	Chrysomelidae	Longitarsus succineus	(Foudras, 1860)	1.95	0	h	h	c	o	NA	l	NA	h	h	
+Coleoptera	Polyphaga	Chrysomelidae	Longitarsus suturellus	(Duftschmid, 1825)	2.15	1	h	h	c	o	NA	l	NA	h	h	
+Coleoptera	Polyphaga	Chrysomelidae	Longitarsus tabidus	(Fabricius, 1775)	3.50	1	h	h	c	m	NA	l	NA	h	h	
+Coleoptera	Polyphaga	Chrysomelidae	Luperus flavipes	(Linneaus, 1761)	4.40	1	h	h	c	o	NA	l	NA	t	t	*
+Coleoptera	Polyphaga	Chrysomelidae	Luperus luperus	(Sulzer, 1776)	4.25	1	h	h	c	o	NA	l	NA	t	t	*
+Coleoptera	Polyphaga	Chrysomelidae	Neocrepidodera ferruginea	(Scopoli, 1763)	3.25	1	h	h	c	o	NA	l	NA	h	h	
+Coleoptera	Polyphaga	Chrysomelidae	Neocrepidodera transversa	(Marsham, 1802)	4.25	1	h	h	c	m	NA	l	NA	h	h	
+Coleoptera	Polyphaga	Chrysomelidae	Neogalerucella tenella	(Linneaus, 1761)	4.00	1	h	h	c	o	NA	l	NA	h	h	
+Coleoptera	Polyphaga	Chrysomelidae	Orsodacne cerasi	(Linneaus, 1758)	6.25	1	h	h	c	o	NA	l-r	NA	h-t	u	
+Coleoptera	Polyphaga	Chrysomelidae	Oulema duftschmidi	(Redtenbacher, 1874)	4.25	1	h	h	c	o	NA	l	NA	h	h	
+Coleoptera	Polyphaga	Chrysomelidae	Oulema gallaeciana	(Heyden, 1870)	4.00	1	h	h	c	o	NA	l	NA	h	h	
+Coleoptera	Polyphaga	Chrysomelidae	Oulema melanopus	(Linneaus, 1758)	4.00	1	h	h	c	o	NA	l	NA	h	h	
+Coleoptera	Polyphaga	Chrysomelidae	Phyllotreta atra	(Fabricius, 1775)	2.15	1	h	h	c	o	NA	l-ro	NA	h	h	
+Coleoptera	Polyphaga	Chrysomelidae	Phyllotreta cruciferae	(Goeze, 1777)	2.15	1	h	h	c	o	NA	l-ro	NA	h	h	
+Coleoptera	Polyphaga	Chrysomelidae	Phyllotreta nemorum	(Linneaus, 1758)	2.75	1	h	h	c	o	NA	l	ml	h	h	
+Coleoptera	Polyphaga	Chrysomelidae	Phyllotreta nigripes	(Fabricius, 1775)	2.30	1	h	h	c	o	NA	l-ro	NA	h	h	
+Coleoptera	Polyphaga	Chrysomelidae	Phyllotreta ochripes	(Curtis, 1837)	2.20	1	h	h	c	o	NA	l-ro	NA	h	h	
+Coleoptera	Polyphaga	Chrysomelidae	Phyllotreta striolata	(Fabricius, 1803)	1.90	1	h	h	c	o	NA	l-ro	NA	h	h	
+Coleoptera	Polyphaga	Chrysomelidae	Phyllotreta undulata	Kutschera, 1860	2.15	1	h	h	c	o	NA	l-ro	NA	h	h	
+Coleoptera	Polyphaga	Chrysomelidae	Phyllotreta vittula	(Redtenbacher, 1849)	1.65	1	h	h	c	o	NA	l-ro	NA	h	h	
+Coleoptera	Polyphaga	Chrysomelidae	Prasocuris glabra	(Herbst, 1783)	4.00	1	h	h	c	m	NA	l	NA	h	h	
+Coleoptera	Polyphaga	Chrysomelidae	Psylliodes attenuatus	(Koch, 1803)	2.50	1	h	h	c	m	NA	l	NA	h-t	u	
+Coleoptera	Polyphaga	Chrysomelidae	Psylliodes chalcomerus	(Illiger, 1807)	3.30	1	h	h	c	o	NA	l	NA	h	h	
+Coleoptera	Polyphaga	Chrysomelidae	Psylliodes chrysocephalus	(Linneaus, 1758)	3.00	1	h	h	c	m	NA	l	ms	h	h	
+Coleoptera	Polyphaga	Chrysomelidae	Psylliodes cupreus	(Koch, 1803)	3.15	1	h	h	c	o	NA	l	NA	h	h	
+Coleoptera	Polyphaga	Chrysomelidae	Psylliodes napi	(Fabricius, 1792)	2.65	1	h	h	c	o	NA	l	NA	h	h	
+Coleoptera	Polyphaga	Chrysomelidae	Psylliodes picinus	(Marsham, 1802)	2.50	1	h	h	c	o	NA	l	NA	h	h	
+Coleoptera	Polyphaga	Chrysomelidae	Sermylassa halensis	(Linneaus, 1767)	6.00	1	h	h	c	p	NA	l	NA	h	h	
+Coleoptera	Polyphaga	Chrysomelidae	Smaragdina salicina	(Scopoli, 1763)	5.50	1	h	h	c	o	NA	l-r	NA	t	t	*
+Coleoptera	Polyphaga	Chrysomelidae	Sphaeroderma rubidum	(Graells, 1858)	3.40	1	h	h	c	o	NA	l	ml	h	h	
+Coleoptera	Polyphaga	Chrysomelidae	Sphaeroderma testaceum	(Fabricius, 1775)	3.00	1	h	h	c	o	NA	l	ml	h	h	
+Coleoptera	Polyphaga	Cleridae	Necrobia rufipes	(De Geer, 1775)	4.75	1	c-d	o	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Coccinellidae	Adalia bipunctata	(Linneaus, 1758)	4.50	1	c	c	c	NA	NA	NA	NA	h	h	
+Coleoptera	Polyphaga	Coccinellidae	Adalia decempunctata	(Linneaus, 1758)	4.25	1	c	c	c	NA	NA	NA	NA	h	h	
+Coleoptera	Polyphaga	Coccinellidae	Calvia quatuordecimguttata	(Linneaus, 1758)	5.25	1	c	c	c	NA	NA	NA	NA	t	t	*
+Coleoptera	Polyphaga	Coccinellidae	Coccidula rufa	(Herbst, 1783)	2.75	1	c	c	c	NA	NA	NA	NA	h	h	
+Coleoptera	Polyphaga	Coccinellidae	Coccidula scutellata	(Herbst, 1783)	2.75	1	c	c	c	NA	NA	NA	NA	h	h	
+Coleoptera	Polyphaga	Coccinellidae	Coccinella quinquepunctata	Linneaus, 1758	4.00	1	c	c	c	NA	NA	NA	NA	h	h	
+Coleoptera	Polyphaga	Coccinellidae	Coccinella septempunctata	Linneaus, 1758	6.60	1	c	c	c	NA	NA	NA	NA	h	h	
+Coleoptera	Polyphaga	Coccinellidae	Coccinula quatuordecimpustulata	(Linneaus, 1758)	3.50	1	c	c	c	NA	NA	NA	NA	h	h	
+Coleoptera	Polyphaga	Coccinellidae	Cynegetis impunctata	(Linneaus, 1767)	3.75	1	h	h	c	o	NA	l-r	NA	h	h	
+Coleoptera	Polyphaga	Coccinellidae	Halyzia sedecimguttata	(Linneaus, 1758)	6.00	1	f	f	c	NA	NA	NA	NA	t	t	*
+Coleoptera	Polyphaga	Coccinellidae	Harmonia axyridis	(Pallas, 1773)	7.00	1	c	c	c	NA	NA	NA	NA	h	h	
+Coleoptera	Polyphaga	Coccinellidae	Hippodamia notata	(Laicharting, 1781)	5.00	1	c	c	c	NA	NA	NA	NA	h	h	
+Coleoptera	Polyphaga	Coccinellidae	Hippodamia tredecimpunctata	(Linneaus, 1758)	5.75	1	c	c	c	NA	NA	NA	NA	h	h	
+Coleoptera	Polyphaga	Coccinellidae	Hippodamia variegata	(Goeze, 1777)	4.25	1	c	c	c	NA	NA	NA	NA	h	h	
+Coleoptera	Polyphaga	Coccinellidae	Nephus redtenbacheri	(Mulsant, 1846)	1.55	1	c	c	c	NA	NA	NA	NA	h	h	
+Coleoptera	Polyphaga	Coccinellidae	Platynaspis luteorubra	(Goeze, 1777)	3.00	1	c	c	c	NA	NA	NA	NA	h	h	
+Coleoptera	Polyphaga	Coccinellidae	Propylea quatuordecimpunctata	(Linneaus, 1758)	4.00	1	c	c	c	NA	NA	NA	NA	h	h	
+Coleoptera	Polyphaga	Coccinellidae	Rhyzobius litura	(Fabricius, 1787)	2.75	1	c	c	c	NA	NA	NA	NA	h	h	
+Coleoptera	Polyphaga	Coccinellidae	Scymnus auritus	Thunberg, 1795	2.25	1	c	c	c	NA	NA	NA	NA	t	t	*
+Coleoptera	Polyphaga	Coccinellidae	Scymnus femoralis	Gyllenhal, 1827	2.50	1	c	c	c	NA	NA	NA	NA	h	h	
+Coleoptera	Polyphaga	Coccinellidae	Scymnus ferrugatus	(Moll, 1785)	2.75	1	c	c	c	NA	NA	NA	NA	t	t	*
+Coleoptera	Polyphaga	Coccinellidae	Scymnus frontalis	(Fabricius, 1787)	2.50	1	c	c	c	NA	NA	NA	NA	h	h	
+Coleoptera	Polyphaga	Coccinellidae	Scymnus haemorrhoidalis	Herbst, 1797	1.90	1	c	c	c	NA	NA	NA	NA	t	t	*
+Coleoptera	Polyphaga	Coccinellidae	Scymnus mimulus	CapraFürsch, 1967	2.65	1	c	c	c	NA	NA	NA	NA	h	h	
+Coleoptera	Polyphaga	Coccinellidae	Scymnus suturalis	Thunberg, 1795	2.00	1	c	c	c	NA	NA	NA	NA	t	t	*
+Coleoptera	Polyphaga	Coccinellidae	Tytthaspis sedecimpunctata	(Linneaus, 1761)	2.75	1	c-f	o	c	NA	NA	NA	NA	h	h	
+Coleoptera	Polyphaga	Corylophidae	Sericoderus lateralis	(Gyllenhal, 1827)	1.20	1	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Cryptophagidae	Atomaria atricapilla	Stephens, 1830	1.70	1	d-f	o	c	NA	NA	NA	NA	i	u	
+Coleoptera	Polyphaga	Cryptophagidae	Atomaria basalis	Erichson, 1846	1.60	1	d-f	o	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Cryptophagidae	Atomaria bella	Reitter, 1875	1.70	1	d-f	o	c	NA	NA	NA	NA	g	g	*
+Coleoptera	Polyphaga	Cryptophagidae	Atomaria fuscata	(Schönherr, 1808)	1.65	1	d-f	o	c	NA	NA	NA	NA	i	u	
+Coleoptera	Polyphaga	Cryptophagidae	Atomaria gibbula	Erichson, 1846	1.50	1	d-f	o	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Cryptophagidae	Atomaria gutta	Newman, 1834	1.40	1	d-f	o	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Cryptophagidae	Atomaria lewisi	Reitter, 1877	1.70	1	d-f	o	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Cryptophagidae	Atomaria linearis	Stephens, 1830	1.35	1	d-f	o	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Cryptophagidae	Atomaria mesomela	(Herbst, 1792)	1.50	1	d-f	o	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Cryptophagidae	Atomaria nigriventris	Stephens, 1830	1.40	1	d-f	o	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Cryptophagidae	Atomaria testacea	Stephens, 1830	1.45	1	d-f	o	c	NA	NA	NA	NA	i	u	
+Coleoptera	Polyphaga	Cryptophagidae	Atomaria turgida	Erichson, 1846	1.85	1	d-f	o	c	NA	NA	NA	NA	g	g	*
+Coleoptera	Polyphaga	Cryptophagidae	Cryptophagus pilosus	Gyllenhal, 1827	2.75	1	d-f	o	c	NA	NA	NA	NA	i	u	
+Coleoptera	Polyphaga	Cryptophagidae	Ephistemus reitteri	Casey, 1900	1.05	1	f	f	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Cryptophagidae	Micrambe lindbergorum	(Bruce, 1934)	2.00	1	f	f	c	NA	NA	NA	NA	h	h	
+Coleoptera	Polyphaga	Cryptophagidae	Telmatophilus typhae	(Fallén, 1802)	2.05	1	h	h	c	m	NA	l-r	NA	h	h	
+Coleoptera	Polyphaga	Curculionidae	Acalyptus carpini	(Fabricius, 1792)	2.20	1	h	h	c	m	NA	l-r	NA	t	t	*
+Coleoptera	Polyphaga	Curculionidae	Amalus scortillum	(Herbst, 1795)	1.90	1	h	h	c	m	NA	l-ro	mro	g	g	
+Coleoptera	Polyphaga	Curculionidae	Anthonomus rectirostris	(Linnaeus, 1758)	4.10	1	h	h	c	m	NA	l-r	mr	t	t	*
+Coleoptera	Polyphaga	Curculionidae	Anthonomus rubi	(Herbst, 1795)	2.75	1	h	h	c	o	NA	l-r	mr	t	t	*
+Coleoptera	Polyphaga	Curculionidae	Bagous tempestivus	(Herbst, 1795)	3.00	1	h	h	c	m	NA	s	ms	h	h	
+Coleoptera	Polyphaga	Curculionidae	Barynotus moerens	(Fabricius, 1792)	7.75	1	d-h	o	c	p	NA	l-ro	mro	g	g	*
+Coleoptera	Polyphaga	Curculionidae	Barynotus obscurus	(Fabricius, 1775)	8.75	1	h	h	c	p	NA	l-ro	NA	s-h	u	
+Coleoptera	Polyphaga	Curculionidae	Barypeithes pellucidus	(Boheman, 1834)	3.75	0	h	h	c	p	NA	l-ro	NA	g-h	u	
+Coleoptera	Polyphaga	Curculionidae	Brachonyx pineti	(Paykull, 1792)	2.30	1	h	h	c	m	NA	l	ml	t	t	*
+Coleoptera	Polyphaga	Curculionidae	Ceutorhynchus assimilis	(Paykull, 1792)	2.70	1	h	h	c	o	NA	s	gs	h	h	
+Coleoptera	Polyphaga	Curculionidae	Ceutorhynchus contractus	(Marshall, 1802)	1.75	1	h	h	c	p	NA	l	ml	h	h	
+Coleoptera	Polyphaga	Curculionidae	Ceutorhynchus erysimi	(Fabricius, 1787)	2.30	1	h	h	c	o	NA	l-ro-s	mro-ms	h	h	
+Coleoptera	Polyphaga	Curculionidae	Ceutorhynchus floralis	(Paykull, 1792)	1.85	1	h	h	c	o	NA	l-r	mr	h	h	
+Coleoptera	Polyphaga	Curculionidae	Ceutorhynchus obstrictus	(Marsham, 1802)	2.75	1	h	h	c	o	NA	r-s	mr	h	h	
+Coleoptera	Polyphaga	Curculionidae	Ceutorhynchus pallidactylus	(Marshall, 1802)	2.90	1	h	h	c	o	NA	l-s	ms	h	h	
+Coleoptera	Polyphaga	Curculionidae	Ceutorhynchus sulcicollis	(Paykull, 1800)	2.90	1	h	h	c	o	NA	s	ms	h	h	
+Coleoptera	Polyphaga	Curculionidae	Chlorophanus viridis	(Linneaus, 1758)	9.50	1	h	h	c	p	NA	l-ro	NA	s-t	u	
+Coleoptera	Polyphaga	Curculionidae	Coryssomerus capucinus	(Beck, 1817)	2.70	1	h	h	c	o	NA	ro	mro	g-h	u	
+Coleoptera	Polyphaga	Curculionidae	Curculio nucum	Linneaus, 1758	7.25	1	h	h	c	m	NA	r	mr	t	t	*
+Coleoptera	Polyphaga	Curculionidae	Datonychus angulosus	(Boheman, 1845)	3.00	1	h	h	c	o	NA	s	ms	h	h	*
+Coleoptera	Polyphaga	Curculionidae	Donus ovalis	(Boheman, 1842)	9.50	0	h	h	c	p	NA	l	NA	h	h	
+Coleoptera	Polyphaga	Curculionidae	Donus tesselatus	(Herbst, 1795)	5.50	0	h	h	c	m	NA	l	NA	h	h	
+Coleoptera	Polyphaga	Curculionidae	Donus zoilus	(Scopoli, 1763)	7.50	1	h	h	c	o	NA	l	NA	h	h	
+Coleoptera	Polyphaga	Curculionidae	Dorytomus dejeani	Faust, 1882	4.75	1	h	h	c	m	NA	l-r	mr	t	t	*
+Coleoptera	Polyphaga	Curculionidae	Dorytomus longimanus	(Forster, 1771)	6.00	1	h	h	c	m	NA	l-r	mr	t	t	*
+Coleoptera	Polyphaga	Curculionidae	Dorytomus suratus	(Gyllenhal, 1836)	3.75	1	h	h	c	m	NA	l-r	mr	t	t	*
+Coleoptera	Polyphaga	Curculionidae	Eusomus ovulum	Germar, 1824	6.25	0	h	h	c	p	NA	l-ro	NA	s-h	u	
+Coleoptera	Polyphaga	Curculionidae	Foucartia squamulata	(Herbst, 1795)	2.75	1	h	h	c	p	NA	l-ro	NA	h	h	
+Coleoptera	Polyphaga	Curculionidae	Glocianus punctiger	(Gyllenhal, 1837)	2.80	1	h	h	c	m	NA	r	mr	h	h	
+Coleoptera	Polyphaga	Curculionidae	Grypus equiseti	(Fabricius, 1775)	5.40	1	h	h	c	m	NA	s	ms	h	h	
+Coleoptera	Polyphaga	Curculionidae	Gymnetron antirrhini	(Paykull, 1800)	2.80	1	h	h	c	m	NA	r	gr	h	h	
+Coleoptera	Polyphaga	Curculionidae	Gymnetron ictericum	Gyllenhal, 1838	1.90	1	h	h	c	m	NA	r	mr	h	h	
+Coleoptera	Polyphaga	Curculionidae	Gymnetron labile	(Herbst, 1795)	1.95	1	h	h	c	m	NA	l-s	ms	g-h	u	
+Coleoptera	Polyphaga	Curculionidae	Gymnetron melanarium	(Germar, 1821)	1.75	1	h	h	c	m	NA	s	gs	h	h	
+Coleoptera	Polyphaga	Curculionidae	Gymnetron pascuorum	(Gyllenhal, 1813)	1.80	1	h	h	c	m	NA	r	mr	h	h	
+Coleoptera	Polyphaga	Curculionidae	Gymnetron veronicae	(Germar, 1821)	2.15	1	h	h	c	m	NA	r	gr	h	h	
+Coleoptera	Polyphaga	Curculionidae	Hadroplontus litura	(Fabricius, 1775)	3.35	1	h	h	c	o	NA	l-s	ms	h	h	
+Coleoptera	Polyphaga	Curculionidae	Hylobius abietis	(Linneaus, 1758)	10.25	1	d	d	c	NA	NA	NA	NA	t	t	*
+Coleoptera	Polyphaga	Curculionidae	Hypera arator	(Linneaus, 1758)	5.25	1	h	h	c	o	NA	l-r-s	(ml)	h	h	
+Coleoptera	Polyphaga	Curculionidae	Hypera meles	(Fabricius, 1792)	4.10	1	h	h	c	m	NA	r-s	NA	h	h	
+Coleoptera	Polyphaga	Curculionidae	Hypera nigrirostris	(Fabricius, 1775)	3.40	1	h	h	c	o	NA	r-s	mr-ms	h	h	
+Coleoptera	Polyphaga	Curculionidae	Hypera plantaginis	(De Geer, 1775)	4.40	1	h	h	c	o	NA	l-r	NA	h	h	
+Coleoptera	Polyphaga	Curculionidae	Hypera postica	(Gyllenhal, 1813)	4.65	1	h	h	c	o	NA	l-s	NA	h	h	
+Coleoptera	Polyphaga	Curculionidae	Hypera rumicis	(Linneaus, 1758)	5.00	1	h	h	c	o	NA	l-s	(ml)	h	h	
+Coleoptera	Polyphaga	Curculionidae	Hypera suspiciosa	(Herbst, 1795)	5.20	1	h	h	c	o	NA	l-r-s	NA	h	h	
+Coleoptera	Polyphaga	Curculionidae	Larinus turbinatus	Gyllenhal, 1836	6.50	1	h	h	c	o	NA	r	NA	h	h	
+Coleoptera	Polyphaga	Curculionidae	Limnobaris t-album	(Linnaeus, 1758)	3.65	1	h	h	c	o	NA	ro-s	mro-ms	h	h	
+Coleoptera	Polyphaga	Curculionidae	Limobius borealis	(Paykull, 1792)	3.10	1	h	h	c	o	NA	r	NA	h	h	
+Coleoptera	Polyphaga	Curculionidae	Liophloeus tessulatus	(Muller O.F., 1776)	9.00	0.25	h	h	c	o	NA	l-ro	NA	h	h	
+Coleoptera	Polyphaga	Curculionidae	Liparus germanus	(Linneaus, 1758)	14.00	1	h	h	c	o	NA	ro	mro	s-h	u	
+Coleoptera	Polyphaga	Curculionidae	Magdalis phlegmatica	(Herbst, 1797)	4.90	1	d	d	c	NA	NA	NA	NA	t	t	*
+Coleoptera	Polyphaga	Curculionidae	Marmaropus besseri	Gyllenhal, 1837	3.60	1	h	h	c	m	NA	l-ro-s	mro-ms	g	g	
+Coleoptera	Polyphaga	Curculionidae	Mecinus pyraster	(Herbst, 1795)	3.40	1	h	h	c	m	NA	s	ms	h	h	
+Coleoptera	Polyphaga	Curculionidae	Miarus ajugae	(Herbst, 1795)	2.80	1	h	h	c	m	NA	r	mr	h	h	
+Coleoptera	Polyphaga	Curculionidae	Micrelus ericae	(Gyllenhal, 1813)	1.95	1	h	h	c	o	NA	r	mr	h	h	
+Coleoptera	Polyphaga	Curculionidae	Mogulones geographicus	(Goeze, 1777)	4.95	1	h	h	c	m	NA	l-ro-s	mro	g-h	u	
+Coleoptera	Polyphaga	Curculionidae	Nedyus quadrimaculatus	(Linneaus, 1758)	2.90	1	h	h	c	m	NA	l-ro	mro	g-h	u	
+Coleoptera	Polyphaga	Curculionidae	Oprohinus consputus	(Germar, 1824)	2.15	1	h	h	c	m	NA	l	ml	h	h	
+Coleoptera	Polyphaga	Curculionidae	Otiorhynchus laevigatus	(Fabricius, 1792)	6.00	0	h	h	c	p	NA	l-ro	NA	g-t	u	
+Coleoptera	Polyphaga	Curculionidae	Otiorhynchus morio	(Fabricius, 1781)	12.50	0	h	h	c	p	NA	l-ro	NA	s-h	u	
+Coleoptera	Polyphaga	Curculionidae	Otiorhynchus ovatus	(Linneaus, 1758)	5.00	0	h	h	c	p	NA	l-ro	NA	s-t	u	
+Coleoptera	Polyphaga	Curculionidae	Parethelcus pollinarius	(Forster, 1771)	3.85	1	h	h	c	m	NA	s	ms	g-h	u	
+Coleoptera	Polyphaga	Curculionidae	Philopedon plagiatus	(Schaller, 1783)	5.00	1	d-h	o	c	p	NA	l-ro	NA	s-h	u	
+Coleoptera	Polyphaga	Curculionidae	Phyllobius argentatus	(Linneaus, 1758)	4.75	0	h	h	c	p	NA	l-ro	NA	s-t	u	*
+Coleoptera	Polyphaga	Curculionidae	Phyllobius betulinus	(Bechstein & Scharfenberg, 1805)	5.00	0	h	h	c	p	NA	l-ro	NA	s-t	u	*
+Coleoptera	Polyphaga	Curculionidae	Phyllobius maculicornis	Germar, 1824	5.00	0	h	h	c	p	NA	l-ro	NA	s-t	u	*
+Coleoptera	Polyphaga	Curculionidae	Phyllobius oblongus	(Linneaus, 1758)	4.50	0	h	h	c	p	NA	l-ro	NA	s-t	u	*
+Coleoptera	Polyphaga	Curculionidae	Phyllobius pomaceus	Gyllenhal, 1834	8.50	0	h	h	c	o	NA	l-ro	NA	s-h	u	
+Coleoptera	Polyphaga	Curculionidae	Phyllobius pyri	(Linneaus, 1758)	6.50	0	h	h	c	p	NA	l-ro	NA	s-t	u	*
+Coleoptera	Polyphaga	Curculionidae	Phyllobius roboretanus	Gredler, 1882	4.50	0	h	h	c	p	NA	l-ro	NA	s-h	u	
+Coleoptera	Polyphaga	Curculionidae	Phyllobius sinuatus	(Fabricius, 1801)	3.50	0	h	h	c	p	NA	l-ro	NA	h	h	*
+Coleoptera	Polyphaga	Curculionidae	Phyllobius virideaeris	(Laicharting, 1781)	3.75	0	h	h	c	o	NA	l-ro	NA	s-h	u	
+Coleoptera	Polyphaga	Curculionidae	Phyllobius viridicollis	(Fabricius, 1792)	4.00	0	h	h	c	p	NA	l-ro	NA	g-h	u	
+Coleoptera	Polyphaga	Curculionidae	Polydrusus formosus	(Mayer, 1779)	6.25	1	h	h	c	o	NA	l-ro	NA	s-t	u	
+Coleoptera	Polyphaga	Curculionidae	Polydrusus impar	Gozis, 1882	6.60	1	h	h	c	o	NA	l-ro	NA	s-t	u	*
+Coleoptera	Polyphaga	Curculionidae	Polydrusus mollis	(Ström, 1768)	7.25	1	h	h	c	o	NA	l-ro	NA	s-t	u	*
+Coleoptera	Polyphaga	Curculionidae	Polydrusus pallidus	Gyllenhal, 1834	4.80	1	h	h	c	o	NA	l-ro	NA	s-t	u	*
+Coleoptera	Polyphaga	Curculionidae	Polydrusus tereticollis	(De Geer, 1775)	5.00	1	h	h	c	o	NA	l-ro	NA	s-t	u	*
+Coleoptera	Polyphaga	Curculionidae	Rhamphus oxyacanthae	(Marshall, 1802)	1.40	1	h	h	c	o	NA	l	ml	t	t	*
+Coleoptera	Polyphaga	Curculionidae	Rhamphus pulicarius	(Herbst, 1795)	1.70	1	h	h	c	o	NA	l	ml	t	t	*
+Coleoptera	Polyphaga	Curculionidae	Rhamphus subaeneus	Illiger, 1807	1.40	1	h	h	c	m	NA	l	ml	t	t	*
+Coleoptera	Polyphaga	Curculionidae	Rhinocyllus conicus	(Froehlich, 1792)	5.50	1	h	h	c	o	NA	l-r	gr	h	h	
+Coleoptera	Polyphaga	Curculionidae	Rhinoncus castor	(Fabricius, 1792)	2.85	1	h	h	c	m	NA	ro-s	mro-ms	g-h	u	
+Coleoptera	Polyphaga	Curculionidae	Rhinoncus inconspectus	(Herbst, 1795)	3.35	1	h	h	c	m	NA	l-ro-s	mro	g-h	u	
+Coleoptera	Polyphaga	Curculionidae	Rhinoncus pericarpius	(Linneaus, 1758)	2.95	1	h	h	c	m	NA	l-s-(ro)	ms	h	h	
+Coleoptera	Polyphaga	Curculionidae	Rhinoncus perpendicularis	(Reich, 1797)	2.50	1	h	h	c	o	NA	s	ms	h	h	
+Coleoptera	Polyphaga	Curculionidae	Rhynchaenus fagi	(Linneaus, 1758)	2.60	1	h	h	c	m	NA	l	ml	t	t	*
+Coleoptera	Polyphaga	Curculionidae	Rhynchaenus lonicerae	(Herbst, 1795)	2.75	1	h	h	c	m	NA	l	ml	t	t	*
+Coleoptera	Polyphaga	Curculionidae	Rhyncolus ater	(Linneaus, 1758)	3.75	1	d	d	c	NA	NA	NA	NA	g	g	*
+Coleoptera	Polyphaga	Curculionidae	Sciaphilus asperatus	(Bonsdorff, 1785)	5.25	0	h	h	c	p	NA	l-ro	mro	g-h	u	
+Coleoptera	Polyphaga	Curculionidae	Sibinia pyrrhodactyla	Germar, 1824	2.45	1	h	h	c	m	NA	l-r	NA	h	h	
+Coleoptera	Polyphaga	Curculionidae	Sitona gressorius	(Fabricius, 1792)	8.50	1	h	h	c	o	NA	l-ro	NA	s-h	u	
+Coleoptera	Polyphaga	Curculionidae	Sitona griseus	(Fabricius, 1775)	7.75	0.75	h	h	c	o	NA	l-ro	NA	s-h	u	*
+Coleoptera	Polyphaga	Curculionidae	Sitona hispidulus	(Fabricius, 1777)	4.00	0.75	h	h	c	o	NA	l-ro	NA	h	h	
+Coleoptera	Polyphaga	Curculionidae	Sitona humeralis	Stephens, 1831	4.25	0.75	h	h	c	m	NA	l-ro	NA	h	h	
+Coleoptera	Polyphaga	Curculionidae	Sitona languidus	Gyllenhal, 1834	3.75	0.75	h	h	c	m	NA	l-ro	NA	h	h	
+Coleoptera	Polyphaga	Curculionidae	Sitona lepidus	Gyllenhal, 1834	5.25	0.75	h	h	c	m	NA	l-ro	NA	h	h	
+Coleoptera	Polyphaga	Curculionidae	Sitona lineatus	(Linneaus, 1758)	4.00	0.75	h	h	c	o	NA	l-ro	NA	h	h	
+Coleoptera	Polyphaga	Curculionidae	Sitona macularius	(Marshall, 1802)	3.75	0.75	h	h	c	o	NA	l-ro	NA	h	h	
+Coleoptera	Polyphaga	Curculionidae	Sitona puncticollis	Stephens, 1831	5.50	0.75	h	h	c	o	NA	l-ro	NA	s-h	u	
+Coleoptera	Polyphaga	Curculionidae	Sitona striatellus	Gyllenhal, 1834	4.00	0.75	h	h	c	o	NA	l-ro	NA	t	t	*
+Coleoptera	Polyphaga	Curculionidae	Sitona sulcifrons	(Thunberg, 1798)	3.50	0.75	h	h	c	m	NA	l-ro	NA	h	h	
+Coleoptera	Polyphaga	Curculionidae	Sitona suturalis	Stephens, 1831	4.25	0.75	h	h	c	m	NA	l-ro	NA	h	h	
+Coleoptera	Polyphaga	Curculionidae	Sitona waterhousei	Walton, 1846	4.00	0.75	h	h	c	m	NA	l-ro	NA	h	h	
+Coleoptera	Polyphaga	Curculionidae	Stenocarus ruficornis	(Stephens, 1831)	3.25	1	h	h	c	m	NA	l-s	ms	h	h	
+Coleoptera	Polyphaga	Curculionidae	Strophosoma sus	Stephens, 1831	3.95	1	h	h	c	m	NA	l-ro	NA	h	h	
+Coleoptera	Polyphaga	Curculionidae	Tanymecus palliatus	(Fabricius, 1787)	10.00	1	h	h	c	p	NA	l-ro-s	(mro-ms)	h	h	
+Coleoptera	Polyphaga	Curculionidae	Tanysphyrus lemnae	(Paykull, 1792)	1.60	1	h	h	c	o	NA	l	ml	w	w	
+Coleoptera	Polyphaga	Curculionidae	Trachyphloeus alternans	Gyllenhal, 1834	2.50	0	h	h	c	p	NA	l-ro	NA	s-h	u	
+Coleoptera	Polyphaga	Curculionidae	Trachyphloeus bifoveolatus	(Beck, 1817)	3.90	0	d-h	o	c	p	NA	l-ro	NA	s-h	u	
+Coleoptera	Polyphaga	Curculionidae	Trichosirocalus horridus	(Panzer, 1801)	3.70	1	h	h	c	o	NA	l-ro-s	mro-ms	g-h	u	
+Coleoptera	Polyphaga	Curculionidae	Trichosirocalus troglodytes	(Fabricius, 1787)	2.60	1	h	h	c	m	NA	l-s	ms	h	h	
+Coleoptera	Polyphaga	Curculionidae	Tychius aureolus	Kiesenwetter, 1851	2.60	1	h	h	c	m	NA	r	gr	h	h	
+Coleoptera	Polyphaga	Curculionidae	Tychius breviusculus	Desbrochers, 1873	2.35	1	h	h	c	m	NA	r	mr	h	h	
+Coleoptera	Polyphaga	Curculionidae	Tychius meliloti	Stephens, 1831	2.25	1	h	h	c	m	NA	r	NA	h	h	
+Coleoptera	Polyphaga	Curculionidae	Tychius picirostris	(Fabricius, 1787)	2.15	1	h	h	c	m	NA	l-r	NA	h	h	
+Coleoptera	Polyphaga	Curculionidae	Tychius schneideri	(Herbst, 1795)	2.60	1	h	h	c	m	NA	r	NA	h	h	
+Coleoptera	Polyphaga	Curculionidae	Tychius stephensi	Schonherr, 1836	2.25	1	h	h	c	m	NA	r	NA	h	h	
+Coleoptera	Polyphaga	Curculionidae	Zacladus geranii	(Paykull, 1800)	2.85	1	h	h	c	m	NA	r	mr	h	h	
+Coleoptera	Polyphaga	Dascillidae	Dascillus cervinus	(Linneaus, 1758)	10.25	1	h	h	c	p	NA	r-ro	NA	h	h	
+Coleoptera	Polyphaga	Dermestidae	Anthrenus fuscus	Olivier, 1789	2.70	1	c-d-h	o	c	p	NA	r	NA	i	u	*
+Coleoptera	Polyphaga	Drilidae	Drilus concolor	Ahrens, 1812	4.50	0.5	c	c	c	NA	NA	NA	NA	h	h	
+Coleoptera	Polyphaga	Elateridae	Adrastus pallens	(Fabricius, 1792)	4.70	1	h	h	c	p	NA	r-ro	NA	t	t	*
+Coleoptera	Polyphaga	Elateridae	Adrastus rachifer	(Geoffroy, 1785)	3.60	1	h	h	c	p	NA	r-ro	NA	t	t	*
+Coleoptera	Polyphaga	Elateridae	Agriotes acuminatus	(Stephens, 1830)	7.00	1	h	h	c	p	NA	l-ro	NA	h	h	
+Coleoptera	Polyphaga	Elateridae	Agriotes gallicus	Boisduval & Lacordaire, 1835	7.00	1	h	h	c	p	NA	l-ro	NA	h	h	
+Coleoptera	Polyphaga	Elateridae	Agriotes lineatus	(Linneaus, 1767)	10.00	1	h	h	c	p	NA	l-ro	NA	h	h	
+Coleoptera	Polyphaga	Elateridae	Agriotes obscurus	(Linneaus, 1758)	8.75	1	h	h	c	p	NA	l-ro	NA	h	h	
+Coleoptera	Polyphaga	Elateridae	Agriotes pallidulus	(Illiger, 1807)	4.60	1	h	h	c	p	NA	l-ro	NA	h	h	*
+Coleoptera	Polyphaga	Elateridae	Agriotes pilosellus	(Schönherr, 1817)	14.75	1	h	h	c	p	NA	l-ro	NA	h	h	*
+Coleoptera	Polyphaga	Elateridae	Agriotes sputator	(Linneaus, 1758)	7.25	1	h	h	c	p	NA	l-ro	NA	h	h	
+Coleoptera	Polyphaga	Elateridae	Agrypnus murina	(Linneaus, 1758)	14.50	1	c	c	c	NA	NA	NA	NA	h	h	
+Coleoptera	Polyphaga	Elateridae	Ampedus nigrinus	(Herbst, 1784)	7.50	1	d	d	c	NA	NA	NA	NA	g-t	u	*
+Coleoptera	Polyphaga	Elateridae	Athous bicolor	(Goeze, 1777)	9.50	1	h	h	c	p	NA	l-r	NA	h	h	
+Coleoptera	Polyphaga	Elateridae	Athous haemorrhoidalis	(Fabricius, 1801)	12.25	1	h	h	c	p	NA	l-r	NA	h	h	
+Coleoptera	Polyphaga	Elateridae	Athous subfuscus	(Muller O.F., 1767)	9.15	1	c-h	o	c	p	NA	l-r	NA	h	h	*
+Coleoptera	Polyphaga	Elateridae	Athous vittatus	(Fabricius, 1792)	10.25	1	h	h	c	p	NA	l-r	NA	h	h	*
+Coleoptera	Polyphaga	Elateridae	Cidnopus aeruginosus	(Olivier, 1790)	10.00	1	h	h	c	p	NA	l-r	NA	h	h	
+Coleoptera	Polyphaga	Elateridae	Cidnopus pilosus	(Leske, 1785)	10.25	1	h	h	c	p	NA	l-r	NA	h	h	
+Coleoptera	Polyphaga	Elateridae	Cidnopus quercus	(Olivier, 1790)	5.00	1	h	h	c	p	NA	l-r	NA	h-t	u	*
+Coleoptera	Polyphaga	Elateridae	Hemicrepidius hirtus	(Herbst, 1784)	14.50	1	h	h	c	p	NA	l	NA	h	h	*
+Coleoptera	Polyphaga	Elateridae	Hemicrepidius niger	(Linneaus, 1758)	12.25	1	h	h	c	p	NA	l	NA	h	h	
+Coleoptera	Polyphaga	Elateridae	Kibunea minutus	(Linneaus, 1758)	6.75	1	h	h	c	p	NA	l-r	NA	h	h	
+Coleoptera	Polyphaga	Elateridae	Limonius poneli	Leseigneur & Mertlik, 2007	6.00	1	h	h	c	p	NA	l	NA	h	h	
+Coleoptera	Polyphaga	Elateridae	Mosotalesus impressus	(Fabricius, 1792)	14.00	1	h	h	c	p	NA	l	NA	h	h	*
+Coleoptera	Polyphaga	Elateridae	Oedostethus quadripustulatus	(Fabricius, 1792)	3.40	1	h	h	c	p	NA	l-r	NA	g	g	
+Coleoptera	Polyphaga	Elateridae	Prosternon tessellatum	(Linneaus, 1758)	11.00	1	h	h	c	p	NA	l-r	NA	h	h	*
+Coleoptera	Polyphaga	Elateridae	Sericus brunneus	(Linneaus, 1758)	8.50	1	d-h	o	c	p	NA	l-r	NA	h	h	*
+Coleoptera	Polyphaga	Elateridae	Synaptus filiformis	(Fabricius, 1781)	10.50	1	h	h	c	p	NA	l-r	NA	t	t	
+Coleoptera	Polyphaga	Histeridae	Margarinotus purpurascens	(Herbst, 1792)	4.50	1	c-d	o	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Hydraenidae	Limnebius papposus	Mulsant, 1844	1.95	1	h	h	c	p	NA	l	NA	w	w	
+Coleoptera	Polyphaga	Hydrophilidae	Cercyon atricapillus	(Marshall, 1802)	1.50	1	d-h	o	c	NA	NA	l	NA	g	g	
+Coleoptera	Polyphaga	Hydrophilidae	Cercyon castaneipennis	Vorst, 2009	3.00	1	d	d	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Hydrophilidae	Cercyon convexiusculus	Stephens, 1829	1.85	1	d-f	o	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Hydrophilidae	Cercyon impressus	(Sturm, 1807)	3.15	1	d-h	o	c	p	NA	l	NA	g	g	
+Coleoptera	Polyphaga	Hydrophilidae	Cercyon lateralis	(Marshall, 1802)	2.75	1	d-h	o	c	p	NA	l	NA	g	g	
+Coleoptera	Polyphaga	Hydrophilidae	Cercyon melanocephalus	(Linneaus, 1758)	2.60	1	d-h	o	c	p	NA	l	NA	g	g	
+Coleoptera	Polyphaga	Hydrophilidae	Cercyon obsoletus	(Gyllenhal, 1808)	3.60	1	d-h	o	c	p	NA	l	NA	g	g	
+Coleoptera	Polyphaga	Hydrophilidae	Cercyon pygmaeus	(Illiger, 1801)	1.45	1	d-h	o	c	p	NA	l	NA	g	g	
+Coleoptera	Polyphaga	Hydrophilidae	Cercyon quisquilius	(Linneaus, 1761)	2.25	1	d-h	o	c	p	NA	l	NA	g	g	
+Coleoptera	Polyphaga	Hydrophilidae	Cercyon tristis	(Illiger, 1801)	2.00	1	d-h	o	c	p	NA	l	NA	g	g	
+Coleoptera	Polyphaga	Hydrophilidae	Cryptopleurum minutum	(Fabricius, 1775)	1.80	1	d-h	o	c	p	NA	l	NA	g	g	
+Coleoptera	Polyphaga	Hydrophilidae	Cryptopleurum subtile	Sharp, 1884	1.75	1	d-h	o	c	p	NA	l	NA	g	g	
+Coleoptera	Polyphaga	Hydrophilidae	Helophorus aquaticus	(Linneaus, 1758)	5.00	1	d-h	o	c	p	NA	l	NA	w	w	*
+Coleoptera	Polyphaga	Hydrophilidae	Helophorus brevipalpis	Bedel, 1881	2.70	1	d-h	o	c	p	NA	l	NA	w	w	*
+Coleoptera	Polyphaga	Hydrophilidae	Helophorus minutus	Fabricius, 1775	3.15	1	d-h	o	c	p	NA	l	NA	w	w	*
+Coleoptera	Polyphaga	Hydrophilidae	Helophorus nubilus	Fabricius, 1777	3.50	1	d-h	o	c	p	NA	l	NA	g	g	
+Coleoptera	Polyphaga	Hydrophilidae	Hydrobius fuscipes	(Linneaus, 1758)	7.50	1	d-h	o	c	p	NA	l	NA	w	w	*
+Coleoptera	Polyphaga	Hydrophilidae	Megasternum obscurum	(Marsham, 1802)	1.95	1	d-h	o	c	p	NA	l	NA	g	g	
+Coleoptera	Polyphaga	Hydrophilidae	Sphaeridium lunatum	Fabricius, 1792	5.50	1	d-h	o	c	p	NA	l	NA	g	g	
+Coleoptera	Polyphaga	Hydrophilidae	Sphaeridium scarabaeoides	(Linneaus, 1758)	5.50	1	d-h	o	c	p	NA	l	NA	g	g	
+Coleoptera	Polyphaga	Kateritidae	Brachypterus glaber	(Stephens, 1832)	2.10	1	h	h	c	m	NA	l-r	NA	h	h	
+Coleoptera	Polyphaga	Kateritidae	Brachypterus urticae	(Fabricius, 1792)	1.90	1	h	h	c	m	NA	l-r	NA	h	h	
+Coleoptera	Polyphaga	Kateritidae	Kateretes pedicularius	(Linneaus, 1758)	2.30	1	h	h	c	o	NA	l-r	NA	h	h	
+Coleoptera	Polyphaga	Lagriidae	Lagria hirta	(Linneaus, 1758)	8.50	1	h	h	c	p	NA	l	NA	h	h	
+Coleoptera	Polyphaga	Latridiidae	Adistemia watsoni	(Wollaston, 1871)	1.40	1	f	f	c	NA	NA	NA	NA	i	u	
+Coleoptera	Polyphaga	Latridiidae	Cartodere nodifer	(Westwood, 1839)	2.00	1	f	f	c	NA	NA	NA	NA	i	u	
+Coleoptera	Polyphaga	Latridiidae	Corticaria abietorum	Motschulsky, 1867	2.00	1	f	f	c	NA	NA	NA	NA	g	g	*
+Coleoptera	Polyphaga	Latridiidae	Corticaria obscura	Brisout, 1863	1.70	1	f	f	c	NA	NA	NA	NA	h	h	
+Coleoptera	Polyphaga	Latridiidae	Corticaria serrata	(Paykull, 1798)	2.00	1	f	f	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Latridiidae	Corticaria umbilicata	(Beck, 1817)	1.90	1	f	f	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Latridiidae	Corticarina fuscula	(Gyllenhal, 1827)	1.65	1	f	f	c	NA	NA	NA	NA	i	u	
+Coleoptera	Polyphaga	Latridiidae	Corticarina lambiana	(Sharp, 1910)	1.35	1	f	f	c	NA	NA	NA	NA	g	g	*
+Coleoptera	Polyphaga	Latridiidae	Corticarina similata	(Gyllenhal, 1827)	1.35	1	f	f	c	NA	NA	NA	NA	i	u	
+Coleoptera	Polyphaga	Latridiidae	Cortinicara gibbosa	(Herbst, 1793)	1.30	1	f	f	c	NA	NA	NA	NA	i	u	
+Coleoptera	Polyphaga	Latridiidae	Enicmus histrio	JoyTomlin, 1910	1.75	1	f	f	c	NA	NA	NA	NA	i	u	
+Coleoptera	Polyphaga	Latridiidae	Enicmus rugosus	(Herbst, 1793)	1.50	1	f	f	c	NA	NA	NA	NA	i	u	
+Coleoptera	Polyphaga	Latridiidae	Enicmus transversus	(Olivier, 1790)	2.00	1	f	f	c	NA	NA	NA	NA	i	u	
+Coleoptera	Polyphaga	Latridiidae	Melanophthalma curticollis	(Mannerheim, 1844)	1.65	1	f	f	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Latridiidae	Melanophthalma distinguenda	(Comolli, 1837)	1.75	1	f	f	c	NA	NA	NA	NA	i	u	
+Coleoptera	Polyphaga	Leiodidae	Agathidium marginatum	Sturm, 1807	2.25	1	f	f	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Leiodidae	Agathidium varians	(Beck, 1817)	2.75	1	f	f	c	NA	NA	NA	NA	g	g	*
+Coleoptera	Polyphaga	Leiodidae	Leiodes dubia	(Kugelann, 1794)	3.15	1	f	f	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Lucanidae	Platycerus caraboides	(Linneaus, 1758)	11.00	1	d	d	c	NA	NA	NA	NA	t	t	*
+Coleoptera	Polyphaga	Malachidae	Anthocomus coccineus	(Schaller, 1783)	4.63	1	f-h	f	c	NA	NA	NA	NA	h	h	
+Coleoptera	Polyphaga	Malachidae	Axinotarsus marginalis	(Castelnau, 1840)	2.50	1	c-h	o	c	o	NA	r	NA	h	h	*
+Coleoptera	Polyphaga	Malachidae	Axinotarsus pulicarius	(Fabricius, 1775)	3.25	1	c-h	o	c	o	NA	r	NA	h	h	
+Coleoptera	Polyphaga	Malachidae	Axinotarsus ruficollis	(Olivier, 1790)	2.50	1	c-h	o	c	p	NA	r	NA	h	h	*
+Coleoptera	Polyphaga	Malachidae	Charopus flavipes	(Paykull, 1798)	2.25	1	c-h	o	c	o	NA	r	NA	h	h	
+Coleoptera	Polyphaga	Malachidae	Clanoptilus barnevillei	(Puton, 1865)	4.50	1	c-h	o	c	o	NA	r	NA	h	h	
+Coleoptera	Polyphaga	Malachidae	Clanoptilus elegans	(Olivier, 1790)	5.50	1	c-h	o	c	p	NA	r	NA	h	h	
+Coleoptera	Polyphaga	Malachidae	Cordylepherus viridis	(Fabricius, 1787)	4.50	1	c-h	o	c	p	NA	r	NA	h	h	
+Coleoptera	Polyphaga	Malachidae	Malachius bipustulatus	(Linneaus, 1758)	5.75	1	c-h	o	c	o	NA	r	NA	t	t	
+Coleoptera	Polyphaga	Malachidae	Troglops albicans	(Linneaus, 1767)	1.00	1	c-h	o	c	p	NA	r	NA	t	t	
+Coleoptera	Polyphaga	Melyridae	Dasytes aeratus	Stephens, 1830	4.00	1	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Melyridae	Dasytes plumbeus	(Mueller, 1776)	4.05	1	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Melyridae	Dasytes virens	(Marshall, 1802)	4.15	1	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Melyridae	Dolichosoma lineare	(Rossi, 1794)	6.00	1	c-h	o	c	p	NA	r	NA	h	h	
+Coleoptera	Polyphaga	Mordellidae	Mordella holomelaena	Apfelbeck, 1914	7.25	1	f-h	o	c	p	NA	l-r	NA	t	t	
+Coleoptera	Polyphaga	Mordellidae	Mordellistena brevicauda	(Boheman, 1849)	4.75	1	h	h	c	m	NA	l-r-s	ms	h	h	
+Coleoptera	Polyphaga	Mordellidae	Mordellistena dieckmanni	Ermisch, 1963	4.15	1	f-h	o	c	p	NA	l-r	NA	h	h	
+Coleoptera	Polyphaga	Mordellidae	Mordellistena parvula	(Gyllenhal, 1827)	2.90	1	f-h	o	c	o	NA	l-r-s	ms	h	h	
+Coleoptera	Polyphaga	Mordellidae	Mordellistena pumila	(Gyllenhal, 1810)	4.33	1	h	h	c	m	NA	l-r-s	ms	h	h	
+Coleoptera	Polyphaga	Mordellidae	Mordellistena pygmaeola	Ermisch, 1956	3.00	1	h	h	c	m	NA	l-r-s	ms	h	h	
+Coleoptera	Polyphaga	Mordellidae	Mordellistena variegata	(Fabricius, 1798)	4.00	1	f-h	o	c	p	NA	l-r	NA	t	t	
+Coleoptera	Polyphaga	Mordellidae	Mordellochroa abdominalis	(Fabricius, 1775)	5.25	1	f-h	o	c	p	NA	l-r	NA	t	t	
+Coleoptera	Polyphaga	Mordellidae	Variimorda villosa	(Schrank, 1781)	7.00	1	f-h	o	c	o	NA	l-r	NA	t	t	
+Coleoptera	Polyphaga	Nitidulidae	Epuraea aestiva	(Linneaus, 1758)	3.00	1	c-d	o	c	NA	NA	NA	NA	t	t	
+Coleoptera	Polyphaga	Nitidulidae	Epuraea melanocephala	(Marshall, 1802)	2.50	1	c-d-h	o	c	o	NA	l-r	NA	h	h	*
+Coleoptera	Polyphaga	Nitidulidae	Epuraea unicolor	(Olivier, 1790)	2.75	1	c-d	o	c	NA	NA	NA	NA	i	u	
+Coleoptera	Polyphaga	Nitidulidae	Meligethes aeneus	(Fabricius, 1775)	2.10	1	h	h	c	o	NA	l-r	NA	h	h	
+Coleoptera	Polyphaga	Nitidulidae	Meligethes carinulatus	Förster, 1849	1.80	1	h	h	c	m	NA	l-r	NA	h	h	
+Coleoptera	Polyphaga	Nitidulidae	Meligethes coeruleovirens	Foerster, 1849	2.15	1	h	h	c	m	NA	l-r	NA	h	h	
+Coleoptera	Polyphaga	Nitidulidae	Meligethes coracinus	Sturm, 1845	2.10	1	h	h	c	o	NA	l-r	NA	h	h	
+Coleoptera	Polyphaga	Nitidulidae	Meligethes difficilis	(Heer, 1841)	2.25	1	h	h	c	m	NA	l-r	NA	h	h	
+Coleoptera	Polyphaga	Nitidulidae	Meligethes flavimanus	Stephens, 1830	2.25	1	h	h	c	m	NA	l-r	NA	t	t	*
+Coleoptera	Polyphaga	Nitidulidae	Meligethes maurus	Sturm, 1845	2.50	1	h	h	c	m	NA	l-r	NA	h	h	
+Coleoptera	Polyphaga	Nitidulidae	Meligethes morosus	Erichson, 1845	2.05	1	h	h	c	o	NA	l-r	NA	h	h	*
+Coleoptera	Polyphaga	Nitidulidae	Meligethes nigrescens	Stephens, 1830	2.10	1	h	h	c	m	NA	l-r	NA	h	h	
+Coleoptera	Polyphaga	Nitidulidae	Meligethes ovatus	Sturm, 1845	2.20	1	h	h	c	m	NA	l-r	NA	h	h	
+Coleoptera	Polyphaga	Nitidulidae	Meligethes persicus	Faldermann, 1837	2.00	1	h	h	c	m	NA	l-r	NA	h	h	*
+Coleoptera	Polyphaga	Nitidulidae	Meligethes rotundicollis	Brisout de Barneville, 1863	2.00	1	h	h	c	o	NA	l-r	NA	h	h	
+Coleoptera	Polyphaga	Nitidulidae	Meligethes ruficornis	(Marshall, 1802)	2.25	1	h	h	c	m	NA	l-r	NA	h	h	
+Coleoptera	Polyphaga	Nitidulidae	Meligethes subaeneus	Sturm, 1845	2.00	1	h	h	c	o	NA	l-r	NA	h	h	
+Coleoptera	Polyphaga	Nitidulidae	Meligethes symphyti	(Heer, 1841)	2.60	1	h	h	c	m	NA	l-r	NA	h	h	
+Coleoptera	Polyphaga	Nitidulidae	Meligethes umbrosus	Sturm, 1845	2.45	1	h	h	c	m	NA	l-r	NA	h	h	
+Coleoptera	Polyphaga	Nitidulidae	Meligethes viridescens	(Fabricius, 1787)	2.25	1	h	h	c	o	NA	l-r	NA	h	h	
+Coleoptera	Polyphaga	Oedemeridae	Anogcodes rufiventris	(Scopoli, 1763)	10.00	1	d-h	o	c	o	NA	r	NA	g	g	
+Coleoptera	Polyphaga	Oedemeridae	Chrysanthia viridissima	(Linneaus, 1758)	8.50	1	d-h	o	c	p	NA	r	NA	h-t	u	
+Coleoptera	Polyphaga	Oedemeridae	Ischnomera sanguinicollis	(Fabricius, 1787)	10.00	1	d-h	o	c	p	NA	r	NA	t	t	
+Coleoptera	Polyphaga	Oedemeridae	Oedemera femorata	(Scopoli, 1763)	9.00	1	d-h	o	c	p	NA	r-s	NA	h	h	
+Coleoptera	Polyphaga	Oedemeridae	Oedemera lurida	(Marshall, 1802)	6.00	1	d-h	o	c	p	NA	r-s	NA	h	h	
+Coleoptera	Polyphaga	Oedemeridae	Oedemera nobilis	(Scopoli, 1763)	9.50	1	d-h	o	c	p	NA	r-s	NA	h	h	
+Coleoptera	Polyphaga	Oedemeridae	Oedemera podagrariae	(Linneaus, 1767)	10.50	1	d-h	o	c	p	NA	r-s	NA	h	h	
+Coleoptera	Polyphaga	Oedemeridae	Oedemera virescens	(Linneaus, 1767)	9.50	1	d-h	o	c	p	NA	r-s	NA	h	h	
+Coleoptera	Polyphaga	Omalisidae	Omalisus fontisbellaquaei	Geoffroy, 1785	7.50	0.5	c-h	o	c	p	NA	r	NA	g	g	
+Coleoptera	Polyphaga	Phalacridae	Olibrus aeneus	(Fabricius, 1792)	2.25	1	h	h	c	o	NA	l-r	NA	h	h	
+Coleoptera	Polyphaga	Phalacridae	Olibrus affinis	(Sturm, 1807)	2.20	1	h	h	c	o	NA	l-r	NA	h	h	
+Coleoptera	Polyphaga	Phalacridae	Olibrus bicolor	(Fabricius, 1792)	2.75	1	h	h	c	o	NA	l-r	NA	h	h	
+Coleoptera	Polyphaga	Phalacridae	Olibrus bimaculatus	Kuster, 1848	2.55	1	h	h	c	m	NA	l-r	NA	h	h	
+Coleoptera	Polyphaga	Phalacridae	Olibrus flavicornis	(Sturm, 1807)	2.65	1	h	h	c	o	NA	l-r	NA	h	h	
+Coleoptera	Polyphaga	Phalacridae	Olibrus liquidus	Er, 1845	2.25	1	h	h	c	o	NA	l-r	NA	h	h	
+Coleoptera	Polyphaga	Phalacridae	Olibrus millefolii	(Paykull, 1800)	1.65	1	h	h	c	m	NA	l-r	NA	h	h	
+Coleoptera	Polyphaga	Phalacridae	Phalacrus caricis	Sturm, 1807	1.95	1	f	f	c	NA	NA	NA	NA	h	h	
+Coleoptera	Polyphaga	Phalacridae	Phalacrus championi	Guillebeau, 1892	2.25	1	f	f	c	NA	NA	NA	NA	h	h	
+Coleoptera	Polyphaga	Phalacridae	Phalacrus coruscus	(Panzer, 1797)	2.25	1	f	f	c	NA	NA	NA	NA	h	h	
+Coleoptera	Polyphaga	Phalacridae	Phalacrus fimetarius	(Fabricius, 1775)	2.25	1	f	f	c	NA	NA	NA	NA	h	h	
+Coleoptera	Polyphaga	Phalacridae	Stilbus atomarius	(Linneaus, 1767)	2.00	1	f-h	o	c	p	NA	l-r	NA	h	h	
+Coleoptera	Polyphaga	Phalacridae	Stilbus oblongus	(Erichson, 1845)	1.90	1	f-h	o	c	p	NA	l-r	NA	h	h	
+Coleoptera	Polyphaga	Phalacridae	Stilbus testaceus	(Panzer, 1797)	3.05	1	f-h	o	c	p	NA	l-r	NA	h	h	
+Coleoptera	Polyphaga	Pselaphidae	Brachygluta fossulata	(Reichenbach, 1816)	1.80	1	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Pselaphidae	Bryaxis puncticollis	(Denny, 1825)	1.30	1	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Pselaphidae	Rybaxis longicornis	(Leach, 1817)	2.00	1	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Pselaphidae	Tychus niger	(Paykull, 1800)	1.55	1	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Ptiliidae	Acrotrichis fascicularis	(Herbst, 1792)	0.90	1	f	f	c	NA	NA	NA	NA	g	g	*
+Coleoptera	Polyphaga	Ptiliidae	Acrotrichis grandicollis	(Mannerheim, 1844)	0.95	1	f	f	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Ptiliidae	Acrotrichis intermedia	(Gillmeister, 1845)	1.05	1	f	f	c	NA	NA	NA	NA	g	g	*
+Coleoptera	Polyphaga	Ptiliidae	Acrotrichis sitkaensis	(Motschulsky, 1845)	1.00	1	f	f	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Ptiliidae	Ptenidium nitidum	(Heer, 1841)	0.85	1	f	f	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Pyrochroidae	Pyrochroa serraticornis	(Scopoli, 1763)	12.00	1	c-d-h	o	c	p	NA	r	NA	g	g	*
+Coleoptera	Polyphaga	Rhizophagidae	Monotoma longicollis	(Gyllenhal, 1827)	1.55	1	d-f	o	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Rhynchitidae	Tatianaerhynchites aequatus	(Linnaeus, 1767)	3.60	0	h	h	c	o	NA	l-r-s	NA	t	t	*
+Coleoptera	Polyphaga	Scarabaeidae	Amphimallon atrum	(Herbst, 1790)	12.00	0.5	h	h	c	p	NA	l-ro	NA	t	t	*
+Coleoptera	Polyphaga	Scarabaeidae	Aphodius contaminatus	(Herbst, 1783)	5.75	1	d	d	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Scarabaeidae	Aphodius corvinus	Erichson, 1848	3.50	1	d	d	c	NA	NA	NA	NA	g	g	*
+Coleoptera	Polyphaga	Scarabaeidae	Aphodius distinctus	(Mueller, 1776)	4.50	1	d	d	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Scarabaeidae	Aphodius erraticus	(Linneaus, 1758)	6.75	1	d	d	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Scarabaeidae	Aphodius fimetarius	(Linneaus, 1758)	6.50	1	d	d	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Scarabaeidae	Aphodius granarius	(Linneaus, 1767)	4.00	1	d	d	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Scarabaeidae	Aphodius haemorrhoidalis	(Linneaus, 1758)	4.25	1	d	d	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Scarabaeidae	Aphodius prodromus	(Brahm, 1790)	5.50	1	d	d	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Scarabaeidae	Aphodius pusillus	(Herbst, 1789)	3.75	1	d	d	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Scarabaeidae	Aphodius sphacelatus	(Panzer, 1798)	5.00	1	d	d	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Scarabaeidae	Hoplia argentea	(Poda, 1761)	10.00	1	h	h	c	p	NA	l-ro	NA	h	h	*
+Coleoptera	Polyphaga	Scarabaeidae	Omaloplia nigromarginata	(Fabricius, 1775)	6.25	1	h	h	c	p	NA	l	NA	h	h	
+Coleoptera	Polyphaga	Scarabaeidae	Onthophagus coenobita	(Herbst, 1783)	8.00	1	d	d	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Scarabaeidae	Onthophagus ovatus	(Linneaus, 1767)	5.00	1	d	d	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Scarabaeidae	Onthophagus verticicornis	(Laicharting, 1781)	8.50	1	d	d	c	NA	NA	NA	NA	g	g	*
+Coleoptera	Polyphaga	Scarabaeidae	Phyllopertha horticola	(Linneaus, 1758)	9.75	1	h	h	c	p	NA	l-r-ro	NA	h	h	
+Coleoptera	Polyphaga	Scirtidae	Cyphon coarctatus	Paykull, 1799	3.75	1	c-d-h	o	c	p	NA	l	NA	h	h	
+Coleoptera	Polyphaga	Scirtidae	Cyphon padi	(Linneaus, 1758)	2.40	1	c-d-h	o	c	p	NA	l	NA	w-h	u	
+Coleoptera	Polyphaga	Scirtidae	Cyphon phragmiteticola	Nyholm, 1955	3.60	1	c-d-h	o	c	p	NA	l	NA	h	h	
+Coleoptera	Polyphaga	Scirtidae	Cyphon pubescens	(Fabricius, 1792)	3.20	1	c-d-h	o	c	p	NA	l	NA	h	h	
+Coleoptera	Polyphaga	Scirtidae	Cyphon variabilis	(Thunberg, 1787)	3.50	1	c-d-h	o	c	p	NA	l	NA	h	h	
+Coleoptera	Polyphaga	Scirtidae	Scirtes hemisphaericus	(Linneaus, 1767)	3.40	1	c-d-h	o	c	p	NA	l	NA	w	w	
+Coleoptera	Polyphaga	Scolytidae	Hylastes attenuatus	Erichson, 1836	2.50	1	d	d	c	NA	NA	NA	NA	t	t	*
+Coleoptera	Polyphaga	Scolytidae	Kissophagus hederae	(Schmitt, 1843)	2.00	1	d	d	c	NA	NA	NA	NA	t	t	*
+Coleoptera	Polyphaga	Scolytidae	Pityogenes chalcographus	(Linneaus, 1761)	2.15	1	d	d	c	NA	NA	NA	NA	t	t	*
+Coleoptera	Polyphaga	Scolytidae	Scolytus intricatus	(Ratzeburg, 1837)	3.00	1	d	d	c	NA	NA	NA	NA	t	t	*
+Coleoptera	Polyphaga	Scolytidae	Xyleborus germanus	(Blandford, 1894)	1.40	0.5	f	f	c	NA	NA	NA	NA	t	t	*
+Coleoptera	Polyphaga	Scraptiidae	Anaspis flava	(Linneaus, 1758)	3.40	1	c-h	o	c	p	NA	r	NA	t	t	
+Coleoptera	Polyphaga	Scraptiidae	Anaspis frontalis	(Linneaus, 1758)	3.40	1	c-d-h	o	c	p	NA	r	NA	t	t	
+Coleoptera	Polyphaga	Scraptiidae	Anaspis rufilabris	(Gyllenhal, 1827)	3.00	1	c-d-h	o	c	p	NA	r	NA	t	t	
+Coleoptera	Polyphaga	Scydmaenidae	Scydmaenus tarsatus	Muller & Kunze, 1822	2.05	1	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Silphidae	Thanatophilus sinuatus	(Fabricius, 1775)	10.50	1	c-d	o	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Silvanidae	Psammoecus bipunctatus	(Fabricius, 1792)	2.55	1	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Acrotona parvula	(Mannerheim, 1831)	2.15	1	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Aleochara bipustulata	(Linneaus, 1761)	3.25	1	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Aleochara laevigata	Gyllenhal, 1810	3.75	1	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Aleochara lygaea	Kraatz, 1862	3.50	1	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Aleochara tristis	Gravenhorst, 1806	5.25	1	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Aleuonota gracilenta	(Erichson , 1839)	2.60	1	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Amischa analis	(Gravenhorst, 1802)	2.10	1	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Amischa bifoveolata	(Mannerheim, 1830)	2.00	1	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Amischa decipiens	(Sharp, 1869)	2.10	1	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Amischa nigrofusca	(Stephens, 1832)	2.00	1	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Anotylus affinis	(CzwaLinneaus, 1870)	1.50	1	c-d	o	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Anotylus rugosus	(Fabricius, 1775)	5.00	1	c-d	o	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Anotylus sculpturatus	(Gravenhorst, 1806)	2.75	1	c-d	o	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Anotylus tetracarinatus	(Block, 1799)	1.95	1	c-d	o	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Aploderus caelatus	(Gravenhorst, 1802)	4.00	1	c-d	o	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Atheta aegra	(Heer, 1841)	1.75	1	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Atheta aeneipennis	Thomson, 1856	3.40	1	c	c	c	NA	NA	NA	NA	g	g	*
+Coleoptera	Polyphaga	Staphylinidae	Atheta amplicollis	(Mulsant & Rey, 1873)	0.31	1	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Atheta atramentaria	(Gyllenhal, 1810)	3.05	1	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Atheta cauta	(Erichson, 1837)	2.10	1	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Atheta celata	(Erichson, 1837)	2.00	1	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Atheta crassicornis	(Fabricius, 1792)	3.10	1	c	c	c	NA	NA	NA	NA	g	g	*
+Coleoptera	Polyphaga	Staphylinidae	Atheta elongatula	(Gravenhorst, 1802)	3.25	1	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Atheta fungi	(Gravenhorst, 1806)	2.60	1	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Atheta graminicola	(Gravenhorst, 1806)	4.25	1	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Atheta inquinula	(Gravenhorst, 1802)	1.15	1	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Atheta liliputana	(Brisout, 1860)	1.75	1	c	c	c	NA	NA	NA	NA	g	g	*
+Coleoptera	Polyphaga	Staphylinidae	Atheta longicornis	(Gravenhorst, 1802)	3.25	1	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Atheta macrocera	(Thomson, 1856)	2.20	1	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Atheta malleus	Joy, 1913	2.90	1	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Atheta nigra	(Kraatz, 1856)	2.00	1	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Atheta orbata	(Erichson, 1837)	2.50	1	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Atheta palustris	(Kiesenwetter, 1844)	2.45	1	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Atheta putrida	(Kraatz, 1856)	3.20	1	c	c	c	NA	NA	NA	NA	g	g	*
+Coleoptera	Polyphaga	Staphylinidae	Atheta triangulum	(Kraatz, 1856)	3.55	1	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Autalia rivularis	(Gravenhorst, 1802)	1.90	1	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Carpelimus corticinus	(Gravenhorst, 1806)	1.50	1	c-h	o	c	p	NA	l	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Carpelimus impressus	(Boisduval & Lacordaire, 1835)	2.45	1	c-h	o	c	p	NA	l	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Carpelimus rivularis	(Motschulsky, 1860)	2.60	1	c-h	o	c	p	NA	l	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Cypha longicornis	(Paykull, 1800)	1.20	1	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Cypha pulicaria	(Erichson, 1839)	1.00	1	c	c	c	NA	NA	NA	NA	g	g	*
+Coleoptera	Polyphaga	Staphylinidae	Cypha tarsalis	(Luze, 1902)	1.20	1	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Euaesthetus laeviusculus	Mannerheim, 1844	1.80	1	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Eusphalerum luteum	(Marsham, 1802)	2.75	1	h	h	c	p	NA	l-r	NA	h	h	
+Coleoptera	Polyphaga	Staphylinidae	Eusphalerum minutum	(Fabricius, 1792)	2.50	1	h	h	c	p	NA	l-r	NA	h	h	
+Coleoptera	Polyphaga	Staphylinidae	Eusphalerum sorbi	(Gyllenhal, 1810)	1.85	1	h	h	c	p	NA	l-r	NA	h	h	
+Coleoptera	Polyphaga	Staphylinidae	Gabrius coxalus	Hochhuth, 1871	4.20	1	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Habrocerus capillaricornis	(Gravenhorst, 1806)	3.25	1	c	c	c	NA	NA	NA	NA	g	g	*
+Coleoptera	Polyphaga	Staphylinidae	Heterothops niger	Kraatz, 1868	4.35	1	c	c	c	NA	NA	NA	NA	t	t	
+Coleoptera	Polyphaga	Staphylinidae	Ischnosoma splendidum	(Gravenhorst, 1806)	4.25	0.5	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Leptusa ruficollis	(Erichson, 1839)	2.15	1	c	c	c	NA	NA	NA	NA	t	t	*
+Coleoptera	Polyphaga	Staphylinidae	Lesteva benicki	Lohse, 1958	2.00	1	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Lesteva longoelytrata	(Goeze, 1777)	4.00	1	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Liogluta alpestris	(Heer, 1839)	3.75	1	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Megarthrus depressus	(Paykull, 1789)	2.75	1	d	d	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Mycetoporus nigricollis	(Stephens, 1835)	5.25	0.5	c-f	o	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Nehemitropia lividipennis	(Mannerheim, 1831)	3.25	1	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Oligota parva	Kraatz, 1862	1.05	1	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Oligota pusillima	(Gravenhorst, 1806)	1.15	1	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Omalium caesum	Gravenhorst, 1806	3.00	1	c-d	o	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Omalium rivulare	(Paykull, 1789)	3.00	1	c-d	o	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Oxypoda acuminata	(Stephens, 1832)	5.00	1	c-d	o	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Oxypoda haemorrhoa	(Mannerheim, 1830)	2.35	1	c-d	o	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Oxypoda longipes	Mulsant & Rey, 1861	4.50	1	c-d	o	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Oxypoda opaca	(Gravenhorst, 1802)	4.00	1	c-d	o	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Oxypoda tarda	Sharp, 1871	2.50	1	c-d	o	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Oxyporus rufus	(Linneaus, 1758)	9.50	1	f	f	c	NA	NA	NA	NA	h	h	
+Coleoptera	Polyphaga	Staphylinidae	Oxytelus piceus	(Linneaus, 1767)	4.50	1	c-d	o	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Paederus brevipennis	Lacordaire, 1835	6.50	0.75	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Paederus fuscipes	Curtis, 1826	6.75	0.75	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Paederus littoralis	Gravenhorst, 1802	8.00	0.75	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Philonthus albipes	(Gravenhorst, 1802)	5.25	1	c-d	o	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Philonthus carbonarius	(Gravenhorst, 1810)	12.50	1	c-d	o	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Philonthus cognatus	Stephens, 1832	9.75	1	c-d	o	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Philonthus laminatus	(Creutzer, 1799)	9.00	1	c-d	o	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Philonthus pseudovarians	Strand, 1941	7.00	1	c-d	o	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Philonthus sanguinolentus	(Gravenhorst, 1802)	7.50	1	c-d	o	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Philonthus varians	(Paykull, 1789)	6.50	1	c-d	o	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Phloeostiba planus	(Paykull, 1792)	2.75	1	c	c	c	NA	NA	NA	NA	t	t	*
+Coleoptera	Polyphaga	Staphylinidae	Placusa atrata	(Mannerheim, 1831)	2.00	1	c	c	c	NA	NA	NA	NA	t	t	*
+Coleoptera	Polyphaga	Staphylinidae	Platystethus arenarius	(Fourcroy, 1785)	3.90	1	c-d	o	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Platystethus cornutus	(Gravenhorst, 1802)	3.50	1	c-d	o	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Pycnota paradoxa	(Mulant et Rey, 1861)	2.25	1	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Quedius cinctus	(Paykull, 1790)	8.00	1	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Quedius nitipennis	(Stephens, 1833)	6.25	1	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Quedius vexans	Eppelsheim, 1881	9.50	1	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Scopaeus laevigatus	(Gyllenhal, 1827)	3.50	1	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Stenus brunnipes	Stephens, 1833	3.45	1	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Stenus canaliculatus	Gyllenhal, 1827	3.50	1	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Stenus cicindeloides	(Schaller, 1783)	5.25	1	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Stenus circularis	Gravenhorst, 1802	2.25	1	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Stenus clavicornis	(Scopoli, 1763)	5.25	1	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Stenus flavipes	Stephens, 1833	3.10	1	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Stenus fulvicornis	Stephens, 1833	3.00	1	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Stenus geniculatus	Gravenhorst, 1806	4.20	1	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Stenus impressus	Germar, 1824	4.10	1	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Stenus pallipes	Gravenhorst, 1802	3.25	1	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Stenus pusillus	Stephens, 1833	2.10	1	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Stenus similis	(Herbst, 1784)	5.25	1	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Tachinus fimetarius	Gravenhorst, 1802	4.50	1	c-d	o	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Tachinus laticollis	Gravenhorst, 1802	3.50	1	c-d-h	o	c	p	NA	l	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Tachinus marginellus	(Fabricius, 1781)	3.50	1	c-d-h	o	c	p	NA	l	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Tachinus signatus	Gravenhorst, 1802	5.75	1	c-d	o	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Tachyporus abdominalis	(Fabricius, 1781)	3.25	0.25	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Tachyporus atriceps	Stephens, 1832	2.65	1	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Tachyporus chrysomelinus	(Linneaus, 1758)	3.75	0.5	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Tachyporus dispar	(Paykull, 1789)	3.00	0.5	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Tachyporus hypnorum	(Fabricius, 1775)	3.50	1	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Tachyporus nitidulus	(Fabricius, 1781)	2.50	1	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Tachyporus obtusus	(Linneaus, 1767)	3.75	1	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Tachyporus pusillus	Gravenhorst, 1806	2.50	1	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Tachyporus scitulus	Erichson, 1839	3.00	1	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Tachyporus solutus	Erichson, 1839	3.75	1	c	c	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Tinotus morion	(Gravenhorst, 1802)	2.25	1	c-d	o	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Xantholinus linearis	(Olivier, 1795)	7.50	0.5	c-d	o	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Staphylinidae	Xantholinus longiventris	Heer, 1839	8.00	0.75	c-d	o	c	NA	NA	NA	NA	g	g	
+Coleoptera	Polyphaga	Throscidae	Trixagus dermestoides	(Linneaus, 1767)	3.05	1	f	f	c	NA	NA	NA	NA	i	u	
+Hemiptera	Cicadomorpha	Aphrophoridae	Aphrophora alni	(Fallen, 1805)	7.50	1	h	h	s	p	x	NA	NA	h-t	u	
+Hemiptera	Cicadomorpha	Aphrophoridae	Lepyronia coleoptrata	(Linnaeus, 1758)	6.75	1	h	h	s	p	x	NA	NA	h-(t)	u	
+Hemiptera	Cicadomorpha	Aphrophoridae	Neophilaenus albipennis	(Fabricius, 1798)	5.50	1	h	h	s	m	x	NA	NA	h	h	
+Hemiptera	Cicadomorpha	Aphrophoridae	Neophilaenus campestris	(Fallen, 1805)	5.35	1	h	h	s	o	x	NA	NA	h-(t)	u	
+Hemiptera	Cicadomorpha	Aphrophoridae	Neophilaenus infumatus	(Haupt, 1917)	4.95	1	h	h	s	m	x	NA	NA	h	h	
+Hemiptera	Cicadomorpha	Aphrophoridae	Neophilaenus lineatus	(Linnaeus, 1758)	5.70	1	h	h	s	o	x	NA	NA	h	h	
+Hemiptera	Cicadomorpha	Aphrophoridae	Neophilaenus minor	(Kirschbaum, 1868)	4.55	1	h	h	s	o	x	NA	NA	h	h	
+Hemiptera	Cicadomorpha	Aphrophoridae	Philaenus spumarius	(Linnaeus, 1758)	6.10	1	h	h	s	p	x	NA	gl	h-(t)	u	
+Hemiptera	Cicadomorpha	Cercopidae	Cercopis vulnerata	Rossi, 1807	9.70	1	h	h	s	p	x	NA	NA	g-h	u	
+Hemiptera	Cicadomorpha	Cicadellidae	Adarrus multinotatus	(Boheman, 1847)	3.13	1	h	h	s	m	p	NA	NA	h	h	
+Hemiptera	Cicadomorpha	Cicadellidae	Agallia brachyptera	(Boheman, 1847)	2.85	0.25	h	h	s	p	p	NA	NA	h	h	
+Hemiptera	Cicadomorpha	Cicadellidae	Alebra albostriella	(Fallen, 1826)	3.85	1	h	h	s	m	m	NA	NA	t	t	*
+Hemiptera	Cicadomorpha	Cicadellidae	Anaceratagallia ribauti	(Ossiannilsson, 1938)	3.05	1	h	h	s	p	p	NA	NA	h	h	
+Hemiptera	Cicadomorpha	Cicadellidae	Anoscopus flavostriatus	(Donovan, 1799)	3.55	1	h	h	s	o	p	NA	NA	h	h	
+Hemiptera	Cicadomorpha	Cicadellidae	Anoscopus serratulae	(Fabricius, 1775)	3.85	1	h	h	s	o	p	NA	NA	h	h	
+Hemiptera	Cicadomorpha	Cicadellidae	Aphrodes bicinctus	(Schrank, 1776)	6.05	1	h	h	s	o	p	NA	NA	h	h	
+Hemiptera	Cicadomorpha	Cicadellidae	Aphrodes diminuta	Ribaut, 1952	5.80	1	h	h	s	o	p	NA	NA	h	h	
+Hemiptera	Cicadomorpha	Cicadellidae	Aphrodes makarovi	Zachvatkin, 1948	6.55	1	h	h	s	p	p	NA	NA	h	h	
+Hemiptera	Cicadomorpha	Cicadellidae	Arocephalus languidus	(Flor, 1861)	2.55	0.75	h	h	s	o	p	NA	NA	h	h	
+Hemiptera	Cicadomorpha	Cicadellidae	Arocephalus longiceps	(Kirschbaum, 1868)	3.80	1	h	h	s	o	p	NA	NA	h	h	
+Hemiptera	Cicadomorpha	Cicadellidae	Arthaldeus arenarius	Remane, 1960	4.05	1	h	h	s	m	p	NA	NA	h	h	
+Hemiptera	Cicadomorpha	Cicadellidae	Arthaldeus pascuellus	(Fallen, 1826)	3.50	1	h	h	s	o	p	NA	NA	h	h	
+Hemiptera	Cicadomorpha	Cicadellidae	Arthaldeus striifrons	(Kirschbaum, 1868)	3.70	1	h	h	s	m	p	NA	NA	h	h	
+Hemiptera	Cicadomorpha	Cicadellidae	Artianus interstitialis	(Germar, 1821)	5.05	1	h	h	s	o	p	NA	NA	h	h	
+Hemiptera	Cicadomorpha	Cicadellidae	Athysanus argentarius	Metcalf, 1955	7.25	1	h	h	s	o	p	NA	NA	h	h	
+Hemiptera	Cicadomorpha	Cicadellidae	Balcanocerus larvatus	(Herrich-Schäffer, 1835)	4.30	1	h	h	s	m	p	NA	NA	t	t	*
+Hemiptera	Cicadomorpha	Cicadellidae	Balclutha calamagrostis	Ossiannilsson, 1961	3.50	1	h	h	s	m	p	NA	NA	h	h	
+Hemiptera	Cicadomorpha	Cicadellidae	Balclutha punctata	(Fabricius, 1775)	3.85	1	h	h	s	o	p	NA	NA	h-(t)	u	
+Hemiptera	Cicadomorpha	Cicadellidae	Balclutha rhenana	Wagner, 1939	3.95	1	h	h	s	m	p	NA	NA	h	h	
+Hemiptera	Cicadomorpha	Cicadellidae	Chlorita paolii	(Ossiannilsson, 1939)	2.85	1	h	h	s	o	m	NA	NA	h	h	
+Hemiptera	Cicadomorpha	Cicadellidae	Chlorita pusilla	Matsumura, 1906	2.15	1	h	h	s	m	m	NA	NA	h	h	*
+Hemiptera	Cicadomorpha	Cicadellidae	Cicadella viridis	(Linnaeus, 1758)	7.35	1	h	h	s	p	x	NA	NA	h	h	
+Hemiptera	Cicadomorpha	Cicadellidae	Cicadula persimilis	(Edwards, 1920)	4.60	1	h	h	s	m	p	NA	NA	h	h	
+Hemiptera	Cicadomorpha	Cicadellidae	Cicadula quadrinotata	(Fabricius, 1794)	4.55	1	h	h	s	m	p	NA	NA	h	h	
+Hemiptera	Cicadomorpha	Cicadellidae	Conosanus obsoletus	(Kirschbaum, 1858)	5.20	0.75	h	h	s	o	p	NA	NA	h	h	
+Hemiptera	Cicadomorpha	Cicadellidae	Deltocephalus pulicaris	(Fallen, 1806)	2.75	1	h	h	s	o	p	NA	NA	h	h	
+Hemiptera	Cicadomorpha	Cicadellidae	Dikraneura variata	Hardy, 1850	3.50	1	h	h	s	o	m	NA	NA	h	h	
+Hemiptera	Cicadomorpha	Cicadellidae	Diplocolenus bohemani	(Zetterstedt, 1840)	4.40	0.75	h	h	s	o	p	NA	NA	h	h	
+Hemiptera	Cicadomorpha	Cicadellidae	Doliotettix lunulatus	(Zetterstedt, 1840)	4.35	0.75	h	h	s	m	p	NA	NA	h	h	
+Hemiptera	Cicadomorpha	Cicadellidae	Doratura exilis	Horvath, 1903	3.25	0.25	h	h	s	m	p	NA	NA	h	h	
+Hemiptera	Cicadomorpha	Cicadellidae	Doratura homophyla	(Flor, 1861)	4.00	0.25	h	h	s	o	p	NA	NA	h	h	
+Hemiptera	Cicadomorpha	Cicadellidae	Doratura stylata	(Boheman, 1847)	3.75	0.25	h	h	s	o	p	NA	NA	h	h	
+Hemiptera	Cicadomorpha	Cicadellidae	Elymana sulphurella	(Zetterstedt, 1828)	4.70	1	h	h	s	o	p	NA	NA	h	h	
+Hemiptera	Cicadomorpha	Cicadellidae	Emelyanoviana mollicula	(Boheman, 1845)	3.40	1	h	h	s	p	m	NA	NA	h	h	
+Hemiptera	Cicadomorpha	Cicadellidae	Empoasca decipiens	Paoli, 1930	3.60	1	h	h	s	p	m-p	NA	NA	h-(t)	u	
+Hemiptera	Cicadomorpha	Cicadellidae	Empoasca pteridis	(Dahlbom, 1850)	3.30	1	h	h	s	p	m	NA	NA	h	h	
+Hemiptera	Cicadomorpha	Cicadellidae	Empoasca vitis	(Gothe, 1875)	3.45	1	h	h	s	p	m-p	NA	NA	t	t	*
+Hemiptera	Cicadomorpha	Cicadellidae	Errastunus ocellaris	(Fallen, 1806)	3.35	1	h	h	s	o	p	NA	NA	h	h	
+Hemiptera	Cicadomorpha	Cicadellidae	Erythria aureola	(Fallen, 1806)	2.60	1	h	h	s	o	m	NA	NA	h	h	
+Hemiptera	Cicadomorpha	Cicadellidae	Eupelix cuspidata	(Fabricius, 1775)	7.00	1	h	h	s	m	p	NA	NA	h	h	
+Hemiptera	Cicadomorpha	Cicadellidae	Eupteryx atropunctata	(Goeze, 1778)	3.60	1	h	h	s	p	m	NA	NA	h	h	
+Hemiptera	Cicadomorpha	Cicadellidae	Eupteryx aurata	(Linnaeus, 1758)	3.90	1	h	h	s	p	m	NA	NA	h	h	
+Hemiptera	Cicadomorpha	Cicadellidae	Eupteryx calcarata	Ossiannilsson, 1936	3.45	1	h	h	s	m	m	NA	NA	h	h	
+Hemiptera	Cicadomorpha	Cicadellidae	Eupteryx cyclops	Matsumura, 1906	3.35	1	h	h	s	m	m	NA	NA	h	h	
+Hemiptera	Cicadomorpha	Cicadellidae	Eupteryx notata	Curtis, 1837	2.40	1	h	h	s	o	m	NA	NA	h	h	
+Hemiptera	Cicadomorpha	Cicadellidae	Eupteryx urticae	(Fabricius, 1803)	3.25	1	h	h	s	m	m	NA	NA	h	h	
+Hemiptera	Cicadomorpha	Cicadellidae	Eupteryx vittata	(Linnaeus, 1758)	3.40	1	h	h	s	p	m	NA	NA	h	h	
+Hemiptera	Cicadomorpha	Cicadellidae	Euscelis incisus	(Kirschbaum, 1858)	3.70	0.75	h	h	s	p	p	NA	NA	h	h	
+Hemiptera	Cicadomorpha	Cicadellidae	Evacanthus interruptus	(Linnaeus, 1758)	6.00	1	h	h	s	p	x	NA	NA	h	h	
+Hemiptera	Cicadomorpha	Cicadellidae	Fagocyba cruenta	(Herrich-Schäffer, 1838)	3.65	1	h	h	s	p	m	NA	NA	t	t	*
+Hemiptera	Cicadomorpha	Cicadellidae	Forcipata citrinella	(Zetterstedt, 1828)	3.45	1	h	h	s	m	m	NA	NA	h	h	
+Hemiptera	Cicadomorpha	Cicadellidae	Goniagnathus brevis	(Herrich-Schäffer, 1835)	5.00	1	h	h	s	m	p	NA	NA	h	h	
+Hemiptera	Cicadomorpha	Cicadellidae	Graphocraerus ventralis	(Fallen, 1806)	5.50	1	h	h	s	o	p	NA	NA	h	h	
+Hemiptera	Cicadomorpha	Cicadellidae	Grypotes puncticollis	(Herrich-Schäffer, 1834)	4.50	1	h	h	s	m	p	NA	NA	t	t	*
+Hemiptera	Cicadomorpha	Cicadellidae	Hardya tenuis	(Germar, 1821)	3.35	1	h	h	s	o	p	NA	NA	h	h	
+Hemiptera	Cicadomorpha	Cicadellidae	Hesium domino	(Reuter, 1880)	6.30	1	h	h	s	o	p	NA	NA	h-t	u	
+Hemiptera	Cicadomorpha	Cicadellidae	Jassargus pseudocellaris	(Flor, 1861)	3.05	1	h	h	s	o	p	NA	NA	h	h	
+Hemiptera	Cicadomorpha	Cicadellidae	Kybos smaragdulus	(Fallen, 1806)	4.20	1	h	h	s	m	m	NA	NA	t	t	*
+Hemiptera	Cicadomorpha	Cicadellidae	Macropsis scutellata	(Boheman, 1845)	4.75	1	h	h	s	m	p	NA	NA	h	h	
+Hemiptera	Cicadomorpha	Cicadellidae	Macrosteles cristatus	(Ribaut, 1927)	3.75	1	h	h	s	p	p	NA	NA	h	h	
+Hemiptera	Cicadomorpha	Cicadellidae	Macrosteles laevis	(Ribaut, 1927)	3.60	1	h	h	s	p	p	NA	NA	h	h	
+Hemiptera	Cicadomorpha	Cicadellidae	Macrosteles lividus	(Edwards, 1894)	4.00	1	h	h	s	m	p	NA	NA	h	h	*
+Hemiptera	Cicadomorpha	Cicadellidae	Macrosteles maculosus	(Then, 1897)	2.95	1	h	h	s	m	p	NA	NA	h	h	*
+Hemiptera	Cicadomorpha	Cicadellidae	Macrosteles sexnotatus	(Fallen, 1806)	3.50	1	h	h	s	p	p	NA	NA	h	h	
+Hemiptera	Cicadomorpha	Cicadellidae	Macrosteles viridigriseus	(Edwards, 1922)	3.35	1	h	h	s	o	p	NA	NA	h	h	
+Hemiptera	Cicadomorpha	Cicadellidae	Macustus grisescens	(Zetterstedt, 1828)	4.70	0.75	h	h	s	o	p	NA	NA	h	h	
+Hemiptera	Cicadomorpha	Cicadellidae	Megophthalmus scanicus	(Fallen, 1806)	2.95	1	h	h	s	o	p	NA	NA	h	h	
+Hemiptera	Cicadomorpha	Cicadellidae	Mocuellus collinus	(Boheman, 1850)	3.85	0.25	h	h	s	o	p	NA	NA	h	h	
+Hemiptera	Cicadomorpha	Cicadellidae	Mocuellus metrius	(Flor, 1861)	4.10	1	h	h	s	m	p	NA	NA	h	h	
+Hemiptera	Cicadomorpha	Cicadellidae	Mocydia crocea	(Herrich-Schäffer, 1837)	4.85	1	h	h	s	o	p	NA	NA	h	h	
+Hemiptera	Cicadomorpha	Cicadellidae	Neoaliturus fenestratus	(Herrich-Schäffer, 1834)	3.10	1	h	h	s	o	p	NA	NA	h	h	
+Hemiptera	Cicadomorpha	Cicadellidae	Notus flavipennis	(Zetterstedt, 1828)	3.95	1	h	h	s	o	m	NA	NA	h	h	
+Hemiptera	Cicadomorpha	Cicadellidae	Paluda flaveola	(Boheman, 1845)	4.70	1	h	h	s	o	p	NA	NA	h	h	
+Hemiptera	Cicadomorpha	Cicadellidae	Pithyotettix abietinus	(Fallen, 1806)	5.65	1	h	h	s	m	p	NA	NA	t	t	*
+Hemiptera	Cicadomorpha	Cicadellidae	Planaphrodes trifasciatus	(Fourcroy, 1785)	4.25	1	h	h	s	o	p	NA	NA	h	h	
+Hemiptera	Cicadomorpha	Cicadellidae	Psammotettix alienus	(Dahlbom, 1850)	4.15	1	h	h	s	o	p	NA	NA	h	h	
+Hemiptera	Cicadomorpha	Cicadellidae	Psammotettix cephalotes	(Herrich-Schäffer, 1834)	3.20	1	h	h	s	m	p	NA	NA	h	h	
+Hemiptera	Cicadomorpha	Cicadellidae	Psammotettix confinis	(Dahlbom, 1850)	3.60	1	h	h	s	o	p	NA	NA	h	h	
+Hemiptera	Cicadomorpha	Cicadellidae	Psammotettix helvolus	(Kirschbaum, 1868)	3.20	0.75	h	h	s	o	p	NA	NA	h	h	
+Hemiptera	Cicadomorpha	Cicadellidae	Psammotettix kolosvarensis	(Matsumura, 1908)	3.75	1	h	h	s	o	p	NA	NA	h	h	
+Hemiptera	Cicadomorpha	Cicadellidae	Psammotettix nodosus	(Ribaut, 1925)	3.40	1	h	h	s	o	p	NA	NA	h	h	*
+Hemiptera	Cicadomorpha	Cicadellidae	Rhopalopyx adumbrata	(Sahlberg, 1842)	3.85	1	h	h	s	m	p	NA	NA	h	h	
+Hemiptera	Cicadomorpha	Cicadellidae	Rhopalopyx preyssleri	(Herrich-Schäffer, 1838)	3.75	1	h	h	s	m	p	NA	NA	h	h	
+Hemiptera	Cicadomorpha	Cicadellidae	Rhopalopyx vitripennis	(Flor, 1861)	3.80	1	h	h	s	m	p	NA	NA	h	h	
+Hemiptera	Cicadomorpha	Cicadellidae	Speudotettix subfusculus	(Fallen, 1806)	5.50	1	h	h	s	p	p	NA	NA	h-t	u	
+Hemiptera	Cicadomorpha	Cicadellidae	Streptanus aemulans	(Kirschbaum, 1868)	5.05	0.5	h	h	s	o	p	NA	NA	h	h	
+Hemiptera	Cicadomorpha	Cicadellidae	Streptanus marginatus	(Kirschbaum, 1858)	3.80	0.25	h	h	s	o	p	NA	NA	h	h	
+Hemiptera	Cicadomorpha	Cicadellidae	Streptanus sordidus	(Zetterstedt, 1828)	4.35	0.5	h	h	s	o	p	NA	NA	h	h	
+Hemiptera	Cicadomorpha	Cicadellidae	Turrutus socialis	(Flor, 1861)	3.35	0.75	h	h	s	o	p	NA	NA	h	h	
+Hemiptera	Cicadomorpha	Cicadellidae	Utecha trivia	(Germar, 1821)	3.05	0	h	h	s	p	p	NA	NA	h	h	
+Hemiptera	Cicadomorpha	Cicadellidae	Verdanus abdominalis	(Fabricius, 1803)	4.15	0.75	h	h	s	o	p	NA	NA	h	h	
+Hemiptera	Cicadomorpha	Cicadellidae	Wagneripteryx germari	(Zetterstedt, 1840)	4.30	1	h	h	s	m	m	NA	NA	t	t	*
+Hemiptera	Cicadomorpha	Cicadellidae	Zyginidia scutellaris	(Herrich-Schäffer, 1838)	2.85	1	h	h	s	o	m	NA	NA	h	h	
+Hemiptera	Fulgoromorpha	Cixiidae	Cixius nervosus	(Linnaeus, 1758)	7.50	1	h	h	s	p	p	NA	NA	g-t	u	*
+Hemiptera	Fulgoromorpha	Cixiidae	Cixius simplex	(Herrich-Schäffer, 1835)	5.85	1	h	h	s	p	p	NA	NA	g-t	u	
+Hemiptera	Fulgoromorpha	Cixiidae	Reptalus panzeri	Löw, 1883	7.50	1	h	h	s	o	p	NA	NA	g-t	u	
+Hemiptera	Fulgoromorpha	Cixiidae	Tachycixius pilosus	(Olivier, 1791)	5.00	1	h	h	s	o	p	NA	NA	g-t	u	*
+Hemiptera	Fulgoromorpha	Cixiidae	Trigonocranus emmeae	Fieber, 1876	4.00	0.5	h	h	s	p	p	NA	NA	g	g	
+Hemiptera	Fulgoromorpha	Delphacidae	Acanthodelphax denticauda	(Boheman, 1847)	3.00	0.5	h	h	s	m	p	NA	NA	h	h	
+Hemiptera	Fulgoromorpha	Delphacidae	Acanthodelphax spinosus	(Fieber, 1866)	2.00	0	h	h	s	m	p	NA	NA	h	h	
+Hemiptera	Fulgoromorpha	Delphacidae	Anakelisia perspicillata	(Boheman, 1845)	2.25	0.5	h	h	s	m	p	NA	NA	h	h	
+Hemiptera	Fulgoromorpha	Delphacidae	Asiraca clavicornis	(Fabricius, 1794)	4.30	1	h	h	s	p	p	NA	NA	h-(t)	u	
+Hemiptera	Fulgoromorpha	Delphacidae	Chloriona smaragdula	(Stal, 1853)	4.80	0.75	h	h	s	m	p	NA	NA	h	h	
+Hemiptera	Fulgoromorpha	Delphacidae	Conomelus anceps	(Germar, 1821)	2.80	0	h	h	s	m	p	NA	NA	h	h	
+Hemiptera	Fulgoromorpha	Delphacidae	Criomorphus albomarginatus	Curtis, 1833	3.00	0.5	h	h	s	o	p	NA	NA	h	h	
+Hemiptera	Fulgoromorpha	Delphacidae	Delphacinus mesomelas	(Boheman, 1850)	3.00	0.25	h	h	s	m	p	NA	NA	h	h	
+Hemiptera	Fulgoromorpha	Delphacidae	Dicranotropis divergens	Kirschbaum, 1868	2.85	0	h	h	s	m	p	NA	NA	h	h	
+Hemiptera	Fulgoromorpha	Delphacidae	Dicranotropis hamata	(Boheman, 1847)	3.80	0.5	h	h	s	o	p	NA	NA	h	h	
+Hemiptera	Fulgoromorpha	Delphacidae	Ditropis pteridis	(Spinola, 1839)	3.50	0.25	h	h	s	m	p	NA	NA	h	h	
+Hemiptera	Fulgoromorpha	Delphacidae	Ditropsis flavipes	(Signoret, 1865)	2.35	0	h	h	s	m	p	NA	NA	h	h	
+Hemiptera	Fulgoromorpha	Delphacidae	Eurybregma nigrolineata	Scott, 1875	4.20	0.5	h	h	s	o	p	NA	NA	h	h	
+Hemiptera	Fulgoromorpha	Delphacidae	Eurysula lurida	(Fieber, 1866)	3.10	0.5	h	h	s	m	p	NA	NA	h	h	
+Hemiptera	Fulgoromorpha	Delphacidae	Hyledelphax elegantulus	(Boheman, 1847)	3.00	0.25	h	h	s	o	p	NA	NA	h	h	
+Hemiptera	Fulgoromorpha	Delphacidae	Jassidaeus lugubris	(Signoret, 1865)	2.10	0.25	h	h	s	m	p	NA	NA	h	h	
+Hemiptera	Fulgoromorpha	Delphacidae	Javesella dubia	(Kirschbaum, 1868)	3.25	0.25	h	h	s	o	p	NA	NA	h	h	
+Hemiptera	Fulgoromorpha	Delphacidae	Javesella forcipata	(Boheman, 1847)	3.00	0.25	h	h	s	o	p	NA	NA	h	h	
+Hemiptera	Fulgoromorpha	Delphacidae	Javesella obscurella	(Boheman, 1847)	3.10	0.25	h	h	s	o	p	NA	NA	h	h	
+Hemiptera	Fulgoromorpha	Delphacidae	Javesella pellucida	(Fabricius, 1794)	3.55	0.75	h	h	s	o	p	NA	NA	h	h	
+Hemiptera	Fulgoromorpha	Delphacidae	Kelisia guttula	(Germar, 1818)	3.15	0.5	h	h	s	m	p	NA	NA	h	h	
+Hemiptera	Fulgoromorpha	Delphacidae	Kelisia monoceros	Ribaut, 1934	3.10	0.5	h	h	s	m	p	NA	NA	h	h	*
+Hemiptera	Fulgoromorpha	Delphacidae	Kosswigianella exigua	(Boheman, 1847)	2.50	0.5	h	h	s	m	p	NA	NA	h	h	
+Hemiptera	Fulgoromorpha	Delphacidae	Laodelphax striatellus	(Fallen, 1826)	3.30	0.75	h	h	s	o	p	NA	NA	h	h	
+Hemiptera	Fulgoromorpha	Delphacidae	Megadelphax haglundi	(Sahlberg, 1871)	3.05	0.25	h	h	s	o	p	NA	NA	h	h	
+Hemiptera	Fulgoromorpha	Delphacidae	Megadelphax sordidulus	(Stal, 1853)	4.15	0.25	h	h	s	m	p	NA	NA	h	h	
+Hemiptera	Fulgoromorpha	Delphacidae	Megamelus notulus	(Germar, 1830)	3.65	0.25	h	h	s	m	p	NA	NA	h	h	
+Hemiptera	Fulgoromorpha	Delphacidae	Muellerianella brevipennis	(Boheman, 1847)	3.40	0.5	h	h	s	m	p	NA	NA	h	h	
+Hemiptera	Fulgoromorpha	Delphacidae	Muellerianella extrusa	(Scott, 1871)	3.15	0.5	h	h	s	m	p	NA	NA	h	h	
+Hemiptera	Fulgoromorpha	Delphacidae	Muellerianella fairmairei	(Perris, 1857)	3.45	0.5	h	h	s	m	p	NA	NA	h	h	
+Hemiptera	Fulgoromorpha	Delphacidae	Muirodelphax aubei	(Perris, 1857)	3.10	0.25	h	h	s	m	p	NA	NA	h	h	
+Hemiptera	Fulgoromorpha	Delphacidae	Paraliburnia adela	(Flor, 1861)	3.70	0.25	h	h	s	m	p	NA	NA	h	h	
+Hemiptera	Fulgoromorpha	Delphacidae	Paraliburnia clypealis	(Sahlberg, 1871)	3.05	0.25	h	h	s	m	p	NA	NA	h	h	*
+Hemiptera	Fulgoromorpha	Delphacidae	Ribautodelphax albostriatus	(Fieber, 1866)	3.35	0.5	h	h	s	m	p	NA	NA	h	h	
+Hemiptera	Fulgoromorpha	Delphacidae	Ribautodelphax angulosus	(Ribaut, 1953)	2.90	0.5	h	h	s	m	p	NA	NA	h	h	
+Hemiptera	Fulgoromorpha	Delphacidae	Ribautodelphax collinus	(Boheman, 1847)	3.10	0.5	h	h	s	m	p	NA	NA	h	h	
+Hemiptera	Fulgoromorpha	Delphacidae	Ribautodelphax pungens	(Ribaut, 1953)	3.25	0.5	h	h	s	m	p	NA	NA	h	h	
+Hemiptera	Fulgoromorpha	Delphacidae	Stenocranus fuscovittatus	(Stal, 1858)	5.35	0.5	h	h	s	m	p	NA	NA	h	h	
+Hemiptera	Fulgoromorpha	Delphacidae	Stenocranus major	(Kirschbaum, 1868)	6.05	0.5	h	h	s	m	p	NA	NA	h	h	
+Hemiptera	Fulgoromorpha	Delphacidae	Stenocranus minutus	(Fabricius, 1787)	5.15	0.5	h	h	s	m	p	NA	NA	h	h	
+Hemiptera	Fulgoromorpha	Delphacidae	Stiroma affinis	Fieber, 1866	3.75	0.25	h	h	s	o	p	NA	NA	h	h	
+Hemiptera	Fulgoromorpha	Delphacidae	Stiroma bicarinata	(Herrich-Schäffer, 1835)	4.00	0.5	h	h	s	o	p	NA	NA	h	h	
+Hemiptera	Fulgoromorpha	Delphacidae	Xanthodelphax flaveolus	(Flor, 1861)	2.75	0.5	h	h	s	m	p	NA	NA	h	h	
+Hemiptera	Fulgoromorpha	Delphacidae	Xanthodelphax stramineus	(Stal, 1858)	3.00	0.5	h	h	s	m	p	NA	NA	h	h	
+Hemiptera	Fulgoromorpha	Tettigometridae	Tettigometra impressopunctata	Dufour, 1846	4.55	1	h	h	s	p	p	NA	NA	g-h-(t)	u	
+Hemiptera	Heteroptera	Acanthosomatidae	Cyphostethus tristriatus	(Fabricius, 1787)	9.50	1	h	h	s	o	r	NA	NA	t	t	
+Hemiptera	Heteroptera	Acanthosomatidae	Elasmostethus interstinctus	(Linnaeus, 1758)	9.70	1	h	h	s	o	r	NA	NA	t	t	*
+Hemiptera	Heteroptera	Acanthosomatidae	Elasmucha grisea	(Linnaeus, 1758)	8.00	1	h	h	s	o	m-r	NA	NA	t	t	*
+Hemiptera	Heteroptera	Alydidae	Alydus calcaratus	(Linnaeus, 1758)	11.00	1	h	h	s	o	r-se	NA	NA	g-(h)	u	
+Hemiptera	Heteroptera	Anthocoridae	Anthocoris nemoralis	(Fabricius, 1794)	3.70	1	c-(h)	c	s	NA	NA	NA	NA	t	t	*
+Hemiptera	Heteroptera	Anthocoridae	Anthocoris nemorum	(Linnaeus, 1761)	3.90	1	c-(h)	c	s	NA	NA	NA	NA	h-t	u	
+Hemiptera	Heteroptera	Anthocoridae	Orius majusculus	(Reuter, 1879)	2.80	1	c-(h)	c	s	NA	NA	NA	NA	h-t	u	
+Hemiptera	Heteroptera	Anthocoridae	Orius minutus	(Linnaeus, 1758)	2.30	1	c-(h)	c	s	NA	NA	NA	NA	h	h	
+Hemiptera	Heteroptera	Anthocoridae	Orius niger	(Wolff, 1811)	2.00	1	c-(h)	c	s	NA	NA	NA	NA	h	h	
+Hemiptera	Heteroptera	Anthocoridae	Temnostethus gracilis	Horvath, 1907	2.40	0.25	c	c	s	NA	NA	NA	NA	t	t	*
+Hemiptera	Heteroptera	Anthocoridae	Temnostethus pusillus	(Herrich-Schäffer, 1835)	2.80	0.75	c	c	s	NA	NA	NA	NA	t	t	*
+Hemiptera	Heteroptera	Anthocoridae	Xylocoris galactinus	(Fieber, 1836)	2.70	1	c	c	s	NA	NA	NA	NA	g	g	
+Hemiptera	Heteroptera	Berytidae	Berytinus clavipes	(Fabricius, 1775)	7.40	0.75	h-(c)	h	s	m	p	NA	NA	(g)-h	u	
+Hemiptera	Heteroptera	Berytidae	Berytinus crassipes	(Herrich-Schäffer, 1835)	5.00	0.5	h-(c)	h	s	o	p	NA	NA	g-h	u	
+Hemiptera	Heteroptera	Berytidae	Berytinus minor	(Herrich-Schäffer, 1835)	6.00	0.5	h-(c)	h	s	o	p	NA	NA	g-(h)	u	
+Hemiptera	Heteroptera	Berytidae	Berytinus signoreti	(Fieber, 1859)	4.90	1	h-(c)	h	s	o	p	NA	NA	g-h	u	
+Hemiptera	Heteroptera	Berytidae	Gampsocoris punctipes	(Germar, 1822)	3.80	1	h	h	s	m	m-p	NA	NA	(g)-h	u	
+Hemiptera	Heteroptera	Berytidae	Neides tipularius	(Linnaeus, 1758)	10.50	0.75	h-(c)	h	s	p	p	NA	NA	g-(h)	u	
+Hemiptera	Heteroptera	Coreidae	Bathysolen nubilus	(Fallen, 1807)	5.80	1	h	h	s	o	se	NA	NA	g	g	
+Hemiptera	Heteroptera	Coreidae	Coreus marginatus	(Linnaeus, 1758)	13.00	1	h	h	s	p	m-r	NA	NA	h	h	
+Hemiptera	Heteroptera	Coreidae	Coriomeris denticulatus	(Scopoli, 1763)	8.70	1	h	h	s	o	p	NA	NA	g-(h)	u	
+Hemiptera	Heteroptera	Coreidae	Syromastus rhombeus	(Linnaeus, 1767)	10.50	1	h	h	s	o	p	NA	NA	g-(h)-(t)	u	
+Hemiptera	Heteroptera	Lygaeidae	Chilacis typhae	(Perris, 1857)	4.20	1	h	h	s	m	r	NA	NA	h	h	*
+Hemiptera	Heteroptera	Lygaeidae	Cymus claviculus	(Fallen, 1807)	3.20	1	h	h	s	o	p-r	NA	NA	h	h	
+Hemiptera	Heteroptera	Lygaeidae	Cymus glandicolor	Hahn, 1832	4.40	1	h	h	s	o	r	NA	NA	h	h	
+Hemiptera	Heteroptera	Lygaeidae	Cymus melanocephalus	Fieber, 1861	3.50	1	h	h	s	o	r	NA	NA	h	h	
+Hemiptera	Heteroptera	Lygaeidae	Drymus sylvaticus	(Fabricius, 1775)	4.10	1	h	h	s	p	se	NA	NA	g	g	*
+Hemiptera	Heteroptera	Lygaeidae	Gastrodes abietum	Bergroth, 1914	6.50	1	h	h	s	o	p-se	NA	NA	t	t	*
+Hemiptera	Heteroptera	Lygaeidae	Ischnodemus sabuleti	(Fallen, 1826)	5.00	0.25	h	h	s	o	m-p	NA	NA	h	h	
+Hemiptera	Heteroptera	Lygaeidae	Kleidocerys resedae	(Panzer, 1797)	5.20	1	h-(c)	h	s	o	r	NA	NA	t	t	*
+Hemiptera	Heteroptera	Lygaeidae	Macroplax preyssleri	(Fieber, 1837)	3.50	0.25	h	h	s	m	se	NA	NA	g	g	
+Hemiptera	Heteroptera	Lygaeidae	Megalonotus chiragra	(Fabricius, 1794)	5.90	0.25	h	h	s	p	se	NA	NA	g	g	
+Hemiptera	Heteroptera	Lygaeidae	Nysius cymoides	(Spinola, 1837)	3.60	1	h	h	s	p	se	NA	NA	g-h	u	
+Hemiptera	Heteroptera	Lygaeidae	Nysius ericae	(Schilling, 1829)	4.00	1	h	h	s	p	se	NA	NA	g-h	u	
+Hemiptera	Heteroptera	Lygaeidae	Nysius senecionis	(Schilling, 1829)	4.30	1	h	h	s	p	se	NA	NA	g-h	u	
+Hemiptera	Heteroptera	Lygaeidae	Nysius thymi	(Wolff, 1804)	4.00	1	h	h	s	p	se	NA	NA	g-h	u	
+Hemiptera	Heteroptera	Lygaeidae	Peritrechus geniculatus	(Hahn, 1832)	5.40	1	h	h	s	p	se	NA	NA	g	g	
+Hemiptera	Heteroptera	Lygaeidae	Peritrechus nubilus	(Fallen, 1807)	5.20	1	h	h	s	p	se	NA	NA	g	g	
+Hemiptera	Heteroptera	Lygaeidae	Rhyparochromus pini	(Linnaeus, 1758)	7.40	1	h	h	s	p	se	NA	NA	g	g	
+Hemiptera	Heteroptera	Lygaeidae	Scolopostethus affinis	(Schilling, 1829)	3.50	0.25	h	h	s	p	r-se	NA	NA	g-h	u	
+Hemiptera	Heteroptera	Lygaeidae	Scolopostethus thomsoni	Reuter, 1875	3.70	0.5	h	h	s	p	r-se	NA	NA	g-h	u	
+Hemiptera	Heteroptera	Lygaeidae	Stygnocoris rusticus	(Fallen, 1807)	3.70	0.25	h	h	s	p	r-se	NA	NA	g-h	g	
+Hemiptera	Heteroptera	Lygaeidae	Stygnocoris sabulosus	(Schilling, 1829)	2.80	1	h	h	s	p	r-se	NA	NA	g-h	g	
+Hemiptera	Heteroptera	Lygaeidae	Trapezonotus arenarius	(Linnaeus, 1758)	4.50	0.75	h	h	s	p	se	NA	NA	g	g	
+Hemiptera	Heteroptera	Miridae	Acetropis carinata	(Herrich-Schäffer, 1841)	6.40	0.5	h	h	s	o	r	NA	NA	h	h	
+Hemiptera	Heteroptera	Miridae	Adelphocoris lineolatus	(Goeze, 1778)	8.40	1	h	h	s	p	r	NA	NA	h	h	
+Hemiptera	Heteroptera	Miridae	Adelphocoris quadripunctatus	(Fabricius, 1794)	8.90	1	h	h	s	m	r	NA	NA	h	h	
+Hemiptera	Heteroptera	Miridae	Adelphocoris seticornis	(Fabricius, 1775)	7.50	1	h-(c)	h	s	o	r	NA	NA	h	h	
+Hemiptera	Heteroptera	Miridae	Adelphocoris ticinensis	(Meyer-Dür, 1843)	7.30	1	c-h	o	s	p	r	NA	NA	h	h	
+Hemiptera	Heteroptera	Miridae	Amblytylus nasutus	(Kirschbaum, 1856)	4.30	1	h	h	s	o	r	NA	NA	h	h	
+Hemiptera	Heteroptera	Miridae	Apolygus spinolae	(Meyer-Dür, 1841)	5.50	1	h-(c)	h	s	p	r	NA	NA	h	h	
+Hemiptera	Heteroptera	Miridae	Atractotomus magnicornis	(Fallen, 1807)	3.10	1	c-h	o	s	o	m	NA	NA	t	t	*
+Hemiptera	Heteroptera	Miridae	Calocoris affinis	(Herrich-Schäffer, 1835)	7.50	1	h	h	s	p	m-r	NA	NA	h	h	
+Hemiptera	Heteroptera	Miridae	Calocoris roseomaculatus	(De Geer, 1773)	7.20	1	h	h	s	p	r	NA	NA	h	h	
+Hemiptera	Heteroptera	Miridae	Campyloneura virgula	(Herrich-Schäffer, 1835)	4.30	1	c	c	s	NA	NA	NA	NA	t	t	*
+Hemiptera	Heteroptera	Miridae	Capsodes gothicus	(Linnaeus, 1758)	6.50	1	c-h	o	s	p	m-p	NA	NA	h	h	
+Hemiptera	Heteroptera	Miridae	Capsus ater	(Linnaeus, 1758)	5.70	1	h	h	s	o	m-p-r	NA	NA	h	h	
+Hemiptera	Heteroptera	Miridae	Charagochilus gyllenhalii	(Fallen, 1807)	3.80	0.75	h	h	s	o	r	NA	NA	h	h	
+Hemiptera	Heteroptera	Miridae	Chlamydatus pulicarius	(Fallen, 1807)	2.50	1	h-(c)	h	s	p	p	NA	NA	g	g	
+Hemiptera	Heteroptera	Miridae	Chlamydatus pullus	(Reuter, 1870)	2.30	1	h-(c)	h	s	p	p	NA	NA	g	g	
+Hemiptera	Heteroptera	Miridae	Chlamydatus saltitans	(Fallen, 1807)	2.60	0.25	c-h	o	s	p	p	NA	NA	g	g	
+Hemiptera	Heteroptera	Miridae	Closterotomus norwegicus	(Gmelin, 1790)	7.00	1	h	h	s	p	r	NA	NA	h	h	
+Hemiptera	Heteroptera	Miridae	Cremnocephalus alpestris	Wagner, 1941	5.30	1	c-h	o	s	o	m	NA	NA	t	t	*
+Hemiptera	Heteroptera	Miridae	Criocoris crassicornis	(Hahn, 1834)	3.30	1	h	h	s	m	m-p	NA	NA	h	h	
+Hemiptera	Heteroptera	Miridae	Deraeocoris annulipes	(Herrich-Schäffer, 1842)	6.80	1	c	c	s	NA	NA	NA	NA	t	t	*
+Hemiptera	Heteroptera	Miridae	Deraeocoris ruber	(Linnaeus, 1758)	7.10	1	c	c	s	NA	NA	NA	NA	h-t	u	
+Hemiptera	Heteroptera	Miridae	Dicyphus annulatus	(Wolff, 1804)	3.20	1	c-h	o	s	m	m-p	NA	NA	h	h	
+Hemiptera	Heteroptera	Miridae	Dicyphus errans	(Wolff, 1804)	4.80	1	c-h	o	s	m	p	NA	NA	h	h	
+Hemiptera	Heteroptera	Miridae	Europiella artemisiae	(Becker, 1864)	3.00	1	h	h	s	m	m-p-r	NA	NA	h	h	
+Hemiptera	Heteroptera	Miridae	Euryopicoris nitidus	(Meyer-Dür, 1843)	3.80	0.25	h	h	s	p	m-p-r	NA	NA	g-h	u	
+Hemiptera	Heteroptera	Miridae	Globiceps flavomaculatus	(Fabricius, 1794)	5.80	0.5	c-h	o	s	p	r	NA	NA	h-t	u	
+Hemiptera	Heteroptera	Miridae	Globiceps fulvicollis	Jakovlev, 1877	5.20	0.5	c-h	o	s	p	r	NA	NA	h-t	u	
+Hemiptera	Heteroptera	Miridae	Hadrodemus m-flavum	(Goeze, 1778)	7.30	1	h	h	s	m	m-p-r	NA	NA	h	h	
+Hemiptera	Heteroptera	Miridae	Halticus apterus	(Linnaeus, 1758)	2.60	0.25	h	h	s	o	m-r	NA	NA	(g)-h	u	
+Hemiptera	Heteroptera	Miridae	Hoplomachus thunbergii	(Fallen, 1807)	4.10	1	h	h	s	m	r	NA	NA	h	h	
+Hemiptera	Heteroptera	Miridae	Horistus orientalis	(Gmelin, 1790)	6.00	1	h	h	s	p	m-p-r	NA	NA	h	h	
+Hemiptera	Heteroptera	Miridae	Leptopterna dolabrata	(Linnaeus, 1758)	8.30	0.5	h	h	s	o	r-(m-p)	NA	NA	h	h	
+Hemiptera	Heteroptera	Miridae	Leptopterna ferrugata	(Fallen, 1807)	7.80	0.5	h	h	s	o	r-(m-p)	NA	NA	h	h	
+Hemiptera	Heteroptera	Miridae	Liocoris tripustulatus	(Fabricius, 1781)	4.40	1	h	h	s	m	r	NA	NA	h	h	
+Hemiptera	Heteroptera	Miridae	Lopus decolor	(Fallen, 1807)	4.30	1	h	h	s	o	r	NA	NA	h	h	
+Hemiptera	Heteroptera	Miridae	Lygocoris pabulinus	(Linnaeus, 1761)	5.80	1	h	h	s	p	p-r	NA	NA	h-t	u	
+Hemiptera	Heteroptera	Miridae	Lygus gemellatus	(Herrich-Schäffer, 1835)	5.70	1	h	h	s	m	m-p-r	NA	NA	h	h	
+Hemiptera	Heteroptera	Miridae	Lygus pratensis	(Linnaeus, 1758)	6.50	1	h	h	s	p	m-p-r	NA	NA	h	h	
+Hemiptera	Heteroptera	Miridae	Lygus rugulipennis	Poppius, 1911	5.20	1	c-h	o	s	p	m-p-r	NA	NA	h	h	
+Hemiptera	Heteroptera	Miridae	Lygus wagneri	Remane, 1955	6.20	1	h	h	s	p	m-p-r	NA	NA	h	h	
+Hemiptera	Heteroptera	Miridae	Macrotylus paykullii	(Fallen, 1807)	3.20	1	h-(c)	h	s	m	m-p	NA	NA	h	h	
+Hemiptera	Heteroptera	Miridae	Megaloceroea recticornis	(Geoffroy, 1785)	9.00	1	h	h	s	o	m	NA	NA	h	h	
+Hemiptera	Heteroptera	Miridae	Megalocoleus molliculus	(Fallen, 1807)	4.50	1	h	h	s	o	m-p-r	NA	NA	h	h	
+Hemiptera	Heteroptera	Miridae	Megalocoleus tanaceti	(Fallen, 1807)	4.70	1	h	h	s	m	r-(m-p)	NA	NA	h	h	
+Hemiptera	Heteroptera	Miridae	Monalocoris filicis	(Linnaeus, 1758)	2.50	1	h	h	s	o	r-(m-p)	NA	NA	h	h	*
+Hemiptera	Heteroptera	Miridae	Myrmecoris gracilis	(R.F. Sahlberg, 1848)	5.00	0	c-(h)	c	s	o	p-r	NA	NA	g-h	u	
+Hemiptera	Heteroptera	Miridae	Notostira elongata	(Geoffroy, 1785)	7.30	0.5	h	h	s	o	m-p-r	NA	NA	h	h	
+Hemiptera	Heteroptera	Miridae	Notostira erratica	(Linnaeus, 1758)	7.60	0.5	h	h	s	o	m-p-r	NA	NA	h	h	
+Hemiptera	Heteroptera	Miridae	Orthocephalus coriaceus	(Fabricius, 1777)	4.80	0.5	h	h	s	o	m-p-r	NA	NA	h	h	
+Hemiptera	Heteroptera	Miridae	Orthocephalus saltator	(Hahn, 1835)	4.50	0.5	h	h	s	o	m-p-r	NA	NA	h	h	
+Hemiptera	Heteroptera	Miridae	Orthonotus rufifrons	(Fallen, 1807)	3.80	0.5	c-h	o	s	m	m-p-r	NA	NA	h	h	*
+Hemiptera	Heteroptera	Miridae	Orthops basalis	(A. Costa, 1853)	4.60	1	h	h	s	o	r	NA	NA	h	h	
+Hemiptera	Heteroptera	Miridae	Orthops campestris	(Linnaeus, 1758)	4.00	1	h	h	s	o	r	NA	NA	h	h	
+Hemiptera	Heteroptera	Miridae	Orthops kalmii	(Linnaeus, 1758)	4.40	1	h	h	s	o	r	NA	NA	h	h	
+Hemiptera	Heteroptera	Miridae	Orthotylus marginalis	Reuter, 1883	6.30	1	c-h	o	s	p	m	NA	NA	t	t	*
+Hemiptera	Heteroptera	Miridae	Phytocoris varipes	Boheman, 1852	6.50	0.75	c-h	o	s	p	r	NA	NA	h	h	
+Hemiptera	Heteroptera	Miridae	Pilophorus perplexus	Douglas & Scott, 1875	4.50	1	c-h	o	s	p	m-r	NA	NA	t	t	*
+Hemiptera	Heteroptera	Miridae	Pinalitus rubricatus	(Fallen, 1807)	4.50	1	h	h	s	o	m	NA	NA	t	t	*
+Hemiptera	Heteroptera	Miridae	Pithanus maerkelii	(Herrich-Schäffer, 1838)	4.50	0	h	h	s	o	p-r	NA	NA	g-(h)	u	
+Hemiptera	Heteroptera	Miridae	Plagiognathus arbustorum	(Fabricius, 1794)	4.00	1	c-h	o	s	p	r	NA	NA	h	h	
+Hemiptera	Heteroptera	Miridae	Plagiognathus chrysanthemi	(Wolff, 1804)	3.60	1	h	h	s	p	r	NA	NA	h	h	
+Hemiptera	Heteroptera	Miridae	Plagiognathus fulvipennis	(Kirschbaum, 1856)	4.00	1	h	h	s	m	r	NA	NA	h	h	
+Hemiptera	Heteroptera	Miridae	Polymerus microphthalmus	(Wagner, 1951)	5.10	1	h	h	s	m	m-p-r	NA	NA	h	h	
+Hemiptera	Heteroptera	Miridae	Polymerus nigrita	(Fallen, 1807)	4.40	1	h	h	s	m	m-p-r	NA	NA	h	h	
+Hemiptera	Heteroptera	Miridae	Polymerus palustris	(Reuter, 1907)	5.30	1	h	h	s	m	m-p-r	NA	NA	h	h	
+Hemiptera	Heteroptera	Miridae	Polymerus unifasciatus	(Fabricius, 1794)	5.90	1	h	h	s	m	m-p-r	NA	NA	h	h	
+Hemiptera	Heteroptera	Miridae	Psallus ambiguus	(Fallen, 1807)	4.30	1	c-h	o	s	o	m-r	NA	NA	t	t	*
+Hemiptera	Heteroptera	Miridae	Psallus perrisi	(Mulsant & Rey, 1852)	3.60	1	c-h	o	s	m	m-r	NA	NA	t	t	*
+Hemiptera	Heteroptera	Miridae	Psallus varians	(Herrich-Schäffer, 1841)	4.20	1	c-h	o	s	o	m-r	NA	NA	t	t	*
+Hemiptera	Heteroptera	Miridae	Stenodema calcarata	(Fallen, 1807)	7.30	1	h	h	s	o	r-(m-p)	NA	NA	h	h	
+Hemiptera	Heteroptera	Miridae	Stenodema holsata	(Fabricius, 1787)	6.50	0.25	h	h	s	o	r-(m-p)	NA	NA	h	h	
+Hemiptera	Heteroptera	Miridae	Stenodema laevigata	(Linnaeus, 1758)	8.40	1	h	h	s	o	r-(m-p)	NA	NA	h	h	
+Hemiptera	Heteroptera	Miridae	Stenotus binotatus	(Fabricius, 1794)	6.60	1	h	h	s	o	r-(m-p)	NA	NA	h	h	
+Hemiptera	Heteroptera	Miridae	Strongylocoris leucocephalus	(Linnaeus, 1758)	4.20	1	h	h	s	p	m-p-r	NA	NA	h	h	
+Hemiptera	Heteroptera	Miridae	Strongylocoris steganoides	(J. Sahlberg, 1875)	3.60	1	h	h	s	m	m-p-r	NA	NA	h	h	
+Hemiptera	Heteroptera	Miridae	Systellonotus triguttatus	(Linnaeus, 1767)	4.00	0.5	c-h	o	s	p	m-p	NA	NA	g	g	
+Hemiptera	Heteroptera	Miridae	Teratocoris antennatus	(Boheman, 1852)	4.50	0	c-h	o	s	o	m-p-r	NA	NA	g-h	u	
+Hemiptera	Heteroptera	Miridae	Teratocoris paludum	J. Sahlberg, 1870	5.10	0.25	c-h	o	s	o	m-p-r	NA	NA	g-h	u	
+Hemiptera	Heteroptera	Miridae	Trigonotylus caelestialium	(Kirkaldy, 1902)	5.90	1	h	h	s	o	r-(m-p)	NA	NA	h	h	
+Hemiptera	Heteroptera	Miridae	Trigonotylus ruficornis	(Geoffroy, 1785)	5.20	1	h	h	s	o	r-(m-p)	NA	NA	h	h	
+Hemiptera	Heteroptera	Miridae	Tytthus pygmaeus	(Zetterstedt, 1838)	2.70	0.75	c	c	s	NA	NA	NA	NA	g	g	
+Hemiptera	Heteroptera	Nabidae	Himacerus mirmicoides	(O. Costa, 1834)	7.80	0.25	c	c	s	NA	NA	NA	NA	(g)-(h)-t	u	
+Hemiptera	Heteroptera	Nabidae	Nabis brevis	Scholtz, 1847	6.20	0.75	c	c	s	NA	NA	NA	NA	g-h	u	
+Hemiptera	Heteroptera	Nabidae	Nabis ferus	(Linnaeus, 1758)	8.00	1	c	c	s	NA	NA	NA	NA	g-h	u	
+Hemiptera	Heteroptera	Nabidae	Nabis flavomarginatus	Scholtz, 1847	8.60	0.25	c	c	s	NA	NA	NA	NA	h	h	
+Hemiptera	Heteroptera	Nabidae	Nabis limbatus	Dahlbom, 1851	8.20	0.25	c	c	s	NA	NA	NA	NA	(g)-h	u	
+Hemiptera	Heteroptera	Nabidae	Nabis pseudoferus	Remane, 1949	7.50	1	c	c	s	NA	NA	NA	NA	g-h	u	
+Hemiptera	Heteroptera	Nabidae	Nabis rugosus	(Linnaeus, 1758)	6.90	0.75	c	c	s	NA	NA	NA	NA	g-h	u	
+Hemiptera	Heteroptera	Pentatomidae	Aelia acuminata	(Linnaeus, 1758)	8.50	1	h	h	s	o	r-(m-p)	NA	NA	h	h	
+Hemiptera	Heteroptera	Pentatomidae	Aelia klugii	Hahn, 1833	7.30	1	h	h	s	o	r-(m-p)	NA	NA	h	h	
+Hemiptera	Heteroptera	Pentatomidae	Carpocoris fuscispinus	(Boheman, 1850)	12.20	1	h	h	s	p	r	NA	NA	h	h	
+Hemiptera	Heteroptera	Pentatomidae	Carpocoris purpureipennis	(De Geer, 1773)	12.00	1	h	h	s	p	r	NA	NA	h	h	
+Hemiptera	Heteroptera	Pentatomidae	Dolycoris baccarum	(Linnaeus, 1758)	11.00	1	h	h	s	p	r	NA	NA	h	h	
+Hemiptera	Heteroptera	Pentatomidae	Eurydema oleracea	(Linnaeus, 1758)	6.50	1	h-(c)	h	s	o	m-p-r	NA	NA	h	h	
+Hemiptera	Heteroptera	Pentatomidae	Graphosoma lineatum	(Linnaeus, 1758)	9.70	1	h	h	s	o	r	NA	NA	h	h	
+Hemiptera	Heteroptera	Pentatomidae	Palomena prasina	(Linnaeus, 1761)	12.50	1	h	h	s	p	m-p-r	NA	NA	h-t	u	
+Hemiptera	Heteroptera	Pentatomidae	Pentatoma rufipes	(Linnaeus, 1758)	13.50	1	c-h	o	s	o	m-p-r	NA	NA	t	t	*
+Hemiptera	Heteroptera	Pentatomidae	Peribalus strictus	(Fabricius, 1803)	9.50	1	h	h	s	p	r	NA	NA	h	h	
+Hemiptera	Heteroptera	Pentatomidae	Piezodorus lituratus	(Fabricius, 1794)	11.00	1	h	h	s	o	r	NA	NA	h-t	u	
+Hemiptera	Heteroptera	Pentatomidae	Podops inunctus	(Fabricius, 1775)	5.70	1	h	h	s	p	m-p	NA	NA	g	g	
+Hemiptera	Heteroptera	Pentatomidae	Sciocoris cursitans	(Fabricius, 1794)	5.20	1	h	h	s	p	se	NA	NA	g	g	
+Hemiptera	Heteroptera	Piesmatidae	Piesma maculatum	(Laporte, 1833)	2.70	0.25	h	h	s	o	m-p	NA	NA	h	h	
+Hemiptera	Heteroptera	Plataspididae	Coptosoma scutellatum	(Geoffroy, 1785)	4.10	1	h	h	s	o	m-p	NA	NA	h	h	
+Hemiptera	Heteroptera	Reduviidae	Phymata crassipes	(Fabricius, 1775)	7.90	1	c	c	s	NA	NA	NA	NA	h	h	
+Hemiptera	Heteroptera	Rhopalidae	Brachycarenus tigrinus	(Schilling, 1829)	6.60	1	h	h	s	p	se	NA	NA	h	h	
+Hemiptera	Heteroptera	Rhopalidae	Corizus hyoscyami	(Linnaeus, 1758)	9.40	1	h	h	s	p	r	NA	NA	h	h	
+Hemiptera	Heteroptera	Rhopalidae	Liorhyssus hyalinus	(Fabricius, 1794)	6.50	1	h	h	s	p	r	NA	NA	h	h	
+Hemiptera	Heteroptera	Rhopalidae	Myrmus miriformis	(Fallen, 1807)	7.70	0.25	h	h	s	o	m-p-r	NA	NA	(g)-h	u	
+Hemiptera	Heteroptera	Rhopalidae	Rhopalus conspersus	(Fieber, 1837)	6.50	1	h	h	s	p	r	NA	NA	h	h	
+Hemiptera	Heteroptera	Rhopalidae	Rhopalus parumpunctatus	Schilling, 1829	6.80	1	h	h	s	p	r	NA	NA	(g)-h	u	
+Hemiptera	Heteroptera	Rhopalidae	Rhopalus subrufus	(Gmelin, 1790)	7.10	1	h	h	s	p	r	NA	NA	h	h	
+Hemiptera	Heteroptera	Rhopalidae	Stictopleurus abutilon	(Rossi, 1790)	7.80	1	h	h	s	o	r	NA	NA	h	h	
+Hemiptera	Heteroptera	Rhopalidae	Stictopleurus crassicornis	(Linnaeus, 1758)	7.40	1	h	h	s	o	r	NA	NA	h	h	
+Hemiptera	Heteroptera	Rhopalidae	Stictopleurus punctatonervosus	(Goeze, 1778)	7.50	1	h	h	s	o	r	NA	NA	h	h	
+Hemiptera	Heteroptera	Saldidae	Chartoscirta cincta	(Herrich-Schäffer, 1841)	3.70	1	c	c	s	NA	NA	NA	NA	g	g	
+Hemiptera	Heteroptera	Saldidae	Saldula opacula	(Zetterstedt, 1838)	3.80	0.5	c	c	s	NA	NA	NA	NA	g	g	*
+Hemiptera	Heteroptera	Saldidae	Saldula orthochila	(Fieber, 1859)	4.00	0.25	c	c	s	NA	NA	NA	NA	g	g	*
+Hemiptera	Heteroptera	Saldidae	Saldula pallipes	(Fabricius, 1794)	4.20	0.5	c	c	s	NA	NA	NA	NA	g	g	*
+Hemiptera	Heteroptera	Saldidae	Saldula saltatoria	(Linnaeus, 1758)	3.90	0.25	c	c	s	NA	NA	NA	NA	g	g	*
+Hemiptera	Heteroptera	Scutelleridae	Eurygaster maura	(Linnaeus, 1758)	9.70	1	h	h	s	o	r	NA	NA	h	h	
+Hemiptera	Heteroptera	Scutelleridae	Eurygaster testudinaria	(Geoffroy, 1785)	9.20	1	h	h	s	o	r	NA	NA	h	h	
+Hemiptera	Heteroptera	Tingidae	Acalypta nigrina	(Fallen, 1807)	2.60	0.25	h	h	s	o	m	NA	NA	g	g	
+Hemiptera	Heteroptera	Tingidae	Acalypta parvula	(Fallen, 1807)	2.00	0.25	h	h	s	o	m	NA	NA	g	g	
+Hemiptera	Heteroptera	Tingidae	Acalypta platycheila	(Fieber, 1844)	2.60	0.25	h	h	s	o	m	NA	NA	g	g	
+Hemiptera	Heteroptera	Tingidae	Catoplatus fabricii	(Stål, 1868)	4.10	1	h	h	s	m	m-p	NA	NA	h	h	
+Hemiptera	Heteroptera	Tingidae	Derephysia foliacea	(Fallen, 1807)	3.30	1	h	h	s	p	m-p-x	NA	NA	g-t	u	
+Hemiptera	Heteroptera	Tingidae	Dictyla humuli	(Fabricius, 1794)	3.40	1	h	h	s	o	m-p-r	NA	NA	h	h	
+Hemiptera	Heteroptera	Tingidae	Kalama tricornis	(Schrank, 1801)	3.10	1	h	h	s	p	x	NA	NA	g-h	u	
+Hemiptera	Heteroptera	Tingidae	Lasiacantha capucina	(Germar, 1837)	2.70	0.25	h	h	s	m	m-p-x	NA	NA	h	h	
+Hemiptera	Heteroptera	Tingidae	Oncochila simplex	(Herrich-Schäffer, 1830)	3.20	0.25	h	h	s	m	m-p-r	NA	NA	h	h	
+Hemiptera	Heteroptera	Tingidae	Physatocheila dumetorum	(Herrich-Schäffer, 1838)	2.80	1	h	h	s	o	m	NA	NA	t	t	*
+Hemiptera	Heteroptera	Tingidae	Tingis ampliata	(Herrich-Schäffer, 1838)	3.90	1	h	h	s	m	m-r	NA	NA	h	h	
+Hemiptera	Heteroptera	Tingidae	Tingis cardui	(Linnaeus, 1758)	3.40	1	h	h	s	o	m-r	NA	NA	h	h	
+Orthoptera	Caelifera	Acrididae	Chorthippus albomarginatus	(De Geer, 1773)	17.00	0.75	h	h	c	p	NA	l	NA	h	h	
+Orthoptera	Caelifera	Acrididae	Chorthippus apricarius	(Linneaus, 1758)	18.00	0	h	h	c	p	NA	l-se	NA	h	h	
+Orthoptera	Caelifera	Acrididae	Chorthippus biguttulus	(Linneaus, 1758)	18.00	1	h	h	c	o	NA	l	NA	h	h	
+Orthoptera	Caelifera	Acrididae	Chorthippus brunneus	(Thunberg, 1815)	20.00	1	h	h	c	p	NA	l	NA	h	h	
+Orthoptera	Caelifera	Acrididae	Chorthippus dorsatus	(Zetterstedt, 1821)	20.00	0.75	h	h	c	o	NA	l	NA	h	h	
+Orthoptera	Caelifera	Acrididae	Chorthippus mollis	(Charpentier, 1825)	16.00	0.75	h	h	c	p	NA	l	NA	h	h	
+Orthoptera	Caelifera	Acrididae	Chorthippus montanus	(Charpentier, 1825)	18.00	0	h	h	c	o	NA	l	NA	h	h	
+Orthoptera	Caelifera	Acrididae	Chorthippus parallelus	(Zetterstedt, 1821)	18.00	0	h	h	c	p	NA	l	NA	h	h	
+Orthoptera	Caelifera	Acrididae	Chrysochraon dispar	(Germar, 1834)	23.00	0.25	h	h	c	p	NA	l	NA	h	h	
+Orthoptera	Caelifera	Acrididae	Euthystira brachyptera	(Ocskay, 1826)	20.00	0	h	h	c	o	NA	l	NA	h	h	
+Orthoptera	Caelifera	Acrididae	Omocestus haemorrhoidalis	(Charpentier, 1825)	14.00	0.5	h	h	c	o	NA	l	NA	h	h	
+Orthoptera	Caelifera	Acrididae	Omocestus viridulus	(Linneaus, 1758)	18.00	0.75	h	h	c	o	NA	l	NA	h	h	
+Orthoptera	Caelifera	Acrididae	Stenobothrus lineatus	(Panzer, 1796)	20.00	0.75	h	h	c	p	NA	l	NA	h	h	
+Orthoptera	Caelifera	Acrididae	Stethophyma grossum	(Linneaus, 1758)	26.00	0.75	h	h	c	o	NA	l	NA	h	h	
+Orthoptera	Caelifera	Tetrigidae	Tetrix bipunctata	(Linneaus, 1758)	10.00	0.5	h	h	c	p	NA	l	NA	h	h	
+Orthoptera	Caelifera	Tetrigidae	Tetrix subulata	(Linneaus, 1758)	10.00	1	h	h	c	p	NA	l	NA	h	h	
+Orthoptera	Caelifera	Tetrigidae	Tetrix tenuicornis	(Sahlberg, 1893)	9.00	0.75	h	h	c	p	NA	l	NA	h	h	
+Orthoptera	Caelifera	Tetrigidae	Tetrix undulata	(Sowerby, 1806)	10.00	0.75	h	h	c	p	NA	l	NA	h	h	
+Orthoptera	Ensifera	Conocephalidae	Conocephalus dorsalis	(Latreille, 1804)	14.00	0.25	c-h	o	c	p	NA	l-r-s	NA	h	h	
+Orthoptera	Ensifera	Conocephalidae	Conocephalus fuscus	(Fabricius, 1793)	14.00	0.75	c-h	o	c	p	NA	l-s	NA	h	h	
+Orthoptera	Ensifera	Gryllidae	Gryllus campestris	Linneaus, 1758	23.00	0.25	d-h	o	c	p	NA	l	NA	g	g	
+Orthoptera	Ensifera	Meconematidae	Meconema thalassinum	(De Geer, 1773)	14.00	0.25	c	c	c	NA	NA	NA	NA	t	t	
+Orthoptera	Ensifera	Phaneropteridae	Isophya kraussii	Brunner von Wattenwyl, 1878	21.00	0.25	h	h	c	o	NA	l	NA	h	h	
+Orthoptera	Ensifera	Phaneropteridae	Leptophyes punctatissima	(Bosc, 1792)	14.00	0.25	h	h	c	p	NA	l	NA	h	h	
+Orthoptera	Ensifera	Phaneropteridae	Phaneroptera falcata	(Poda, 1761)	15.00	1	h-(c)	o	c	p	NA	l-r	NA	h	h	
+Orthoptera	Ensifera	Tettigoniidae	Metrioptera bicolor	(Philippi, 1830)	16.00	0	h-(c)	o	c	p	NA	l-r	NA	h	h	
+Orthoptera	Ensifera	Tettigoniidae	Metrioptera brachyptera	(Linneaus, 1761)	15.00	0	c-h	o	c	p	NA	l	NA	h	h	
+Orthoptera	Ensifera	Tettigoniidae	Metrioptera roeselii	(Hagenbach, 1822)	16.00	0.25	h-(c)	o	c	p	NA	l	NA	h	h	
+Orthoptera	Ensifera	Tettigoniidae	Pholidoptera griseoaptera	(De Geer, 1773)	16.00	0	c-(h)	o	c	p	NA	l	NA	h	h	
+Orthoptera	Ensifera	Tettigoniidae	Platycleis albopunctata	(Goeze, 1778)	20.00	0.75	c-h	o	c	p	NA	l-se	NA	h	h	
+Orthoptera	Ensifera	Tettigoniidae	Tettigonia cantans	(Fuessly, 1775)	26.00	0	c-(h)	o	c	p	NA	l-r	NA	h	h	
+Orthoptera	Ensifera	Tettigoniidae	Tettigonia viridissima	Linneaus, 1758	35.00	1	c-(h)	o	c	p	NA	l-r	NA	t	t	
