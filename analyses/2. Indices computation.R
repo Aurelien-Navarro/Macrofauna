@@ -17,7 +17,7 @@
 
 
 # Libraries
-librarian::shelf(tidyverse)
+librarian::shelf(dplyr, forcats, stringr)
 
 # Data load
   ## Community data load 
@@ -45,14 +45,20 @@ librarian::shelf(tidyverse)
               
 # Indice computation
     lumbricid_traits <- traits %>% 
-                       filter(trait_name %in% c("Body_length", "ecological_strategy"))
+                       filter(trait_name %in% c("Body_length", "Habitat", "ecological_strategy"))
     lumbricid_ind <- myIndices(DF = df[df$orderName == "Crassiclitellata",], 
                      IDresol = "Espèce", TR = lumbricid_traits)
     
     diplopoda_traits <- traits %>% 
-                     filter(trait_name %in% c("Body_length", "Habitat", "Humidity_preference", "Body_diameter" ))  
-    diplopoda_ind <- myIndices(DF = df[df$className == "Diplopoda",], 
+                     filter(trait_name %in% c("Body_length", "Habitat", "Humidity_preference"))  
+    diplopoda_ind  <- myIndices(DF = df[df$className == "Diplopoda",], 
                      IDresol = "Espèce", TR = diplopoda_traits)
 
+    arachnida_traits <- traits %>% 
+                             filter(trait_name %in% c("Body_length", "Habitat", "Motion_strategies"))  
+    arachnida_ind  <- myIndices(DF = df[df$className == "Arachnida",], 
+                                IDresol = "Espèce", TR = arachnida_traits)
 
-
+    
+    
+    
