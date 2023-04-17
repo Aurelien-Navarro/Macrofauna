@@ -96,6 +96,9 @@ Carabidae_traits_dispo<-inner_join(
     distinct(trait_name),
   by="trait_name")
 
+#Sortie du taleau : 
+write.csv2(Carabidae_traits_dispo, here::here("outputs","Carabidae_traits_dipos.csv"),row.names = FALSE ) 
+
 
     #Orthoptera-----
 
@@ -189,6 +192,9 @@ Orthopera_traits_dispo<-inner_join(
 
 ###remarque : je n'ai pas garde les familles et tribus, j'ai regarde les genres
 #4 traits dispos pour les 26 genres
+
+#Sortie du taleau : 
+write.csv2(Orthopera_traits_dispo, here::here("outputs","Orthoptera_traits_dipos.csv"),row.names = FALSE ) 
 
     #Hymenoptera----
 #/!\ BETSI ne semble pas répertorier d'hymeno...
@@ -290,3 +296,5 @@ Hymenoptera_traits_dispo<-inner_join(
     distinct(trait_name),
   by="trait_name")
 
+#Sortie du taleau : 
+write.csv2(Hymenoptera_traits_dispo, here::here("outputs","Hymenoptera_traits_dipos.csv"),row.names = FALSE ) 
