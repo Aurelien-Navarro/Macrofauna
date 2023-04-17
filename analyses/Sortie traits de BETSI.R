@@ -332,3 +332,19 @@ Vdt_traits_dispos<-bind_rows(
 
 #Sortie du tableau 
 write.csv2(Vdt_traits_dispos, here::here("outputs","Lumbricidae_traits_dipos.csv"),row.names = FALSE ) 
+
+
+    #Geotrupidae
+#ici, seulement especes donc pas besoin de passer par un listing des genres identifies
+#par Inat
+
+Geotrupidae_traits_dispos<-inner_join(
+  filter(BETSI, grepl("Anoplotrupes",taxon_name))%>%
+    distinct(trait_name),
+  filter(BETSI, grepl("Trypocopris",taxon_name))%>%
+    distinct(trait_name),
+  by="trait_name")
+
+#sortie du tableau 
+write.csv2(Geotrupidae_traits_dispos, here::here("outputs","Geotrupidae_traits_dipos.csv"),row.names = FALSE ) 
+
