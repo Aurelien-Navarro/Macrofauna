@@ -10,6 +10,7 @@ librarian::shelf(tidyr, dplyr, ggplot2, rinat, RODBC, stringr)
 #------
 #Importation de la BDD----
 read.csv("data/raw-data/BETSI_220221.csv",header = T, sep=";")->BETSI
+read.csv("data/raw-data/ew_traits.csv",header = T, sep=";")->traits_vdt
 #------
 
     #Carabidae----
@@ -298,3 +299,34 @@ Hymenoptera_traits_dispo<-inner_join(
 
 #Sortie du taleau : 
 write.csv2(Hymenoptera_traits_dispo, here::here("outputs","Hymenoptera_traits_dipos.csv"),row.names = FALSE ) 
+
+    #Lumbricidae----
+#Sortie des especes de vdt dispo id sur INAT
+inat_orchamp_vdt <- get_inat_obs_project(grpid="lumbricidae_orchamp", type="observations",raw=T)
+#Conservation de la colone taxon
+inat_orchamp_vdt_tax <- inat_orchamp_vdt %>%
+  as_tibble() %>%
+  select(taxon.name, taxon.rank, description) %>%
+  rename(INat = description) %>%
+  filter(!is.na(INat))%>%
+  distinct(taxon.name)
+
+#Sortie des traits dispos sur 'ew_traits' des especes identifiees sur Inat.
+
+Vdt_traits_dispos<-bind_rows(
+  traits_vdt%>%
+  filter(grepl("Aporrectodea caliginosa",Name.in.Drilobase.2019)),
+  traits_vdt%>%
+  filter(grepl("Aporrectodea rosea",Name.in.Drilobase.2019)),
+  traits_vdt%>%
+    filter(grepl("Allolobophora chlorotica",Name.in.Drilobase.2019)),
+  traits_vdt%>%
+    filter(grepl("Lumbricus terrestris",Name.in.Drilobase.2019)),
+  traits_vdt%>%
+    filter(grepl("Lumbricus rubellus",Name.in.Drilobase.2019)),
+  traits_vdt%>%
+    filter(grepl("Octolasion lacteum",Name.in.Drilobase.2019)),
+  )
+
+#Sortie du tableau 
+write.csv2(Vdt_traits_dispos, here::here("outputs","Lumbricidae_traits_dipos.csv"),row.names = FALSE ) 
