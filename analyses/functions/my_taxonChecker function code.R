@@ -19,9 +19,11 @@ my_taxonChecker <- function(V) {
   
 
   # parse taxon name to clean the list to obtain the most simple canonical name
-  uniqueNames00 <- unique(V)
+  uniqueNames00 <- V %>% 
+    #drop_na() %>%
+    unique()
   uniqueNames0 <- gn_parse_tidy(uniqueNames00)$canonicalsimple
-  uniqueNames0 <- unique(V)
+  uniqueNames0 <- unique(uniqueNames0)
   nb_unique <- length(uniqueNames0)  
   harmo_colnames <- c("initial", "canonic", "id", "rankName", "referenceName", 
                       "familyName", "orderName", "className", "phylumName")
@@ -41,40 +43,18 @@ my_taxonChecker <- function(V) {
   # function to retrieve taxonomy from TaxRef to each canonical name
   taxref_chk <- function(X){
     chk0 <- rt_taxa_search(sciname = X) 
-    R <- str_count(X ,"\\W+") + 1  # is a species or a higher taxonomic level (2 => species)
-    ifelse(ncol(chk0) == 1,
-           chk <- rep(NA, 7),
-           ifelse(R >= 2,
-                  ifelse(!rankName %in% "Espèce",
-                           chk <- rep(NA, 7),
-                           chk <- chk0 %>%
-                             filter(rankName == "Espèce") %>%
-                            select(id, rankName, referenceName, familyName, orderName, className, phylumName),
-                  chk <- chk0 %>%
-                      filter(! rankName %in% c("Espèce", "Sous-Espèce", "Variété")) %>%
-                      filter(scientificName == X) %>%
-                      select(id, rankName, referenceName, familyName, orderName, className, phylumName)
-           )
-    ))
-    chk
-  }
-  
-  
-  taxref_chk <- function(X){
-    chk0 <- rt_taxa_search(sciname = X) 
     ifelse(ncol(chk0) == 1,
            chk <- rep(NA, 7),
            ifelse(nrow(chk0) == 1,
                   chk <- chk0 %>%
-                           select(id, rankName, referenceName, familyName, orderName, className, phylumName),
+                    select(id, rankName, referenceName, familyName, orderName, className, phylumName),
                   chk <- rep(NA, 7)
-                  )
            )
+    )
     chk
   }
   
-  
-  
+
   # loop to attribute TaxRef taxo to all canonical names
   for(i in 1:nb_unique){
     taxo_harmo[i,3:9] <- taxref_chk(X = taxo_harmo$canonic[i])
@@ -84,7 +64,8 @@ my_taxonChecker <- function(V) {
   taxo_unaligned <- taxo_harmo %>%
     filter(is.na(id)) %>%
     select(initial, canonic) %>%
-    rename(unalign = canonic)
+    rename(unalign = canonic) %>%
+    drop_na()
   
   # Find unaligned taxa in a global taxonomic backbone (gbif)
   gbif_align <- gbif_species_name_match(taxo_unaligned, "unalign") %>%
@@ -97,7 +78,7 @@ my_taxonChecker <- function(V) {
            scientificName = unalign, 
            id = usageKey) %>%
     select(!c("kingdom", "genus", "confidence", "synonym", "status","matchType" ))%>%
-    mutate(rankName  = fct_recode(rankName, "Espèce" = "SPECIES", "Genre" = "GENUS", "Famille" = "FAMILY"))
+    mutate(rankName  = fct_recode(rankName, "Espèce" = "SPECIES", "Genre" = "GENUS", "Famille" = "FAMILY", "Ordre" = "ORDER"))
   
   taxo_harmo <- taxo_harmo %>%
     filter(!is.na(id)) 

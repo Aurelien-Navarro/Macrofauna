@@ -17,11 +17,13 @@
 librarian::shelf(tidyr, dplyr, ggplot2, rinat, RODBC, stringr)
 
 # Database queries 
-  ## Connection to Mike's Access database
+  ## Alternative: importing data from a csv file
+  df0 <- read.csv("data/raw-data/Macrofaune_Orchamp_2021_2022.csv", h=T, sep = ";")
+  
+  ## Better way : Connection to Mike's Access database
       ### Set up driver info and database path
       DRIVERINFO <- "Driver={Microsoft Access Driver (*.mdb, *.accdb)};"
-      MDBPATH <- "C:/Users/Hedde/Nextcloud/Hedde M/1. Travaux/AQR/0. Bases de Données/db communautés/fds_230228.accdb"
-      MDBPATH <- "C:/Users/heddemic/Nextcloud2/Hedde M/1. Travaux/AQR/0. Bases de Données/db communautés/fds_230228.accdb"  # Laptop
+      MDBPATH <- "data/raw-data/fds_230315+MOU1.accdb"
       PATH <- paste0(DRIVERINFO, "DBQ=", MDBPATH)
       
       ### Establish connection
@@ -33,7 +35,7 @@ librarian::shelf(tidyr, dplyr, ggplot2, rinat, RODBC, stringr)
       ### Close and remove channel
       close(channel)
       rm(channel)
-
+      
   ## Connection to Orchamp_global project on INaturalist
     ### Getting data
     inat_orchamp <- get_inat_obs_project(158034, type="observations",raw=T)  # project_id=158034  pour Orchamp_global
@@ -47,13 +49,18 @@ librarian::shelf(tidyr, dplyr, ggplot2, rinat, RODBC, stringr)
 
 # Data preparation
   ## Merging Mike's team and INat identifications
-  df <- df0 %>% 
-    left_join(inat_orchamp, by = "INat") %>%
-    mutate(name = ifelse(is.na(taxon.name), `Valid Name`, taxon.name)) 
+    notINat <- df0 %>% 
+      filter(!grepl("-", INat))
+    df <- df0 %>% 
+    filter(grepl("-", INat)) %>%
+    left_join(inat_orchamp, by = "INat", relationship = "many-to-many") %>%
+    mutate(name = ifelse(is.na(taxon.name), `Valid Name`, taxon.name)) %>%
+    bind_rows(notINat)
+
 
   ## Getting valid and homogenized taxonomic names
     uniqueNames_raw <- tibble(name = unique(df$name)) %>% 
-                              filter(!grepl("Larve", name), !grepl("vide", name))
+                              filter(!grepl("Larv", name), !grepl("vide", name))
     valid_names <- my_taxonChecker(uniqueNames_raw$name)  # Function stored at: "~/analyses/functions/my_taxonChecker function code"
 
   ## Merging the taxonomic backbone to the observations
