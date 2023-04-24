@@ -17,7 +17,7 @@ my_taxonChecker <- function(V) {
   
   librarian::shelf(tidyr, dplyr, rgbif, "Rekyt/rtaxref", "inbo/inborutils", "ropensci/rgnparser", stringr, forcats)
   
-
+  
   # parse taxon name to clean the list to obtain the most simple canonical name
   uniqueNames00 <- V %>% 
     #drop_na() %>%
@@ -25,7 +25,7 @@ my_taxonChecker <- function(V) {
   uniqueNames0 <- gn_parse_tidy(uniqueNames00)$canonicalsimple
   uniqueNames0 <- unique(uniqueNames0)
   nb_unique <- length(uniqueNames0)  
-  harmo_colnames <- c("initial", "canonic", "id", "rankName", "referenceName", 
+  harmo_colnames <- c("initial", "canonic", "id", "rankName", "fullName", 
                       "familyName", "orderName", "className", "phylumName")
   
   # create an empty dataframe to store TaxRef taxonomy
@@ -47,14 +47,14 @@ my_taxonChecker <- function(V) {
            chk <- rep(NA, 7),
            ifelse(nrow(chk0) == 1,
                   chk <- chk0 %>%
-                    select(id, rankName, referenceName, familyName, orderName, className, phylumName),
+                    select(id, rankName, fullName, familyName, orderName, className, phylumName),
                   chk <- rep(NA, 7)
            )
     )
     chk
   }
   
-
+  
   # loop to attribute TaxRef taxo to all canonical names
   for(i in 1:nb_unique){
     taxo_harmo[i,3:9] <- taxref_chk(X = taxo_harmo$canonic[i])
@@ -68,9 +68,10 @@ my_taxonChecker <- function(V) {
     drop_na()
   
   # Find unaligned taxa in a global taxonomic backbone (gbif)
-  gbif_align <- gbif_species_name_match(taxo_unaligned, "unalign") %>%
+  gbif_align0 <- gbif_species_name_match(taxo_unaligned, "unalign") 
+  gbif_align <- gbif_align0 %>% 
     rename(rankName = rank,
-           referenceName = scientificName,
+           fullName = scientificName,
            familyName = family,
            orderName = order,
            className = class,
@@ -78,11 +79,13 @@ my_taxonChecker <- function(V) {
            scientificName = unalign, 
            id = usageKey) %>%
     select(!c("kingdom", "genus", "confidence", "synonym", "status","matchType" ))%>%
-    mutate(rankName  = fct_recode(rankName, "Espèce" = "SPECIES", "Genre" = "GENUS", "Famille" = "FAMILY", "Ordre" = "ORDER"))
+    mutate(rankName  = fct_recode(rankName, "Espèce" = "SPECIES", "Genre" = "GENUS", 
+                                  "Famille" = "FAMILY", "Ordre" = "ORDER", "Classe" = "CLASS"))
   
   taxo_harmo <- taxo_harmo %>%
     filter(!is.na(id)) 
   taxo_harmo_def <- bind_rows(list(taxref = taxo_harmo, gbif = gbif_align), .id = "referential") %>%
-                   distinct()
+    distinct()
   taxo_harmo_def
 }
+#####

@@ -20,7 +20,7 @@
 librarian::shelf(dplyr, forcats, stringr, hillR, FD, mFD, rgnparser, textshape, tidyr)
 
 # Create a generic function with
-      # DF = dataframe containing id_sample, canonic (taxon name), abundance and mass
+      # DF = dataframe containing id_sample, name (taxon name), abundance and mass
       # TR = trait file from BETSI
       # IDresol = rank taxo at wich indices will be computed
 
@@ -72,9 +72,9 @@ myIndices <- function(DF, TR, IDresol){
 
     ## Species mass
     indmass <- DF %>% 
-      select(id_sample, canonic, mass, rankName) %>%
+      select(id_sample, name, mass, rankName) %>%
       filter(rankName == IDresol) %>%
-      group_by(id_sample, canonic) %>%
+      group_by(id_sample, name) %>%
       summarize(massMean = mean(as.numeric(mass), na.omit = T),
                 massSD = sd(mass),
                 massNb = length(mass))  
@@ -83,11 +83,11 @@ myIndices <- function(DF, TR, IDresol){
              "max(x, na.rm = TRUE) - min(x, na.rm = TRUE)" )
     par(mfrow = c(1,1))
     #massDistri <- plotDistri(as.data.frame(indmass$massMean), rep("region", times = nrow(indmass)),
-    #           indmass$canonic, plot.ask = F, multipanel = F)
+    #           indmass$name, plot.ask = F, multipanel = F)
     #sp_regional.ind<-ComIndex(traits = data.frame(massMean = indmass$massMean,
     #                                                 massMean0 = indmass$massMean), 
     #                          index = funct, 
-    #                          sp = indmass$canonic,
+    #                          sp = indmass$name,
     #                          nullmodels = "regional.ind", 
     #                          ind.plot = indmass$id_sample,
     #                          nperm = 9, print = FALSE)
@@ -95,9 +95,9 @@ myIndices <- function(DF, TR, IDresol){
 # Diversity indices
     ## Alpha taxonomic diversity
     com <- DF %>% 
-          select(id_sample, canonic, abundance, rankName) %>%
+          select(id_sample, name, abundance, rankName) %>%
           filter(rankName == IDresol) %>%
-          pivot_wider(id_cols = id_sample, names_from = canonic, names_sort = T,
+          pivot_wider(id_cols = id_sample, names_from = name, names_sort = T,
                       values_from = abundance, values_fill = 0, values_fn = sum) 
         
         q0 <- hill_taxa(com[,-1], q = 0)
@@ -111,30 +111,30 @@ myIndices <- function(DF, TR, IDresol){
         ## Alpha functional diversity
           ### from mFD package
           ### need a trait matrix with vectors : 
-              ###            canonic name, 
+              ###            name name, 
               ###            type (trait/strategy)
               ###            modality
               ###            value
           ### reco => use sqrt(Gower) instead of raw Gower distance to stdz PCoA axes
           ### Compute CWM, CWV, ... trait  FD::functcomp()
              tr0 <- TR %>%
-                mutate(canonic = gn_parse_tidy(taxon_name)$canonicalsimple) %>%
-                filter(canonic %in% colnames(com)[-1]) %>%
-                select(canonic, trait_name, raw_trait_value, attribute_trait, coded_trait_value)
+                mutate(name = gn_parse_tidy(taxon_name)$canonicalsimple) %>%
+                filter(name %in% colnames(com)[-1]) %>%
+                select(name, trait_name, raw_trait_value, attribute_trait, coded_trait_value)
               
               TR_cont <- tr0 %>%
                     filter(is.na(coded_trait_value)) %>%
-                    group_by(canonic, trait_name) %>%
+                    group_by(name, trait_name) %>%
                     summarise(val = mean(as.numeric(raw_trait_value), na.omit = T)) %>%
-                    pivot_wider(id_cols = canonic, names_from = trait_name, 
+                    pivot_wider(id_cols = name, names_from = trait_name, 
                                 values_from = val)
               
               TR_discr0 <- tr0  %>%
                 filter(!is.na(coded_trait_value)) %>%
                 select(!raw_trait_value) %>%
-                group_by(canonic, trait_name, attribute_trait)%>%
+                group_by(name, trait_name, attribute_trait)%>%
                 summarise(sum_aff = sum(coded_trait_value)) %>%
-                group_by(canonic, trait_name)%>%
+                group_by(name, trait_name)%>%
                 mutate(codedPrc = sum_aff/sum(sum_aff),
                        new_trait_name = paste(trait_name, attribute_trait, sep=""))
               
@@ -147,21 +147,21 @@ myIndices <- function(DF, TR, IDresol){
                 
               TR_discr_H <- TR_discr0 %>%
                 mutate(trait_name = paste(trait_name, "H", sep = "")) %>%
-                group_by(canonic, trait_name)%>%
+                group_by(name, trait_name)%>%
                 summarize(H = shannon.entropy(codedPrc)) %>%
-                pivot_wider(id_cols = canonic, names_from = trait_name, 
+                pivot_wider(id_cols = name, names_from = trait_name, 
                             values_from = H, values_fill = 0) 
                 
                 
               tr1 <- TR_discr0  %>%
-                  pivot_wider(id_cols = canonic, names_from = new_trait_name, 
+                  pivot_wider(id_cols = name, names_from = new_trait_name, 
                             values_from = codedPrc, values_fill = 0) %>%
                   full_join(TR_discr_H) %>%
                   full_join(TR_cont) 
                
                tr_completeness <- DF %>% 
                  filter(rankName == IDresol) %>%
-                 select(canonic) %>%
+                 select(name) %>%
                  distinct() %>%
                  left_join(tr1) %>%
                  mutate(across(c(2:ncol(.)), ~ifelse(. == 0, 0, 1)))
