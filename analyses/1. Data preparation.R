@@ -18,18 +18,24 @@ librarian::shelf(tidyr, dplyr, ggplot2, rinat, RODBC, stringr)
 
 # Database queries 
   ## Alternative: importing data from a csv file
-  df0 <- read.csv("data/raw-data/Macrofaune_Orchamp_2021_2022.csv", h=T, sep = ";")
+  #df0 <- read.csv("data/raw-data/Macrofaune_Orchamp_2021_2022.csv", h=T, sep = ";")
   
   ## Better way : Connection to Mike's Access database
       ### Set up driver info and database path
-      DRIVERINFO <- "Driver={Microsoft Access Driver (*.mdb, *.accdb)};"
-      MDBPATH <- "data/raw-data/fds_230315+MOU1.accdb"
+      #DRIVERINFO <- "driver={CData ODBC Driver for Microsoft Access};"
+      DRIVERINFO <- "driver={Microsoft Access Driver (*.mdb, *.accdb)};"
+      MDBPATH <- "data/raw-data/fds_230315.accdb"
       PATH <- paste0(DRIVERINFO, "DBQ=", MDBPATH)
       
       ### Establish connection
+      
       channel <- odbcDriverConnect(PATH)
+      sqlTables(channel)
+      
       
       ### Load Orchamp data into R dataframe
+      
+
       df0 <- sqlFetch(channel,"Orchamp_matrix")
       
       ### Close and remove channel
@@ -61,6 +67,8 @@ librarian::shelf(tidyr, dplyr, ggplot2, rinat, RODBC, stringr)
   ## Getting valid and homogenized taxonomic names
     uniqueNames_raw <- tibble(name = unique(df$name)) %>% 
                               filter(!grepl("Larv", name), !grepl("vide", name))
+    #Importation de my taxon checker function 
+    source("analyses/functions/my_taxonChecker function code.R")
     valid_names <- my_taxonChecker(uniqueNames_raw$name)  # Function stored at: "~/analyses/functions/my_taxonChecker function code"
 
   ## Merging the taxonomic backbone to the observations
