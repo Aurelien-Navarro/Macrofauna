@@ -21,7 +21,7 @@ librarian::shelf(dplyr, forcats, stringr)
 
 # Data load
   ## Community data load 
-    df <- read.csv("data/derived-data/clean_data_2023-04-24.csv", 
+    df <- read.csv("data/derived-data/clean_data_2023-04-25.csv", 
                    h = T, sep = ",") 
     df$rankName <-  fct_recode(df$rankName, "Famille" = "Sous-Famille",
                                "Famille" = "Super-Famille",
@@ -31,32 +31,30 @@ librarian::shelf(dplyr, forcats, stringr)
                                "Phylum" = "Sous-Phylum")
   ## Species trait data load 
     traits <- read.csv("data/raw-data/BETSI_220221.csv", h = T, sep = ";")
-    # if taxonomic homogenization needed (/|\ take hours !!)
-    #traits <- traits %>%
-    #          filter(Taxa %in% c("Arachnida", "Coleoptera", "Dermaptera", "Diplopoda", "Gastropoda",
-    #                             "Isopoda", "Oligochaeta", "Orthoptera"))
-    #trait_taxa_correct0 <- my_taxonChecker(traits$taxon_name)
-    #trait_taxa_correct <- trait_taxa_correct0 %>%
-    #                      mutate(canonic = ifelse(is.na(canonic) == T, scientificName, canonic))
-    #traits <- left_join(traits, trait_taxa_correct0) 
+    source("analyses/functions/my_taxonChecker function code.R")
+    trait_taxa_correct <- my_taxonChecker(traits$taxon_name)
+    trait_taxa_correct <- trait_taxa_correct %>%
+                          mutate(canonic = ifelse(is.na(canonic) == T, scientificName, canonic))
+    write.csv(trait_taxa_correct, "data/derived-data/trait_taxa_correct.csv")
+    traits_corr <- left_join(traits, trait_taxa_correct, by = c("taxon_name" = "fullName")) 
   
   ## Selection of trait(s) of interest
               
 # Indice computation
     ## By taxonomic group
-    lumbricid_tr <- traits %>% 
+    spider_tr <- traits_corr %>% 
                        filter(trait_name %in% c("Body_length", "Habitat", "ecological_strategy"))
-    lumbricid_ind <- myIndices(DF = df[df$orderName == "Crassiclitellata",], 
-                     IDresol = "Espèce", TR = lumbricid_tr)
+    spider_ind <- myIndices(DF = filter(df, df$orderName == "Araneae",), 
+                     IDresol = "Espèce", TR = spider_tr)
     
     ## By Guild (e.g. detritivores)
-    detritivore_tr <- traits %>% 
+    detritivore_tr <- traits_corr %>% 
                      filter(trait_name %in% c("Body_length", "Habitat"))  
     detritivore_ind  <- myIndices(DF = df[df$className %in% c("Diplopoda", "Isopoda", "Clitellata"),], 
                      IDresol = "Espèce", TR = detritivore_tr)
 
     ## By trait
-    BL <- filter(traits, trait_name %in% c("Body_length", "Habitat"))  
+    BL <- filter(traits_corr, trait_name %in% c("Body_length", "Habitat"))  
     BL_ind  <- myIndices(DF = df, IDresol = "Espèce", TR = BL)  
     
 wrkdataset <- df[, c(2, 4:6)] %>%
