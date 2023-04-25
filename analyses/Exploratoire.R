@@ -19,218 +19,74 @@
 
 
 # Libraries
-librarian::shelf(tidyr, dplyr, ggplot2, rinat, RODBC, stringr)
+librarian::shelf(tidyr, dplyr, ggplot2, rinat, RODBC, stringr, vegan, tibble, esquisse, fossil, data.table)
 
-#rgnparser::install_gnparser()
-library(rgnparser)
+#Importation donnees propres
+read.csv("data/derived-data/clean_data_2023-04-25.csv", header = T, sep=",")->All_Orchamp
 
-#Importation de la bdd
-read.csv("data/raw-data/Macrofaune_Orchamp_2021_2022.csv", header=T,row.names=NULL, sep=";")->AccessDB
-str(AccessDB)
+#Transformation en matrice------
+tp<-All_Orchamp %>%
+  filter(!grepl("0", abundance))%>%
+  mutate(name2 = ifelse(name == "", "unid", name)) %>% ##supression des vides 
+  group_by(gradient, name, alti)%>%
+  summarise(tot = sum(abundance)) 
+as.numeric(tp$tot)->tp$tot
 
-## Connection to Orchamp_global project on INaturalist
-### Getting data
-inat_orchamp <- get_inat_obs_project(158034, type="observations",raw=T)  # project_id=158034  pour Orchamp_global
+pivot_wider(tp,
+            id_cols = c('gradient','alti'),
+            names_from = 'name', 
+            values_from = 'tot',
+            values_fill = 0)->matrice
+#infos sur la matrice
+str(matrice)
+head(matrice)
+summary(matrice)
 
-### Data refining
-inat_orchamp <- inat_orchamp %>%
-  as_tibble() %>%
-  select(taxon.name, taxon.rank, description) %>%
-  rename(INat = description) %>%
-  filter(!is.na(INat))
+##Sortie de la matrice 
+#write.csv(matrice, file = paste0("data/derived-data/matrice_esp_" , as.character(Sys.Date()) , ".csv"))
 
-# Data preparation
-## Merging Mike's team and INat identifications
-df <- AccessDB %>% 
-  left_join(inat_orchamp, by = "INat") %>%
-  mutate(name = ifelse(is.na(taxon.name), `Valid.Name`, taxon.name)) 
-#####
-my_taxonChecker <- function(V) {
-  
-  librarian::shelf(tidyr, dplyr, rgbif, "Rekyt/rtaxref", "inbo/inborutils", "ropensci/rgnparser", stringr, forcats)
-  
-  
-  # parse taxon name to clean the list to obtain the most simple canonical name
-  uniqueNames00 <- unique(V)
-  uniqueNames0 <- gn_parse_tidy(uniqueNames00)$canonicalsimple
-  uniqueNames0 <- unique(V)
-  nb_unique <- length(uniqueNames0)  
-  harmo_colnames <- c("initial", "canonic", "id", "rankName", "referenceName", 
-                      "familyName", "orderName", "className", "phylumName")
-  
-  # create an empty dataframe to store TaxRef taxonomy
-  taxo_harmo <- as.data.frame(matrix(data=NA, 
-                                     nrow = nb_unique, 
-                                     ncol = 9,
-                                     dimnames = list(1:nb_unique, harmo_colnames)))
-  taxo_harmo$initial <- uniqueNames0
-  taxo_harmo$canonic <- ifelse(is.na(word(uniqueNames0, 1, 2)), 
-                               uniqueNames0, 
-                               word(uniqueNames0, 1, 2))  # keep only the canonical binomial name (no subsp) 
-  
-  
-  
-  # function to retrieve taxonomy from TaxRef to each canonical name
-  taxref_chk <- function(X){
-    chk0 <- rt_taxa_search(sciname = X) 
-    R <- str_count(X ,"\\W+") + 1  # is a species or a higher taxonomic level (2 => species)
-    ifelse(ncol(chk0) == 1,
-           chk <- rep(NA, 7),
-           ifelse(R >= 2,
-                  ifelse(!rankName %in% "Espèce",
-                         chk <- rep(NA, 7),
-                         chk <- chk0 %>%
-                           filter(rankName == "Espèce") %>%
-                           select(id, rankName, referenceName, familyName, orderName, className, phylumName),
-                         chk <- chk0 %>%
-                           filter(! rankName %in% c("Espèce", "Sous-Espèce", "Variété")) %>%
-                           filter(scientificName == X) %>%
-                           select(id, rankName, referenceName, familyName, orderName, className, phylumName)
-                  )
-           ))
-    chk
-  }
-  
-  
-  taxref_chk <- function(X){
-    chk0 <- rt_taxa_search(sciname = X) 
-    ifelse(ncol(chk0) == 1,
-           chk <- rep(NA, 7),
-           ifelse(nrow(chk0) == 1,
-                  chk <- chk0 %>%
-                    select(id, rankName, referenceName, familyName, orderName, className, phylumName),
-                  chk <- rep(NA, 7)
-           )
-    )
-    chk
-  }
-  
-  
-  
-  # loop to attribute TaxRef taxo to all canonical names
-  for(i in 1:nb_unique){
-    taxo_harmo[i,3:9] <- taxref_chk(X = taxo_harmo$canonic[i])
-  }
-  
-  # look to taxa that are not present in TaxRef
-  taxo_unaligned <- taxo_harmo %>%
-    filter(is.na(id)) %>%
-    select(initial, canonic) %>%
-    rename(unalign = canonic)
-  
-  # Find unaligned taxa in a global taxonomic backbone (gbif)
-  gbif_align <- gbif_species_name_match(taxo_unaligned, "unalign") %>%
-    rename(rankName = rank,
-           referenceName = scientificName,
-           familyName = family,
-           orderName = order,
-           className = class,
-           phylumName = phylum,
-           scientificName = unalign, 
-           id = usageKey) %>%
-    select(!c("kingdom", "genus", "confidence", "synonym", "status","matchType" ))%>%
-    mutate(rankName  = fct_recode(rankName, "Espèce" = "SPECIES", "Genre" = "GENUS", "Famille" = "FAMILY"))
-  
-  taxo_harmo <- taxo_harmo %>%
-    filter(!is.na(id)) 
-  taxo_harmo_def <- bind_rows(list(taxref = taxo_harmo, gbif = gbif_align), .id = "referential") %>%
-    distinct()
-  taxo_harmo_def
+#######
+#NMDS--
+#######
+matrice%>%
+  unite(id_plot, gradient, alti)->matrice_u
+
+#Matrice sans les sites 
+matrice_u[,2:314]->NMDSobj
+     
+# Vérifier si x contient des valeurs manquantes
+if (any(is.na(tp))) {
+  # Gérer les valeurs manquantes ici
+  message("Il y a des valeurs manquantes dans x.")
+} else {
+  # Exécuter le code si x ne contient pas de valeurs manquantes
+  message("x ne contient pas de valeurs manquantes.")
 }
-######
-
-## Getting valid and homogenized taxonomic names
-uniqueNames_raw <- tibble(name = unique(df$name)) %>% 
-  filter(!grepl("Larve", name), !grepl("vide", name))
-valid_names <- my_taxonChecker(uniqueNames_raw$name)  # Function stored at: "~/analyses/functions/my_taxonChecker function code"
-
-## Merging the taxonomic backbone to the observations
-df1 <- left_join(df, valid_names, by= c("Valid.Name" = "initial")) %>%
-  select(!c(`Valid.Name`, taxon.name, taxon.rank, name,  scientificName)) %>%
-  mutate(INat = ifelse(is.na(INat), 0, 1)) %>%
-  separate(id_plot, c("gradient", "alti"))
-
-## Save dataset
-write.csv(df1, file = paste0("data/derived-data/clean_data_" , as.character(Sys.Date()) , ".csv"))
-
-################################################################################
-################################################################################
-
-#II- Indices computations#######
-
-# @title
-# IndComm sur données Orchamp
-# 
-# @description
-# Calcul d'indices de communautés sur les données Orchamp
-# 
-# @objectif
-# Calculer des indices de communautés, globaux ou par taxon
-#
-# @details
-# 0. Import des données d'identification (fusion ID Eco&Sols et ID INat)
-#         - définir des groupes (Grp) d'intérêt
-##             - détritivores : vdt, diplo, iso 
-##             - prédateurs : carabiques, araignées, ...(?)
-##             - herbivores : criquets, ... (?)
-# 1. Calcul de variables de communautés
-
-
-# Libraries
-librarian::shelf(dplyr, forcats, stringr)
-
-# Data load
-## Community data load 
-df_clean <- read.csv("data/derived-data/clean_data_2023-04-20.csv", 
-               h = T, sep = ",") 
-df_clean$rankName <-  fct_recode(df_clean$rankName, "Famille" = "Sous-Famille",
-                           "Famille" = "Super-Famille",
-                           "Classe" = "Infra-Classe",
-                           "Genre" = "Sous-Genre",
-                           "Ordre" = "Sous-Ordre", 
-                           "Phylum" = "Sous-Phylum")
-## Species trait data load 
-traits <- read.csv("data/raw-data/BETSI_220221.csv", h = T, sep = ";")
-# if taxonomic homogenization needed (/|\ take hours !!)
-#traits <- traits %>%
-#          filter(Taxa %in% c("Arachnida", "Coleoptera", "Dermaptera", "Diplopoda", "Gastropoda",
-#                             "Isopoda", "Oligochaeta", "Orthoptera"))
-#trait_taxa_correct0 <- my_taxonChecker(traits$taxon_name)
-#trait_taxa_correct <- trait_taxa_correct0 %>%
-#                      mutate(canonic = ifelse(is.na(canonic) == T, scientificName, canonic))
-#traits <- left_join(traits, trait_taxa_correct0) 
-
-## Selection of trait(s) of interest
-
-# Indice computation
-## By taxonomic group
-lumbricid_tr <- traits %>% 
-  filter(trait_name %in% c("Body_length", "Habitat", "ecological_strategy"))
-lumbricid_ind <- myIndices(DF = df[df$orderName == "Crassiclitellata",], 
-                           IDresol = "Espece", TR = lumbricid_tr)
-
-## By Guild (e.g. detritivores)
-detritivore_tr <- traits %>% 
-  filter(trait_name %in% c("Body_length", "Habitat"))  
-detritivore_ind  <- myIndices(DF = df[df$className %in% c("Diplopoda", "Isopoda", "Clitellata"),], 
-                              IDresol = "Espece", TR = detritivore_tr)
-
-## By trait
-BL <- filter(traits, trait_name %in% c("Body_length", "Habitat"))  
-BL_ind  <- myIndices(DF = df, IDresol = "Espece", TR = BL)  
-
-wrkdataset <- df[, c(1, 3:5)] %>%
-  left_join(lumbricid_ind$alpha) %>%
-  filter(method %in% c("tri manuel")) %>%
-  replace(is.na(.), 0) %>%
-  group_by(gradient, alti) %>%
-  summarise(meanMass = mean(mass))
-
-
-ggplot(wrkdataset, aes(x=as.numeric(alti), y=as.numeric(meanMass), color= gradient))+
-  geom_point()+
-  #facet_wrap(.~gradient, scales = "free_y")+
-  theme_bw()
+#Passage des id_plot en ligne
+matrice_u %>%
+  remove_rownames() %>%
+  column_to_rownames(var = 'id_plot')->NMDSobj
 
 
 
+#Run NMDS
+  NMDS_allOrchamp=metaMDS(NMDSobj, # Our community-by-species matrix
+                     k=2) # The number of reduced dimensions
+  stressplot(NMDS_allOrchamp)
+  plot(NMDS_allOrchamp)
+  ordiplot(NMDS_allOrchamp,type="n")
+  orditorp(NMDS_allOrchamp,display="sites",cex=0.55,air=0.01) 
+  
+  #Avec couleurs par site d'échantillonnage 
+  treat=c(rep("ARG",6),rep("ARM",2),rep("BOU",5), rep("CAU",8), rep("MOU",6), 
+          rep("MSB",5), rep("PEC",2), rep("RIS",6), rep("TAN",5), rep("VAL",5),
+          rep("VCHA",6), rep("VER",5), rep("VTN",5))
+  ordiplot(example_NMDS,type="n")
+  ordihull(example_NMDS,groups=treat,draw="polygon",col="grey90",label=F)
+  orditorp(example_NMDS,display="sites",col=c(rep("green",6),rep("blue",2),rep("red",5), rep("orange",8), rep("purple",6), 
+                                              rep("black",5), rep("lightblue",2), rep("pink",6), rep("lightgreen",5), rep("brown",5),
+                                              rep("darkblue",6), rep("darkgreen",5), rep("darkorange",5)),
+           air=0.01,cex=0.5)  
+  
+  
+  
