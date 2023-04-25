@@ -47,27 +47,27 @@ librarian::shelf(dplyr, forcats, stringr)
     lumbricid_tr <- traits %>% 
                        filter(trait_name %in% c("Body_length", "Habitat", "ecological_strategy"))
     lumbricid_ind <- myIndices(DF = df[df$orderName == "Crassiclitellata",], 
-                     IDresol = "Espece", TR = lumbricid_tr)
+                     IDresol = "Espèce", TR = lumbricid_tr)
     
     ## By Guild (e.g. detritivores)
     detritivore_tr <- traits %>% 
                      filter(trait_name %in% c("Body_length", "Habitat"))  
     detritivore_ind  <- myIndices(DF = df[df$className %in% c("Diplopoda", "Isopoda", "Clitellata"),], 
-                     IDresol = "Espece", TR = detritivore_tr)
+                     IDresol = "Espèce", TR = detritivore_tr)
 
     ## By trait
     BL <- filter(traits, trait_name %in% c("Body_length", "Habitat"))  
-    BL_ind  <- myIndices(DF = df, IDresol = "Espece", TR = BL)  
+    BL_ind  <- myIndices(DF = df, IDresol = "Espèce", TR = BL)  
     
-wrkdataset <- df[, c(1, 3:5)] %>%
-  left_join(lumbricid_ind$alpha) %>%
-  filter(method %in% c("tri manuel")) %>%
+wrkdataset <- df[, c(2, 4:6)] %>%
+  left_join(detritivore_ind$alpha) %>%
+  filter(method %in% c("barber")) %>%
   replace(is.na(.), 0) %>%
   group_by(gradient, alti) %>%
-  summarise(meanMass = mean(mass))
+  summarise(meanAb = mean(ab))
 
 
-ggplot(wrkdataset, aes(x=as.numeric(alti), y=as.numeric(meanMass), color= gradient))+
+ggplot(wrkdataset, aes(x=as.numeric(alti), y=meanAb, color= gradient))+
   geom_point()+
   #facet_wrap(.~gradient, scales = "free_y")+
   theme_bw()
