@@ -126,5 +126,3 @@ as.data.frame(donut)->donut_df
       col=rainbow(length(lbls)),
       main="Répartition taxonomique des effectifs échantillonnés")
 
-
-
