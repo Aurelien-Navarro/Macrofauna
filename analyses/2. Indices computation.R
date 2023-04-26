@@ -21,7 +21,7 @@ librarian::shelf(dplyr, forcats, stringr)
 
 # Data load
   ## Community data load 
-    df <- read.csv("data/derived-data/clean_data_2023-04-24.csv", 
+    df <- read.csv("data/derived-data/clean_data_2023-04-25.csv", 
                    h = T, sep = ",") 
     df$rankName <-  fct_recode(df$rankName, "Famille" = "Sous-Famille",
                                "Famille" = "Super-Famille",

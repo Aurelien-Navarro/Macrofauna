@@ -81,12 +81,50 @@ matrice_u %>%
   treat=c(rep("ARG",6),rep("ARM",2),rep("BOU",5), rep("CAU",8), rep("MOU",6), 
           rep("MSB",5), rep("PEC",2), rep("RIS",6), rep("TAN",5), rep("VAL",5),
           rep("VCHA",6), rep("VER",5), rep("VTN",5))
-  ordiplot(example_NMDS,type="n")
-  ordihull(example_NMDS,groups=treat,draw="polygon",col="grey90",label=F)
-  orditorp(example_NMDS,display="sites",col=c(rep("green",6),rep("blue",2),rep("red",5), rep("orange",8), rep("purple",6), 
+  ordiplot(NMDS_allOrchamp,type="n")
+  ordihull(NMDS_allOrchamp,groups=treat,draw="polygon",col="grey90",label=F)
+  orditorp(NMDS_allOrchamp,display="sites",col=c(rep("green",6),rep("blue",2),rep("red",5), rep("orange",8), rep("purple",6), 
                                               rep("black",5), rep("lightblue",2), rep("pink",6), rep("lightgreen",5), rep("brown",5),
                                               rep("darkblue",6), rep("darkgreen",5), rep("darkorange",5)),
            air=0.01,cex=0.5)  
+   
+  ##############
+  #PIECHART-----
+  ##############
+  library(formattable)
+  #install.packages("PieDonut")
+  #library(PieDonut)
+  #On prend All_Orchamp
+  str(All_Orchamp)
+  ORCPc <- All_Orchamp %>%
+    filter(!className %in% c("Collembola"), !orderName %in% c("Diptera"))  
   
-  
-  
+  #Donut chart of taxonomic distribution
+  donut <- ORCPc %>%
+    select(orderName, className, familyName, abundance) %>%
+    mutate(orderName = ifelse(orderName == "", "NI", orderName)) %>%
+    mutate(orderName = ifelse(is.na(orderName), "NI", orderName)) %>% 
+    mutate(className = ifelse(is.na(className), "NI", className)) %>%
+    mutate(familyName = ifelse(is.na(familyName), "NI", familyName)) %>%
+    filter(!familyName %in% c("NI"))%>%
+    mutate(className = as.factor(className), orderName = as.factor(orderName),
+           familyName= as.factor(familyName))%>%  
+    group_by(familyName, orderName, className) %>%
+    summarise(n = sum(abundance)) 
+str(donut)
+as.data.frame(donut)->donut_df
+
+# Pie Chart with Percentages
+  slices <-donut_df$n
+  lbls <-donut_df$familyName
+  pct <- round(slices/sum(slices)*100)
+  lbls <- paste(lbls, pct) # add percents to labels
+  lbls <- paste(lbls,"%",sep="") # ad % to labels
+  pie(slices,labels = lbls,
+      cex=0.6,
+      edges = 200, radius = 0.8,
+      col=rainbow(length(lbls)),
+      main="Répartition taxonomique des effectifs échantillonnés")
+
+
+
