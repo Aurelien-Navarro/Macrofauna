@@ -17,7 +17,7 @@
 
 
 # Libraries
-librarian::shelf(dplyr, forcats, stringr)
+librarian::shelf(dplyr, forcats, stringr, ggplot2)
 
 # Data load
   ## Community data load 
@@ -36,32 +36,39 @@ librarian::shelf(dplyr, forcats, stringr)
               filter(Taxa %in% c("Arachnida", "Coleoptera", "Dermaptera", "Diplopoda", "Gastropoda",
                                  "Isopoda", "Oligochaeta", "Orthoptera","Hymenoptera"))
     source("analyses/functions/my_taxonChecker function code.R")
-    trait_taxa_correct0 <- my_taxonChecker(traits$taxon_name)
+    #trait_taxa_correct0 <- my_taxonChecker(traits$taxon_name)
     trait_taxa_correct <- trait_taxa_correct0 %>%
                           mutate(canonic = ifelse(is.na(canonic) == T, scientificName, canonic))
     trait_taxa_correct%>%
       rename(taxon_name=fullName)->trait_taxa_correct
     traits <- left_join(traits, trait_taxa_correct, by='taxon_name', relationship = "many-to-many") 
   
+    #sauvegarde des traits homogeneises 
+    write.csv(traits, file = paste0("data/derived-data/traits_homo_" , as.character(Sys.Date()) , ".csv"))
   ## Selection of trait(s) of interest
-              
+    source("analyses/functions/IndCom.R")
+
 # Indice computation
     ## By taxonomic group
     lumbricid_tr <- traits %>% 
                        filter(trait_name %in% c("Body_length", "Habitat", "ecological_strategy"))
     lumbricid_ind <- myIndices(DF = df[df$orderName == "Crassiclitellata",], 
                      IDresol = "Espèce", TR = lumbricid_tr)
+    lumbricid_ind$alpha
     
     ## By Guild (e.g. detritivores)
     detritivore_tr <- traits %>% 
                      filter(trait_name %in% c("Body_length", "Habitat"))  
     detritivore_ind  <- myIndices(DF = df[df$className %in% c("Diplopoda", "Isopoda", "Clitellata"),], 
-                     IDresol = "Espèce", TR = detritivore_tr)
+                     IDresol = "Espèce", TR = detritivore_tr); detritivore_ind$alpha
 
     ## By trait
     BL <- filter(traits, trait_name %in% c("Body_length", "Habitat"))  
-    BL_ind  <- myIndices(DF = df, IDresol = "Espèce", TR = BL)  
+    BL_ind  <- myIndices(DF = df, IDresol = "Espèce", TR = BL) 
+    BL_ind$alpha
+
     
+    ##representation abondance detritivores   
 wrkdataset <- df[, c(2, 4:6)] %>%
   left_join(detritivore_ind$alpha) %>%
   filter(method %in% c("barber")) %>%
@@ -71,7 +78,7 @@ wrkdataset <- df[, c(2, 4:6)] %>%
 
 
 ggplot(wrkdataset, aes(x=as.numeric(alti), y=meanAb, color= gradient))+
-  geom_point()+
-  #facet_wrap(.~gradient, scales = "free_y")+
+  geom_line()+
+  facet_wrap(.~gradient, scales = "free_y")+
   theme_bw()
     
