@@ -32,13 +32,16 @@ librarian::shelf(dplyr, forcats, stringr)
   ## Species trait data load 
     traits <- read.csv("data/raw-data/BETSI_220221.csv", h = T, sep = ";")
     # if taxonomic homogenization needed (/|\ take hours !!)
-    #traits <- traits %>%
-    #          filter(Taxa %in% c("Arachnida", "Coleoptera", "Dermaptera", "Diplopoda", "Gastropoda",
-    #                             "Isopoda", "Oligochaeta", "Orthoptera"))
-    #trait_taxa_correct0 <- my_taxonChecker(traits$taxon_name)
-    #trait_taxa_correct <- trait_taxa_correct0 %>%
-    #                      mutate(canonic = ifelse(is.na(canonic) == T, scientificName, canonic))
-    #traits <- left_join(traits, trait_taxa_correct0) 
+    traits <- traits %>%
+              filter(Taxa %in% c("Arachnida", "Coleoptera", "Dermaptera", "Diplopoda", "Gastropoda",
+                                 "Isopoda", "Oligochaeta", "Orthoptera","Hymenoptera"))
+    source("analyses/functions/my_taxonChecker function code.R")
+    trait_taxa_correct0 <- my_taxonChecker(traits$taxon_name)
+    trait_taxa_correct <- trait_taxa_correct0 %>%
+                          mutate(canonic = ifelse(is.na(canonic) == T, scientificName, canonic))
+    trait_taxa_correct%>%
+      rename(taxon_name=fullName)->trait_taxa_correct
+    traits <- left_join(traits, trait_taxa_correct, by='taxon_name', relationship = "many-to-many") 
   
   ## Selection of trait(s) of interest
               
