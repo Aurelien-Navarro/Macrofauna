@@ -22,7 +22,7 @@
 librarian::shelf(tidyr, dplyr, ggplot2, rinat, RODBC, stringr, vegan, tibble, esquisse, fossil, data.table)
 
 #Importation donnees propres
-read.csv("data/derived-data/clean_data_2023-04-25.csv", header = T, sep=",")->All_Orchamp
+read.csv("data/derived-data/Esp/clean_data_2023-04-25.csv", header = T, sep=",")->All_Orchamp
 
 #Transformation en matrice------
 tp<-All_Orchamp %>%
@@ -43,7 +43,7 @@ head(matrice)
 summary(matrice)
 
 ##Sortie de la matrice 
-#write.csv(matrice, file = paste0("data/derived-data/matrice_esp_" , as.character(Sys.Date()) , ".csv"))
+write.csv(matrice, file = paste0("data/derived-data/matrice_esp_" , as.character(Sys.Date()) , ".csv"))
 
 #######
 #NMDS--

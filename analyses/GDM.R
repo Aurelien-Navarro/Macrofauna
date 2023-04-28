@@ -22,7 +22,7 @@ read.csv("data/derived-data/traits_homo_2023-04-27.csv",header=T, sep=",")->TRAI
 
 #DECOMPOSEURS-------------
   ##VDT (on n'a que ça)---
-
+source("analyses/functions/IndCom.R")
 lumbricid_tr <- TRAITS %>% 
   filter(trait_name %in% c("Body_length", "Habitat", "ecological_strategy"))
 lumbricid_ind <- myIndices(DF = df[df$orderName == "Crassiclitellata",], 
