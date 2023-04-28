@@ -16,6 +16,7 @@ read.csv("data/raw-data/envir/BoisVivant.data4.csv", header = T, sep=",")->Arbre
 read.csv("data/raw-data/envir/Anasolsup.data5.csv", header = T, sep=",")->AnaSol
 read.csv("data/raw-data/envir/AnaFossePedo.data6.csv", header = T, sep=",")->FosseP
 read.csv("data/raw-data/envir/par_aurel/Tmean_Prec1.csv", header = T, sep=";")->Tmean_rainf1
+read.csv("data/raw-data/envir/Habitat.csv",header=T, sep=",")->Habit
 #----------------
 
 
@@ -198,7 +199,16 @@ RS_veg_final<-Phyto%>%
   
   ##implementation sur ENV
   left_join(ENV, XYLmean_final, by = "codeplot")->ENV
+
   
-  #Save ENV
+#Habitat-----
+  ##Via un df concu de tt pièces
+  Habit %>%
+    rename(codeplot = id_plot) %>%
+    select(!c("Alt")) %>%
+    mutate(Milieu = ifelse(grepl("Milieu_ouvert", Milieu), 0, 1)) -> Habit_final
+  ##implementation sur ENV
+  left_join(ENV, Habit_final, by = "codeplot")->ENV
+  
+#Save ENV--------------
   write.csv(ENV, file = paste0("data/derived-data/ENV_" , as.character(Sys.Date()) , ".csv"))
-  
