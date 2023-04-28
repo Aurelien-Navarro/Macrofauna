@@ -19,6 +19,8 @@
 # Libraries
 librarian::shelf(dplyr, forcats, stringr, ggplot2)
 
+#Passer directement à la ligne 52, car correction des taxas de BETSI deja réalisee
+
 # Data load
   ## Community data load 
     df <- read.csv("data/derived-data/Esp/clean_data_2023-04-25.csv", 
@@ -45,9 +47,14 @@ librarian::shelf(dplyr, forcats, stringr, ggplot2)
   
     #sauvegarde des traits homogeneises 
     write.csv(traits, file = paste0("data/derived-data/traits_homo_" , as.character(Sys.Date()) , ".csv"))
-  ## Selection of trait(s) of interest
+  
+    
+## Selection of trait(s) of interest
     source("analyses/functions/IndCom.R")
 
+    
+#Importation de traits homogénéisés : 
+    read.csv("data/derived-data/Traits/traits_homo_2023-04-27.csv", header=T, sep=",")->traits
 # Indice computation
     ## By taxonomic group
     lumbricid_tr <- traits %>% 
@@ -55,8 +62,16 @@ librarian::shelf(dplyr, forcats, stringr, ggplot2)
     lumbricid_ind <- myIndices(DF = df[df$orderName == "Crassiclitellata",], 
                      IDresol = "Espèce", TR = lumbricid_tr)
     lumbricid_ind$alpha
+      ###Carabidae
+    carab_tr<- traits%>%
+                    filter(trait_name %in% c("Body_length", "Habitat", "ecological_strategy"))
+    carab_ind <- myIndices(DF = df[df$familyName == "Carabidae",], 
+                               IDresol = "Espèce", TR = carab_tr)
+    carab_ind$alpha
+      
     
-    ## By Guild (e.g. detritivores)
+    ## By Guild 
+      ###(e.g. detritivores)
     detritivore_tr <- traits %>% 
                      filter(trait_name %in% c("Body_length", "Habitat"))  
     detritivore_ind  <- myIndices(DF = df[df$className %in% c("Diplopoda", "Isopoda", "Clitellata"),], 
@@ -81,4 +96,9 @@ ggplot(wrkdataset, aes(x=as.numeric(alti), y=meanAb, color= gradient))+
   geom_line()+
   facet_wrap(.~gradient, scales = "free_y")+
   theme_bw()
-    
+
+#######################
+#ZONE DE TRAVAUX------
+######################
+as.matrix(detritivore_ind$alpha)->detrialphaM
+write.csv(detrialphaM, file = paste0("data/derived-data/Traits/detrialphaM_" , as.character(Sys.Date()) , ".csv"))
