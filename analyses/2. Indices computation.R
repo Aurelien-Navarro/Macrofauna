@@ -32,8 +32,6 @@ librarian::shelf(dplyr, forcats, stringr, ggplot2)
                                "Ordre" = "Sous-Ordre", 
                                "Phylum" = "Sous-Phylum")
   
-    # /!\Passer directement a la ligne 53, car correction des taxas de BETSI deja réalisee
-    
     ## Species trait data load 
     traits <- read.csv("data/raw-data/BETSI_220221.csv", h = T, sep = ";")
     # if taxonomic homogenization needed (/|\ take hours !!)
@@ -41,7 +39,7 @@ librarian::shelf(dplyr, forcats, stringr, ggplot2)
               filter(Taxa %in% c("Arachnida", "Coleoptera", "Dermaptera", "Diplopoda", "Gastropoda",
                                  "Isopoda", "Oligochaeta", "Orthoptera","Hymenoptera"))
     source("analyses/functions/my_taxonChecker function code.R")
-    #trait_taxa_correct0 <- my_taxonChecker(traits$taxon_name)
+    trait_taxa_correct0 <- my_taxonChecker(traits$taxon_name)
     trait_taxa_correct <- trait_taxa_correct0 %>%
                           mutate(canonic = ifelse(is.na(canonic) == T, scientificName, canonic))
     trait_taxa_correct%>%
@@ -107,7 +105,8 @@ ggplot(wrkdataset, aes(x=as.numeric(alti), y=meanAb, color= gradient))+
 #ZONE DE TRAVAUX------
 ######################
 (detritivore_ind$alpha)->detrialphaM
-write.csv(detrialphaM, file = paste0("data/derived-data/Traits/detrialphaM_" , as.character(Sys.Date()) , ".csv"))
+
+write.csv(detrialphaM, file = paste0("data/derived-data/Traits/detriti/detrialphaM_" , as.character(Sys.Date()) , ".csv"))
 #Maintenant on va essayer de passer du code ANI (detritvore_ind$alpha) au code des plots en moyennisant les traits. 
 #Nécessaire pour les prochaines analyses 
 
@@ -128,5 +127,6 @@ write.csv(detrialphaM, file = paste0("data/derived-data/Traits/detrialphaM_" , a
              q0=mean(q0),
              q1=mean(q1),
              q2=mean(q2),
-             Body_length=mean(Body_length))->detrialphamean
+             Body_length=mean(Body_length))->detrialphaplot
+ write.csv(detrialphaplot, file = paste0("data/derived-data/Traits/detriti/detrialphaplot_" , as.character(Sys.Date()) , ".csv"))
  

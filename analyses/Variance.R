@@ -122,23 +122,23 @@ pivot_wider(tp5.3,
 #creation de matrices de dissimilarite par couples de site
 ESP_sample%>%
   remove_rownames()%>%
-  column_to_rownames(var='id_sample')->ESP_sample_ind #passage samples en index
+  column_to_rownames()->ESP_sample_ind #passage samples en index
 
 ESP_plot%>%
   remove_rownames()%>%
-  column_to_rownames(var='id_plot')->ESP_plot_ind
+  column_to_rownames()->ESP_plot_ind
 
 ESP_grad%>%
   remove_rownames()%>%
-  column_to_rownames(var='gradient')->ESP_grad_ind
+  column_to_rownames()->ESP_grad_ind
 
 ESP_massif%>%
   remove_rownames()%>%
-  column_to_rownames(var='massif')->ESP_massif_ind
+  column_to_rownames()->ESP_massif_ind
 
 ESP_milieu%>%
   remove_rownames()%>%
-  column_to_rownames(var='Milieu2')->ESP_milieu_ind
+  column_to_rownames()->ESP_milieu_ind
 
 
   ##dissimilarite sur esp_sample----
@@ -171,17 +171,6 @@ ESP_milieu_bin[ESP_milieu_bin!=0]<-1
 C5 <- beta.pair(ESP_milieu_bin, index.family = "jaccard")
 jac_plots_C5 <- as.matrix(C5$beta.jac)
 
-
-
-  #Dissimilarité Moyenne
-
-mean(jac_plots_C1)->BetaC1
-mean(jac_plots_C2)->BetaC2
-mean(jac_plots_C3)->BetaC3
-mean(jac_plots_C4)->BetaC4
-mean(jac_plots_C5)->BetaC5
-
-
 #faible beta moyenne : elements semblables 
 #forte beta moyenne : element dissemblables 
 
@@ -194,7 +183,53 @@ beta_echelle<- data.frame(Echelle, Dissimilarite)
 library(ggplot2)
 
 ggplot(beta_echelle) +
- aes(x = Echelle, fill = Echelle, colour = Echelle, weight = Dissimilarite ) +
+  aes(x = Echelle, fill = Echelle, colour = Echelle, weight = Dissimilarite ) +
+  geom_bar() +
+  scale_fill_hue(direction = 1) +
+  scale_color_hue(direction = 1) +
+  theme_minimal()
+
+
+
+#AVEC VGDIS########### (idem)
+vegdist(ESP_sample_ind, method="bray", na.rm=T)->C1.2
+as.matrix(C1.2)->C1.2M
+
+vegdist(ESP_plot_ind, method="bray", na.rm=T)->C2.2
+as.matrix(C2.2)->C2.2M
+
+vegdist(ESP_grad_ind, method="bray", na.rm=T)->C3.2
+as.matrix(C3.2)->C3.2M
+
+vegdist(ESP_massif_ind, method="bray", na.rm=T)->C4.2
+as.matrix(C4.2)->C4.2M
+
+vegdist(ESP_milieu_ind, method="bray", na.rm=T)->C5.2
+as.matrix(C5.2)->C5.2M
+
+
+  #Dissimilarité Moyenne
+
+mean(C1.2M)->BetaC1.2
+mean(C2.2M)->BetaC2.2
+mean(C3.2M)->BetaC3.2
+mean(C4.2M)->BetaC4.2
+mean(C5.2M)->BetaC5.2
+
+
+#faible beta moyenne : elements semblables 
+#forte beta moyenne : element dissemblables 
+
+Echelle.2 <- c("Echantillons","plot","gradient","massif","habitat")
+Dissimilarite.2 <-c(BetaC1.2, BetaC2.2, BetaC3.2, BetaC4.2, BetaC5.2)
+
+beta_echelle.2<- data.frame(Echelle.2, Dissimilarite.2)
+
+
+library(ggplot2)
+
+ggplot(beta_echelle.2) +
+ aes(x = Echelle.2, fill = Echelle.2, colour = Echelle.2, weight = Dissimilarite.2 ) +
  geom_bar() +
  scale_fill_hue(direction = 1) +
  scale_color_hue(direction = 1) +
@@ -203,17 +238,19 @@ ggplot(beta_echelle) +
 #Plus l'echelle est haute, plus la dissimilarite moyenne entre element est faible
 #A large echelle, les elements se ressemblent plus qu'à faible echelle 
 
-#####################
-#ZONE DE TRAVAUX-----
-####################
+########################
+#Analyse de variance----
+########################
 
 #recup du tableau ech-esp
 
+#echelle de l echantillon
 ESP_samplenomatr%>%
   distinct(id_sample, .keep_all=T)%>%
   inner_join(ESP_sample, by='id_sample')%>%
   select(id_sample) ->echelle0
 
+#echelle du plot (gradient et altitude)
 ESP_samplenomatr%>%
   distinct(id_sample, .keep_all=T)%>%
   unite(id_plot, gradient, alti)%>%
@@ -221,12 +258,14 @@ ESP_samplenomatr%>%
   inner_join(ESP_sample, by='id_sample')%>%
   select(id_plot) ->echelle1
 
+#echelle du gradient (localité)
 ESP_samplenomatr%>%
   distinct(id_sample, .keep_all=T)%>%
   select(c(id_sample, gradient))%>%
   inner_join(ESP_sample, by='id_sample')%>%
   select(gradient)->echelle2
 
+#echelle du massif (alpe ou pyr)
 ESP_samplenomatr%>%
   distinct(id_sample, .keep_all=T)%>%
   select(c(id_sample, gradient))%>%
@@ -234,21 +273,21 @@ ESP_samplenomatr%>%
   mutate(massif = ifelse(gradient==c("MSB","VER","CAU"),"Pyr", "Alp"))%>%
   select(massif)->echelle3
 
-echelle1%>%
-  inner_join(ENV1, by='id_plot')->test
+#echelle de l'altitude
+ESP_samplenomatr%>%
+  distinct(id_sample, .keep_all=T)%>%
+  select(c(id_sample, alti))%>%
+  inner_join(ESP_sample, by='id_sample')%>%
+  select(alti) ->echelle4
   
+#Partitition de variance-----
 
-  
-
-
-
-
-
-varpart(ESP_sample_ind, echelle1, echelle2, echelle3)->spe.part.all
+  #le pb c'est que la fonction ne me laisse pas gérer plus de 4 tableaux explicatifs
+varpart(ESP_sample_ind, echelle2, echelle3, echelle4)->spe.part.all
 spe.part.all$part
 
 plot(spe.part.all,
-     Xnames = c("echelle 1","echelle2",'echelle3'), # noms des matrices explicatives
+     Xnames = c("gradient",'massif','altitude'), # noms des matrices explicatives
      bg = c("seagreen3", "mediumpurple", "purple"), alpha = 80,
      digits = 2,
      cex = 1)
