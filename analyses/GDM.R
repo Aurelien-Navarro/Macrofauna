@@ -21,7 +21,7 @@ read.csv("data/derived-data/ENV_2023-04-26.csv", row.names = 1)->ENV
 read.csv("data/derived-data/traits_homo_2023-04-27.csv",header=T, sep=",")->TRAITS
 
 #DECOMPOSEURS-------------
-  ##VDT (on n'a que ça)---
+  ##VDT ---
 source("analyses/functions/IndCom.R")
 lumbricid_tr <- TRAITS %>% 
   filter(trait_name %in% c("Body_length", "Habitat", "ecological_strategy"))

@@ -19,7 +19,7 @@
 # Libraries
 librarian::shelf(dplyr, forcats, stringr, ggplot2)
 
-#Passer directement à la ligne 52, car correction des taxas de BETSI deja réalisee
+
 
 # Data load
   ## Community data load 
@@ -31,7 +31,10 @@ librarian::shelf(dplyr, forcats, stringr, ggplot2)
                                "Genre" = "Sous-Genre",
                                "Ordre" = "Sous-Ordre", 
                                "Phylum" = "Sous-Phylum")
-  ## Species trait data load 
+  
+    # /!\Passer directement a la ligne 53, car correction des taxas de BETSI deja réalisee
+    
+    ## Species trait data load 
     traits <- read.csv("data/raw-data/BETSI_220221.csv", h = T, sep = ";")
     # if taxonomic homogenization needed (/|\ take hours !!)
     traits <- traits %>%
@@ -75,7 +78,10 @@ librarian::shelf(dplyr, forcats, stringr, ggplot2)
     detritivore_tr <- traits %>% 
                      filter(trait_name %in% c("Body_length", "Habitat"))  
     detritivore_ind  <- myIndices(DF = df[df$className %in% c("Diplopoda", "Isopoda", "Clitellata"),], 
-                     IDresol = "Espèce", TR = detritivore_tr); detritivore_ind$alpha
+                     IDresol = "Espèce", TR = detritivore_tr)
+    view(detritivore_ind$alpha)
+    detritivore_ind$indmass
+    detritivore_ind$rankID
 
     ## By trait
     BL <- filter(traits, trait_name %in% c("Body_length", "Habitat"))  
@@ -100,5 +106,27 @@ ggplot(wrkdataset, aes(x=as.numeric(alti), y=meanAb, color= gradient))+
 #######################
 #ZONE DE TRAVAUX------
 ######################
-as.matrix(detritivore_ind$alpha)->detrialphaM
+(detritivore_ind$alpha)->detrialphaM
 write.csv(detrialphaM, file = paste0("data/derived-data/Traits/detrialphaM_" , as.character(Sys.Date()) , ".csv"))
+#Maintenant on va essayer de passer du code ANI (detritvore_ind$alpha) au code des plots en moyennisant les traits. 
+#Nécessaire pour les prochaines analyses 
+
+#creation colone id_plot sur df pour l'exemple
+  df%>%
+    unite(id_plot, gradient, alti)%>%
+    select(c(id_sample, id_plot)) -> colones_types
+
+#Fusion entre colone_types et le tableur de sortie 
+  left_join(detrialphaM, colones_types, by="id_sample")%>%
+    relocate(id_plot, .after = id_sample)->detrialphaM
+
+#Moyennisage selon non pas id_sample mais selon id_plot
+ detrialphaM%>%
+   group_by(id_plot)%>%
+   summarise(ab = mean(ab),
+             mass= mean(mass),
+             q0=mean(q0),
+             q1=mean(q1),
+             q2=mean(q2),
+             Body_length=mean(Body_length))->detrialphamean
+ 

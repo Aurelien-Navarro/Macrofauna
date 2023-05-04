@@ -11,6 +11,7 @@ library(factoextra)
 library(missMDA)
 library(corrplot)
 library(ade4)
+library(tibble)
 
 #Importation des jeux de donnée 
 read.csv('data/derived-data/ENV_2023-04-28.csv', h=T, sep=",")->ENV
@@ -34,6 +35,13 @@ ENV %>%
   remove_rownames()%>%
   column_to_rownames(var='codeplot')%>%
   select(!c('X','X_L93','Y_L93'))->ENV_ACP
+
+##Passage des stations en ligne
+
+as_tibble(detrialphamean)->detrialphamean
+detrialphamean %>%
+  dplyr::select(id_plot, everything()) %>%
+  tibble::column_to_rownames(var = "id_plot") -> detrialphaACP
 
 #ACP ENVIRONNEMENTALE-----------
 
@@ -210,3 +218,89 @@ fviz_pca_ind(PCA_esp, # Montre les points seulement (mais pas le "text")
                 #col.var = "grey", # Couleur des variables
                 #col.ind = "orange"  # Couleur des individus)
 
+#ACP traits------
+
+PCA(detrialphaACP, scale.unit = TRUE, ncp = 5, graph = TRUE)->PCA_traits
+
+###exploration des donnees
+eig.val <- get_eigenvalue(PCA_traits)
+eig.val
+fviz_eig(PCA_traits, addlabels = TRUE, ylim = c(0, 50))
+var <- get_pca_var(PCA_traits);var
+
+fviz_pca_var(PCA_traits, col.var = "black")
+
+###qualité de representation des variables 
+head(var$cos2, 4)
+
+###visualisation desdites qualités
+
+corrplot(var$cos2, is.corr=FALSE)
+
+### bar plot qualité de reprentation variables
+fviz_cos2(PCA_traits, choice = "var", axes = 1:2)
+#Colorer en fonction du cos2: qualité de représentation
+fviz_pca_var(PCA_traits, col.var = "cos2",
+             gradient.cols = c("#00AFBB", "#E7B800", "#FC4E07"),
+             repel = TRUE # Évite le chevauchement de texte
+)
+
+#Contribution des var aux axes principaux 
+head(var$contrib, 6)
+
+corrplot(var$contrib, is.corr=FALSE) 
+
+#Contribution à PC1 et PC2 
+fviz_contrib(PCA_traits, choice = "var", axes = 1:2, top = 10)
+
+#Variables les plus contributives
+fviz_pca_var(PCA_traits, col.var = "contrib",
+             gradient.cols = c("#00AFBB", "#E7B800", "#FC4E07")
+)
+
+#Les individus-----
+ind <- get_pca_ind(PCA_traits);ind
+# Coordonnées des individus
+head(ind$coord)
+# Qualité des individus
+head(ind$cos2)
+# Contributions des individus
+head(ind$contrib)
+
+#Ind par valeur de cos2
+fviz_pca_ind (PCA_traits, col.ind = "cos2",
+              gradient.cols = c("#00AFBB", "#E7B800", "#FC4E07"),
+              repel = TRUE # Évite le chevauchement de texte
+)
+
+##Qualité de représentation
+fviz_cos2(PCA_traits, choice = "ind")
+## Contribution totale sur PC1 et PC2
+fviz_contrib(PCA_traits, choice = "ind", axes = 1:2)
+
+##colorer ind par leur site d'appartenance
+
+color <- substr(detrialphamean$id_plot, 1, nchar(detrialphamean$id_plot) - 5)
+
+
+fviz_pca_ind(PCA_traits, # Montre les points seulement (mais pas le "text")
+             col.ind = color, # colorer by groups
+             palette = c("#00AFBB", "#E7B800", "#FC4E07","red",'black',"green",'purple',"blue","brown","pink","lightgreen","darkred","darkblue","darkgreen"),
+             addEllipses = TRUE,# Ellipses de concentration
+             mean.point = FALSE,
+             ellipse.type = "confidence",
+             legend.title = "Sites",
+             labelsize= 2,
+             pointsize= 1,
+             pointshape = 15,
+             title = "Principal Component Analysis, specific variables",
+             subtitle = "Orchamp plots",
+             caption = "Source: factoextra",
+             xlab = "PC1", ylab = "PC2",
+             legend.position = "top"
+)
+
+###Biplot, tres peu utile, tres vite le bazar
+fviz_pca_biplot(PCA_traits, repel = TRUE,
+col.var = "black", # Couleur des variables
+col.ind = "orange",)  # Couleur des individus)
