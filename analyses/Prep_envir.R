@@ -129,6 +129,167 @@ RS_veg_final<-Phyto%>%
   ##implementation sur ENV
   left_join(ENV, Nmean_final, by = "codeplot")->ENV
   
+  
+#Pedologie-----
+  
+  ##Aluminium-----
+  FosseP%>%
+    filter(grepl("Aluminium", code_anasol))%>%
+    na.omit(valeur)%>%
+    group_by(codeplot)%>%
+    summarise(Almean=mean(valeur))->Almean_final
+  
+  ##implementation sur ENV
+  left_join(ENV, Almean_final, by = "codeplot")->ENV
+  
+  ##Argile
+  FosseP%>%
+    filter(grepl("Argile", code_anasol))%>%
+    na.omit(valeur)%>%
+    group_by(codeplot)%>%
+    summarise(Argilemean=mean(valeur))->Argilemean_final
+  
+  ##implementation sur ENV
+  left_join(ENV, Argilemean_final, by = "codeplot")->ENV
+  
+  ##Calcaire-----
+  FosseP%>%
+    filter(grepl("Calcaire", code_anasol))%>%
+    na.omit(valeur)%>%
+    group_by(codeplot)%>%
+    summarise(Calcmean=mean(valeur))->Calc_final
+  
+  ##implementation sur ENV
+  left_join(ENV, Calc_final, by = "codeplot")->ENV
+  
+  ##Calcium
+  
+  FosseP%>%
+    filter(grepl("Calcium", code_anasol))%>%
+    na.omit(valeur)%>%
+    group_by(codeplot)%>%
+    summarise(Camean=mean(valeur))->Camean_final
+  
+  ##implementation sur ENV
+  left_join(ENV, Camean_final, by = "codeplot")->ENV
+  
+  ##Fer
+  
+  FosseP%>%
+    filter(grepl("Fer", code_anasol))%>%
+    na.omit(valeur)%>%
+    group_by(codeplot)%>%
+    summarise(Fermean=mean(valeur))->fermean_final
+  
+  ##implementation sur ENV
+  left_join(ENV, fermean_final, by = "codeplot")->ENV
+  
+  ##Limons fins-----
+  
+  FosseP%>%
+    filter(grepl("Limons fins", code_anasol))%>%
+    na.omit(valeur)%>%
+    group_by(codeplot)%>%
+    summarise(Limfinmean=mean(valeur))->Limfinmean_final
+  
+  ##implementation sur ENV
+  left_join(ENV, Limfinmean_final, by = "codeplot")->ENV
+  
+  ##Limons grossiers----
+  
+  FosseP%>%
+    filter(grepl("Limons grossiers", code_anasol))%>%
+    na.omit(valeur)%>%
+    group_by(codeplot)%>%
+    summarise(Limgrosmean=mean(valeur))->Limgrosmean_final
+  
+  ##implementation sur ENV
+  left_join(ENV, Limgrosmean_final, by = "codeplot")->ENV
+  
+  ##Magnesium
+  
+  FosseP%>%
+    filter(grepl("Magnésium", code_anasol))%>%
+    na.omit(valeur)%>%
+    group_by(codeplot)%>%
+    summarise(mgmean=mean(valeur))->mgmean_final
+  
+  
+  ##implementation sur ENV
+  left_join(ENV, mgmean_final, by = "codeplot")->ENV
+  
+  ##Manganèse
+  
+  FosseP%>%
+    filter(grepl("Manganèse", code_anasol))%>%
+    na.omit(valeur)%>%
+    group_by(codeplot)%>%
+    summarise(Mnmean=mean(valeur))->Mnmean_final
+  
+  ##implementation sur ENV
+  left_join(ENV, Mnmean_final, by = "codeplot")->ENV
+  
+  ##Phosphore ----
+  FosseP%>%
+    filter(grepl("Phosphore", code_anasol))%>%
+    na.omit(valeur)%>%
+    group_by(codeplot)%>%
+    summarise(Phosmean=mean(valeur))->Phosmean_final
+  
+  ##implementation sur ENV
+  left_join(ENV, Phosmean_final, by = "codeplot")->ENV
+  
+  ##Potassium----
+  FosseP%>%
+    filter(grepl("Potassium", code_anasol))%>%
+    na.omit(valeur)%>%
+    group_by(codeplot)%>%
+    summarise(Kmean=mean(valeur))->Kmean_final
+  
+  ##implementation sur ENV
+  left_join(ENV, Kmean_final, by = "codeplot")->ENV
+  
+  
+  ##Sablesfins----
+  FosseP%>%
+    filter(grepl("Sables fins", code_anasol))%>%
+    na.omit(valeur)%>%
+    group_by(codeplot)%>%
+    summarise(Sablefinmean=mean(valeur))->Sablefin_final
+  
+  ##implementation sur ENV
+  left_join(ENV, Sablefin_final, by = "codeplot")->ENV
+  
+  ##Sables grossiers----
+  FosseP%>%
+    filter(grepl("Sables grossier", code_anasol))%>%
+    na.omit(valeur)%>%
+    group_by(codeplot)%>%
+    summarise(Sablegrosmean=mean(valeur))->Sablegros_final
+  
+  ##implementation sur ENV
+  left_join(ENV, Sablegros_final, by = "codeplot")->ENV
+  
+  ##Sodium-----
+  FosseP%>%
+    filter(grepl("Sodium", code_anasol))%>%
+    na.omit(valeur)%>%
+    group_by(codeplot)%>%
+    summarise(Namean=mean(valeur))->Namean_final
+  
+  ##implementation sur ENV
+  left_join(ENV, Namean_final, by = "codeplot")->ENV
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 
 #ENZYMES------
   ##PHOS
@@ -212,4 +373,4 @@ RS_veg_final<-Phyto%>%
   
 
 #Save ENV--------------
-  write.csv(ENV, file = paste0("data/derived-data/ENV_" , as.character(Sys.Date()) , ".csv"))
+  write.csv(ENV, file = paste0("data/derived-data/Envir/ENV_" , as.character(Sys.Date()) , ".csv"))

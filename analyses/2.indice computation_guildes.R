@@ -62,21 +62,20 @@ read.csv("data/derived-data/Traits/traits_homo_2023-04-27.csv", header=T, sep=",
 # Indice computation
 
 ## By Guild 
-      ###(e.g. detritivores)
+      ###(e.g. detritivores)-----
       detritivore_tr <- traits %>% 
       filter(trait_name %in% c("Body_length", "Habitat"))  
-      detritivore_ind  <- myIndices(DF = df[df$className %in% c("Diplopoda", "Isopoda", "Clitellata"),], 
+      detritivore_ind  <- myIndices(DF = df[df$orderName %in% c("Diplopoda", "Isopoda", "Clitellata"),], 
                               IDresol = "Espèce", TR = detritivore_tr)
-      view(detritivore_ind$alpha)
-      detritivore_ind$indmass
-      detritivore_ind$rankID
-
-
+      
       (detritivore_ind$alpha)->detrialphaM
 
-      write.csv(detrialphaM, file = paste0("data/derived-data/Traits/detriti/detrialphaM_" , as.character(Sys.Date()) , ".csv"))
-      #Maintenant on va essayer de passer du code ANI (detritvore_ind$alpha) au code des plots en moyennisant les traits. 
-      #Nécessaire pour les prochaines analyses 
+      ####Echelle : sample----
+     write.csv(detrialphaM, file = paste0("data/derived-data/Traits/detriti/detrialphaM_" , as.character(Sys.Date()) , ".csv"))
+      
+     
+      ####Echelle : plot----
+      
 
       #creation colone id_plot sur df pour l'exemple
       df%>%
@@ -101,21 +100,18 @@ read.csv("data/derived-data/Traits/traits_homo_2023-04-27.csv", header=T, sep=",
       write.csv(detrialphaplot, file = paste0("data/derived-data/Traits/detriti/detrialphaplot_" , as.character(Sys.Date()) , ".csv"))
       
       
-      ###By predators
+      ###By predators----
       predat_tr <- traits %>% 
-        filter(trait_name %in% c("Body_length", "Habitat"))  
-      predat_ind  <- myIndices(DF = df[df$familyName %in% c("carabidae"),], 
+        filter(trait_name %in% c("Body_length","Habitat","Motion_strategies"))  
+      predat_ind  <- myIndices(DF = df[df$familyName == "Carabidae",], 
                                     IDresol = "Espèce", TR = predat_tr)
-      view(predat_ind$alpha)
-      predat_ind$indmass
-      predat_ind$rankID
-      
-      
+    
+     
+      ####Echelle : sample----
       (predat_ind$alpha)->predatalphaM
       
       write.csv(detrialphaM, file = paste0("data/derived-data/Traits/detriti/detrialphaM_" , as.character(Sys.Date()) , ".csv"))
-      #Maintenant on va essayer de passer du code ANI (detritvore_ind$alpha) au code des plots en moyennisant les traits. 
-      #Nécessaire pour les prochaines analyses 
+        ####Echelle plot----
       
       #creation colone id_plot sur df pour l'exemple
       df%>%
@@ -138,4 +134,49 @@ read.csv("data/derived-data/Traits/traits_homo_2023-04-27.csv", header=T, sep=",
       
       #Sortie du df pour les plots 
       write.csv(predataphaplot, file = paste0("data/derived-data/Traits/predat/detrialphaplot_" , as.character(Sys.Date()) , ".csv"))
+
+
+      ###By herbivores----
+      herbi_tr <- traits %>% 
+        filter(trait_name %in% c("Body_length","Habitat"))  
+      herbi_ind  <- myIndices(DF = df[df$orderName %in% c("Orthoptera"),], 
+                              IDresol = "Espèce", TR = herbi_tr)
+      
+        ####Echelle : sample---- 
+      (herbi_ind$alpha)->herbialphaM
+      
+      write.csv(herbialphaM, file = paste0("data/derived-data/Traits/herbi/herbialphaM_" , as.character(Sys.Date()) , ".csv"))
+      ####Echelle plot----
+      
+      #creation colone id_plot sur df pour l'exemple
+      df%>%
+        unite(id_plot, gradient, alti)%>%
+        select(c(id_sample, id_plot)) -> colones_types
+      
+      #Fusion entre colone_types et le tableur de sortie 
+      left_join(herbialphaM, colones_types, by="id_sample")%>%
+        relocate(id_plot, .after = id_sample)->herbialphaM
+      
+      #Moyennisage selon non pas id_sample mais selon id_plot
+      herbialphaM%>%
+        group_by(id_plot)%>%
+        summarise(ab = mean(ab),
+                  mass= mean(mass),
+                  q0=mean(q0),
+                  q1=mean(q1),
+                  q2=mean(q2),
+                  Body_length=mean(Body_length))->herbialphaplot
+      
+      #Sortie du df pour les analyses
+      write.csv(herbialphaplot, file = paste0("data/derived-data/Traits/herbi/herbialphaplot_" , as.character(Sys.Date()) , ".csv"))
+      
+      
+      
+     
+      ###by Parasits
+
+################
+#Zone de travaux
+################
+
       

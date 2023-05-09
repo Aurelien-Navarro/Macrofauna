@@ -66,7 +66,6 @@ pivot_wider(tp2,
             values_fill = 0)->ESP_plot
       
   ##Preparation de esp_gradient-----
-    #reprendre une matrice qui n'est pas une matrice esp deja prete 
           ESP_samplenomatr%>%
   filter(!grepl("0", abundance))%>%
   mutate(name2 = ifelse(name == "", "unid", name)) %>% ##supression des vides 
@@ -80,7 +79,7 @@ pivot_wider(tp2,
             values_fill = 0)->ESP_grad
 
   ##Preparation de esp_massif-----
-    #reprendre une matrice qui n'est pas une matrice esp deja prete
+    
 
  ESP_samplenomatr%>%
   filter(!grepl("0", abundance))%>%
@@ -119,26 +118,27 @@ pivot_wider(tp5.3,
             values_fill = 0)->ESP_milieu
 
 
-#creation de matrices de dissimilarite par couples de site
+  ##creation de matrices de dissimilarite par couples de site----
+    #passage de l'ID en index
 ESP_sample%>%
   remove_rownames()%>%
-  column_to_rownames()->ESP_sample_ind #passage samples en index
+  column_to_rownames('id_sample')->ESP_sample_ind #passage samples en index
 
 ESP_plot%>%
   remove_rownames()%>%
-  column_to_rownames()->ESP_plot_ind
+  column_to_rownames('id_plot')->ESP_plot_ind
 
 ESP_grad%>%
   remove_rownames()%>%
-  column_to_rownames()->ESP_grad_ind
+  column_to_rownames('gradient')->ESP_grad_ind
 
 ESP_massif%>%
   remove_rownames()%>%
-  column_to_rownames()->ESP_massif_ind
+  column_to_rownames('massif')->ESP_massif_ind
 
 ESP_milieu%>%
   remove_rownames()%>%
-  column_to_rownames()->ESP_milieu_ind
+  column_to_rownames('Milieu2')->ESP_milieu_ind
 
 
   ##dissimilarite sur esp_sample----
@@ -173,6 +173,14 @@ jac_plots_C5 <- as.matrix(C5$beta.jac)
 
 #faible beta moyenne : elements semblables 
 #forte beta moyenne : element dissemblables 
+
+#Dissimilarité Moyenne
+
+mean(jac_plots_C1)->BetaC1
+mean(jac_plots_C2)->BetaC2
+mean(jac_plots_C3)->BetaC3
+mean(jac_plots_C4)->BetaC4
+mean(jac_plots_C5)->BetaC5
 
 Echelle <- c("Echantillons","plot","gradient","massif","habitat")
 Dissimilarite <-c(BetaC1, BetaC2, BetaC3, BetaC4, BetaC5)
@@ -291,3 +299,5 @@ plot(spe.part.all,
      bg = c("seagreen3", "mediumpurple", "purple"), alpha = 80,
      digits = 2,
      cex = 1)
+
+
