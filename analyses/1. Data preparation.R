@@ -14,7 +14,7 @@
 
 
 # Libraries
-librarian::shelf(tidyr, dplyr, ggplot2, rinat, RODBC, stringr)
+librarian::shelf(tidyr, dplyr, ggplot2, rinat, RODBC, stringr, rgnparser)
 
 # Database queries 
 ## Alternative: importing data from a csv file
@@ -24,7 +24,7 @@ librarian::shelf(tidyr, dplyr, ggplot2, rinat, RODBC, stringr)
 ### Set up driver info and database path
 #DRIVERINFO <- "driver={CData ODBC Driver for Microsoft Access};"
 DRIVERINFO <- "driver={Microsoft Access Driver (*.mdb, *.accdb)};"
-MDBPATH <- "data/raw-data/fds_230425.accdb"
+MDBPATH <- "data/raw-data/fds_230510.accdb"
 PATH <- paste0(DRIVERINFO, "DBQ=", MDBPATH)
 
 ### Establish connection

@@ -23,7 +23,7 @@ librarian::shelf(dplyr, forcats, stringr, ggplot2)
 
 # Data load
 ## Community data load 
-df <- read.csv("data/derived-data/Esp/clean_data_2023-04-25.csv", 
+df <- read.csv("data/derived-data/Esp/clean_data_2023-05-10.csv", 
                h = T, sep = ",") 
 df$rankName <-  fct_recode(df$rankName, "Famille" = "Sous-Famille",
                            "Famille" = "Super-Famille",
@@ -42,7 +42,7 @@ traits <- traits %>%
   filter(Taxa %in% c("Arachnida", "Coleoptera", "Dermaptera", "Diplopoda", "Gastropoda",
                      "Isopoda", "Oligochaeta", "Orthoptera","Hymenoptera"))
 source("analyses/functions/my_taxonChecker function code.R")
-#trait_taxa_correct0 <- my_taxonChecker(traits$taxon_name)
+trait_taxa_correct0 <- my_taxonChecker(traits$taxon_name)
 trait_taxa_correct <- trait_taxa_correct0 %>%
   mutate(canonic = ifelse(is.na(canonic) == T, scientificName, canonic))
 trait_taxa_correct%>%
