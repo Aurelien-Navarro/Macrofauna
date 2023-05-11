@@ -99,7 +99,7 @@ ESP_matrice0%>%
   left_join(localite, by="id_sample")%>%
   left_join(massif, by="id_sample")%>%
   left_join(milieu, by="id_sample")%>%
-  select(c(id_plot, gradient, milieumass, massif))%>%
+  select(c(id_sample, id_plot, gradient, milieumass, massif))%>%
   relocate(milieumass, .before=id_plot)->echelle#passage par matrice 0 afin de conserver l'ordre des colones id sample
 
 
@@ -111,24 +111,27 @@ adipart(ESP_matrice, echelle,
         nsimul = 150,
         )->addipartESP
 
-write.csv(addipartESP$statistic, file = paste0("outputs/PartitionVariance/Orthopteres" , as.character(Sys.Date()) , ".csv"))
+write.csv(addipartESP$statistic, file = paste0("outputs/PartitionVariance_fichiers csv/Orthoptera/Orthopteres_alpha" , as.character(Sys.Date()) , ".csv"))
 
     ###hierarchical null model hypothesis
 
 hiersimu(ESP_matrice, echelle,  FUN=diversity, relative=TRUE, nsimul=150)->Nullmod
-write.csv(Nullmod$statistic, file = paste0("outputs/PartitionVariance/Orthopteres_nullmodel" , as.character(Sys.Date()) , ".csv"))
+write.csv(Nullmod$statistic, file = paste0("outputs/PartitionVariance_fichiers csv/Orthoptera/Orthopteres_nullmodel" , as.character(Sys.Date()) , ".csv"))
 
 ###Presentation des resultats----
 
-niveaux<-c(sum(addipartESP$statistic[c(1:6)]),
-           sum(addipartESP$statistic[c(2:7)]),
-           sum(addipartESP$statistic[c(3:8)]),
-           sum(addipartESP$statistic[c(4:9)]))
+addipartESP$statistic
+
+
+niveaux<-c(sum(addipartESP$statistic[c(1,6)]),
+           sum(addipartESP$statistic[c(2,7)]),
+           sum(addipartESP$statistic[c(3,8)]),
+           sum(addipartESP$statistic[c(4,9)]))
 sum(niveaux)->Sumniveaux
-niveaufinal<-c(sum(addipartESP$statistic[c(1:6)])/Sumniveaux,
-               sum(addipartESP$statistic[c(2:7)])/Sumniveaux,
-               sum(addipartESP$statistic[c(3:8)])/Sumniveaux,
-               sum(addipartESP$statistic[c(4:9)])/Sumniveaux)
+niveaufinal<-c(sum(addipartESP$statistic[c(1,6)])/Sumniveaux,
+               sum(addipartESP$statistic[c(2,7)])/Sumniveaux,
+               sum(addipartESP$statistic[c(3,8)])/Sumniveaux,
+               sum(addipartESP$statistic[c(4,9)])/Sumniveaux)
 sum(niveaufinal)#doit faire 1
 factor1<-(c("Intra station","Milieu","Station","Gradient"))
 data.frame(x=factor1, y=niveaufinal)->plotvariance
@@ -136,7 +139,7 @@ plotvariance%>%
   rename(Echelle = x)%>%
   rename(Variance_expliquee = y)->plotvariance
 
-write.csv(plotvariance, file = paste0("outputs/PartitionVariance/Orthopteres_niveau" , as.character(Sys.Date()) , ".csv"))
+write.csv(plotvariance, file = paste0("outputs/PartitionVariance_fichiers csv/Orthoptera/Orthopteres_niveau" , as.character(Sys.Date()) , ".csv"))
 
 ggplot(plotvariance, aes(x='Echelle', y=Variance_expliquee, fill=Echelle, )) +
   geom_bar(stat="identity", width=1) +
@@ -252,23 +255,23 @@ adipart(ESP_matrice, echelle,
         relative = T,
         nsimul = 150,
 )->addipartESP
-write.csv(addipartESP$statistic, file = paste0("outputs/PartitionVariance/Decomposeurs" , as.character(Sys.Date()) , ".csv"))
+write.csv(addipartESP$statistic, file = paste0("outputs/PartitionVariance_fichiers csv/Decompo/Decompo_alpha" , as.character(Sys.Date()) , ".csv"))
     ###hierarchical null model hypothesis
 
 hiersimu(ESP_matrice, echelle,  FUN=diversity, relative=TRUE, nsimul=150)->Nullmod
-write.csv(Nullmod$statistic, file = paste0("outputs/PartitionVariance/NullModelDecomposeurs" , as.character(Sys.Date()) , ".csv"))
+write.csv(Nullmod$statistic, file = paste0("outputs/PartitionVariance_fichiers csv/Decompo/Decompo_Nullmod" , as.character(Sys.Date()) , ".csv"))
 
     ###Presentation des resultats----
 
-niveaux<-c(sum(addipartESP$statistic[c(1:6)]),
-           sum(addipartESP$statistic[c(2:7)]),
-           sum(addipartESP$statistic[c(3:8)]),
-           sum(addipartESP$statistic[c(4:9)]))
+niveaux<-c(sum(addipartESP$statistic[c(1,6)]),
+           sum(addipartESP$statistic[c(2,7)]),
+           sum(addipartESP$statistic[c(3,8)]),
+           sum(addipartESP$statistic[c(4,9)]))
 sum(niveaux)->Sumniveaux
-niveaufinal<-c(sum(addipartESP$statistic[c(1:6)])/Sumniveaux,
-               sum(addipartESP$statistic[c(2:7)])/Sumniveaux,
-               sum(addipartESP$statistic[c(3:8)])/Sumniveaux,
-               sum(addipartESP$statistic[c(4:9)])/Sumniveaux)
+niveaufinal<-c(sum(addipartESP$statistic[c(1,6)])/Sumniveaux,
+               sum(addipartESP$statistic[c(2,7)])/Sumniveaux,
+               sum(addipartESP$statistic[c(3,8)])/Sumniveaux,
+               sum(addipartESP$statistic[c(4,9)])/Sumniveaux)
 sum(niveaufinal)#doit faire 1
 factor1<-(c("Intra station","Milieu","Station","Gradient"))
 data.frame(x=factor1, y=niveaufinal)->plotvariance
@@ -276,7 +279,7 @@ plotvariance%>%
   rename(Echelle = x)%>%
   rename(Variance_expliquee = y)->plotvariance
 
-write.csv(plotvariance, file = paste0("outputs/PartitionVariance/Decompo_niveau" , as.character(Sys.Date()) , ".csv"))
+write.csv(plotvariance, file = paste0("outputs/PartitionVariance_fichiers csv/Decompo/Decompo_niveau" , as.character(Sys.Date()) , ".csv"))
 
 
 ggplot(plotvariance, aes(x='Echelle', y=Variance_expliquee, fill=Echelle, )) +
@@ -392,23 +395,23 @@ adipart(ESP_matrice, echelle,
         relative = T,
         nsimul = 150,
         )->addipartESP
-write.csv(addipartESP$statistic, file = paste0("outputs/PartitionVariance/Carabidae" , as.character(Sys.Date()) , ".csv"))
+write.csv(addipartESP$statistic, file = paste0("outputs/PartitionVariance_fichiers csv/Carabidae/Carab_alpha" , as.character(Sys.Date()) , ".csv"))
 ###hierarchical null model hypothesis
 
 hiersimu(ESP_matrice, echelle,  FUN=diversity, relative=TRUE, nsimul=150)->Nullmod
-write.csv(Nullmod$statistic, file = paste0("outputs/PartitionVariance/NullModelCarabidae" , as.character(Sys.Date()) , ".csv"))
+write.csv(Nullmod$statistic, file = paste0("outputs/PartitionVariance_fichiers csv/Carabidae/Carab_NullMod" , as.character(Sys.Date()) , ".csv"))
     ###Presentation des resultats----
 
 
-niveaux<-c(sum(addipartESP$statistic[c(1:6)]),
-           sum(addipartESP$statistic[c(2:7)]),
-           sum(addipartESP$statistic[c(3:8)]),
-           sum(addipartESP$statistic[c(4:9)]))
+niveaux<-c(sum(addipartESP$statistic[c(1,6)]),
+           sum(addipartESP$statistic[c(2,7)]),
+           sum(addipartESP$statistic[c(3,8)]),
+           sum(addipartESP$statistic[c(4,9)]))
 sum(niveaux)->Sumniveaux
-niveaufinal<-c(sum(addipartESP$statistic[c(1:6)])/Sumniveaux,
-               sum(addipartESP$statistic[c(2:7)])/Sumniveaux,
-               sum(addipartESP$statistic[c(3:8)])/Sumniveaux,
-               sum(addipartESP$statistic[c(4:9)])/Sumniveaux)
+niveaufinal<-c(sum(addipartESP$statistic[c(1,6)])/Sumniveaux,
+               sum(addipartESP$statistic[c(2,7)])/Sumniveaux,
+               sum(addipartESP$statistic[c(3,8)])/Sumniveaux,
+               sum(addipartESP$statistic[c(4,9)])/Sumniveaux)
 sum(niveaufinal)#doit faire 1
 factor1<-(c("Intra station","Milieu","Station","Gradient"))
 data.frame(x=factor1, y=niveaufinal)->plotvariance
@@ -416,7 +419,7 @@ plotvariance%>%
   rename(Echelle = x)%>%
   rename(Variance_expliquee = y)->plotvariance
 
-write.csv(plotvariance, file = paste0("outputs/PartitionVariance/Carab_niveau" , as.character(Sys.Date()) , ".csv"))
+write.csv(plotvariance, file = paste0("outputs/PartitionVariance_fichiers csv/Carabidae/Carab_niveau" , as.character(Sys.Date()) , ".csv"))
 
 
 ggplot(plotvariance, aes(x='Echelle', y=Variance_expliquee, fill=Echelle, )) +
