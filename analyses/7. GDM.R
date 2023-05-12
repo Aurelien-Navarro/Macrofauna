@@ -15,9 +15,10 @@ library(FactoMineR)
 library(factoextra)
 library(pander)
 library(tibble)
+library(tidyverse)
 
 #injection des DF 
-read.csv("data/derived-data/Envir/ENV_2023-05-09.csv", row.names = 1)->ENV
+read.csv("data/derived-data/Envir/ENV_2023-05-11.csv", row.names = 1)->ENV
 read.csv("data/derived-data/Traits/traits_homo_2023-04-27.csv",header=T, sep=",")->TRAITS
 read.csv("data/raw-data/envir/phyto.data3.csv",header=T, sep=",")->Phyto
 
@@ -38,7 +39,7 @@ Phyto%>%
   summarise(tot = sum(ab))->tp
 
 
-#transformation en matrice
+  ##transformation en matrice
 pivot_wider(tp,
             id_cols = 'id_plot',
             names_from = 'lb_nom', 
@@ -103,7 +104,7 @@ as.matrix(Dissvdt)->Dissvdt
 #rajouter la colone id plot à la matrice de dissimilarite
 cbind(Dissvdt, idplot)->gmdist
 
-#GDM----------
+  ##GDM----------
 
     ##creation de l'objet-------
 gdmdata <- formatsitepair(bioData=gmdist, 
@@ -195,7 +196,7 @@ as.matrix(Dissvdt)->Dissvdt
 #rajouter la colone id plot à la matrice de dissimilarite
 cbind(Dissvdt, idplot)->gmdist
 
-#GDM----------
+  ##GDM----------
 
 ##creation de l'objet-------
 gdmdata <- formatsitepair(bioData=gmdist, 
