@@ -26,7 +26,7 @@ ESP%>%
   ##ORTHOPTERA-----
 ESP%>%
   filter(!grepl("0", abundance))%>%
-  filter(rankName %in% "Espèce")%>%
+  filter(rankName %in% "EspÃ¨ce")%>%
   filter(method %in% "barber")%>%
   filter(orderName %in% "Orthoptera")%>% 
   mutate(name2 = ifelse(name == "", "unid", name)) %>% ##supression des vides 
@@ -121,16 +121,16 @@ ESP_matrice0%>%
 
 
     ###Partitition de variance addititve-----
-adipart(ESP_matrice, echelle,
+adipart(ESP_matrice, echelle[,-3],
         index=c("richness","shannon","simpson"), 
         weights = c("unif","prop"),
         relative = T,
         nsimul = 150,
-        )->addipartESP
+        )->addipartESP_ortho
 
-addipartESP$statistic
+addipartESP_ortho$statistic
 
-write.csv(addipartESP$statistic, file = paste0("outputs/PartitionVariance_fichiers csv/Orthoptera/Orthopteres_alpha" , as.character(Sys.Date()) , ".csv"))
+write.csv(addipartESP_ortho$statistic, file = paste0("outputs/PartitionVariance_fichiers csv/Orthoptera/Orthopteres_alpha" , as.character(Sys.Date()) , ".csv"))
 
     ###hierarchical null model hypothesis
 
@@ -141,6 +141,7 @@ write.csv(Nullmod$statistic, file = paste0("outputs/PartitionVariance_fichiers c
 ###Presentation des resultats----
 
 #creation d'un tableau pour les resultats
+<<<<<<< HEAD
 
 #Bidouillage
 test<-sum(addipartESP$statistic[c(1,7:11)])
@@ -153,6 +154,10 @@ niveaux<-c(sum(addipartESP$statistic[c(1,7)]),
 #-----------------------
 
 factor1<-(c("Echantillon","Station","Milieu","Gradient", "Massif"))
+=======
+niveaux<-addipartESP$statistic_ortho[c(1,6:9)]
+factor1<-(c("1.Alpha", "2.B-Echan","3.B-Gradient","4.B-Gradient", "5.B-Massif"))
+>>>>>>> main
 data.frame(x=factor1, y=niveaux)->plotvariance
 plotvariance%>%
   rename(Echelle = x)%>%
@@ -170,17 +175,16 @@ ggplot(plotvariance, aes(x='Echelle', y=Variance_expliquee, fill=Echelle, )) +
     title    = "Partition de variance taxonomique des Orthoptères",
     subtitle = "Dispositif Orchamp, 2021-2022",
     x        = "Echelles d'étude",
-    y        = "Porportion de Variance expliquée",
-    caption  = "mpg data from the ggplot2 package")
+    y        = "Porportion de Variance expliquée")
 
 ggplot(plotvariance) +
   aes(x = Echelle, y = Variance_expliquee, fill = Echelle) +
-  geom_col() +
+  geom_bar(stat = "identity")+
   scale_fill_hue(direction = 1) +
   labs(
     x = "Echelle",
     y = "% de variance expliquee",
-    title = "Partition de la variance taxonomique (diversité alpha) des orthoptères",
+    title = "Partition de la variance taxonomique des orthoptères",
     subtitle = "Dispositif Orchamp, 2021-2022, pièges Barber"
   ) +
   theme_minimal()
@@ -192,7 +196,7 @@ ggplot(plotvariance) +
 
 ESP%>%
   filter(!grepl("0", abundance))%>%
-  filter(rankName %in% "Espèce")%>%
+  filter(rankName %in% "EspÃ¨ce")%>%
   filter(method %in% "barber")%>%
   filter(familyName %in% "Carabidae")%>% 
   mutate(name2 = ifelse(name == "", "unid", name)) %>% ##supression des vides 
@@ -287,14 +291,14 @@ ESP_matrice0%>%
 
 
 ###Partitition de variance addititve-----
-adipart(ESP_matrice, echelle,
+adipart(ESP_matrice, echelle[,-3],
         index=c("richness","shannon","simpson"), 
         weights = c("unif","prop"),
         relative = T,
         nsimul = 150,
-)->addipartESP
+)->addipartESP_carab
 
-addipartESP$statistic
+addipartESP_carab$statistic
 
 write.csv(addipartESP$statistic, file = paste0("outputs/PartitionVariance_fichiers csv/Orthoptera/Orthopteres_alpha" , as.character(Sys.Date()) , ".csv"))
 
@@ -307,22 +311,9 @@ write.csv(Nullmod$statistic, file = paste0("outputs/PartitionVariance_fichiers c
 ###Presentation des resultats----
 
 #creation d'un tableau pour les resultats
-niveaux<-c(sum(addipartESP$statistic[c(1,6)]),
-           sum(addipartESP$statistic[c(2,7)]),
-           sum(addipartESP$statistic[c(3,8)]),
-           sum(addipartESP$statistic[c(4,9)]),
-           sum(addipartESP$statistic[c(5,10)])
-)
-sum(niveaux)->Sumniveaux
-niveaufinal<-c(sum(addipartESP$statistic[c(1,6)])/Sumniveaux,
-               sum(addipartESP$statistic[c(2,7)])/Sumniveaux,
-               sum(addipartESP$statistic[c(3,8)])/Sumniveaux,
-               sum(addipartESP$statistic[c(4,9)])/Sumniveaux,
-               sum(addipartESP$statistic[c(5,10)])/Sumniveaux
-)
-sum(niveaufinal)#doit faire 1
-factor1<-(c("Echantillon","Station","Milieu","Gradient", "Massif"))
-data.frame(x=factor1, y=niveaufinal)->plotvariance
+niveaux<-addipartESP$statistic_carab[c(1,6:9)]
+factor1<-(c("1.Alpha", "2.B-Echan","3.B-Gradient","4.B-Gradient", "5.B-Massif"))
+data.frame(x=factor1, y=niveaux)->plotvariance
 plotvariance%>%
   rename(Echelle = x)%>%
   rename(Variance_expliquee = y)->plotvariance
@@ -344,24 +335,24 @@ ggplot(plotvariance, aes(x='Echelle', y=Variance_expliquee, fill=Echelle, )) +
 
 ggplot(plotvariance) +
   aes(x = Echelle, y = Variance_expliquee, fill = Echelle) +
-  geom_col() +
+  geom_bar(stat = "identity") +
   scale_fill_hue(direction = 1) +
   labs(
     x = "Echelle",
     y = "% de variance expliquee",
-    title = "Partition de la variance taxonomique (diversité alpha) des Carabiques",
+    title = "Partition de la variance taxonomique des Carabiques",
     subtitle = "Dispositif Orchamp, 2021-2022, pièges Barber"
   ) +
   theme_minimal()
 
 
-    ##DETRITVORES------
+    ##Vers de terre------
 
 ESP%>%
   filter(!grepl("0", abundance))%>%
-  filter(rankName %in% "Espèce")%>%
+  filter(rankName %in% "EspÃ¨ce")%>%
   filter(method %in% c("tri manuel","tri manuel qualitatif","chasse à vue"))%>%
-  filter(orderName %in% "Isopoda"|className%in%c("Diplopoda","Clitellata"))%>% 
+  filter(className %in% c("Clitellata"))%>% 
   mutate(name2 = ifelse(name == "", "unid", name)) %>% ##supression des vides 
   group_by(id_sample, name2)%>%
   summarise(tot = sum(abundance))->tp1
@@ -454,14 +445,14 @@ ESP_matrice0%>%
 
 
 ###Partitition de variance addititve-----
-adipart(ESP_matrice, echelle,
+adipart(ESP_matrice, echelle[,-3],
         index=c("richness","shannon","simpson"), 
         weights = c("unif","prop"),
         relative = T,
         nsimul = 150,
-)->addipartESP
+)->addipartESP_vdt
 
-addipartESP$statistic
+addipartESP_vdt$statistic
 
 write.csv(addipartESP$statistic, file = paste0("outputs/PartitionVariance_fichiers csv/Orthoptera/Orthopteres_alpha" , as.character(Sys.Date()) , ".csv"))
 
@@ -474,22 +465,9 @@ write.csv(Nullmod$statistic, file = paste0("outputs/PartitionVariance_fichiers c
 ###Presentation des resultats----
 
 #creation d'un tableau pour les resultats
-niveaux<-c(sum(addipartESP$statistic[c(1,6)]),
-           sum(addipartESP$statistic[c(2,7)]),
-           sum(addipartESP$statistic[c(3,8)]),
-           sum(addipartESP$statistic[c(4,9)]),
-           sum(addipartESP$statistic[c(5,10)])
-)
-sum(niveaux)->Sumniveaux
-niveaufinal<-c(sum(addipartESP$statistic[c(1,6)])/Sumniveaux,
-               sum(addipartESP$statistic[c(2,7)])/Sumniveaux,
-               sum(addipartESP$statistic[c(3,8)])/Sumniveaux,
-               sum(addipartESP$statistic[c(4,9)])/Sumniveaux,
-               sum(addipartESP$statistic[c(5,10)])/Sumniveaux
-)
-sum(niveaufinal)#doit faire 1
-factor1<-(c("Echantillon","Station","Milieu","Gradient", "Massif"))
-data.frame(x=factor1, y=niveaufinal)->plotvariance
+niveaux<-addipartESP_vdt$statistic[c(1,6:9)]
+factor1<-(c("1.Alpha", "2.B-Echan","3.B-Gradient","4.B-Gradient", "5.B-Massif"))
+data.frame(x=factor1, y=niveaux)->plotvariance
 plotvariance%>%
   rename(Echelle = x)%>%
   rename(Variance_expliquee = y)->plotvariance
@@ -511,18 +489,347 @@ ggplot(plotvariance, aes(x='Echelle', y=Variance_expliquee, fill=Echelle, )) +
 
 ggplot(plotvariance) +
   aes(x = Echelle, y = Variance_expliquee, fill = Echelle) +
-  geom_col() +
+  geom_bar(stat = "identity") +
   scale_fill_hue(direction = 1) +
   labs(
     x = "Echelle",
     y = "% de variance expliquee",
-    title = "Partition de la variance taxonomique (diversité alpha) des Detritivores",
+    title = "Partition de la variance taxonomique des vers de terre",
     subtitle = "Dispositif Orchamp, 2021-2022, Tri manuel, qualitatif et chasse à vue"
   ) +
   theme_minimal()
 
 
+##Diplopodes------
+
+ESP%>%
+  filter(!grepl("0", abundance))%>%
+  filter(rankName %in% "EspÃ¨ce")%>%
+  #filter(method %in% c("tri manuel","tri manuel qualitatif","chasse à vue"))%>%
+  filter(className %in% c("Diplopoda"))%>% 
+  mutate(name2 = ifelse(name == "", "unid", name)) %>% ##supression des vides 
+  group_by(id_sample, name2)%>%
+  summarise(tot = sum(abundance))->tp1
+###transfo en matrice
+pivot_wider(tp1,
+            id_cols = 'id_sample',
+            names_from = 'name2', 
+            values_from = 'tot',
+            values_fill = 0)->ESP_matrice0
+
+#passage de la colone id en index
+ESP_matrice0%>%
+  remove_rownames()%>%
+  column_to_rownames('id_sample')->ESP_matrice
+
+###tableau des echelles----
+
+
+#echelle de l echantillon
+ESP%>%
+  filter(!grepl("0", abundance))%>%
+  distinct(id_sample, .keep_all=T)%>%
+  select(id_sample) ->sample
 
 
 
+#echelle du plot (gradient et altitude)
+ESP%>%
+  filter(!grepl("0", abundance))%>%
+  distinct(id_sample, .keep_all=T)%>%
+  unite(id_plot, gradient, alti)%>%
+  select(c(id_sample, id_plot)) ->plot
 
+#echelle de l'habitat 
+#importation du tableau qui possède les habitats
+read.csv("data/raw-data/Envir/Habitat.csv", header = T, sep=",")->habit0
+
+
+habit0%>%
+  select(c(Milieu, id_plot))%>%
+  left_join(plot, by='id_plot')%>%
+  left_join(localite, by='id_sample')%>%
+  unite(habitat, Milieu, gradient)%>%
+  select(c(id_sample, habitat))->milieu
+
+
+#echelle du gradient (localité)
+ESP%>%
+  filter(!grepl("0", abundance))%>%
+  distinct(id_sample, .keep_all=T)%>%
+  select(c(id_sample, gradient))->localite
+
+#echelle de l'altitude
+ESP%>%
+  filter(!grepl("0", abundance))%>%
+  distinct(id_sample, .keep_all=T)%>%
+  select(c(id_sample, alti)) ->altitude
+
+
+#echelle du massif (Alpes S ou AlpesN ou pyr)
+ESP%>%
+  filter(!grepl("0", abundance))%>%
+  distinct(id_sample, .keep_all=T)%>%
+  select(c(id_sample, gradient))%>%
+  mutate(massif = case_when(gradient %in% c("MSB","VER","CAU")~"Pyr",
+                            gradient %in% c("VCHA", "VTN", "MOU","RIS")~"AlpS",
+                            gradient %in% c("VAL", "BOU", "TAN","PEC","ARG","ARM")~"AlpN"))%>%
+  select(c(id_sample, massif))->massif
+
+
+
+#Echelle totale(gamma)
+ESP%>%
+  distinct(id_sample, .keep_all=T)%>%
+  add_column(Dispositif = "Orchamp")%>%
+  select(c("id_sample","Dispositif"))->gamma
+
+
+#Concaténation 
+
+ESP_matrice0%>%
+  inner_join(plot, by="id_sample")%>%
+  inner_join(altitude, by="id_sample")%>%
+  inner_join(milieu, by="id_sample")%>%
+  inner_join(localite, by="id_sample")%>%
+  inner_join(massif, by="id_sample")%>%
+  inner_join(gamma, by="id_sample")%>%
+  select(c(id_sample, id_plot, habitat, gradient, massif, Dispositif))%>%
+  relocate(habitat, .before=gradient)->echelle#passage par matrice 0 afin de conserver l'ordre des colones id sample
+
+
+###Partitition de variance addititve-----
+adipart(ESP_matrice, echelle[,-3],
+        index=c("richness","shannon","simpson"), 
+        weights = c("unif","prop"),
+        relative = T,
+        nsimul = 150,
+)->addipartESP_diplo
+
+addipartESP_diplo$statistic
+
+write.csv(addipartESP$statistic, file = paste0("outputs/PartitionVariance_fichiers csv/Orthoptera/Orthopteres_alpha" , as.character(Sys.Date()) , ".csv"))
+
+###hierarchical null model hypothesis
+
+hiersimu(ESP_matrice, echelle,  FUN=diversity, relative=TRUE, nsimul=150)->Nullmod
+Nullmod$statistic
+write.csv(Nullmod$statistic, file = paste0("outputs/PartitionVariance_fichiers csv/Orthoptera/Orthopteres_nullmodel" , as.character(Sys.Date()) , ".csv"))
+
+###Presentation des resultats----
+
+#creation d'un tableau pour les resultats
+niveaux<-addipartESP_vdt$statistic[c(1,6:9)]
+factor1<-(c("1.Alpha", "2.B-Echan","3.B-Gradient","4.B-Gradient", "5.B-Massif"))
+data.frame(x=factor1, y=niveaux)->plotvariance
+plotvariance%>%
+  rename(Echelle = x)%>%
+  rename(Variance_expliquee = y)->plotvariance
+
+write.csv(plotvariance, file = paste0("outputs/PartitionVariance_fichiers csv/Orthoptera/Orthopteres_niveau" , as.character(Sys.Date()) , ".csv"))
+
+#plot du tableau
+
+ggplot(plotvariance, aes(x='Echelle', y=Variance_expliquee, fill=Echelle, )) +
+  geom_bar(stat="identity", width=1) +
+  coord_polar("y", start=0)+
+  theme_void()+
+  labs(
+    title    = "Partition de variance taxonomique des Detritivores",
+    subtitle = "Dispositif Orchamp, 2021-2022, Tri manuel, qualitatif et chasse à vue",
+    x        = "Echelles d'étude",
+    y        = "Porportion de Variance expliquée",
+    caption  = "mpg data from the ggplot2 package")
+
+ggplot(plotvariance) +
+  aes(x = Echelle, y = Variance_expliquee, fill = Echelle) +
+  geom_bar(stat = "identity") +
+  scale_fill_hue(direction = 1) +
+  labs(
+    x = "Echelle",
+    y = "% de variance expliquee",
+    title = "Partition de la variance taxonomique des vers de terre",
+    subtitle = "Dispositif Orchamp, 2021-2022, Tri manuel, qualitatif et chasse à vue"
+  ) +
+  theme_minimal()
+
+
+##Geotrupidae------
+
+ESP%>%
+  filter(!grepl("0", abundance))%>%
+  filter(rankName %in% "EspÃ¨ce")%>%
+  #filter(method %in% c("tri manuel","tri manuel qualitatif","chasse à vue"))%>%
+  filter(familyName %in% c("Geotrupidae"))%>% 
+  mutate(name2 = ifelse(name == "", "unid", name)) %>% ##supression des vides 
+  group_by(id_sample, name2)%>%
+  summarise(tot = sum(abundance))->tp1
+###transfo en matrice
+pivot_wider(tp1,
+            id_cols = 'id_sample',
+            names_from = 'name2', 
+            values_from = 'tot',
+            values_fill = 0)->ESP_matrice0
+
+#passage de la colone id en index
+ESP_matrice0%>%
+  remove_rownames()%>%
+  column_to_rownames('id_sample')->ESP_matrice
+
+###tableau des echelles----
+
+
+#echelle de l echantillon
+ESP%>%
+  filter(!grepl("0", abundance))%>%
+  distinct(id_sample, .keep_all=T)%>%
+  select(id_sample) ->sample
+
+
+
+#echelle du plot (gradient et altitude)
+ESP%>%
+  filter(!grepl("0", abundance))%>%
+  distinct(id_sample, .keep_all=T)%>%
+  unite(id_plot, gradient, alti)%>%
+  select(c(id_sample, id_plot)) ->plot
+
+#echelle de l'habitat 
+#importation du tableau qui possède les habitats
+read.csv("data/raw-data/Envir/Habitat.csv", header = T, sep=",")->habit0
+
+
+habit0%>%
+  select(c(Milieu, id_plot))%>%
+  left_join(plot, by='id_plot')%>%
+  left_join(localite, by='id_sample')%>%
+  unite(habitat, Milieu, gradient)%>%
+  select(c(id_sample, habitat))->milieu
+
+
+#echelle du gradient (localité)
+ESP%>%
+  filter(!grepl("0", abundance))%>%
+  distinct(id_sample, .keep_all=T)%>%
+  select(c(id_sample, gradient))->localite
+
+#echelle de l'altitude
+ESP%>%
+  filter(!grepl("0", abundance))%>%
+  distinct(id_sample, .keep_all=T)%>%
+  select(c(id_sample, alti)) ->altitude
+
+
+#echelle du massif (Alpes S ou AlpesN ou pyr)
+ESP%>%
+  filter(!grepl("0", abundance))%>%
+  distinct(id_sample, .keep_all=T)%>%
+  select(c(id_sample, gradient))%>%
+  mutate(massif = case_when(gradient %in% c("MSB","VER","CAU")~"Pyr",
+                            gradient %in% c("VCHA", "VTN", "MOU","RIS")~"AlpS",
+                            gradient %in% c("VAL", "BOU", "TAN","PEC","ARG","ARM")~"AlpN"))%>%
+  select(c(id_sample, massif))->massif
+
+
+
+#Echelle totale(gamma)
+ESP%>%
+  distinct(id_sample, .keep_all=T)%>%
+  add_column(Dispositif = "Orchamp")%>%
+  select(c("id_sample","Dispositif"))->gamma
+
+
+#Concaténation 
+
+ESP_matrice0%>%
+  inner_join(plot, by="id_sample")%>%
+  inner_join(altitude, by="id_sample")%>%
+  inner_join(milieu, by="id_sample")%>%
+  inner_join(localite, by="id_sample")%>%
+  inner_join(massif, by="id_sample")%>%
+  inner_join(gamma, by="id_sample")%>%
+  select(c(id_sample, id_plot, habitat, gradient, massif, Dispositif))%>%
+  relocate(habitat, .before=gradient)->echelle#passage par matrice 0 afin de conserver l'ordre des colones id sample
+
+
+###Partitition de variance addititve-----
+adipart(ESP_matrice, echelle[,-3],
+        index=c("richness","shannon","simpson"), 
+        weights = c("unif","prop"),
+        relative = T,
+        nsimul = 150,
+)->addipartESP_geotrup
+
+addipartESP_geotrup$statistic
+
+write.csv(addipartESP$statistic, file = paste0("outputs/PartitionVariance_fichiers csv/Orthoptera/Orthopteres_alpha" , as.character(Sys.Date()) , ".csv"))
+
+###hierarchical null model hypothesis
+
+hiersimu(ESP_matrice, echelle,  FUN=diversity, relative=TRUE, nsimul=150)->Nullmod
+Nullmod$statistic
+write.csv(Nullmod$statistic, file = paste0("outputs/PartitionVariance_fichiers csv/Orthoptera/Orthopteres_nullmodel" , as.character(Sys.Date()) , ".csv"))
+
+###Presentation des resultats----
+
+#creation d'un tableau pour les resultats
+niveaux<-addipartESP_vdt$statistic[c(1,6:9)]
+factor1<-(c("1.Alpha", "2.B-Echan","3.B-Gradient","4.B-Gradient", "5.B-Massif"))
+data.frame(x=factor1, y=niveaux)->plotvariance
+plotvariance%>%
+  rename(Echelle = x)%>%
+  rename(Variance_expliquee = y)->plotvariance
+
+write.csv(plotvariance, file = paste0("outputs/PartitionVariance_fichiers csv/Orthoptera/Orthopteres_niveau" , as.character(Sys.Date()) , ".csv"))
+
+#plot du tableau
+
+ggplot(plotvariance, aes(x='Echelle', y=Variance_expliquee, fill=Echelle, )) +
+  geom_bar(stat="identity", width=1) +
+  coord_polar("y", start=0)+
+  theme_void()+
+  labs(
+    title    = "Partition de variance taxonomique des Detritivores",
+    subtitle = "Dispositif Orchamp, 2021-2022, Tri manuel, qualitatif et chasse à vue",
+    x        = "Echelles d'étude",
+    y        = "Porportion de Variance expliquée",
+    caption  = "mpg data from the ggplot2 package")
+
+ggplot(plotvariance) +
+  aes(x = Echelle, y = Variance_expliquee, fill = Echelle) +
+  geom_bar(stat = "identity") +
+  scale_fill_hue(direction = 1) +
+  labs(
+    x = "Echelle",
+    y = "% de variance expliquee",
+    title = "Partition de la variance taxonomique des vers de terre",
+    subtitle = "Dispositif Orchamp, 2021-2022, Tri manuel, qualitatif et chasse à vue"
+  ) +
+  theme_minimal()
+
+
+#####Comparaison entre groupes
+resum <- tibble(
+echelle = c("1.Alpha", "2.Beta-échantillons","3.Beta-stations","4.Beta-gradients", "5.Beta-massifs"), 
+G4vdt = addipartESP_vdt$statistic[c(1,6:9)],
+G5carab = addipartESP_carab$statistic[c(1,6:9)],
+G3ortho = addipartESP_ortho$statistic[c(1,6:9)],
+G2diplo = addipartESP_diplo$statistic[c(1,6:9)],
+G1geotrup = addipartESP_geotrup$statistic[c(1,6:9)])
+
+resum <- resum %>%
+  pivot_longer(cols = 2:6, names_to = "taxo")
+  
+ggplot(resum) +
+  aes(x = taxo, y = value, fill = echelle) +
+  geom_bar(stat = "identity", color = "black") +
+  scale_fill_grey(end=1)+
+  facet_grid(echelle~., scales="free_y")+
+  labs(
+    x = "",
+    y = "% de variance expliquée",
+    title = "Partition de la variance taxonomique",
+    subtitle = "Dispositif Orchamp, 2021-2022, 12 gradients"
+  ) +
+  theme_minimal()+
+  theme(legend.position = "none")
