@@ -85,7 +85,8 @@ write.csv(DECOMPO_nullmod$statistic, file = paste0("outputs/PartitionVariance_fi
 
 
 ##Hymenoptera----
-HYMENO_nullmod<-my_null_model_function(ESP = ESP[ESP$orderName %in% "Hymenoptera",], 
+HYMENO_nullmod<-my_null_model_function(ESP = ESP[ESP$orderName %in% "Hymenoptera"
+                                       |!ESP$familyName %in%"Formicidae",], 
                                         ECHELLE = echelle0,
                                         Methode = "barber",
                                         habit0=habit0
