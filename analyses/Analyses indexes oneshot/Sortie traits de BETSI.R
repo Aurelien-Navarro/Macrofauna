@@ -302,9 +302,10 @@ Hymenoptera_traits_dispo<-inner_join(
 #Sortie du taleau : 
 write.csv2(Hymenoptera_traits_dispo, here::here("outputs","Hymenoptera_traits_dipos.csv"),row.names = FALSE ) 
 
-    #Lumbricidae----
+    #Decomposeurs----
 #Sortie des especes de vdt dispo id sur INAT
-inat_orchamp_vdt <- get_inat_obs_project(grpid="lumbricidae_orchamp", type="observations",raw=T)
+inat_orchamp_vdt <- get_inat_obs_project(grpid="Decomposeurs_orchamp", type="observations",raw=T)
+
 #Conservation de la colone taxon
 inat_orchamp_vdt_tax <- inat_orchamp_vdt %>%
   as_tibble() %>%
@@ -335,7 +336,7 @@ write.csv2(Vdt_traits_dispos, here::here("outputs","Lumbricidae_traits_dipos.csv
 
 
     #Geotrupidae
-#ici, seulement especes donc pas besoin de passer par un listing des genres identifies
+#ici, seulement 2 especes donc pas besoin de passer par un listing des genres identifies
 #par Inat
 
 Geotrupidae_traits_dispos<-inner_join(

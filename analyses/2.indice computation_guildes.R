@@ -51,6 +51,8 @@ traits <- left_join(traits, trait_taxa_correct, by='taxon_name', relationship = 
 
 #sauvegarde des traits homogeneises 
 write.csv(traits, file = paste0("data/derived-data/traits_homo_" , as.character(Sys.Date()) , ".csv"))
+#sauvegardé au 10-05
+
 
 #------------------------------------------------------
 ## Selection of trait(s) of interest
@@ -65,10 +67,11 @@ read.csv("data/derived-data/Traits/traits_homo_2023-04-27.csv", header=T, sep=",
       ###(e.g. detritivores)-----
       detritivore_tr <- traits %>% 
       filter(trait_name %in% c("Body_length", "Habitat"))  
-      detritivore_ind  <- myIndices(DF = df[df$orderName %in% c("Diplopoda", "Isopoda", "Clitellata"),], 
+      detritivore_ind  <- myIndices(DF = df[df$orderName %in% "Isopoda"|df$className %in% c("Diplopoda","Clitellata")|df$familyName %in% "Geotrupidae",], 
                               IDresol = "Espèce", TR = detritivore_tr)
       
       (detritivore_ind$alpha)->detrialphaM
+      
 
       ####Echelle : sample----
      write.csv(detrialphaM, file = paste0("data/derived-data/Traits/detriti/detrialphaM_" , as.character(Sys.Date()) , ".csv"))
@@ -102,8 +105,8 @@ read.csv("data/derived-data/Traits/traits_homo_2023-04-27.csv", header=T, sep=",
       
       ###By predators----
       predat_tr <- traits %>% 
-        filter(trait_name %in% c("Body_length","Habitat","Motion_strategies"))  
-      predat_ind  <- myIndices(DF = df[df$familyName == "Carabidae",], 
+        filter(trait_name %in% "Body_length")  
+      predat_ind  <- myIndices(DF = df[df$familyName %in% "Carabidae",], 
                                     IDresol = "Espèce", TR = predat_tr)
     
      

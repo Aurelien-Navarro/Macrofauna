@@ -20,7 +20,8 @@ library(ggplot2)
 
 #tableau communautes-----
 read.csv("data/derived-data/Esp/clean_data_2023-05-10.csv", h=T, sep=',')->ESP
-
+ESP%>%
+  filter(!gradient %in% c("BOU","CAU"))->ESP #Forêts du bout et Cauteret non terminés
 
   ##ORTHOPTERA-----
 ESP%>%
@@ -61,6 +62,12 @@ ESP%>%
   unite(id_plot, gradient, alti)%>%
   select(c(id_sample, id_plot)) ->plot
 
+#echelle du gradient (localité)
+ESP%>%
+  filter(!grepl("0", abundance))%>%
+  distinct(id_sample, .keep_all=T)%>%
+  select(c(id_sample, gradient))->localite
+
 #echelle de l'habitat 
 #importation du tableau qui possède les habitats
 read.csv("data/raw-data/Envir/Habitat.csv", header = T, sep=",")->habit0
@@ -73,12 +80,6 @@ habit0%>%
   unite(habitat, Milieu, gradient)%>%
   select(c(id_sample, habitat))->milieu
 
-
-#echelle du gradient (localité)
-ESP%>%
-  filter(!grepl("0", abundance))%>%
-  distinct(id_sample, .keep_all=T)%>%
-  select(c(id_sample, gradient))->localite
 
 #echelle de l'altitude
 ESP%>%
@@ -140,22 +141,19 @@ write.csv(Nullmod$statistic, file = paste0("outputs/PartitionVariance_fichiers c
 ###Presentation des resultats----
 
 #creation d'un tableau pour les resultats
-niveaux<-c(sum(addipartESP$statistic[c(1,6)]),
-           sum(addipartESP$statistic[c(2,7)]),
-           sum(addipartESP$statistic[c(3,8)]),
-           sum(addipartESP$statistic[c(4,9)]),
-           sum(addipartESP$statistic[c(5,10)])
-           )
-sum(niveaux)->Sumniveaux
-niveaufinal<-c(sum(addipartESP$statistic[c(1,6)])/Sumniveaux,
-               sum(addipartESP$statistic[c(2,7)])/Sumniveaux,
-               sum(addipartESP$statistic[c(3,8)])/Sumniveaux,
-               sum(addipartESP$statistic[c(4,9)])/Sumniveaux,
-               sum(addipartESP$statistic[c(5,10)])/Sumniveaux
-               )
-sum(niveaufinal)#doit faire 1
+
+#Bidouillage
+test<-sum(addipartESP$statistic[c(1,7:11)])
+niveaux<-c(sum(addipartESP$statistic[c(1,7)]),
+         sum(addipartESP$statistic[c(1,8)]),
+         sum(addipartESP$statistic[c(1,9)]),
+         sum(addipartESP$statistic[c(1,10)]),
+         sum(addipartESP$statistic[c(1,11)]))
+             
+#-----------------------
+
 factor1<-(c("Echantillon","Station","Milieu","Gradient", "Massif"))
-data.frame(x=factor1, y=niveaufinal)->plotvariance
+data.frame(x=factor1, y=niveaux)->plotvariance
 plotvariance%>%
   rename(Echelle = x)%>%
   rename(Variance_expliquee = y)->plotvariance

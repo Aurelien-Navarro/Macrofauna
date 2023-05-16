@@ -24,6 +24,10 @@ read.csv("data/raw-data/envir/phyto.data3.csv",header=T, sep=",")->Phyto
 
 ENV%>%
   rename(id_plot=codeplot)->ENV
+#supression de Foret du Bout et Cauteret
+
+TRAITS%>%
+  
 
 #preparation de phyto 
 
@@ -62,7 +66,7 @@ vegedis <- cbind(idplot,Dissvege)
     ##Echelle : le plot----
   
     ###Preparation des donnees------
-read.csv("data/derived-data/Traits/detriti/detrialphaplot_2023-05-04.csv",header=T, sep=",")->detrialphaplot
+read.csv("data/derived-data/Traits/detriti/detrialphaM_2023-05-15.csv",header=T, sep=",")->detrialphaplot
 
 
 #Remplacement des NAs par 0 : souvent trop haut pour mesurer quelque chose
