@@ -24,39 +24,30 @@ read.csv("data/raw-data/envir/phyto.data3.csv",header=T, sep=",")->Phyto
 
 ENV%>%
   rename(id_plot=codeplot)->ENV
-#supression de Foret du Bout et Cauteret
 
-TRAITS%>%
-  
 
 #preparation de phyto 
-
-    ##faire fit phyto avec le reste
+##faire fit phyto avec le reste
 Phyto%>%
   rename(id_plot=codeplot)%>%
-  inner_join(ENV, by='id_plot')->Phyto
-    
-
-Phyto%>%
+  inner_join(ENV, by='id_plot')%>%
   add_column(ab = 1)%>%
   group_by(id_plot, lb_nom)%>%
   summarise(tot = sum(ab))->tp
-
-
   ##transformation en matrice
 pivot_wider(tp,
             id_cols = 'id_plot',
             names_from = 'lb_nom', 
             values_from = 'tot',
-            values_fill = 0)->commu
+            values_fill = 0)->commuphyto
 
 #passage de id_plot en index 
-commu%>%
+commuphyto%>%
   remove_rownames()%>%
-  column_to_rownames(var='id_plot')->commu_ind
+  column_to_rownames(var='id_plot')->commuphyto_ind
 #dissimilarite vegetale
 
-Dissvege <- vegdist(commu_ind, method="bray", na.rm=T)
+Dissvege <- vegdist(commuphyto_ind, method="bray", na.rm=T)
 as.matrix(Dissvege)->Dissvege
 
 rownames(Dissvege)->idplot
@@ -73,7 +64,7 @@ read.csv("data/derived-data/Traits/detriti/detrialphaM_2023-05-15.csv",header=T,
 ENV%>%
   mutate_all( ~replace(., is.na(.), 0))->ENV
 
-#adequation entre ENV et Dissvdt
+#adequation entre ENV et imput
 #ENV%>%
   #rename(id_plot='codeplot')->ENV
 detrialphaplot%>%

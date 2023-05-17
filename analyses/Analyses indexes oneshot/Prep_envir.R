@@ -369,7 +369,7 @@ RS_veg_final<-Phyto%>%
     rename(codeplot = id_plot) %>%
     mutate(Milieu = ifelse(grepl("Milieu_ouvert", Milieu), 0, 1)) -> Habit_final
   ##implementation sur ENV
-  left_join(ENV, Habit_final, by = "codeplot")->ENV
+  full_join(ENV, Habit_final, by = "codeplot")->ENV
   
 
 #Save ENV--------------

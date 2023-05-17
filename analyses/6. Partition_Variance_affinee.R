@@ -26,19 +26,17 @@ read.csv("data/raw-data/Envir/Habitat.csv", header = T, sep=",")->habit0
 
 source("analyses/functions/my_adipart_function.R")
 source("analyses/functions/my_null_model_function.R")
-#utilisation de la fonction
+#utilisation des fonctions
 
 ##Orthopteres----
 ORTHO_nullmod<-my_null_model_function(ESP = ESP[ESP$orderName == "Orthoptera",], 
                                       ECHELLE = echelle0,
                                       Methode = "barber",
-                                      habit0=habit0
-)
+                                      habit0=habit0)
 ORTHO_addipart<-my_adipart_function(ESP = ESP[ESP$orderName == "Orthoptera",], 
                  ECHELLE = echelle0,
                  Methode = "barber",
-                 habit0=habit0
-                 )
+                 habit0=habit0)
 
   ###Sauvergarde des differents outputs 
 write.csv(ORTHO_addipart$statistic, file = paste0("outputs/PartitionVariance_fichiers csv/Orthoptera/Orthopteres_alphabeta" , as.character(Sys.Date()) , ".csv"))
@@ -49,13 +47,11 @@ write.csv(ORTHO_nullmod$statistic, file = paste0("outputs/PartitionVariance_fich
 CARAB_nullmod<-my_null_model_function(ESP = ESP[ESP$familyName == "Carabidae",], 
                                       ECHELLE = echelle0,
                                       Methode = "barber",
-                                      habit0=habit0
-)
+                                      habit0=habit0)
 CARAB_addipart<-my_adipart_function(ESP = ESP[ESP$familyName == "Carabidae",], 
                                     ECHELLE = echelle0,
                                     Methode = "barber",
-                                    habit0=habit0
-)
+                                    habit0=habit0)
 
 ###Sauvergarde des differents outputs 
 write.csv(CARAB_addipart$statistic, file = paste0("outputs/PartitionVariance_fichiers csv/Carabidae/Carab_alphabeta" , as.character(Sys.Date()) , ".csv"))
@@ -68,20 +64,17 @@ DECOMPO_nullmod<-my_null_model_function(ESP = ESP[ESP$orderName %in% "Isopoda"|
                                                     ESP$familyName %in% "Geotrupidae",], 
                                       ECHELLE = echelle0,
                                       Methode = c("tri manuel","chasse à vue","tri manuel qualitatif"),
-                                      habit0=habit0
-)
+                                      habit0=habit0)
 DECOMPO_addipart<-my_adipart_function(ESP = ESP[ESP$orderName %in% "Isopoda"|
                                                   ESP$className %in% c("Diplopoda","Clitellata")|
                                                   ESP$familyName %in% "Geotrupidae",], 
                                     ECHELLE = echelle0,
                                     Methode = c("tri manuel","chasse à vue","tri manuel qualitatif"),
-                                    habit0=habit0
-)
+                                    habit0=habit0)
 
 ###Sauvergarde des differents outputs 
 write.csv(DECOMPO_addipart$statistic, file = paste0("outputs/PartitionVariance_fichiers csv/Decompo/Decompo_alphabeta" , as.character(Sys.Date()) , ".csv"))
 write.csv(DECOMPO_nullmod$statistic, file = paste0("outputs/PartitionVariance_fichiers csv/Decompo/Decompo_nullmodel" , as.character(Sys.Date()) , ".csv"))
-
 
 
 ##Hymenoptera----
@@ -89,13 +82,11 @@ HYMENO_nullmod<-my_null_model_function(ESP = ESP[ESP$orderName %in% "Hymenoptera
                                        |!ESP$familyName %in%"Formicidae",], 
                                         ECHELLE = echelle0,
                                         Methode = "barber",
-                                        habit0=habit0
-)
+                                        habit0=habit0)
 HYMENO_addipart<-my_adipart_function(ESP = ESP[ESP$orderName %in% "Hymenoptera",], 
                                       ECHELLE = echelle0,
                                       Methode = "barber",
-                                      habit0=habit0
-)
+                                      habit0=habit0)
 
 ###Sauvergarde des differents outputs 
 write.csv(HYMENO_addipart$statistic, file = paste0("outputs/PartitionVariance_fichiers csv/Hymeno/Hymeno_alphabeta" , as.character(Sys.Date()) , ".csv"))
