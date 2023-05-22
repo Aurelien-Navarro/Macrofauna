@@ -10,6 +10,7 @@ my_gdm_function<-function(ENV, COMM, PHYTO, Methode){
   #preparation generale des tableaux
   ENV%>%
     rename(id_plot=codeplot)%>%
+    select(c('id_plot', 'Tmean', 'Pmean', 'Rveg', 'Milieu', 'Alt', 'X_L93', 'Y_L93', 'pHmean'))%>%
     na.omit->ENV
   COMM%>%
     unite(id_plot, gradient, alti)->COMM
@@ -116,6 +117,6 @@ my_gdm_function<-function(ENV, COMM, PHYTO, Methode){
   gdm.1 <- gdm(data=gdmdata, geo=TRUE)
   summary(gdm.1) 
 
-  
+  return(gdm.1)
 
 }
