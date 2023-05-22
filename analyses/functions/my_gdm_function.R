@@ -6,20 +6,19 @@ librarian::shelf(dplyr,vegan, ggplot2, betapart, gdm, tibble, tidyverse)
 
 #La fonction
 my_gdm_function<-function(ENV, COMM, PHYTO, Methode){
- 
 
-  
-#preparation generale des tableaux
-ENV%>%
+  #preparation generale des tableaux
+  ENV%>%
     rename(id_plot=codeplot)%>%
-    mutate_all( ~replace(., is.na(.), 0))->ENV
-COMM%>%
-  unite(id_plot, gradient, alti)->COMM
-PHYTO%>%
-  rename(id_plot=codeplot)->PHYTO
-
-
-#preparation de phyto 
+    na.omit->ENV
+  COMM%>%
+    unite(id_plot, gradient, alti)->COMM
+  Phyto%>%
+    rename(id_plot=codeplot)->PHYTO
+  
+  
+  
+  #preparation de phyto 
   PHYTO%>%
     add_column(ab = 1)%>%
     group_by(id_plot, lb_nom)%>%
@@ -31,7 +30,7 @@ PHYTO%>%
               values_from = 'tot',
               values_fill = 0)->commuphyto
   
- 
+  
   
   
   
@@ -39,7 +38,7 @@ PHYTO%>%
   
   COMM%>%
     filter(!grepl("0", abundance))%>%
-    filter(method == Methode)%>%
+    filter(method == "barber")%>%
     filter(rankName %in% "EspÃ¨ce"|rankName%in%"Espèce")%>%
     mutate(name2 = ifelse(name == "", "unid", name))%>% 
     group_by(id_plot, name2)%>%
@@ -56,27 +55,33 @@ PHYTO%>%
   
   matrice1 <- subset(matrice, id_plot %in% intersect(intersect(matrice$id_plot, commuphyto$id_plot), ENV$id_plot))
   commuphyto1 <- subset(commuphyto, id_plot %in% intersect(intersect(commuphyto$id_plot, matrice$id_plot), ENV$id_plot))
-  ENV1 <- subset(ENV, id_plot %in% intersect(intersect(ENV$id_plot, matrice$id_plot), matrice$id_plot))
+  ENV1 <- subset(ENV, id_plot %in% intersect(intersect(ENV$id_plot, matrice$id_plot), commuphyto$id_plot))
   
   
   
   ##dissimilarite vegetale
   
+  
+  
+  commuphyto1$id_plot->id_plot
+  as.data.frame(id_plot)->id_plot
+  
   ##passage de id_plot en index 
   commuphyto1%>%
     remove_rownames()%>%
-    column_to_rownames()->commuphyto_ind
-  Dissvege <- vegdist(commuphyto_ind, method="bray", na.rm=T)
-
-  rownames(Dissvege)->id_plot
+    column_to_rownames('id_plot')->commuphyto_ind
+  Dissvege <- as.matrix(vegdist(commuphyto_ind, method="bray", na.rm=T))
+  
+  
+  
   vegedis <- cbind(id_plot,Dissvege)
-
-
-
+  
+  
+  
   ###Dissimilarite communaute 
   #Sortir la colone id_plot
   matrice1 %>% 
-    select(id_plot) -> idplot
+    select(id_plot) -> idplot2
   
   #on finit la matrice commu
   
@@ -87,12 +92,11 @@ PHYTO%>%
   
   DissComm <- vegdist(matrice2, method="bray", na.rm=T)
   as.matrix(DissComm)->DissComm
-
-  #on replace id_plot
-  cbind(DissComm, idplot)->gdmdist
   
-
-
+  #on replace id_plot
+  cbind(DissComm, idplot2)->gdmdist
+  
+  
   
   
   
@@ -106,9 +110,12 @@ PHYTO%>%
                             distPreds = list(vegedis),
                             siteColumn="id_plot")
   
+  
+  
   ##application de la fonction GDM
   gdm.1 <- gdm(data=gdmdata, geo=TRUE)
-  summary(gdm.1)
-return(gdm.1)
-}  
+  summary(gdm.1) 
+
   
+
+}
