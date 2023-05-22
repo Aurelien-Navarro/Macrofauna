@@ -6,7 +6,7 @@
 librarian::shelf(dplyr,vegan, ggplot2, betapart, gdm, tibble, tidyverse)
 
 #Importation des données
-read.csv("data/derived-data/Envir/ENV_2023-05-17.csv", row.names = 1)->ENV
+read.csv("data/derived-data/Envir/ENV_2023-05-22.csv", row.names = 1)->ENV
 ENV%>%
   filter(!codeplot %in% c("BOU","CAU"))->ENV
 read.csv("data/derived-data/Traits/traits_homo_2023-04-27.csv",header=T, sep=",")->TRAITS
@@ -24,14 +24,27 @@ source("analyses/functions/my_gdm_function.R")
 #GDM ESPECE------
 
   ##HERBIVORES----
-  HERBI_ESP<-my_gdm_function(ENV=ENV,
+  GDM_HERBI_ESP<-my_gdm_function(ENV=ENV,
                             COMM=ESP[ESP$orderName == "Orthoptera"|ESP$familyName=="Chrysomelidae",],
                             PHYTO=Phyto,
                             Methode= "barber")
   ##PREDATEURS----
+GDM_PREDAT_ESP<-my_gdm_function(ENV=ENV,
+                                COMM=ESP[ESP$familyName=="Carabidae",],
+                                PHYTO=Phyto,
+                                Methode= "barber")
   ##DECOMPOSEURS----
+GDM_DECOMPO_ESP<-my_gdm_function(ENV=ENV,
+                                COMM= ESP[ESP$orderName %in% "Isopoda"|
+                                                 ESP$className %in% c("Diplopoda","Clitellata")|
+                                                 ESP$familyName %in% "Geotrupidae",],
+                                PHYTO=Phyto,
+                                Methode= c("tri manuel","chasse à vue","tri manuel qualitatif"))
   ##PARASITES----
-
+GDM_PARA_ESP<-my_gdm_function(ENV=ENV,
+                                 COMM= ESP[ESP$orderName %in% "Hymenoptera"&!ESP$familyName %in%"Formicidae",],
+                                 PHYTO=Phyto,
+                                 Methode= c("barber"))
 #GDM TRAITS------
 
   ##HERBIVORES----
