@@ -111,7 +111,7 @@ my_gdm_function<-function(ENV, COMM, PHYTO, Methode){
                             distPreds = list(vegedis),
                             siteColumn="id_plot")
   
-  
+  na.omit(gdmdata)->gdmdata
   
   ##application de la fonction GDM
   gdm.1 <- gdm(data=gdmdata, geo=TRUE)
