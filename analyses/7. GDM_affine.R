@@ -3,10 +3,10 @@
 #Script pour insérer les différentes conditions au GDM et le produire 
 
 #librairies
-librarian::shelf(dplyr,vegan, ggplot2, betapart, gdm, tibble, tidyverse)
+librarian::shelf(dplyr,vegan, ggplot2, betapart, gdm, tibble, tidyverse, esquisse)
 
 #Importation des données
-read.csv("data/derived-data/Envir/ENV_2023-05-22.csv", row.names = 1)->ENV
+read.csv("data/derived-data/Envir/ENV_2023-05-23.csv", row.names = 1)->ENV
 ENV%>%
   filter(!codeplot %in% c("BOU","CAU"))->ENV
 read.csv("data/derived-data/Traits/traits_homo_2023-04-27.csv",header=T, sep=",")->TRAITS
@@ -27,29 +27,49 @@ source("analyses/functions/my_gdm_function.R")
   GDM_HERBI_ESP<-my_gdm_function(ENV=ENV,
                             COMM=ESP[ESP$orderName == "Orthoptera"|ESP$familyName=="Chrysomelidae",],
                             PHYTO=Phyto,
-                            Methode= "barber")
-  ##PREDATEURS----
-GDM_PREDAT_ESP<-my_gdm_function(ENV=ENV,
+                            Methode= "barber", #trop de NAs pour incorporer
+                            Variables = c("id_plot","ndvi.mean","GDD_1cm.sum.mean","GDD_10cm.sum.mean",       
+                                           "CWD.sum.mean","FDD_1cm.sum.mean","FDD_10cm.sum.mean","solar.radiation.sum.mean",
+                                          "DSN_T_ISBA.mean","TG1.degres.mean","TG4.degres.mean",
+                                          "DRT.air.mean","TMeanY.mean","TMeanRngD.mean","TSeason.mean",
+                                          "TRngY.mean","PTotY.mean","PSeason.mean","Tmean","Pmean",                   
+                                          "Rveg", "PRCTMOmean","pHmean","Milieu","Alt","X_L93","Y_L93"))
+
+colnames(ENV)->test
+test
+  
+##PREDATEURS----
+  GDM_PREDAT_ESP<-my_gdm_function(ENV=ENV,
                                 COMM=ESP[ESP$familyName=="Carabidae",],
                                 PHYTO=Phyto,
-                                Methode= "barber")
+                                Methode= "barber",
+                                Variables = c('id_plot', 'Tmean', 'Pmean', 'Rveg', 'Milieu', 'Alt', 'X_L93', 'Y_L93', 'pHmean','NDVImax','NDVImin'))
+    
   ##DECOMPOSEURS----
 GDM_DECOMPO_ESP<-my_gdm_function(ENV=ENV,
                                 COMM= ESP[ESP$orderName %in% "Isopoda"|
                                                  ESP$className %in% c("Diplopoda","Clitellata")|
                                                  ESP$familyName %in% "Geotrupidae",],
                                 PHYTO=Phyto,
-                                Methode= c("tri manuel","chasse à vue","tri manuel qualitatif"))
-  ##PARASITES----
+                                Methode= c("tri manuel","chasse à vue","tri manuel qualitatif"),
+                                Variables = c('id_plot', 'Tmean', 'Pmean', 'Rveg', 'Milieu', 'Alt', 'X_L93', 'Y_L93', 'pHmean','NDVImax','NDVImin'))
+  
+##PARASITES----
 GDM_PARA_ESP<-my_gdm_function(ENV=ENV,
                                  COMM= ESP[ESP$orderName %in% "Hymenoptera"&!ESP$familyName %in%"Formicidae",],
                                  PHYTO=Phyto,
-                                 Methode= c("barber"))
+                                 Methode= "barber", 
+                              Variables = c('id_plot', 'Tmean', 'Pmean', 'Rveg', 'Milieu', 'Alt', 'X_L93', 'Y_L93', 'pHmean','NDVImax','NDVImin'))
+    
+
+
+
 #GDM TRAITS------
 
   ##HERBIVORES----
   ##PREDATEURS----
   ##DECOMPOSEURS----
   ##PARASITES----
+
 
 

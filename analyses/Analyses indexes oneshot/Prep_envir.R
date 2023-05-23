@@ -17,7 +17,8 @@ read.csv("data/raw-data/envir/Anasolsup.data5.csv", header = T, sep=",")->AnaSol
 read.csv("data/raw-data/envir/AnaFossePedo.data6.csv", header = T, sep=",")->FosseP
 read.csv("data/raw-data/envir/par_aurel/Tmean_Prec1.csv", header = T, sep=";")->Tmean_rainf1
 read.csv("data/raw-data/envir/Habitat.csv",header=T, sep=",")->Habit
-
+read.csv("data/raw-data/envir/Romain/MODIS4ORCHAMP.csv",header=T, sep=",")->NDVI
+readRDS("data/raw-data/envir/Romain/climatic.rds")->Climat
 #----------------
 
 
@@ -48,6 +49,13 @@ paste(Rainfall_final$site, Rainfall_final$alti, sep="_")->Rainfall_final$codeplo
 left_join(Temp_final, Rainfall_final, by = "codeplot")%>%
   select(c(codeplot, Tmean, Pmean))->ENV
 
+  ##DONNES CLIMATIQUES 
+Climat%>%
+  select(!c(idplot, gradient, elevation, year))->Climatfinal
+
+#Ajout sur ENV
+Climatfinal%>%
+left_join(ENV, by = "codeplot")->ENV
 
 #PARAMETRES BIO------
 
@@ -61,11 +69,7 @@ RS_veg_final<-Phyto%>%
   summarize(Rveg=n())
 
   ###rajout de la Richesse veg au tableau final
-  left_join(ENV, RS_veg_final, by = "codeplot")%>%
-    select(c(codeplot,
-             Tmean,
-             Pmean,
-             Rveg))->ENV
+  left_join(ENV, RS_veg_final, by = "codeplot")->ENV
   
   
   ##Caracteristiques arbres--------------
@@ -77,13 +81,17 @@ RS_veg_final<-Phyto%>%
     summarise(Diam_mean=mean(diam))
   
   ##rajout du diametre arbre au tableau environnement
-  left_join(ENV, TF_arbres_final, by = "codeplot")%>%
-    select(c(codeplot,
-             Tmean,
-             Pmean,
-             Rveg,
-             Diam_mean))->ENV
+  left_join(ENV, TF_arbres_final, by = "codeplot")->ENV
   
+  ##NDVI
+  NDVI%>%
+    na.omit(c(NDVImin, NDVImax))%>%
+    select(c(codeplot, NDVImin, NDVImax))%>%
+    group_by(codeplot)%>%
+    summarise(NDVImin=mean(NDVImin), NDVImax=mean(NDVImax))->NDVIfinal
+  
+  #rajout au tableau environnement 
+  left_join(ENV, NDVIfinal, by='codeplot')->ENV
   
 #LE SOL--------
 

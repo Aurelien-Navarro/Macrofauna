@@ -5,12 +5,12 @@
 librarian::shelf(dplyr,vegan, ggplot2, betapart, gdm, tibble, tidyverse)
 
 #La fonction
-my_gdm_function<-function(ENV, COMM, PHYTO, Methode){
+my_gdm_function<-function(ENV, COMM, PHYTO, Methode, Variables){
 
   #preparation generale des tableaux
   ENV%>%
     rename(id_plot=codeplot)%>%
-    select(c('id_plot', 'Tmean', 'Pmean', 'Rveg', 'Milieu', 'Alt', 'X_L93', 'Y_L93', 'pHmean'))%>%
+    select(Variables)%>%
     na.omit->ENV
   COMM%>%
     unite(id_plot, gradient, alti)->COMM
@@ -115,8 +115,22 @@ my_gdm_function<-function(ENV, COMM, PHYTO, Methode){
   
   ##application de la fonction GDM
   gdm.1 <- gdm(data=gdmdata, geo=TRUE)
-  summary(gdm.1) 
+  summary(gdm.1)
+  
+  #validation du GDM
+  gdm.crossvalidation(gdmdata,train.proportion=0.5, n.crossvalid.tests=1,
+                       geo=FALSE, splines=NULL, knots=NULL)
+  
+ 
+  #plot du GDM
+  
+  plot(gdm.1, plot.layout=c(2,3))->plot
+  
+  #affinage splines
+  gdm.1.splineDat <- isplineExtract(gdm.1)
+  str(gdm.1.splineDat)
 
-  return(gdm.1)
-
+  
+  
+return(gdm.1)
 }
