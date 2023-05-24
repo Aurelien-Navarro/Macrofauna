@@ -3,6 +3,8 @@
 #objectif : encapsuler la fonction adipart() dans une fonction afin de pouvoir 
 #facilement injecter les conditions 
 
+#/!\ il y a une confusion dans valloire 2710 ou 2715 car altitude de Orchamp c'est 2710 
+#mais celui des echantillons c'est 2715, il faut parfois changer ça dans les talbeurs
 
 #librairies
 library(vegan)
@@ -14,11 +16,11 @@ library(ggplot2)
 
 #Importation des donnees 
 #tableau especes
-read.csv("data/derived-data/Esp/clean_data_2023-05-10.csv", h=T, sep=',')->ESP
+read.csv("data/derived-data/Esp/clean_data_2023-05-24.csv", h=T, sep=',')->ESP
 ESP%>%
   filter(!gradient %in% c("BOU","CAU"))->ESP #Forêts du bout et Cauteret non terminés
 #tableau des echelles 
-read.csv("data/derived-data/Esp/clean_data_2023-05-10.csv", h=T, sep=',')->echelle0
+read.csv("data/derived-data/Esp/clean_data_2023-05-24.csv", h=T, sep=',')->echelle0
 read.csv("data/raw-data/Envir/Habitat.csv", header = T, sep=",")->habit0
 
 
@@ -96,10 +98,10 @@ write.csv(HYMENO_nullmod$statistic, file = paste0("outputs/PartitionVariance_fic
 
 resum <- tibble(
   echelle = c("1.Alpha", "2.Beta-échantillons","3.Beta-stations","4.Beta-gradients", "5.Beta-massifs"), 
-  G4hymeno = HYMENO_addipart$Variance_expliquee,
-  G3decompo = DECOMPO_addipart$Variance_explique,
-  G2carab = CARAB_addipart$Variance_expliquee,
-  G1ortho = ORTHO_addipart$Variance_expliquee)
+  G4Parasits = HYMENO_addipart$Variance_expliquee,
+  G3Detritivores = DECOMPO_addipart$Variance_explique,
+  G2Predators = CARAB_addipart$Variance_expliquee,
+  G1Herbivores = ORTHO_addipart$Variance_expliquee)
 
 resum <- resum %>%
   pivot_longer(cols = 2:5, names_to = "taxo")
