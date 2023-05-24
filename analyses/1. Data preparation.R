@@ -54,6 +54,11 @@ inat_orchamp <- inat_orchamp0 %>%
   rename(INat = description) %>%
   filter(!is.na(INat))
 
+#Modifications about old classificaton
+sub('Philonthina', 'Philonthus', inat_orchamp$taxon.name)->inat_orchamp$taxon.name
+
+
+
 # Data preparation
 ## Merging Mike's team and INat identifications
 notINat <- df0 %>% 
@@ -81,4 +86,4 @@ df1 <- left_join(df, valid_names, by = c("taxon.name" = "initial")) %>%
   separate(id_plot, c("gradient", "alti"))
 
 ## Save dataset
-write.csv(df1, file = paste0("data/derived-data/clean_data_" , as.character(Sys.Date()) , ".csv"))
+write.csv(df1, file = paste0("data/derived-data/Esp/clean_data_" , as.character(Sys.Date()) , ".csv"))

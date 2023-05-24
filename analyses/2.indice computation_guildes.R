@@ -23,7 +23,7 @@ librarian::shelf(dplyr, forcats, stringr, ggplot2)
 
 # Data load
 ## Community data load 
-df <- read.csv("data/derived-data/Esp/clean_data_2023-05-10.csv", 
+df <- read.csv("data/derived-data/Esp/clean_data_2023-05-24.csv", 
                h = T, sep = ",") 
 df$rankName <-  fct_recode(df$rankName, "Famille" = "Sous-Famille",
                            "Famille" = "Super-Famille",
@@ -31,6 +31,9 @@ df$rankName <-  fct_recode(df$rankName, "Famille" = "Sous-Famille",
                            "Genre" = "Sous-Genre",
                            "Ordre" = "Sous-Ordre", 
                            "Phylum" = "Sous-Phylum")
+
+
+  
 
 # /!\Passer directement a la ligne 53, car correction des taxas de BETSI deja réalisee
 
@@ -41,6 +44,7 @@ traits <- read.csv("data/raw-data/BETSI_220221.csv", h = T, sep = ";")
 traits <- traits %>%
   filter(Taxa %in% c("Arachnida", "Coleoptera", "Dermaptera", "Diplopoda", "Gastropoda",
                      "Isopoda", "Oligochaeta", "Orthoptera","Hymenoptera"))
+
 source("analyses/functions/my_taxonChecker function code.R")
 trait_taxa_correct0 <- my_taxonChecker(traits$taxon_name)
 trait_taxa_correct <- trait_taxa_correct0 %>%
@@ -113,7 +117,7 @@ read.csv("data/derived-data/Traits/traits_homo_2023-04-27.csv", header=T, sep=",
       ####Echelle : sample----
       (predat_ind$alpha)->predatalphaM
       
-      write.csv(detrialphaM, file = paste0("data/derived-data/Traits/detriti/detrialphaM_" , as.character(Sys.Date()) , ".csv"))
+      write.csv(predatalphaM, file = paste0("data/derived-data/Traits/predat/predatalphaM_" , as.character(Sys.Date()) , ".csv"))
         ####Echelle plot----
       
       #creation colone id_plot sur df pour l'exemple
@@ -122,7 +126,7 @@ read.csv("data/derived-data/Traits/traits_homo_2023-04-27.csv", header=T, sep=",
         select(c(id_sample, id_plot)) -> colones_types
       
       #Fusion entre colone_types et le tableur de sortie 
-      left_join(predataphaM, colones_types, by="id_sample")%>%
+      left_join(predatalphaM, colones_types, by="id_sample")%>%
         relocate(id_plot, .after = id_sample)->predataphaM
       
       #Moyennisage selon non pas id_sample mais selon id_plot
@@ -136,13 +140,13 @@ read.csv("data/derived-data/Traits/traits_homo_2023-04-27.csv", header=T, sep=",
                   Body_length=mean(Body_length))->predataphaplot
       
       #Sortie du df pour les plots 
-      write.csv(predataphaplot, file = paste0("data/derived-data/Traits/predat/detrialphaplot_" , as.character(Sys.Date()) , ".csv"))
+      write.csv(predataphaplot, file = paste0("data/derived-data/Traits/predat/predatalphaplot_" , as.character(Sys.Date()) , ".csv"))
 
 
       ###By herbivores----
       herbi_tr <- traits %>% 
         filter(trait_name %in% c("Body_length","Habitat"))  
-      herbi_ind  <- myIndices(DF = df[df$orderName %in% c("Orthoptera"),], 
+      herbi_ind  <- myIndices(DF = df[df$orderName %in% c("Orthoptera")|df$familyName=="Chrysomelidae",], 
                               IDresol = "Espèce", TR = herbi_tr)
       
         ####Echelle : sample---- 
@@ -177,9 +181,14 @@ read.csv("data/derived-data/Traits/traits_homo_2023-04-27.csv", header=T, sep=",
       
      
       ###by Parasits
+      #Je n ai pas trouvé de donnees traits sur des hymeno parasites
+
+
+      
 
 ################
 #Zone de travaux
 ################
-
+PredatT%>%
+        rename(Y=X)->test
       

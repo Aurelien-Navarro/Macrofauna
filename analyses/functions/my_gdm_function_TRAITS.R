@@ -6,17 +6,18 @@
 librarian::shelf(dplyr,vegan, ggplot2, betapart, gdm, tibble, tidyverse)
 
 #La fonction
-  
-  #Pas besoin de préciser la méthode car déja précisée lors 
+my_gdm_function_TRAITS<-function(ENV, COMM, PHYTO, Variables){
+ 
+   #Pas besoin de préciser la méthode car déja précisée lors 
   #de la sortie des traits sur 2.Indice computation guilde
   
   #preparation generale des tableaux
   ENV%>%
-    rename(id_plot= codeplot)%>%
+    rename(id_plot=codeplot)%>%
     select(Variables)%>%
     na.omit->ENV
-  Phyto%>%
-    rename(id_plot= codeplot)->PHYTO
+  PHYTO%>%
+    rename(id_plot=codeplot)->PHYTO
   
   
   
@@ -40,7 +41,7 @@ librarian::shelf(dplyr,vegan, ggplot2, betapart, gdm, tibble, tidyverse)
   
   COMM%>%
     select(!X)->matrice
-  
+    
   
   #Affinage
   

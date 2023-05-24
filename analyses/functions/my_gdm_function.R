@@ -39,7 +39,7 @@ my_gdm_function<-function(ENV, COMM, PHYTO, Methode, Variables){
   
   COMM%>%
     filter(!grepl("0", abundance))%>%
-    filter(method == "barber")%>%
+    filter(method == Methode)%>%
     filter(rankName %in% "EspÃ¨ce"|rankName%in%"Espèce")%>%
     mutate(name2 = ifelse(name == "", "unid", name))%>% 
     group_by(id_plot, name2)%>%
