@@ -41,8 +41,8 @@ ORTHO_addipart<-my_adipart_function(ESP = ESP[ESP$orderName == "Orthoptera",],
                  habit0=habit0)
 
   ###Sauvergarde des differents outputs 
-write.csv(ORTHO_addipart$statistic, file = paste0("outputs/PartitionVariance_fichiers csv/Orthoptera/Orthopteres_alphabeta" , as.character(Sys.Date()) , ".csv"))
-write.csv(ORTHO_nullmod$statistic, file = paste0("outputs/PartitionVariance_fichiers csv/Orthoptera/Orthopteres_nullmodel" , as.character(Sys.Date()) , ".csv"))
+write.csv(ORTHO_addipart$statistic, file = paste0("outputs/PartitionVariance_fichiers csv/Herbivores/Orthopteres_alphabeta" , as.character(Sys.Date()) , ".csv"))
+write.csv(ORTHO_nullmod$statistic, file = paste0("outputs/PartitionVariance_fichiers csv/Herbivores/Orthopteres_nullmodel" , as.character(Sys.Date()) , ".csv"))
 
 
 ##Carabidae----

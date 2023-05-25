@@ -1,6 +1,9 @@
 #GDM affiné 
 
 #Script pour insérer les différentes conditions au GDM et le produire 
+#J ai du selectionner des variables car certaines ont trop de NA
+#et le modèle se retrouve avec des valeurs négatives qu'il ne peut traiter 
+
 
 #librairies
 librarian::shelf(dplyr,vegan, ggplot2, betapart, gdm, tibble, tidyverse, esquisse)
@@ -9,13 +12,13 @@ librarian::shelf(dplyr,vegan, ggplot2, betapart, gdm, tibble, tidyverse, esquiss
 read.csv("data/derived-data/Envir/ENV_2023-05-23.csv", row.names = 1)->ENV
 ENV%>%
   filter(!codeplot %in% c("BOU","CAU"))->ENV
-read.csv("data/derived-data/Traits/traits_homo_2023-04-27.csv",header=T, sep=",")->TRAITS
 read.csv("data/raw-data/envir/phyto.data3.csv",header=T, sep=",")->Phyto
 Phyto%>%
   filter(!codeplot %in% c("BOU","CAU"))->Phyto
 read.csv("data/derived-data/Esp/clean_data_2023-05-10.csv",header=T, sep=",")->ESP
 ESP%>%
   filter(!gradient %in% c("BOU","CAU"))->ESP
+read.csv("data/derived-data/ECHELLE2023-05-25.csv",header =T, sep=",")->Echelle
 
 #Donnes traits deja triees par 2.Indice Computation Guilde
 read.csv("data/derived-data/Traits/detriti/detrialphaplot_2023-05-24.csv", h=T, sep=",")->DetritiT
@@ -31,7 +34,9 @@ source("analyses/functions/my_gdm_function_TRAITS.R")
   GDM_HERBI_ESP<-my_gdm_function(ENV=ENV,
                             COMM=ESP[ESP$orderName == "Orthoptera"|ESP$familyName=="Chrysomelidae",],
                             PHYTO=Phyto,
-                            Methode= "barber", #trop de NAs pour incorporer
+                            Methode= "barber",
+                            NIVEAU = "habitat",
+                            ECHELLE = Echelle,#penser à toujours laisser id plot
                             Variables = c("id_plot","ndvi.mean","GDD_1cm.sum.mean","GDD_10cm.sum.mean",       
                                            "CWD.sum.mean","FDD_1cm.sum.mean","FDD_10cm.sum.mean","solar.radiation.sum.mean",
                                           "DSN_T_ISBA.mean","TG1.degres.mean","TG4.degres.mean",
@@ -39,8 +44,6 @@ source("analyses/functions/my_gdm_function_TRAITS.R")
                                           "TRngY.mean","PTotY.mean","PSeason.mean","Tmean","Pmean",                   
                                           "Rveg", "PRCTMOmean","pHmean","Milieu","Alt","X_L93","Y_L93"))
 
-#J ai du selectionner des variables car certaines ont trop de Na
-#et le modèle se retrouve avec des valeurs négatives qu'il ne peut traiter 
 
   
 ##PREDATEURS----

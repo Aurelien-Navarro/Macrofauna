@@ -5,12 +5,16 @@
 librarian::shelf(dplyr,vegan, ggplot2, betapart, gdm, tibble, tidyverse)
 
 #La fonction
-my_gdm_function<-function(ENV, COMM, PHYTO, Methode, Variables){
+my_gdm_function<-function(ENV, COMM, PHYTO, Methode, Variables, ECHELLE, NIVEAU){
 
   #preparation generale des tableaux
+  
   ENV%>%
     rename(id_plot=codeplot)%>%
-    select(Variables)%>%
+    inner_join(ECHELLE, by='id_plot')%>%
+    group_by(NIVEAU)%>%
+    select(all_of(Variables))%>%
+    summarise(across(!(id_plot), mean))%>%
     na.omit->ENV
   COMM%>%
     unite(id_plot, gradient, alti)->COMM
@@ -30,6 +34,9 @@ my_gdm_function<-function(ENV, COMM, PHYTO, Methode, Variables){
               names_from = 'lb_nom', 
               values_from = 'tot',
               values_fill = 0)->commuphyto
+  
+    
+    
   
   
   
@@ -132,5 +139,5 @@ my_gdm_function<-function(ENV, COMM, PHYTO, Methode, Variables){
 
   
   
-return(gdm.1)
+return(gdm.1.splineDat)
 }

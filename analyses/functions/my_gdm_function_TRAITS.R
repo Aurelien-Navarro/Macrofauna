@@ -115,7 +115,7 @@ my_gdm_function_TRAITS<-function(ENV, COMM, PHYTO, Variables){
   
   #plot du GDM
   
-  plot(gdm.1, plot.layout=c(2,3))->plot
+  plot(gdm.1, plot.layout=c(2,3))
   
   #affinage splines
   gdm.1.splineDat <- isplineExtract(gdm.1)
@@ -123,5 +123,5 @@ my_gdm_function_TRAITS<-function(ENV, COMM, PHYTO, Variables){
   
   
   
-  return(gdm.1)
+  return(gdm.1.splineDat)
 }
