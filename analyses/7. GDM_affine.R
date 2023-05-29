@@ -258,90 +258,63 @@ tapply(Pa3, ceiling(seq_along(V1)/3), sum)->coefPara_grad
 #sample
 t1<-data.frame(Predictors = GDM_HERBI_ESP_echSample$predictors, 
        coefPr_sample,coefPara_samp,coefH_sample)
-t1 <- tidyr::gather(t1, guildetrophique, valeur, -Predictors)%>%
-  filter(valeur>0.2)
-ggplot(t1, aes(x = guildetrophique, y = valeur, fill = Predictors)) +
+#parcelle
+t2<-data.frame(Predictors = GDM_HERBI_ESP_EchPlot$predictors, 
+           coefPr_plot,coefPara_plot,coefH_plot,coefDecompo_plot)
+#gradient
+t3<-tibble(Predictors=GDM_HERBI_ESP_echSample$predictors, 
+       coefPr_grad,coefPara_grad, coefDecompo_grad)
+
+
+#Le plot 
+Tbis <- tidyr::gather(t3, guildetrophique, valeur, -Predictors)
+Tbis <- Tbis %>%
+  group_by(guildetrophique) %>%
+  slice_max(n = 3, order_by = valeur) %>%
+  ungroup()%>%
+  filter(valeur>0)
+
+
+ggplot(Tbis, aes(x = guildetrophique, y = valeur, fill = Predictors)) +
   geom_bar(stat = "identity") +
   labs(x = "Predictors", y = "Coefficient") +
   scale_fill_hue(l = 40) 
-  theme_minimal()
+theme_minimal()
 
-
-#plot
-t2<-data.frame(Predictors =GDM_HERBI_ESP_EchPlot$predictors, 
-           coefPr_plot,coefPara_plot,coefH_plot,coefDecompo_plot)
-t2 <- tidyr::gather(t2, guildetrophique, valeur, -Predictors)%>%
-  filter(valeur>0.2)
-ggplot(t2, aes(x = guildetrophique, y = valeur, fill = Predictors)) +
-  geom_bar(stat = "identity") +
-  labs(x = "Predictors", y = "Coefficient") +
-  theme_minimal()
-
-#gradient
-t3<-tibble(GDM_HERBI_ESP_echSample$predictors, 
-       coefPr_grad,coefPara_grad, coefDecompo_grad)
 ##Comparaison entre echelles
 #Herbi
-t4<-tibble(GDM_HERBI_ESP_echSample$predictors, 
+t4<-tibble(Predictors=GDM_HERBI_ESP_echSample$predictors, 
            coefH_sample, coefH_plot)
 #Preda
-t5<-tibble(GDM_HERBI_ESP_echSample$predictors, 
+t5<-tibble(Predictors=GDM_HERBI_ESP_echSample$predictors, 
            coefPr_sample, coefPr_plot, coefPr_grad)
 #Detriti
-t6<-tibble(GDM_HERBI_ESP_echSample$predictors, 
+t6<-tibble(Predictors=GDM_HERBI_ESP_echSample$predictors, 
            coefDecompo_grad, coefDecompo_plot)
 #Parasites
-t7<-tibble(GDM_HERBI_ESP_echSample$predictors, 
+t7<-tibble(Predictors=GDM_HERBI_ESP_echSample$predictors, 
            coefPara_samp, coefPara_plot, coefPara_grad)
 
+#Le plot 
+Tbis <- tidyr::gather(t7, echelleetude, valeur, -Predictors)
+Tbis <- Tbis %>%
+  group_by(echelleetude) %>%
+  slice_max(n = 3, order_by = valeur) %>%
+  ungroup()%>%
+  filter(valeur>0)
+
+
+ggplot(Tbis, aes(x = echelleetude, y = valeur, fill = Predictors)) +
+  geom_bar(stat = "identity") +
+  labs(x = "Scale of study", y = "Coefficient") +
+  scale_fill_hue(l = 40) 
+theme_minimal()
 
 
 
 
 
 
-
-
-
-
-
-#GDM TRAITS------
-
-  ##HERBIVORES----
-
-GDM_HERBI_TRAITS<-my_gdm_function_TRAITS(ENV=ENV,
-                               COMM=herbiT,
-                               PHYTO=Phyto,
-                               Variables = c("id_plot","ndvi.mean","GDD_1cm.sum.mean","GDD_10cm.sum.mean",       
-                                             "CWD.sum.mean","FDD_1cm.sum.mean","FDD_10cm.sum.mean","solar.radiation.sum.mean",
-                                             "DSN_T_ISBA.mean","TG1.degres.mean","TG4.degres.mean",
-                                             "DRT.air.mean","TMeanY.mean","TMeanRngD.mean","TSeason.mean",
-                                             "TRngY.mean","PTotY.mean","PSeason.mean","Tmean","Pmean",                   
-                                             "Rveg", "PRCTMOmean","pHmean","Milieu","Alt","X_L93","Y_L93"))
-
-
-  ##PREDATEURS----
-GDM_PREDA_TRAITS<-my_gdm_function_TRAITS(ENV=ENV,
-                                         COMM=PredatT,
-                                         PHYTO=Phyto,
-                                         Variables = c("id_plot","ndvi.mean","GDD_1cm.sum.mean","GDD_10cm.sum.mean",       
-                                                       "CWD.sum.mean","FDD_1cm.sum.mean","FDD_10cm.sum.mean","solar.radiation.sum.mean",
-                                                       "DSN_T_ISBA.mean","TG1.degres.mean","TG4.degres.mean",
-                                                       "DRT.air.mean","TMeanY.mean","TMeanRngD.mean","TSeason.mean",
-                                                       "TRngY.mean","PTotY.mean","PSeason.mean","Tmean","Pmean",                   
-                                                       "Rveg", "PRCTMOmean","pHmean","Milieu","Alt","X_L93","Y_L93"))
-
-
-  ##DECOMPOSEURS----
-GDM_DETRITI_TRAITS<-my_gdm_function_TRAITS(ENV=ENV,
-                                         COMM=DetritiT,
-                                         PHYTO=Phyto,
-                                         Variables = c("id_plot","ndvi.mean","GDD_1cm.sum.mean","GDD_10cm.sum.mean",       
-                                                       "CWD.sum.mean","FDD_1cm.sum.mean","FDD_10cm.sum.mean","solar.radiation.sum.mean",
-                                                       "DSN_T_ISBA.mean","TG1.degres.mean","TG4.degres.mean",
-                                                       "DRT.air.mean","TMeanY.mean","TMeanRngD.mean","TSeason.mean",
-                                                       "TRngY.mean","PTotY.mean","PSeason.mean","Tmean","Pmean",                   
-                                                       "Rveg", "PRCTMOmean","pHmean","Milieu","Alt","X_L93","Y_L93"))
 
 
 
