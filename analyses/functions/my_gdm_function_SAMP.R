@@ -1,42 +1,41 @@
+#my_GDM_function SAMPLE
+#Fontions qui recoit les imputs et sortira les outputs
+
 #librairies
 librarian::shelf(dplyr,vegan, ggplot2, betapart, gdm, tibble, tidyverse)
 
-COMM=ESP[ESP$orderName == "Orthoptera"|ESP$familyName=="Chrysomelidae",]
-ECHELLE=Echelle
-
+#La fonction
+my_gdm_function_SAMP<-function(ENV, COMM, PHYTO, Methode, Variables, ECHELLE){
+  
   #preparation generale des tableaux
   #ECHELLE GRADIENT------
   ENV%>%
     rename(id_plot=codeplot)%>%
-    inner_join(ECHELLE, by='id_plot',relationship
-               = "many-to-many")%>%
-    select(c(Variables,gradient))%>%
-    group_by(gradient)%>%
+    inner_join(ECHELLE, by='id_plot',relationship = "many-to-many" )%>%
+    select(c(Variables,id_sample))%>%
+    group_by(id_sample)%>%
     summarise(across(
       .cols = all_of(Variables), 
       .fns = mean,
       na.rm=T))%>%
-    rename(echelle = gradient)%>%
+    rename(echelle = id_sample)%>%
     na.omit->ENV
   
   
-  Phyto%>%
+  PHYTO%>%
     rename(id_plot=codeplot)%>%
-    inner_join(ECHELLE, by='id_plot', relationship
-               = "many-to-many")->PHYTO
+    inner_join(ECHELLE, by='id_plot', relationship = "many-to-many")->PHYTO
   
   COMM%>%
-    unite(id_plot, gradient, alti)%>%
-    inner_join(ECHELLE, by='id_plot', relationship
-               = "many-to-many")->COMM
+    unite(id_plot, gradient, alti)->COMM
   
   
   
   #preparation de phyto 
   PHYTO%>%
+    group_by(id_sample, lb_nom)%>%
+    rename(echelle = id_sample)%>%
     add_column(ab = 1)%>%
-    group_by(gradient, lb_nom)%>%
-    rename(echelle = gradient)%>%
     summarise(tot = sum(ab))->tp
   ##transformation en matrice
   pivot_wider(tp,
@@ -50,11 +49,11 @@ ECHELLE=Echelle
   
   COMM%>%
     filter(!grepl("0", abundance))%>%
-    filter(method == "barber")%>%
+    filter(method == Methode)%>%
     filter(rankName %in% "EspÃ¨ce"|rankName%in%"Espèce")%>%
     mutate(name2 = ifelse(name == "", "unid", name))%>% 
-    group_by(gradient, name2)%>%
-    rename(echelle =gradient) %>%
+    group_by(id_sample, name2)%>%
+    rename(echelle =id_sample) %>%
     summarise(tot = sum(abundance))->tp1
   
   ###transfo en matrice
@@ -124,4 +123,19 @@ ECHELLE=Echelle
   ##application de la fonction GDM
   gdm.1 <- gdm(data=gdmdata, geo=TRUE)
   summary(gdm.1)
+  return(gdm.1)
   
+  #validation du GDM
+  gdm.crossvalidation(gdmdata,train.proportion=0.5, n.crossvalid.tests=1,
+                      geo=FALSE, splines=NULL, knots=NULL)
+  
+  
+  #plot du GDM
+  
+  plot(gdm.1, plot.layout=c(2,3))->plot
+  
+  #affinage splines
+  gdm.1.splineDat <- isplineExtract(gdm.1)
+  str(gdm.1.splineDat)
+  
+}
