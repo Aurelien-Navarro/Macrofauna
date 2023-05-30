@@ -15,7 +15,7 @@ ENV%>%
 read.csv("data/raw-data/envir/phyto.data3.csv",header=T, sep=",")->Phyto
 Phyto%>%
   filter(!codeplot %in% c("BOU","CAU"))->Phyto
-read.csv("data/derived-data/Esp/clean_data_2023-05-10.csv",header=T, sep=",")->ESP
+read.csv("data/derived-data/Esp/clean_data_2023-05-30.csv",header=T, sep=",")->ESP
 ESP%>%
   filter(!gradient %in% c("BOU","CAU"))->ESP
 read.csv("data/derived-data/ECHELLE2023-05-25.csv",header =T, sep=",")->Echelle
@@ -164,8 +164,7 @@ as.vector(GDM_HERBI_ESP_EchPlot$coefficients)->H2
                                                         ESP$familyName %in% "Geotrupidae",],
                                             PHYTO=Phyto,
                                             ECHELLE= Echelle,
-                                            Methode= c("tri manuel","chasse à vue","tri manuel qualitatif"),
-                                            Variables = c("ndvi.mean","GDD_1cm.sum.mean","GDD_10cm.sum.mean",       
+                                            Methode = c("tri manuel","tri manuel qualitatif","chasse a vue"),                                            Variables = c("ndvi.mean","GDD_1cm.sum.mean","GDD_10cm.sum.mean",       
                                                           "CWD.sum.mean","FDD_1cm.sum.mean","FDD_10cm.sum.mean","solar.radiation.sum.mean",
                                                           "DSN_T_ISBA.mean","TG1.degres.mean","TG4.degres.mean",
                                                           "DRT.air.mean","TMeanY.mean","TMeanRngD.mean","TSeason.mean",
@@ -265,7 +264,7 @@ Cate<-c("Distance", "Habitat","Habitat","Habitat","Habitat",
 #sample
 t1<-data.frame(Predictors = GDM_HERBI_ESP_echSample$predictors, 
        Predators = coefPr_sample,Parasitoids = coefPara_samp, Herbivores = coefH_sample
-        , Categorie= Cate)
+        ,Detritivores = coefDecompo_ech, Categorie= Cate)
 #parcelle
 t2<-data.frame(Predictors = GDM_HERBI_ESP_EchPlot$predictors, 
            Predators= coefPr_plot,
@@ -274,7 +273,7 @@ t2<-data.frame(Predictors = GDM_HERBI_ESP_EchPlot$predictors,
            Detritivores = coefDecompo_plot, Categorie= Cate)
 #gradient
 t3<-tibble(Predictors=GDM_HERBI_ESP_echSample$predictors, 
-       Predators =coefPr_grad,Parasitoids =coefPara_grad, Detritivores=coefDecompo_grad
+       Herbivores = coefH_grad, Predators =coefPr_grad,Parasitoids =coefPara_grad, Detritivores=coefDecompo_grad
        , Categorie= Cate)
 
 
@@ -297,7 +296,7 @@ ggplot(Tbis, aes(x = guildetrophique, y = valeur, fill = Predictors)) +
 ##Comparaison entre echelles
 #Herbi
 t4<-tibble(Predictors=GDM_HERBI_ESP_echSample$predictors, 
-           Sample = coefH_sample, Site = coefH_plot,
+           Sample = coefH_sample, Plot = coefH_plot, Site = coefH_grad,
            Categorie= Cate)
 #Preda
 t5<-tibble(Predictors=GDM_HERBI_ESP_echSample$predictors, 
@@ -305,7 +304,7 @@ t5<-tibble(Predictors=GDM_HERBI_ESP_echSample$predictors,
            Categorie = Cate)
 #Detriti
 t6<-tibble(Predictors=GDM_HERBI_ESP_echSample$predictors, 
-           Plot = coefDecompo_plot, Site = coefDecompo_grad,
+           Sample = coefDecompo_ech, Plot = coefDecompo_plot, Site = coefDecompo_grad,
            Categorie = Cate)
   
 #Parasites

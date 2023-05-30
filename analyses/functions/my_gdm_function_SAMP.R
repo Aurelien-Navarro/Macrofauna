@@ -49,7 +49,7 @@ my_gdm_function_SAMP<-function(ENV, COMM, PHYTO, Methode, Variables, ECHELLE){
   
   COMM%>%
     filter(!grepl("0", abundance))%>%
-    filter(method == Methode)%>%
+    filter(method %in% Methode)%>%
     filter(rankName %in% "EspÃ¨ce"|rankName%in%"Espèce")%>%
     mutate(name2 = ifelse(name == "", "unid", name))%>% 
     group_by(id_sample, name2)%>%
