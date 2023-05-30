@@ -313,7 +313,7 @@ t7<-tibble(Predictors=GDM_PARA_ESP_EchSamp$predictors,
            Categorie = Cate)
 
 #Le plot 
-Tbis <- tidyr::gather(t4, echelleetude, valeur, -c(Predictors, Categorie))
+Tbis <- tidyr::gather(t7, echelleetude, valeur, -c(Predictors, Categorie))
 Tbis <- Tbis %>%
   group_by(echelleetude) %>%
   slice_max(n = 3, order_by = valeur) %>%
