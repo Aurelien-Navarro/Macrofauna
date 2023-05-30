@@ -124,10 +124,9 @@ my_gdm_function_SAMP<-function(ENV, COMM, PHYTO, Methode, Variables, ECHELLE){
   gdm.1 <- gdm(data=gdmdata, geo=TRUE)
   summary(gdm.1)
   return(gdm.1)
-  
   #validation du GDM
   gdm.crossvalidation(gdmdata,train.proportion=0.5, n.crossvalid.tests=1,
-                      geo=FALSE, splines=NULL, knots=NULL)
+                      geo=FALSE, splines=NULL, knots=NULL)->valid
   
   
   #plot du GDM
@@ -137,5 +136,7 @@ my_gdm_function_SAMP<-function(ENV, COMM, PHYTO, Methode, Variables, ECHELLE){
   #affinage splines
   gdm.1.splineDat <- isplineExtract(gdm.1)
   str(gdm.1.splineDat)
+ 
+  
   
 }

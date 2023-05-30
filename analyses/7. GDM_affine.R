@@ -67,10 +67,11 @@ GDM_HERBI_ESP_EchPlot<-my_gdm_function_PLOT(ENV=ENV,
  
   
   
+
 as.vector(GDM_HERBI_ESP_EchPlot$coefficients)->H2
   tapply(H2, ceiling(seq_along(V1)/3), sum)->coefH_plot
   
-  GDM_HERBI_ESP_EchGrad<-my_gdm_function_GRAD(ENV=ENV,
+GDM_HERBI_ESP_EchGrad<-my_gdm_function_GRAD(ENV=ENV,
                                               COMM=ESP[ESP$orderName == "Orthoptera"|ESP$familyName=="Chrysomelidae",],
                                               PHYTO=Phyto,
                                               Methode= "barber",
@@ -81,7 +82,8 @@ as.vector(GDM_HERBI_ESP_EchPlot$coefficients)->H2
                                                             "DRT.air.mean","TMeanY.mean","TMeanRngD.mean","TSeason.mean",
                                                             "TRngY.mean","PTotY.mean","PSeason.mean","Tmean","Pmean",                   
                                                             "Rveg", "PRCTMOmean","pHmean","Milieu","Alt","X_L93","Y_L93"))
-  as.vector(GDM_HERBI_ESP_EchGrad$coefficients)->H3
+plot(GDM_HERBI_ESP_EchGrad)  
+as.vector(GDM_HERBI_ESP_EchGrad$coefficients)->H3
   tapply(H3, ceiling(seq_along(V1)/3), sum)->coefH_grad
   
   
@@ -153,7 +155,7 @@ as.vector(GDM_HERBI_ESP_EchPlot$coefficients)->H2
                                                                "TRngY.mean","PTotY.mean","PSeason.mean","Tmean","Pmean",                   
                                                                "Rveg", "PRCTMOmean","pHmean","Milieu","Alt","X_L93","Y_L93"))
    
- 
+ plot(GDM_PREDAT_ESP_EchGrad)
    as.vector(GDM_PREDAT_ESP_EchGrad$coefficients)->Pr3
    tapply(Pr3, ceiling(seq_along(V1)/3), sum)->coefPr_grad
    
@@ -204,7 +206,8 @@ GDM_DECOMPO_ESP_EchGrad<-my_gdm_function_GRAD(ENV=ENV,
                                                             "DRT.air.mean","TMeanY.mean","TMeanRngD.mean","TSeason.mean",
                                                             "TRngY.mean","PTotY.mean","PSeason.mean","Tmean","Pmean",                   
                                                             "Rveg", "PRCTMOmean","pHmean","Milieu","Alt","X_L93","Y_L93"))
-   as.vector(GDM_DECOMPO_ESP_EchGrad$coefficients)->D3
+plot(GDM_DECOMPO_ESP_EchGrad)   
+as.vector(GDM_DECOMPO_ESP_EchGrad$coefficients)->D3
    tapply(D3, ceiling(seq_along(V1)/3), sum)->coefDecompo_grad
 ##PARASITES----
    GDM_PARA_ESP_EchSamp<-my_gdm_function_SAMP(ENV=ENV,
@@ -218,7 +221,7 @@ GDM_DECOMPO_ESP_EchGrad<-my_gdm_function_GRAD(ENV=ENV,
                                                             "DRT.air.mean","TMeanY.mean","TMeanRngD.mean","TSeason.mean",
                                                             "TRngY.mean","PTotY.mean","PSeason.mean","Tmean","Pmean",                   
                                                             "Rveg", "PRCTMOmean","pHmean","Milieu","Alt","X_L93","Y_L93"))
-   
+   plot(GDM_PARA_ESP_EchSamp)
    as.vector(GDM_PARA_ESP_EchSamp$coefficients)->Pa1
    tapply(Pa1, ceiling(seq_along(V1)/3), sum)->coefPara_samp
    
@@ -247,7 +250,7 @@ GDM_PARA_ESP_EchGrad<-my_gdm_function_GRAD(ENV=ENV,
                                                          "DRT.air.mean","TMeanY.mean","TMeanRngD.mean","TSeason.mean",
                                                          "TRngY.mean","PTotY.mean","PSeason.mean","Tmean","Pmean",                   
                                                          "Rveg", "PRCTMOmean","pHmean","Milieu","Alt","X_L93","Y_L93"))
-
+plot(GDM_PARA_ESP_EchGrad)
 as.vector(GDM_PARA_ESP_EchGrad$coefficients)->Pa3
 tapply(Pa3, ceiling(seq_along(V1)/3), sum)->coefPara_grad
 
@@ -328,13 +331,41 @@ ggplot(Tbis, aes(x = echelleetude, y = valeur, fill = Predictors)) +
   geom_text(aes(label = Predictors), position = position_dodge(width = 1), vjust = -0.5) +  theme_minimal()
 
 
+#####LE PLOT DES SPLINES######
+
+#Herbivores
+t8<-tibble(Ecological_Distance = GDM_HERBI_ESP_EchSample$ecological,
+             Observed_Dissimilarity = GDM_HERBI_ESP_EchSample$observed )
+t9<-tibble(Ecological_Distance = GDM_HERBI_ESP_EchPlot$ecological,
+           Observed_Dissimilarity = GDM_HERBI_ESP_EchPlot$observed )
+t10<-tibble(Ecological_Distance = GDM_HERBI_ESP_EchGrad$ecological,
+            Observed_Dissimilarity = GDM_HERBI_ESP_EchGrad$observed )
+#Carnivores
+t11<-tibble(Ecological_Distance = GDM_PREDAT_ESP_EchSamp$ecological,
+            Observed_Dissimilarity = GDM_PREDAT_ESP_EchSamp$observed )
+t12<-tibble(Ecological_Distance = GDM_PREDAT_ESP_EchPlot$ecological,
+            Observed_Dissimilarity = GDM_PREDAT_ESP_EchPlot$observed )
+t13<-tibble(Ecological_Distance = GDM_PREDAT_ESP_EchGrad$ecological,
+            Observed_Dissimilarity = GDM_PREDAT_ESP_EchGrad$observed )
+#Detritivores
+t14<-tibble(Ecological_Distance = GDM_DECOMPO_ESP_EchSamp$ecological,
+            Observed_Dissimilarity = GDM_DECOMPO_ESP_EchSamp$observed )
+t15<-tibble(Ecological_Distance = GDM_DECOMPO_ESP_EchPlot$ecological,
+            Observed_Dissimilarity = GDM_DECOMPO_ESP_EchPlot$observed )
+t16<-tibble(Ecological_Distance = GDM_DECOMPO_ESP_EchGrad$ecological,
+            Observed_Dissimilarity = GDM_DECOMPO_ESP_EchGrad$observed )
+#Parasits
+t17<-tibble(Ecological_Distance = GDM_PARA_ESP_EchSamp$ecological,
+            Observed_Dissimilarity = GDM_PARA_ESP_EchSamp$observed )
+t18<-tibble(Ecological_Distance = GDM_PARA_ESP_EchPlot$ecological,
+            Observed_Dissimilarity = GDM_PARA_ESP_EchPlot$observed )
+t19<-tibble(Ecological_Distance = GDM_PARA_ESP_EchGrad$ecological,
+            Observed_Dissimilarity = GDM_PARA_ESP_EchGrad$observed )
 
 
+#Comparaison entre echelles
+par(mfrow = c(2,2))
 
-
-
-
-
-
+plot(GDM_DECOMPO_ESP_EchSamp)
 
 
