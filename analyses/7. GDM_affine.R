@@ -175,7 +175,7 @@ as.vector(GDM_HERBI_ESP_EchPlot$coefficients)->H2
    as.vector(GDM_DECOMPO_ESP_EchSamp$coefficients)->D1
    tapply(D1, ceiling(seq_along(V1)/3), sum)->coefDecompo_ech
    
-GDM_DECOMPO_ESP_EchPlot<-my_gdm_function_PLOT(ENV=ENV,
+DM_DECOMPO_ESP_EchPlot<-my_gdm_function_PLOT(ENV=ENV,
                                 COMM= ESP[ESP$orderName %in% "Isopoda"|
                                                  ESP$className %in% c("Diplopoda","Clitellata")|
                                                  ESP$familyName %in% "Geotrupidae",],
@@ -254,20 +254,32 @@ tapply(Pa3, ceiling(seq_along(V1)/3), sum)->coefPara_grad
 
 #####PLOT######
 
+#Creation de groupe dans lesquels appartiennent les variables 
+Cate<-c("Distance", "Habitat","Habitat","Habitat","Habitat",
+        "Habitat","Habitat","Habitat","Habitat","Habitat",
+        "Habitat","Habitat","Habitat","Habitat","Habitat",
+        "Habitat","Habitat","Habitat","Habitat","Habitat",
+        "Biotic", "Biotic", "Habitat", "Habitat", "Habitat","Biotic")
+
 ##Comparaison entre guildes 
 #sample
 t1<-data.frame(Predictors = GDM_HERBI_ESP_echSample$predictors, 
-       coefPr_sample,coefPara_samp,coefH_sample)
+       Predators = coefPr_sample,Parasitoids = coefPara_samp, Herbivores = coefH_sample
+        , Categorie= Cate)
 #parcelle
 t2<-data.frame(Predictors = GDM_HERBI_ESP_EchPlot$predictors, 
-           coefPr_plot,coefPara_plot,coefH_plot,coefDecompo_plot)
+           Predators= coefPr_plot,
+           Parastoids = coefPara_plot,
+           Herbivores = coefH_plot,
+           Detritivores = coefDecompo_plot, Categorie= Cate)
 #gradient
 t3<-tibble(Predictors=GDM_HERBI_ESP_echSample$predictors, 
-       coefPr_grad,coefPara_grad, coefDecompo_grad)
+       Predators =coefPr_grad,Parasitoids =coefPara_grad, Detritivores=coefDecompo_grad
+       , Categorie= Cate)
 
 
 #Le plot 
-Tbis <- tidyr::gather(t3, guildetrophique, valeur, -Predictors)
+Tbis <- tidyr::gather(t3, guildetrophique, valeur, -c(Predictors,Categorie))
 Tbis <- Tbis %>%
   group_by(guildetrophique) %>%
   slice_max(n = 3, order_by = valeur) %>%
@@ -276,27 +288,33 @@ Tbis <- Tbis %>%
 
 
 ggplot(Tbis, aes(x = guildetrophique, y = valeur, fill = Predictors)) +
-  geom_bar(stat = "identity") +
-  labs(x = "Predictors", y = "Coefficient") +
-  scale_fill_hue(l = 40) 
-theme_minimal()
+  geom_bar(stat = "identity", position = "dodge") +
+  labs(x = "Trophic Guild", y = "Coefficient") +
+  scale_fill_hue(c = 40) +
+  geom_text(aes(label = Predictors), position = position_dodge(width = 1), vjust = -0.5)
+  theme_minimal()
 
 ##Comparaison entre echelles
 #Herbi
 t4<-tibble(Predictors=GDM_HERBI_ESP_echSample$predictors, 
-           coefH_sample, coefH_plot)
+           Sample = coefH_sample, Site = coefH_plot,
+           Categorie= Cate)
 #Preda
 t5<-tibble(Predictors=GDM_HERBI_ESP_echSample$predictors, 
-           coefPr_sample, coefPr_plot, coefPr_grad)
+           Sample = coefPr_sample, Plot = coefPr_plot, Site = coefPr_grad,
+           Categorie = Cate)
 #Detriti
 t6<-tibble(Predictors=GDM_HERBI_ESP_echSample$predictors, 
-           coefDecompo_grad, coefDecompo_plot)
+           Plot = coefDecompo_plot, Site = coefDecompo_grad,
+           Categorie = Cate)
+  
 #Parasites
-t7<-tibble(Predictors=GDM_HERBI_ESP_echSample$predictors, 
-           coefPara_samp, coefPara_plot, coefPara_grad)
+t7<-tibble(Predictors=GDM_PARA_ESP_EchSamp$predictors, 
+           Sample = coefPara_samp, Plot = coefPara_plot, Site =coefPara_grad,
+           Categorie = Cate)
 
 #Le plot 
-Tbis <- tidyr::gather(t7, echelleetude, valeur, -Predictors)
+Tbis <- tidyr::gather(t4, echelleetude, valeur, -c(Predictors, Categorie))
 Tbis <- Tbis %>%
   group_by(echelleetude) %>%
   slice_max(n = 3, order_by = valeur) %>%
@@ -305,10 +323,10 @@ Tbis <- Tbis %>%
 
 
 ggplot(Tbis, aes(x = echelleetude, y = valeur, fill = Predictors)) +
-  geom_bar(stat = "identity") +
-  labs(x = "Scale of study", y = "Coefficient") +
-  scale_fill_hue(l = 40) 
-theme_minimal()
+  geom_bar(stat = "identity", position = "dodge") +
+  labs(x = "Scale", y = "Coefficient") +
+  scale_fill_hue(c = 40) +
+  geom_text(aes(label = Predictors), position = position_dodge(width = 1), vjust = -0.5) +  theme_minimal()
 
 
 
