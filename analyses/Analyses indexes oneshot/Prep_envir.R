@@ -19,6 +19,9 @@ read.csv("data/raw-data/envir/par_aurel/Tmean_Prec1.csv", header = T, sep=";")->
 read.csv("data/raw-data/envir/Habitat.csv",header=T, sep=",")->Habit
 read.csv("data/raw-data/envir/Romain/MODIS4ORCHAMP.csv",header=T, sep=",")->NDVI
 readRDS("data/raw-data/envir/Romain/climatic.rds")->Climat
+read.csv("data/raw-data/Envir/Julien/SafranPyr.csv")->SafranPyr
+read.csv("data/raw-data/Envir/Julien/CrocusPyr.csv")->CrocusPyr
+
 #----------------
 
 
@@ -26,9 +29,9 @@ readRDS("data/raw-data/envir/Romain/climatic.rds")->Climat
 
  ##TEMPERATURES----------
   ##Temperature moyenne de 2017-2018-2019 par site et par altitude
-  str(Temperatures$X2019.12)
+ 
 Temperatures %>%
-  select(contains(c("2019","2018","2017"))) %>%
+  select(contains("2019")) %>%
   rowMeans()->Temperatures$Tmean
 Temperatures%>%
   select(c("nom", "idsite", "codeplot", "idplot", "Tmean"))->Temp_final
@@ -38,7 +41,7 @@ Temperatures%>%
   ##Precipitations moyennes par site et par altitude
 
 Tmean_rainf1%>%
-    filter(year>="2017")%>%
+    filter(year>="2019")%>%
     na.omit(Rainf)%>%
     group_by(site, alti)%>%
     summarise(Pmean=mean(Rainf))-> Rainfall_final
@@ -380,5 +383,45 @@ RS_veg_final<-Phyto%>%
   full_join(ENV, Habit_final, by = "codeplot")->ENV
   
 
+#Les pyrenees 
+  #recoder les idplot
+  CrocusPyr%>%
+    mutate(id_plot = recode(idplot, "186" = "MSB_1370",
+                            "187" = "MSB_1420",
+                            "188"="MSB_1600",
+                            "189"="MSB_2000",
+                            "190"="MSB_2200",
+                            "191"="MSB_2400",
+                            "199"="VER_1200",
+                            "200"="VER_1400",
+                            "201"="VER_1420",
+                            "202"="VER_1620",
+                            "203"="VER_1800",
+                            "204"="VER_2000"))->CrocusPyr
+  #TG1
+  CrocusPyr%>%
+    group_by(idplot)%>%
+  summarise(TG1mean=mean(TG1))-> TG1f
+  #TG4
+  CrocusPyr%>%
+    group_by(idplot)%>%
+    summarise(TG4mean=mean(TG4))-> TG4f
+  #DSNDISBA
+  CrocusPyr%>%
+    group_by(idplot)%>%
+    summarise(DSN_T_ISBAmean=mean(DSN_T_ISBA))-> DSN_T_ISBAf
+  #Tairmean
+  SafranPyr%>%
+    group_by(idplot)%>%
+    summarise(Tairmean=mean(TairMean))-> Tairmeanf
+  #Rainf
+  SafranPyr%>%
+    group_by(idplot)%>%
+    summarise(Rainfmean=mean(Rainf))-> Rainff
+  
+  
+  
+  
+  
 #Save ENV--------------
   write.csv(ENV, file = paste0("data/derived-data/Envir/ENV_" , as.character(Sys.Date()) , ".csv"))

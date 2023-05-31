@@ -1,127 +1,13 @@
-#librairies
-librarian::shelf(dplyr,vegan, ggplot2, betapart, gdm, tibble, tidyverse)
+#Globiboulga de mes variables, plus simples à selectionner 
 
-COMM=ESP[ESP$orderName == "Orthoptera"|ESP$familyName=="Chrysomelidae",]
-ECHELLE=Echelle
-
-  #preparation generale des tableaux
-  #ECHELLE GRADIENT------
-  ENV%>%
-    rename(id_plot=codeplot)%>%
-    inner_join(ECHELLE, by='id_plot',relationship
-               = "many-to-many")%>%
-    select(c(Variables,gradient))%>%
-    group_by(gradient)%>%
-    summarise(across(
-      .cols = all_of(Variables), 
-      .fns = mean,
-      na.rm=T))%>%
-    rename(echelle = gradient)%>%
-    na.omit->ENV
-  
-  
-  Phyto%>%
-    rename(id_plot=codeplot)%>%
-    inner_join(ECHELLE, by='id_plot', relationship
-               = "many-to-many")->PHYTO
-  
-  COMM%>%
-    unite(id_plot, gradient, alti)%>%
-    inner_join(ECHELLE, by='id_plot', relationship
-               = "many-to-many")->COMM
-  
-  
-  
-  #preparation de phyto 
-  PHYTO%>%
-    add_column(ab = 1)%>%
-    group_by(gradient, lb_nom)%>%
-    rename(echelle = gradient)%>%
-    summarise(tot = sum(ab))->tp
-  ##transformation en matrice
-  pivot_wider(tp,
-              id_cols =echelle ,
-              names_from = 'lb_nom', 
-              values_from = 'tot',
-              values_fill = 0)->commuphyto
-  
-  
-  #Preparation de COMM
-  
-  COMM%>%
-    filter(!grepl("0", abundance))%>%
-    filter(method == "barber")%>%
-    filter(rankName %in% "EspÃ¨ce"|rankName%in%"Espèce")%>%
-    mutate(name2 = ifelse(name == "", "unid", name))%>% 
-    group_by(gradient, name2)%>%
-    rename(echelle =gradient) %>%
-    summarise(tot = sum(abundance))->tp1
-  
-  ###transfo en matrice
-  pivot_wider(tp1,
-              id_cols = echelle,
-              names_from = 'name2', 
-              values_from = 'tot',
-              values_fill = 0)->matrice
-  
-  #Affinage
-  
-  matrice1 <- subset(matrice, echelle %in% intersect(intersect(matrice$echelle, commuphyto$echelle), ENV$echelle))
-  commuphyto1 <- subset(commuphyto, echelle %in% intersect(intersect(commuphyto$echelle, matrice$echelle), ENV$echelle))
-  ENV1 <- subset(ENV, echelle %in% intersect(intersect(ENV$echelle, matrice$echelle), commuphyto$echelle))
-  
-  
-  
-  ##dissimilarite vegetale
-  
-  
-  
-  commuphyto1$echelle->echelle
-  as.data.frame(echelle)->echelle
-  
-  ##passage de id_plot en index 
-  commuphyto1%>%
-    remove_rownames()%>%
-    column_to_rownames('echelle')->commuphyto_ind
-  Dissvege <- as.matrix(vegdist(commuphyto_ind, method="bray", na.rm=T))
-  
-  
-  
-  vegedis <- cbind(echelle,Dissvege)
-  
-  
-  
-  ###Dissimilarite communaute 
-  #Sortir la colone id_plot
-  matrice1 %>% 
-    select(echelle) -> echelle2
-  
-  #on finit la matrice commu
-  
-  matrice1%>%
-    remove_rownames()%>%
-    column_to_rownames('echelle')->matrice2
-  
-  
-  DissComm <- vegdist(matrice2, method="bray", na.rm=T)
-  as.matrix(DissComm)->DissComm
-  
-  #on replace id_plot
-  cbind(DissComm, echelle2)->gdmdist
-  
-  
-  
-  gdmdata <- formatsitepair(bioData=gdmdist, 
-                            bioFormat=3, #diss matrix 
-                            XColumn="X_L93", 
-                            YColumn="Y_L93", 
-                            predData=ENV1,
-                            distPreds = list(vegedis),
-                            siteColumn="echelle")
-  
-  na.omit(gdmdata)->gdmdata
-  
-  ##application de la fonction GDM
-  gdm.1 <- gdm(data=gdmdata, geo=TRUE)
-  summary(gdm.1)
-  
+c("codeplot","ndvi.mean","GDD_1cm.sum.mean","GDD_10cm.sum.mean","CWD.sum.mean",
+"FDD_1cm.sum.mean","FDD_10cm.sum.mean","solar.radiation.sum.mean",
+"DSN_T_ISBA.mean","TG1.degres.mean","TG4.degres.mean","DRT.air.mean",
+"TMeanY.mean","TMeanRngD.mean","TSeason.mean","TRngY.mean",
+"PTotY.mean","PSeason.mean","Tmean","Pmean","Rveg",
+"Diam_mean","NDVImin","NDVImax","PRCTMOmean","pHmean",
+"Cmean","Nmean","Almean","Argilemean","Calcmean","Camean","Fermean",
+"Limfinmean","Limgrosmean","mgmean","Mnmean","Phosmean","Kmean",
+"Sablefinmean","Sablegrosmean","Namean","PHOSmean","NAGmean",
+"LAPmean","AGmean","CBmean","BGmean","XYLmean","Milieu",
+"Alt","X_L93","Y_L93")
