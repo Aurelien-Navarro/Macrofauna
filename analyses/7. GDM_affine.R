@@ -19,6 +19,7 @@ read.csv("data/derived-data/Esp/clean_data_2023-05-30.csv",header=T, sep=",")->E
 ESP%>%
   filter(grepl("ARG|ARM|RIS|VCHA|VAL|PEC|MOU|VTN|TAN|MSB|VER", gradient))->ESP
 read.csv("data/derived-data/ECHELLE2023-05-25.csv",header =T, sep=",")->Echelle
+read.csv("data/derived-data/Envir/resp.csv",header=T, sep=",")->RICHSPEANIMO
 
 #Donnes traits deja triees par 2.Indice Computation Guilde
 read.csv("data/derived-data/Traits/detriti/detrialphaplot_2023-05-24.csv", h=T, sep=",")->DetritiT
@@ -40,10 +41,11 @@ GDM_HERBI_ESP_EchSample<-my_gdm_function_SAMP(ENV=ENV,
                                             Methode= "barber",
                                             IDRESO = "Espèce",
                                             ECHELLE = Echelle,
+                                            ANIMO = RICHSPEANIMO,
                                             Variables = c("ndvi.mean","TMeanY.mean","PTotY.mean",                
                                                           "Rveg","NDVImin","NDVImax","PRCTMOmean",
                                                           "pHmean","Milieu","Alt","X_L93","Y_L93",
-                                                          "TG1.degres.mean" ,"TG4.degres.mean","DSN_T_ISBA.mean"))
+                                                          "TG1.degres.mean" ,"TG4.degres.mean","DSN_T_ISBA.mean", "Resp"))
 
 as.vector(GDM_HERBI_ESP_EchSample$coefficients)->H1
 tapply(H1, ceiling(seq_along(H1)/3), sum)->coefH_sample
@@ -57,10 +59,11 @@ GDM_HERBI_ESP_EchPlot<-my_gdm_function_PLOT(ENV=ENV,
                                               PHYTO=Phyto,
                                               Methode= "barber",
                                               IDRESO = "Espèce",
+                                              ANIMO= RICHSPEANIMO,
                                               Variables = c("ndvi.mean","TMeanY.mean","PTotY.mean",                
                                                             "Rveg","NDVImin","NDVImax","PRCTMOmean",
                                                             "pHmean","Milieu","Alt","X_L93","Y_L93",
-                                                            "TG1.degres.mean" ,"TG4.degres.mean","DSN_T_ISBA.mean"))
+                                                            "TG1.degres.mean" ,"TG4.degres.mean","DSN_T_ISBA.mean", "Resp"))
  
   
   
@@ -74,10 +77,11 @@ GDM_HERBI_ESP_EchGrad<-my_gdm_function_GRAD(ENV=ENV,
                                               Methode= "barber",
                                               IDRESO = "Espèce",
                                               ECHELLE = Echelle,
+                                              ANIMO = RICHSPEANIMO,
                                               Variables = c("ndvi.mean","TMeanY.mean","PTotY.mean",                
                                                             "Rveg","NDVImin","NDVImax","PRCTMOmean",
                                                             "pHmean","Milieu","Alt","X_L93","Y_L93",
-                                                            "TG1.degres.mean" ,"TG4.degres.mean","DSN_T_ISBA.mean"))
+                                                            "TG1.degres.mean" ,"TG4.degres.mean","DSN_T_ISBA.mean", "Resp"))
 
 as.vector(GDM_HERBI_ESP_EchGrad$coefficients)->H3
   tapply(H3, ceiling(seq_along(H3)/3), sum)->coefH_grad
@@ -96,10 +100,11 @@ as.vector(GDM_HERBI_ESP_EchGrad$coefficients)->H3
                                                 Methode= "barber",
                                                 IDRESO = "Espèce",
                                                 ECHELLE= Echelle,
+                                                ANIMO = RICHSPEANIMO,
                                                 Variables = c("ndvi.mean","TMeanY.mean","PTotY.mean",                
                                                               "Rveg","NDVImin","NDVImax","PRCTMOmean",
                                                               "pHmean","Milieu","Alt","X_L93","Y_L93",
-                                                              "TG1.degres.mean" ,"TG4.degres.mean","DSN_T_ISBA.mean"))
+                                                              "TG1.degres.mean" ,"TG4.degres.mean","DSN_T_ISBA.mean", "Resp"))
    
    
   
@@ -114,10 +119,11 @@ as.vector(GDM_HERBI_ESP_EchGrad$coefficients)->H3
                                 PHYTO=Phyto,
                                 IDRESO = "Espèce",
                                 Methode= "barber",
+                                ANIMO = RICHSPEANIMO,
                                 Variables = c("ndvi.mean","TMeanY.mean","PTotY.mean",                
                                               "Rveg","NDVImin","NDVImax","PRCTMOmean",
                                               "pHmean","Milieu","Alt","X_L93","Y_L93",
-                                              "TG1.degres.mean" ,"TG4.degres.mean","DSN_T_ISBA.mean"))
+                                              "TG1.degres.mean" ,"TG4.degres.mean","DSN_T_ISBA.mean","Resp"))
    
    
    
@@ -131,10 +137,11 @@ as.vector(GDM_HERBI_ESP_EchGrad$coefficients)->H3
                                                 IDRESO = "Espèce",
                                                  Methode= "barber",
                                                  ECHELLE = Echelle,
+                                                ANIMO = RICHSPEANIMO,
                                                  Variables = c("ndvi.mean","TMeanY.mean","PTotY.mean",                
                                                                "Rveg","NDVImin","NDVImax","PRCTMOmean",
                                                                "pHmean","Milieu","Alt","X_L93","Y_L93",
-                                                               "TG1.degres.mean" ,"TG4.degres.mean","DSN_T_ISBA.mean"))
+                                                               "TG1.degres.mean" ,"TG4.degres.mean","DSN_T_ISBA.mean","Resp"))
    
 
    as.vector(GDM_PREDAT_ESP_EchGrad$coefficients)->Pr3
@@ -148,8 +155,9 @@ as.vector(GDM_HERBI_ESP_EchGrad$coefficients)->H3
                                                 PHYTO=Phyto,
                                                 IDRESO = "Espèce",
                                                 ECHELLE= Echelle,
+                                                ANIMO = RICHSPEANIMO,
                                                 Methode = c("tri manuel","tri manuel qualitatif","chasse a vue"),    
-                                                Variables = c("ndvi.mean","TMeanY.mean","PTotY.mean",                
+                                                Variables = c("ndvi.mean","TMeanY.mean","PTotY.mean","Resp",                
                                                               "Rveg","NDVImin","NDVImax","PRCTMOmean",
                                                               "pHmean","Milieu","Alt","X_L93","Y_L93",
                                                               "TG1.degres.mean" ,"TG4.degres.mean","DSN_T_ISBA.mean",
@@ -167,9 +175,10 @@ GDM_DECOMPO_ESP_EchPlot<-my_gdm_function_PLOT(ENV=ENV,
                                                  ESP$familyName %in% "Geotrupidae",],
                                 PHYTO=Phyto,
                                 IDRESO = "Espèce",
+                                ANIMO = RICHSPEANIMO,
                                 Methode= c("tri manuel","chasse à vue","tri manuel qualitatif"),
                                 Variables = c("ndvi.mean","TMeanY.mean","PTotY.mean",                
-                                              "Rveg","NDVImin","NDVImax","PRCTMOmean",
+                                              "Rveg","NDVImin","NDVImax","PRCTMOmean","Resp",
                                               "pHmean","Milieu","Alt","X_L93","Y_L93",
                                               "TG1.degres.mean" ,"TG4.degres.mean","DSN_T_ISBA.mean",
                                               "Nmean","Almean","Argilemean","Calcmean","Camean","Fermean",
@@ -187,8 +196,9 @@ GDM_DECOMPO_ESP_EchGrad<-my_gdm_function_GRAD(ENV=ENV,
                                               PHYTO=Phyto,
                                               IDRESO = "Espèce",
                                               ECHELLE= Echelle,
+                                              ANIMO = RICHSPEANIMO,
                                               Methode= c("tri manuel","chasse à vue","tri manuel qualitatif"),
-                                              Variables = c("ndvi.mean","TMeanY.mean","PTotY.mean",                
+                                              Variables = c("ndvi.mean","TMeanY.mean","PTotY.mean", "Resp",               
                                                             "Rveg","NDVImin","NDVImax","PRCTMOmean",
                                                             "pHmean","Milieu","Alt","X_L93","Y_L93",
                                                             "TG1.degres.mean" ,"TG4.degres.mean","DSN_T_ISBA.mean",
@@ -205,6 +215,7 @@ as.vector(GDM_DECOMPO_ESP_EchGrad$coefficients)->D3
                                               IDRESO = "Genre",
                                               Methode= "barber",
                                               ECHELLE = Echelle,
+                                              ANIMO = RICHSPEANIMO,
                                               Variables = c("ndvi.mean","TMeanY.mean","PTotY.mean",                
                                                             "Rveg","NDVImin","NDVImax","PRCTMOmean",
                                                             "pHmean","Milieu","Alt","X_L93","Y_L93",
@@ -218,8 +229,9 @@ GDM_PARA_ESP_EchPlot<-my_gdm_function_PLOT(ENV=ENV,
                               PHYTO=Phyto,
                               IDRESO = "Genre",
                               Methode= "barber", 
+                              ANIMO = RICHSPEANIMO,
                               Variables = c("ndvi.mean","TMeanY.mean","PTotY.mean",                
-                                            "Rveg","NDVImin","NDVImax","PRCTMOmean",
+                                            "Rveg","NDVImin","NDVImax","PRCTMOmean","Resp",
                                             "pHmean","Milieu","Alt","X_L93","Y_L93",
                                             "TG1.degres.mean" ,"TG4.degres.mean","DSN_T_ISBA.mean"))
     
@@ -231,8 +243,9 @@ GDM_PARA_ESP_EchGrad<-my_gdm_function_GRAD(ENV=ENV,
                                            PHYTO=Phyto,
                                            Methode= "barber",
                                            IDRESO = "Genre",
+                                           ANIMO = RICHSPEANIMO,
                                            ECHELLE=Echelle,
-                                           Variables = c("ndvi.mean","TMeanY.mean","PTotY.mean",                
+                                           Variables = c("ndvi.mean","TMeanY.mean","PTotY.mean","Resp",              
                                                          "Rveg","NDVImin","NDVImax","PRCTMOmean",
                                                          "pHmean","Milieu","Alt","X_L93","Y_L93",
                                                          "TG1.degres.mean" ,"TG4.degres.mean","DSN_T_ISBA.mean"))
