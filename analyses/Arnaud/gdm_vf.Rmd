@@ -1,0 +1,189 @@
+---
+title: "gdm_vf"
+author: "Arnaud"
+date: "2023-03-15"
+output: html_document
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = T)
+r = getOption("repos")
+r["CRAN"] = "http://cran.us.r-project.org"
+options(repos = r)
+pkgs <- unique(c("stringr","dplyr","tidyverse","glue","rgl","vegan","readxl","readr"))
+new.pkgs <- pkgs[!(pkgs %in% installed.packages()[,"Package"])]
+if(length(new.pkgs)){install.packages(new.pkgs)}
+lapply(pkgs, require, character.only = T)
+
+library(vegan)
+library(ggplot2)
+library(betapart)
+library(cowplot)
+library(gdm)
+library(FactoMineR)
+library(factoextra)
+library(pander)
+```
+## Packages nécessaires
+
+- ggplot2
+- vegan
+- betapart
+- gdm
+- FactoMineR
+- factoextra
+- pander
+
+
+## Description
+
+L'objectif est d'effectuer une modélisation de dissimilarité généralisée pour analyser les schémas spatiaux de la biodiversité afin de déterminer quel(s) variable(s) affecte(nt) davantage la diversité beta entre les communautés 
+
+Nous avons vérifié préalablement et changé les matrices d'abondance en matrices d'occurence, ce qui n'affecte aucunement le modèle et le poids de chaque facteur.
+
+Nous ne travaillons plus sur nestdeness/turnover car le turnover explique la quasi-totalité de la diverité beta.
+(preuve à mettre dans l'article)
+
+## Création des data pour les gdm
+
+
+```{r creation gdmdata}
+#Données
+sol2 <- read.csv2("D:/these/donnees/all_data/article2/donnees_glm/matrice_def/donnees_sol.csv") #pour les noms de commu
+OTU <- read.csv2("D:/these/donnees/all_data/article2/donnees_glm/matrice_def/matrice_abon.csv", row.names = 1)
+sol <- read.csv2("D:/these/donnees/all_data/article2/donnees_glm/matrice_def/donnees_sol.csv", row.names = 1)
+geo <- read.csv2("D:/these/donnees/all_data/article2/donnees_glm/matrice_def/donnees_geo.csv", row.names = 1)
+vege <- read.csv2("D:/these/donnees/all_data/article2/donnees_glm/matrice_def/matrice_vege_fam.csv", row.names = 1)
+precipitation <- read.csv2("D:/these/donnees/all_data/article2/donnees_glm/matrice_def/donnees_climato.csv", row.names = 1)
+alt <- read.csv2("D:/these/donnees/all_data/article2/donnees_glm/matrice_def/dev_alt.csv", row.names = 1)
+
+##Création du data pour les gdm
+
+#Pour la végétation il n'y a pas galbao. Donc on enleve pour les autres les première lignes
+geo <- geo[-c(1:7),]
+sol <- sol[-c(1:7),]
+precipitation <- precipitation[-c(1:7),]
+OTU <- OTU[-c(1:7),]
+
+#Création des matrices de dissimilarités
+OTU2 <- OTU
+OTU2[OTU2!=0]<-1
+c1 <- beta.pair(OTU2, index.family = "sorensen")
+sor_plots <- as.matrix(c1$beta.sor)
+ne_plots <- as.matrix(((c1$beta.sor)/c1$beta.sor)*c1$beta.sne)
+tu_plots <- as.matrix(((c1$beta.sor)/c1$beta.sor)*c1$beta.sim)
+
+#Création des id des communautés
+sol2 <- sol2[-c(1:7),]
+commu <- unique(sol2$Site.Code)
+commu.id <- c(1:36) #nombre de communautés
+commu.tab <- data.frame(commu,commu.id)
+
+#Création du data pour les gdm
+env <- cbind(commu.id,geo,sol,precipitation,alt)
+
+gdmdis <- cbind(commu.id, sor_plots)
+
+vege2 <- vege
+vege2[vege2!=0]<-1
+c2 <- beta.pair(vege2, index.family = "sorensen")
+vege_plots2 <- as.matrix(c2$beta.sor)
+
+vegedis <- cbind(commu.id,vege_plots2)
+
+
+gdmdata <- formatsitepair(bioData=gdmdis, 
+                          bioFormat=3, #diss matrix 
+                          XColumn="Lon", 
+                          YColumn="Lat", 
+                          predData=env,
+                          distPreds = list(vegedis),
+                          siteColumn="commu.id")
+
+gdmdata[,1] <- as.numeric(gdmdata[,1])
+gdmdata[,2] <- as.numeric(gdmdata[,2])
+gdmdata[,3] <- as.numeric(gdmdata[,3])
+gdmdata[,4] <- as.numeric(gdmdata[,4])
+gdmdata[,5] <- as.numeric(gdmdata[,5])
+gdmdata[,6] <- as.numeric(gdmdata[,6])
+
+```
+
+
+## Choix entre T or F pour le paramètre géo
+
+Le paramètre geo = T/F (pour la fonction gdm ou gdm_varImp) permet juste d'inclure la distance géographique dans le modèle comme prédicteur ou non.
+Donc je vois deux façons de faire. 
+Soit, on laisse nos glm pour montrer que la distance géographique est un facteur qui explique enormement la diversité beta puis dans les gdm on effectue les modèles avec geo = F pour voir quels autres facteurs expliquent la diversité béta
+Soit, on fait les modèles d'abord avec geo = T on conclue que la distance explique à lui seul la diversité aux niveaux béta 3 et 1. Puis on effectue le modèle une seconde fois avec geo = F pour déterminer les autres prédicteurs qui expliquent également la diversité aux différents niveaux (je trouve cela plus pertinent pour l'article. La suite du script détaille ce point. J'ai effectué gdm_varImp avec les deux paramètres geo = T/F)
+
+## Explication GDM_varImp
+
+Cette fonction calcule également un score d'importance de chaque prédicteur ("Predictor Importance") (permettant de les classer par ordre d'importance) mais, surtout, il lui associe une p-value pour voir quel prédicteur explique significativement la diversité béta grâce à des tests de permutations.
+J'ai regardé la fonction est dans notre cas on peut laisser tous les paramètres par défaut sans problème.
+Il n'y a que le paramètre geo = T/F que je modifie (cf plus haut).
+En réalité, j'ai testé de changer la valeur d'un autre paramètre qui est predSelect = T/F. Par defaut, il est sur false. Quand on le passe sur true, le modèle calcule les valeurs d'importance des predicteurs et les p-value comme pour predSelect = F. Sauf qu'une fois cela fait, il supprime le prédicteur qui a la plus faible "Predictor importance" puis recalcule les valeurs d'importance et p-value pour les autres. Il effectue en boucle ce schéma jusqu'à n'avoir que des prédicteurs qui expliquent significativement la diversité.
+J'ai pris la décision ici de ne pas utiliser cette option car je ne vois pas l'intéret biologique. Concrètement, toutes les variables environnementales sont liées et je trouve qu'il n'y a pas de sens à tester en suppriment à chaque fois une variable. (je ne sais pas si je suis clair). Sur ce point, on peut également en discuter si tu n'es pas d'accord avec mon pont de vue. Je suis ouvert sur ça.
+
+## GDM_varImp 1: Béta 4
+
+Analyse GDM à l'échelle béta 4
+
+```{r gdm1}
+
+gdmdata.b4 <- gdmdata[,-c(7,8,11,19,20,23)] #on enlève clay, silt et N
+
+gdm.b4_T <- gdm(data=gdmdata.b4, geo=T)
+
+summary(gdm.b4_T)
+
+plot(gdm.b4_T$)
+
+gdm.b4_F <- gdm(data=gdmdata.b4, geo=F)
+
+summary(gdm.b4_F)
+
+plot(gdm.b4_F, plot.layout=c(2,3))
+
+```
+
+## GDM_varImp 2: Béta 3
+
+Analyse GDM à l'échelle béta 3
+
+```{r gdm2}
+
+gdmdata.b3 <- gdmdata.b4[-c(9:35,43:69,76:102,108:134,139:165,169:195,198:224,226:279,
+                            288:305,313:330,337:354,360:377,382:399,403:420,423:440,442:477,
+                            489:494,505:510,520:525,534:539,547:552,559:564,570:575,580:585,
+                            589:594,597:602,604:615),]
+
+gdm.b3 <- gdm(data=gdmdata.b3, geo=T)
+
+summary(gdm.b3)
+
+gdm.b3 <- gdm(data=gdmdata.b3, geo=F)
+
+summary(gdm.b3)
+
+```
+
+## GDM_varImp 3: Béta 2
+
+Analyse GDM à l'échelle béta 2
+
+```{r gdm3}
+
+gdmdata.b2 <- gdmdata.b4[c(1,2,36,103:107,135:138,166:168,196,197,225,282,285,
+                        308,311,333,336,357,380,402,480,483,486,497,500,503,
+                        513,516,519,528,531,542,545,555,558,567,578,588,616,
+                        617,621,628),]
+
+gdm.b2 <- gdm(data=gdmdata.b2, geo=T)
+
+summary(gdm.b2)
+
+gdm.b4 <- gdm(data=gdmdata.b2, geo=F)
+
+summary(gdm.b2)
+
+```

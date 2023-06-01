@@ -167,7 +167,7 @@ myIndices <- function(DF, TR, IDresol){
                  mutate(across(c(2:ncol(.)), ~ifelse(. == 0, 0, 1)))
                
                tr2 <- tr1 %>%
-                 column_to_rownames(1)
+                 column_to_rownames("name")
                com1 <- com[,-1] %>%
                  select(rownames(tr2))
                CWM <- cbind(com[,1], functcomp(as.matrix(tr2), as.matrix(com1)))
