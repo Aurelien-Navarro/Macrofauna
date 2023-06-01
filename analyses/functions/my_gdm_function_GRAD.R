@@ -5,7 +5,7 @@
 librarian::shelf(dplyr,vegan, ggplot2, betapart, gdm, tibble, tidyverse)
 
 #La fonction
-my_gdm_function_GRAD<-function(ENV, COMM, PHYTO, Methode, Variables, ECHELLE){
+my_gdm_function_GRAD<-function(ENV, COMM, PHYTO, Methode, Variables, ECHELLE, IDRESO, ANIMO){
 
   #preparation generale des tableaux
   #ECHELLE GRADIENT------
@@ -13,6 +13,7 @@ my_gdm_function_GRAD<-function(ENV, COMM, PHYTO, Methode, Variables, ECHELLE){
     rename(id_plot=codeplot)%>%
     inner_join(ECHELLE, by='id_plot',relationship
                = "many-to-many")%>%
+    left_join(ANIMO, by="id_sample")%>%
     select(c(Variables,gradient))%>%
     group_by(gradient)%>%
     summarise(across(
@@ -54,7 +55,7 @@ my_gdm_function_GRAD<-function(ENV, COMM, PHYTO, Methode, Variables, ECHELLE){
   COMM%>%
     filter(!grepl("0", abundance))%>%
     filter(method %in% Methode)%>%
-    filter(rankName %in% "EspÃ¨ce"|rankName%in%"Espèce")%>%
+    filter(rankName %in% IDRESO)%>%
     mutate(name2 = ifelse(name == "", "unid", name))%>% 
     group_by(gradient, name2)%>%
     rename(echelle =gradient) %>%

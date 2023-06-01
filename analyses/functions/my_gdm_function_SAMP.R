@@ -5,14 +5,15 @@
 librarian::shelf(dplyr,vegan, ggplot2, betapart, gdm, tibble, tidyverse)
 
 #La fonction
-my_gdm_function_SAMP<-function(ENV, COMM, PHYTO, Methode, Variables, ECHELLE){
+my_gdm_function_SAMP<-function(ENV, COMM, PHYTO, Methode, Variables, ECHELLE, IDRESO, ANIMO){
   
   #preparation generale des tableaux
   #ECHELLE GRADIENT------
   ENV%>%
     rename(id_plot=codeplot)%>%
     inner_join(ECHELLE, by='id_plot',relationship = "many-to-many" )%>%
-    select(c(Variables,id_sample))%>%
+    left_join(ANIMO, by="id_sample")%>%
+    select(c(all_of(Variables),id_sample))%>%
     group_by(id_sample)%>%
     summarise(across(
       .cols = all_of(Variables), 
@@ -50,7 +51,7 @@ my_gdm_function_SAMP<-function(ENV, COMM, PHYTO, Methode, Variables, ECHELLE){
   COMM%>%
     filter(!grepl("0", abundance))%>%
     filter(method %in% Methode)%>%
-    filter(rankName %in% "EspÃ¨ce"|rankName%in%"Espèce")%>%
+    filter(rankName%in% IDRESO )%>%
     mutate(name2 = ifelse(name == "", "unid", name))%>% 
     group_by(id_sample, name2)%>%
     rename(echelle =id_sample) %>%

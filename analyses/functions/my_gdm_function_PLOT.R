@@ -6,11 +6,17 @@
 librarian::shelf(dplyr,vegan, ggplot2, betapart, gdm, tibble, tidyverse)
 
 #La fonction
-my_gdm_function_PLOT<-function(ENV, COMM, PHYTO, Methode, Variables){
+my_gdm_function_PLOT<-function(ENV, COMM, PHYTO, Methode, Variables, IDRESO, ANIMO){
+  
   
   #preparation generale des tableaux
+  ANIMO%>%
+    group_by(id_plot)%>%
+    summarise(Resp = sum(Resp))->ANIMO
+  
   ENV%>%
     rename(id_plot=codeplot)%>%
+    left_join(ANIMO, by="id_plot")%>%
     select(c(Variables,id_plot))%>%
     na.omit->ENV
   COMM%>%
@@ -41,7 +47,7 @@ my_gdm_function_PLOT<-function(ENV, COMM, PHYTO, Methode, Variables){
   COMM%>%
     filter(!grepl("0", abundance))%>%
     filter(method == Methode)%>%
-    filter(rankName %in% "EspÃ¨ce"|rankName%in%"Espèce")%>%
+    filter(rankName %in% IDRESO)%>%
     mutate(name2 = ifelse(name == "", "unid", name))%>% 
     group_by(id_plot, name2)%>%
     summarise(tot = sum(abundance))->tp1

@@ -393,35 +393,83 @@ RS_veg_final<-Phyto%>%
                             "190"="MSB_2200",
                             "191"="MSB_2400",
                             "199"="VER_1200",
-                            "200"="VER_1400",
-                            "201"="VER_1420",
-                            "202"="VER_1620",
+                            "200"="VER_1400F",
+                            "201"="VER_1400P",
+                            "202"="VER_1600",
                             "203"="VER_1800",
                             "204"="VER_2000"))->CrocusPyr
+  
+  SafranPyr%>%
+    mutate(id_plot = recode(idplot, "186" = "MSB_1370",
+                            "187" = "MSB_1420",
+                            "188"="MSB_1600",
+                            "189"="MSB_2000",
+                            "190"="MSB_2200",
+                            "191"="MSB_2400",
+                            "199"="VER_1200",
+                            "200"="VER_1400F",
+                            "201"="VER_1400P",
+                            "202"="VER_1600",
+                            "203"="VER_1800",
+                            "204"="VER_2000"))->SafranPyr
   #TG1
   CrocusPyr%>%
-    group_by(idplot)%>%
-  summarise(TG1mean=mean(TG1))-> TG1f
+    group_by(id_plot)%>%
+  summarise(TG1.degres.mean=mean(TG1))%>%
+  rename(codeplot=id_plot)-> TG1f
+  ENV%>%
+    left_join(TG1f, by="codeplot")%>%
+    mutate(TG1.degres.mean = coalesce(TG1.degres.mean.y, TG1.degres.mean.x)) %>%
+    select(-TG1.degres.mean.y, -TG1.degres.mean.x)->ENV
   #TG4
   CrocusPyr%>%
-    group_by(idplot)%>%
-    summarise(TG4mean=mean(TG4))-> TG4f
+    group_by(id_plot)%>%
+    summarise(TG4.degres.mean=mean(TG4))%>%
+    rename(codeplot=id_plot)-> TG4f
+  ENV%>%
+    left_join(TG4f, by="codeplot")%>%
+    mutate(TG4.degres.mean = coalesce(TG4.degres.mean.y, TG4.degres.mean.x)) %>%
+    select(-TG4.degres.mean.y, -TG4.degres.mean.x)->ENV
   #DSNDISBA
   CrocusPyr%>%
-    group_by(idplot)%>%
-    summarise(DSN_T_ISBAmean=mean(DSN_T_ISBA))-> DSN_T_ISBAf
-  #Tairmean
-  SafranPyr%>%
-    group_by(idplot)%>%
-    summarise(Tairmean=mean(TairMean))-> Tairmeanf
+    group_by(id_plot)%>%
+    summarise(DSN_T_ISBA.mean=mean(DSN_T_ISBA))%>%
+    rename(codeplot=id_plot)-> DSN_T_ISBAf 
+  ENV%>%
+    left_join(DSN_T_ISBAf, by="codeplot")%>%
+    mutate(DSN_T_ISBA.mean = coalesce(DSN_T_ISBA.mean.y, DSN_T_ISBA.mean.x)) %>%
+    select(-DSN_T_ISBA.mean.y, -DSN_T_ISBA.mean.x)->ENV 
   #Rainf
   SafranPyr%>%
-    group_by(idplot)%>%
-    summarise(Rainfmean=mean(Rainf))-> Rainff
-  
-  
-  
-  
+    group_by(id_plot)%>%
+    summarise(PTotY.mean=mean(Rainf))%>%
+    rename(codeplot=id_plot)-> rainff
+  ENV%>%
+    left_join(rainff, by="codeplot")%>%
+    mutate(PTotY.mean = coalesce(PTotY.mean.y, PTotY.mean.x)) %>%
+    select(-PTotY.mean.y, -PTotY.mean.x)->ENV 
+
+  #Tairmean
+  SafranPyr%>%
+    group_by(id_plot)%>%
+    summarise(TMeanY.mean=mean(TairMean))%>%
+    rename(codeplot=id_plot)-> Tairf
+  ENV%>%
+    left_join(Tairf, by="codeplot")%>%
+    mutate(TMeanY.mean = coalesce(TMeanY.mean.y, TMeanY.mean.x)) %>%
+    select(-TMeanY.mean.y, -TMeanY.mean.x)->ENV 
+
+
+
   
 #Save ENV--------------
   write.csv(ENV, file = paste0("data/derived-data/Envir/ENV_" , as.character(Sys.Date()) , ".csv"))
+
+  
+  #PREPARATION DE PHYTO
+  read.csv("data/raw-data/envir/phyto.data3.csv",header=T, sep=",")->Phyto0
+  read.csv("data/raw-data/envir/Julien/PhytoPyrenees.csv",header=T, sep=";")->Phyto1
+  Phyto0%>%
+    bind_rows(Phyto1)->Phyto
+  write.csv(Phyto, file = paste0("data/derived-data/Envir/Phyto",".csv"))   
+  
