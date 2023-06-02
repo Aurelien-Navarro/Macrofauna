@@ -345,40 +345,5 @@ ggplot(Tpara, aes(x = Scale, y = Valeur, fill = Predictors)) +
   
   
 #####LE PLOT DES SPLINES######
-
-#Herbivores
-t8<-tibble(Ecological_Distance = GDM_HERBI_ESP_EchSample$ecological,
-             Observed_Dissimilarity = GDM_HERBI_ESP_EchSample$observed )
-t9<-tibble(Ecological_Distance = GDM_HERBI_ESP_EchPlot$ecological,
-           Observed_Dissimilarity = GDM_HERBI_ESP_EchPlot$observed )
-t10<-tibble(Ecological_Distance = GDM_HERBI_ESP_EchGrad$ecological,
-            Observed_Dissimilarity = GDM_HERBI_ESP_EchGrad$observed )
-#Carnivores
-t11<-tibble(Ecological_Distance = GDM_PREDAT_ESP_EchSamp$ecological,
-            Observed_Dissimilarity = GDM_PREDAT_ESP_EchSamp$observed )
-t12<-tibble(Ecological_Distance = GDM_PREDAT_ESP_EchPlot$ecological,
-            Observed_Dissimilarity = GDM_PREDAT_ESP_EchPlot$observed )
-t13<-tibble(Ecological_Distance = GDM_PREDAT_ESP_EchGrad$ecological,
-            Observed_Dissimilarity = GDM_PREDAT_ESP_EchGrad$observed )
-#Detritivores
-t14<-tibble(Ecological_Distance = GDM_DECOMPO_ESP_EchSamp$ecological,
-            Observed_Dissimilarity = GDM_DECOMPO_ESP_EchSamp$observed )
-t15<-tibble(Ecological_Distance = GDM_DECOMPO_ESP_EchPlot$ecological,
-            Observed_Dissimilarity = GDM_DECOMPO_ESP_EchPlot$observed )
-t16<-tibble(Ecological_Distance = GDM_DECOMPO_ESP_EchGrad$ecological,
-            Observed_Dissimilarity = GDM_DECOMPO_ESP_EchGrad$observed )
-#Parasits
-t17<-tibble(Ecological_Distance = GDM_PARA_ESP_EchSamp$ecological,
-            Observed_Dissimilarity = GDM_PARA_ESP_EchSamp$observed )
-t18<-tibble(Ecological_Distance = GDM_PARA_ESP_EchPlot$ecological,
-            Observed_Dissimilarity = GDM_PARA_ESP_EchPlot$observed )
-t19<-tibble(Ecological_Distance = GDM_PARA_ESP_EchGrad$ecological,
-            Observed_Dissimilarity = GDM_PARA_ESP_EchGrad$observed )
-
-
-#Comparaison entre echelles
-par(mfrow = c(2,2))
-
-plot(GDM_DECOMPO_ESP_EchSamp)
-
+plot(GDM_PARA_ESP_EchPlot)
 
