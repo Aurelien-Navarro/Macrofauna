@@ -72,9 +72,9 @@ myIndices <- function(DF, TR, IDresol){
 
     ## Species mass
     indmass <- DF %>% 
-      select(id_sample, name, mass, rankName) %>%
+      select(id_sample, canonic, mass, rankName) %>%
       filter(rankName == IDresol) %>%
-      group_by(id_sample, name) %>%
+      group_by(id_sample, canonic) %>%
       summarize(massMean = mean(as.numeric(mass), na.omit = T),
                 massSD = sd(mass),
                 massNb = length(mass))  
@@ -95,9 +95,9 @@ myIndices <- function(DF, TR, IDresol){
 # Diversity indices
     ## Alpha taxonomic diversity
     com <- DF %>% 
-          select(id_sample, name, abundance, rankName) %>%
+          select(id_sample, canonic, abundance, rankName) %>%
           filter(rankName == IDresol) %>%
-          pivot_wider(id_cols = id_sample, names_from = name, names_sort = T,
+          pivot_wider(id_cols = id_sample, names_from = canonic, names_sort = T,
                       values_from = abundance, values_fill = 0, values_fn = sum) 
         
         q0 <- hill_taxa(com[,-1], q = 0)
@@ -118,7 +118,7 @@ myIndices <- function(DF, TR, IDresol){
           ### reco => use sqrt(Gower) instead of raw Gower distance to stdz PCoA axes
           ### Compute CWM, CWV, ... trait  FD::functcomp()
              tr0 <- TR %>%
-                mutate(name = gn_parse_tidy(taxon_name)$canonicalsimple) %>%
+                #mutate(name = gn_parse_tidy(taxon_name)$canonicalsimple) %>%
                 filter(name %in% colnames(com)[-1]) %>%
                 select(name, trait_name, raw_trait_value, attribute_trait, coded_trait_value)
               

@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+C:/Users/heddemic/Documents/Codes R/Macrofauna/analyses/1. Data preparation.R="D70B202D"
+C:/Users/heddemic/Documents/Codes R/Macrofauna/analyses/2. Indices computation.R="D6FBD585"
+C:/Users/heddemic/Documents/Codes R/Macrofauna/analyses/functions/IndCom.R="C4E172B8"
+C:/Users/heddemic/Documents/Codes R/Macrofauna/analyses/functions/my_taxonChecker function code.R="51C35938"
+=======
 C:/AUREL/STAGE/M2/Rapport/tests/t1.Rmd="FFF61107"
 C:/AUREL/STAGE/M2/work/Macrofauna/MarkDown/MarkDown_test.Rmd="C6EBECA6"
 C:/AUREL/STAGE/M2/work/Macrofauna/analyses/1. Data preparation.R="C347B0EC"
@@ -23,3 +29,4 @@ C:/AUREL/STAGE/M2/work/Macrofauna/analyses/functions/my_gdm_function_SAMP.R="4D7
 C:/AUREL/STAGE/M2/work/Macrofauna/analyses/functions/my_gdm_function_TRAITS.R="4C81BFE9"
 C:/AUREL/STAGE/M2/work/Macrofauna/analyses/functions/my_null_model_function.R="BE29CC14"
 C:/AUREL/STAGE/M2/work/Macrofauna/analyses/functions/my_taxonChecker function code.R="6723C693"
+>>>>>>> 115dcdd95c2f72e695a85daf16eb70556342f60c
