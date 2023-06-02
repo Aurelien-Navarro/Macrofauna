@@ -156,14 +156,14 @@ as.vector(GDM_HERBI_ESP_EchGrad$coefficients)->H3
                                                 IDRESO = "Espèce",
                                                 ECHELLE= Echelle,
                                                 ANIMO = RICHSPEANIMO,
-                                                Methode = c("tri manuel","tri manuel qualitatif","chasse a vue"),    
+                                                Methode = c("tri manuel","tri manuel qualitatif","chasse a vue","barber"),    
                                                 Variables = c("ndvi.mean","TMeanY.mean","PTotY.mean","Resp",                
                                                               "Rveg","NDVImin","NDVImax","PRCTMOmean",
                                                               "pHmean","Milieu","Alt","X_L93","Y_L93",
                                                               "TG1.degres.mean" ,"TG4.degres.mean","DSN_T_ISBA.mean",
                                                               "Nmean","Almean","Argilemean","Calcmean","Camean","Fermean",
                                                               "Limfinmean","Limgrosmean","mgmean","Mnmean","Phosmean","Kmean",
-                                                              "Sablefinmean","Sablegrosmean","Namean","Milieu","Alt","X_L93","Y_L93"))
+                                                              "Sablefinmean","Sablegrosmean","Namean"))
                                                 
    
    as.vector(GDM_DECOMPO_ESP_EchSamp$coefficients)->D1
@@ -176,7 +176,7 @@ GDM_DECOMPO_ESP_EchPlot<-my_gdm_function_PLOT(ENV=ENV,
                                 PHYTO=Phyto,
                                 IDRESO = "Espèce",
                                 ANIMO = RICHSPEANIMO,
-                                Methode= c("tri manuel","chasse à vue","tri manuel qualitatif"),
+                                Methode= c("tri manuel","chasse à vue","tri manuel qualitatif","barber"),
                                 Variables = c("ndvi.mean","TMeanY.mean","PTotY.mean",                
                                               "Rveg","NDVImin","NDVImax","PRCTMOmean","Resp",
                                               "pHmean","Milieu","Alt","X_L93","Y_L93",
@@ -197,7 +197,7 @@ GDM_DECOMPO_ESP_EchGrad<-my_gdm_function_GRAD(ENV=ENV,
                                               IDRESO = "Espèce",
                                               ECHELLE= Echelle,
                                               ANIMO = RICHSPEANIMO,
-                                              Methode= c("tri manuel","chasse à vue","tri manuel qualitatif"),
+                                              Methode= c("tri manuel","chasse à vue","tri manuel qualitatif","barber"),
                                               Variables = c("ndvi.mean","TMeanY.mean","PTotY.mean", "Resp",               
                                                             "Rveg","NDVImin","NDVImax","PRCTMOmean",
                                                             "pHmean","Milieu","Alt","X_L93","Y_L93",
@@ -334,16 +334,16 @@ Tpara<-bind_rows(t4,t8,t12)
 #Le plot 
 
 
-ggplot(Tpara, aes(x = Scale, y = Valeur, fill = Predictors)) +
+ggplot(Tdetri, aes(x = Scale, y = Valeur, fill = Predictors)) +
   geom_bar(stat = "identity", position = "dodge") +
   labs(x = "Predictors", y = "Coefficient") +
   scale_fill_hue(c = 40) +
   geom_text(aes(label = Predictors), position = position_dodge(width = 1), vjust = -0.5) +
-  ggtitle("Parasitoids")+
+  ggtitle("Detritivores")+
   theme_minimal()
   
-  
+
   
 #####LE PLOT DES SPLINES######
-plot(GDM_PARA_ESP_EchPlot)
-
+x11()
+plot(GDM_DECOMPO_ESP_EchSamp, plot.layout=c(1,1))
