@@ -86,7 +86,7 @@ my_gdm_function_GRAD<-function(ENV, COMM, PHYTO, Methode, Variables, ECHELLE, ID
   ##passage de id_plot en index 
   commuphyto1%>%
     remove_rownames()%>%
-    column_to_rownames('echelle')->commuphyto_ind
+    column_to_rownames("echelle")->commuphyto_ind
   Dissvege <- as.matrix(vegdist(commuphyto_ind, method="bray", na.rm=T))
   
   

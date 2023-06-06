@@ -346,4 +346,4 @@ ggplot(Tdetri, aes(x = Scale, y = Valeur, fill = Predictors)) +
   
 #####LE PLOT DES SPLINES######
 x11()
-plot(GDM_DECOMPO_ESP_EchSamp, plot.layout=c(1,1))
+plot(GDM_PARA_ESP_EchGrad, plot.layout=c(1,1))
