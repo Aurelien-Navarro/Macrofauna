@@ -99,8 +99,8 @@ my_adipart_function <- function(ESP, ECHELLE, habit0, Methode){
    
    #Variance additive 
     adipart(ESP_matrice, echelle[,-3],
-          index=c("richness","shannon","simpson"), 
-          weights = c("unif","prop"),
+          index="shannon", 
+          weights = "prop",
           relative = T,
           nsimul = 150,
            )->addipart

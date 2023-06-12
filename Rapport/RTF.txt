@@ -1,0 +1,4 @@
+To do 
+
+Quid des HH et autres PS dans le nom des varaibles si index ? 
+

@@ -6,7 +6,7 @@
 
 
 #librairies
-librarian::shelf(dplyr,vegan, ggplot2, betapart, gdm, tibble, tidyverse, esquisse, gridExtra)
+librarian::shelf(dplyr,vegan, ggplot2, betapart, gdm, tibble, tidyverse, esquisse, gridExtra, cowplot)
 
 #Importation des données
 read.csv("data/derived-data/Envir/ENV_2023-06-01.csv", row.names = 1)->ENV
@@ -45,7 +45,7 @@ GDM_HERBI_ESP_EchSample<-my_gdm_function_SAMP(ENV=ENV,
                                             Variables = c("ndvi.mean","TMeanY.mean","PTotY.mean",                
                                                           "Rveg","NDVImin","NDVImax","PRCTMOmean",
                                                           "pHmean","Milieu","Alt","X_L93","Y_L93",
-                                                          "TG1.degres.mean" ,"TG4.degres.mean","DSN_T_ISBA.mean", "Resp"))
+                                                          "TG1.degres.mean" ,"TG4.degres.mean","DSN_T_ISBA.mean"))
 
 as.vector(GDM_HERBI_ESP_EchSample$coefficients)->H1
 tapply(H1, ceiling(seq_along(H1)/3), sum)->coefH_sample
@@ -63,7 +63,7 @@ GDM_HERBI_ESP_EchPlot<-my_gdm_function_PLOT(ENV=ENV,
                                               Variables = c("ndvi.mean","TMeanY.mean","PTotY.mean",                
                                                             "Rveg","NDVImin","NDVImax","PRCTMOmean",
                                                             "pHmean","Milieu","Alt","X_L93","Y_L93",
-                                                            "TG1.degres.mean" ,"TG4.degres.mean","DSN_T_ISBA.mean", "Resp"))
+                                                            "TG1.degres.mean" ,"TG4.degres.mean","DSN_T_ISBA.mean"))
  
   
   
@@ -81,7 +81,7 @@ GDM_HERBI_ESP_EchGrad<-my_gdm_function_GRAD(ENV=ENV,
                                               Variables = c("ndvi.mean","TMeanY.mean","PTotY.mean",                
                                                             "Rveg","NDVImin","NDVImax","PRCTMOmean",
                                                             "pHmean","Milieu","Alt","X_L93","Y_L93",
-                                                            "TG1.degres.mean" ,"TG4.degres.mean","DSN_T_ISBA.mean", "Resp"))
+                                                            "TG1.degres.mean" ,"TG4.degres.mean","DSN_T_ISBA.mean"))
 
 as.vector(GDM_HERBI_ESP_EchGrad$coefficients)->H3
   tapply(H3, ceiling(seq_along(H3)/3), sum)->coefH_grad
@@ -104,7 +104,7 @@ as.vector(GDM_HERBI_ESP_EchGrad$coefficients)->H3
                                                 Variables = c("ndvi.mean","TMeanY.mean","PTotY.mean",                
                                                               "Rveg","NDVImin","NDVImax","PRCTMOmean",
                                                               "pHmean","Milieu","Alt","X_L93","Y_L93",
-                                                              "TG1.degres.mean" ,"TG4.degres.mean","DSN_T_ISBA.mean", "Resp"))
+                                                              "TG1.degres.mean" ,"TG4.degres.mean","DSN_T_ISBA.mean"))
    
    
   
@@ -123,7 +123,7 @@ as.vector(GDM_HERBI_ESP_EchGrad$coefficients)->H3
                                 Variables = c("ndvi.mean","TMeanY.mean","PTotY.mean",                
                                               "Rveg","NDVImin","NDVImax","PRCTMOmean",
                                               "pHmean","Milieu","Alt","X_L93","Y_L93",
-                                              "TG1.degres.mean" ,"TG4.degres.mean","DSN_T_ISBA.mean","Resp"))
+                                              "TG1.degres.mean" ,"TG4.degres.mean","DSN_T_ISBA.mean"))
    
    
    
@@ -141,7 +141,7 @@ as.vector(GDM_HERBI_ESP_EchGrad$coefficients)->H3
                                                  Variables = c("ndvi.mean","TMeanY.mean","PTotY.mean",                
                                                                "Rveg","NDVImin","NDVImax","PRCTMOmean",
                                                                "pHmean","Milieu","Alt","X_L93","Y_L93",
-                                                               "TG1.degres.mean" ,"TG4.degres.mean","DSN_T_ISBA.mean","Resp"))
+                                                               "TG1.degres.mean" ,"TG4.degres.mean","DSN_T_ISBA.mean"))
    
 
    as.vector(GDM_PREDAT_ESP_EchGrad$coefficients)->Pr3
@@ -150,14 +150,13 @@ as.vector(GDM_HERBI_ESP_EchGrad$coefficients)->H3
     ##DECOMPOSEURS----
    GDM_DECOMPO_ESP_EchSamp<-my_gdm_function_SAMP(ENV=ENV,
                                                   COMM= ESP[ESP$orderName %in% "Isopoda"|
-                                                              ESP$className %in% c("Diplopoda","Clitellata")|
-                                                              ESP$familyName %in% "Geotrupidae",],
+                                                              ESP$className %in% c("Diplopoda","Clitellata"),],
                                                 PHYTO=Phyto,
                                                 IDRESO = "Espèce",
                                                 ECHELLE= Echelle,
                                                 ANIMO = RICHSPEANIMO,
-                                                Methode = c("tri manuel","tri manuel qualitatif","chasse a vue","barber"),    
-                                                Variables = c("ndvi.mean","TMeanY.mean","PTotY.mean","Resp",                
+                                                Methode = c("tri manuel","tri manuel qualitatif"),    
+                                                Variables = c("ndvi.mean","TMeanY.mean","PTotY.mean",                
                                                               "Rveg","NDVImin","NDVImax","PRCTMOmean",
                                                               "pHmean","Milieu","Alt","X_L93","Y_L93",
                                                               "TG1.degres.mean" ,"TG4.degres.mean","DSN_T_ISBA.mean",
@@ -171,16 +170,14 @@ as.vector(GDM_HERBI_ESP_EchGrad$coefficients)->H3
    
 GDM_DECOMPO_ESP_EchPlot<-my_gdm_function_PLOT(ENV=ENV,
                                 COMM= ESP[ESP$orderName %in% "Isopoda"|
-                                                 ESP$className %in% c("Diplopoda","Clitellata")|
-                                                 ESP$familyName %in% "Geotrupidae",],
+                                                 ESP$className %in% c("Diplopoda","Clitellata"),],
                                 PHYTO=Phyto,
                                 IDRESO = "Espèce",
                                 ANIMO = RICHSPEANIMO,
-                                Methode= c("tri manuel","chasse à vue","tri manuel qualitatif","barber"),
+                                Methode= c("tri manuel","tri manuel qualitatif"),
                                 Variables = c("ndvi.mean","TMeanY.mean","PTotY.mean",                
-                                              "Rveg","NDVImin","NDVImax","PRCTMOmean","Resp",
-                                              "pHmean","Milieu","Alt","X_L93","Y_L93",
-                                              "TG1.degres.mean" ,"TG4.degres.mean","DSN_T_ISBA.mean",
+                                              "Rveg","NDVImin","NDVImax","PRCTMOmean",
+                                              "pHmean","TG1.degres.mean" ,"TG4.degres.mean","DSN_T_ISBA.mean",
                                               "Nmean","Almean","Argilemean","Calcmean","Camean","Fermean",
                                               "Limfinmean","Limgrosmean","mgmean","Mnmean","Phosmean","Kmean",
                                               "Sablefinmean","Sablegrosmean","Namean","Milieu","Alt","X_L93","Y_L93"))
@@ -191,19 +188,17 @@ tapply(D2, ceiling(seq_along(D2)/3), sum)->coefDecompo_plot
 
 GDM_DECOMPO_ESP_EchGrad<-my_gdm_function_GRAD(ENV=ENV,
                                               COMM= ESP[ESP$orderName %in% "Isopoda"|
-                                                          ESP$className %in% c("Diplopoda","Clitellata")|
-                                                          ESP$familyName %in% "Geotrupidae",],
+                                                          ESP$className %in% c("Diplopoda","Clitellata"),],
                                               PHYTO=Phyto,
                                               IDRESO = "Espèce",
                                               ECHELLE= Echelle,
                                               ANIMO = RICHSPEANIMO,
-                                              Methode= c("tri manuel","chasse à vue","tri manuel qualitatif","barber"),
-                                              Variables = c("ndvi.mean","TMeanY.mean","PTotY.mean", "Resp",               
+                                              Methode= c("tri manuel","tri manuel qualitatif"),
+                                              Variables = c("ndvi.mean","TMeanY.mean","PTotY.mean",               
                                                             "Rveg","NDVImin","NDVImax","PRCTMOmean",
                                                             "pHmean","Milieu","Alt","X_L93","Y_L93",
                                                             "TG1.degres.mean" ,"TG4.degres.mean","DSN_T_ISBA.mean",
-                                                            "Nmean","Argilemean",
-                                                            "Limfinmean","Limgrosmean",
+                                                            "Nmean","Argilemean","Limfinmean","Limgrosmean",
                                                             "Sablefinmean","Sablegrosmean","Milieu","Alt","X_L93","Y_L93"))
   
 as.vector(GDM_DECOMPO_ESP_EchGrad$coefficients)->D3
@@ -231,7 +226,7 @@ GDM_PARA_ESP_EchPlot<-my_gdm_function_PLOT(ENV=ENV,
                               Methode= "barber", 
                               ANIMO = RICHSPEANIMO,
                               Variables = c("ndvi.mean","TMeanY.mean","PTotY.mean",                
-                                            "Rveg","NDVImin","NDVImax","PRCTMOmean","Resp",
+                                            "Rveg","NDVImin","NDVImax","PRCTMOmean",
                                             "pHmean","Milieu","Alt","X_L93","Y_L93",
                                             "TG1.degres.mean" ,"TG4.degres.mean","DSN_T_ISBA.mean"))
     
@@ -245,7 +240,7 @@ GDM_PARA_ESP_EchGrad<-my_gdm_function_GRAD(ENV=ENV,
                                            IDRESO = "Genre",
                                            ANIMO = RICHSPEANIMO,
                                            ECHELLE=Echelle,
-                                           Variables = c("ndvi.mean","TMeanY.mean","PTotY.mean","Resp",              
+                                           Variables = c("ndvi.mean","TMeanY.mean","PTotY.mean",              
                                                          "Rveg","NDVImin","NDVImax","PRCTMOmean",
                                                          "pHmean","Milieu","Alt","X_L93","Y_L93",
                                                          "TG1.degres.mean" ,"TG4.degres.mean","DSN_T_ISBA.mean"))
@@ -256,94 +251,232 @@ tapply(Pa3, ceiling(seq_along(Pa3)/3), sum)->coefPara_grad
 #####PLOT######
 
 ##Comparaison entre guildes 
+cate1<-c("Geo","E","PS","PS","E",
+        "E","E","E","PS","CF",
+        "CF","PS","PS","PS","E")
+cate2<-c("Geo","E","PS","PS","E",
+         "E","E","E",
+         "PS","PS","PS","PS",
+         "NC","NC","NC","NC","NC","NC",
+         "HH","HH", 
+         "NC","NC", "NC","NC",
+         "HH", "HH", "NC","CF","CF","E")
+cate3<-c("Geographic","Energy","Physical_Stressing","PS","E","E","E","E",
+         "PS", "CF","CF","PS","PS","PS","N","HH","HH",
+         "HH","HH","HH","E")
 #sample
 t1<-data.frame(Predictors = GDM_HERBI_ESP_EchSample$predictors,
-               Valeur = coefH_sample, Guild= "Herbivores",Scale="Sample")
-sorted_indices <- order(-t1$Valeur)
-t1 <- t1[sorted_indices, c("Predictors", "Valeur","Guild", "Scale")]
-t1<-t1[1:3,] 
+               Valeur = coefH_sample, Guild= "Herbivores",Scale="β1-Sample", 
+               Categorie = cate1)
+
 t2<-data.frame(Predictors= GDM_PREDAT_ESP_EchSamp$predictors,
-               Valeur = coefPr_sample, Guild = "Predators", Scale="Sample")
-sorted_indices <- order(-t2$Valeur)
-t2 <- t2[sorted_indices, c("Predictors", "Valeur", "Guild", "Scale")]
-t2<-t2[1:3,] 
+               Valeur = coefPr_sample, Guild = "Predators", Scale="β1-Sample",
+               Categorie = cate1)
+
 t3<-data.frame(Predictors = GDM_DECOMPO_ESP_EchSamp$predictors,
-               Valeur = coefDecompo_ech, Guild = "Detritivores", Scale="Sample")
-sorted_indices <- order(-t3$Valeur)
-t3 <- t3[sorted_indices, c("Predictors", "Valeur","Guild", "Scale")]
-t3<-t3[1:3,] 
+               Valeur = coefDecompo_ech, Guild = "Detritivores", Scale="β1-Sample",
+               Categorie = cate2)
+
 t4<-data.frame(Predictors =GDM_PARA_ESP_EchSamp$predictors,
-               Valeur = coefPara_samp, Guild="Parasitoids", Scale="Sample")
-sorted_indices <- order(-t4$Valeur)
-t4 <- t4[sorted_indices, c("Predictors", "Valeur","Guild", "Scale")]
-t4<-t4[1:3,] 
+               Valeur = coefPara_samp, Guild="Parasitoids", Scale="β1-Sample",
+               Categorie = cate1)
+
 
 Tsample<-bind_rows(t1,t2,t3,t4)
 #parcelle
 t5<-data.frame(Predictors = GDM_HERBI_ESP_EchPlot$predictors, 
-               Valeur = coefH_plot, Guild="Herbivores", Scale="Plot")
-sorted_indices <- order(-t5$Valeur)
-t5 <- t5[sorted_indices, c("Predictors", "Valeur","Guild", "Scale")]
-t5<-t5[1:3,] 
+               Valeur = coefH_plot, Guild="Herbivores", Scale="β2-Plot",
+               Categorie = cate1)
+
 t6<-data.frame(Predictors = GDM_PREDAT_ESP_EchPlot$predictors, 
-               Valeur = coefPr_plot, Guild="Predators", Scale="Plot")
-sorted_indices <- order(-t6$Valeur)
-t6 <- t6[sorted_indices, c("Predictors", "Valeur","Guild", "Scale")]
-t6<-t6[1:3,] 
+               Valeur = coefPr_plot, Guild="Predators", Scale="β2-Plot",
+               Categorie = cate1)
+
 t7<-data.frame(Predictors = GDM_DECOMPO_ESP_EchPlot$predictors, 
-               Valeur = coefDecompo_plot, Guild = "Detritivores", Scale="Plot")
-sorted_indices <- order(-t7$Valeur)
-t7 <- t7[sorted_indices, c("Predictors", "Valeur","Guild","Scale")]
-t7<-t7[1:3,] 
+               Valeur = coefDecompo_plot, Guild = "Detritivores", Scale="β2-Plot",
+               Categorie = cate2)
+
 t8<-data.frame(Predictors = GDM_PARA_ESP_EchPlot$predictors, 
-               Valeur = coefPara_plot, Guild="Parasitoids", Scale="Plot")
-sorted_indices <- order(-t8$Valeur)
-t8 <- t8[sorted_indices, c("Predictors", "Valeur","Guild", "Scale")]
-t8<-t8[1:3,] 
+               Valeur = coefPara_plot, Guild="Parasitoids", Scale="β2-Plot",
+               Categorie = cate1)
+
 Tplot<-bind_rows(t5,t6,t7,t8)
 
 #gradient
 t9<-data.frame(Predictors=GDM_HERBI_ESP_EchGrad$predictors, 
-               Valeur = coefH_grad, Guild="Herbivores", Scale="Site")
-sorted_indices <- order(-t9$Valeur)
-t9 <- t9[sorted_indices, c("Predictors", "Valeur","Guild","Scale")]
-t9<-t9[1:3,] 
+               Valeur = coefH_grad, Guild="Herbivores", Scale="β3-Site",
+               Categorie = cate1)
+ 
 t10<-data.frame(Predictors=GDM_PREDAT_ESP_EchGrad$predictors, 
-                Valeur = coefPr_grad, Guild="Predators", Scale="Site")
-sorted_indices <- order(-t10$Valeur)
-t10 <- t10[sorted_indices, c("Predictors", "Valeur","Guild", "Scale")]
-t10<-t10[1:3,] 
-t11<-data.frame(Predictors=GDM_DECOMPO_ESP_EchGrad$predictors, 
-                   Valeur = coefDecompo_grad, Guild="Detritivores",Scale="Site")
-sorted_indices <- order(-t11$Valeur)
-t11 <- t11[sorted_indices, c("Predictors", "Valeur","Guild", "Scale")]
-t11<-t11[1:3,] 
-t12<-data.frame(Predictors=GDM_PARA_ESP_EchGrad$predictors, 
-                Valeur = coefPara_grad, Guild="Parasitoids",Scale="Site")
-sorted_indices <- order(-t12$Valeur)
-t12 <- t12[sorted_indices, c("Predictors", "Valeur","Guild","Scale")]
-t12<-t12[1:3,] 
-Tgrad<-bind_rows(t9, t10, t11, t12)
+                Valeur = coefPr_grad, Guild="Predators", Scale="β3-Site",
+                Categorie = cate1)
 
-THerbi<-bind_rows(t1, t5, t9)
-TPredat<-bind_rows(t2, t6, t10)
-Tdetri<-bind_rows(t3,t7,t11)
-Tpara<-bind_rows(t4,t8,t12)
+t11<-data.frame(Predictors=GDM_DECOMPO_ESP_EchGrad$predictors, 
+                   Valeur = coefDecompo_grad, Guild="Detritivores",Scale="β3-Site",
+                Categorie = cate3)
+
+t12<-data.frame(Predictors=GDM_PARA_ESP_EchGrad$predictors, 
+                Valeur = coefPara_grad, Guild="Parasitoids",Scale="β3-Site",
+                Categorie = cate1)
+
+
+Total<-bind_rows(t1, t2, t3, t4, t5, t6, t7, t8, t9, t10, t11, t12)
+
+recode(Total$Predictors, 
+       Geographic="Geographic", 
+       ndvi.mean="NDVIm",
+       TMeanY.mean="Temp_Y",
+       PTotY.mean="Precip_Y",
+       Rveg="RS_veg",
+       NDVImin="NDVImin",
+       NDVImax="NDVImax", 
+       PRCTMOmean="Organic_Matter",
+       pHmean="pH",
+       Milieu="Opening",
+       Alt="Altitude",
+       TG1.degres.mean="Temp_1cm",
+       TG4.degres.mean="Temp_4cm",
+       DSN_T_ISBA.mean="Snow_depth",
+       matrix_1="Vegetal_Diss", 
+       Nmean="Nitrogene",
+       Almean="Aluminium",
+       Argilemean="Clay",
+       Calcmean="Limestone", 
+       Camean="Calcium",
+       Fermean="Iron",
+       Limfinmean="Fine_silt",
+       Limgrosmean="Coarse_silt",
+       mgmean="Manganeze",
+       Phosmean="Phosphorus", 
+       Kmean="Potassium",
+       Sablefinmean="Fine_sand", 
+       Sablegrosmean="Coarse_sand",
+       Namean="Sodium")->Total$Predictors
+       
+recode(Total$Categorie,
+       Geo="Geographic",
+       E="Energy_Related",
+       CF="Complex_Factor",
+       HH="Habitat_Heterogeneity",
+       NC="Nutrient_Content",
+       PS="Physical_Stressing")->Total$Categorie
 
 
 #Le plot 
 
 
-ggplot(Tdetri, aes(x = Scale, y = Valeur, fill = Predictors)) +
-  geom_bar(stat = "identity", position = "dodge") +
-  labs(x = "Predictors", y = "Coefficient") +
-  scale_fill_hue(c = 40) +
-  geom_text(aes(label = Predictors), position = position_dodge(width = 1), vjust = -0.5) +
-  ggtitle("Detritivores")+
-  theme_minimal()
-  
 
-  
+library(RColorBrewer)
+palette_colors <- rep(brewer.pal(9, "Greys"), length.out = 30)
+
+library(dplyr)
+
+ggplot(Total, aes(x = Guild, y = Valeur, fill = Categorie, color = Predictors)) +
+  geom_bar(stat = "identity", position = position_stack(), linewidth=0.1) +
+  geom_text(data = subset(Total, Valeur != 0), aes(label = Predictors), position = position_stack(vjust = 0.5), size = 3) +
+  facet_wrap(~ Scale, ncol = 1) +
+  coord_flip()+
+  labs(x = "Guilds", y = "Coefficient", fill = "Predictors") +
+  scale_fill_manual(values = c("Physical_Stressing" = "lightpink", "Geographic" = "cyan2", "Energy_Related" = "lightgreen", "Complex_Factor" = "sienna1", "Nutrient_Content" = "khaki", "Habitat_Heterogeneity" = "mediumorchid1")) +
+  scale_color_grey(start = 0.2, end = 0.1)+
+  guides(fill = guide_legend(title = "Categorie"), color = "none") +  # Supprimer la légende de "Predictors"
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5))
+
+
 #####LE PLOT DES SPLINES######
-x11()
-plot(GDM_PARA_ESP_EchGrad, plot.layout=c(1,1))
+
+M1<-data.frame(Ecological= GDM_HERBI_ESP_EchSample$ecological,
+               Observed= GDM_HERBI_ESP_EchSample$observed,
+               Guild="Herbivore")
+M2<-data.frame(Ecological=GDM_PREDAT_ESP_EchSamp$ecological,
+               Observed=GDM_PREDAT_ESP_EchSamp$observed, 
+               Guild="Predator")
+M3<-data.frame(Ecological=GDM_DECOMPO_ESP_EchSamp$ecological,
+               Observed=GDM_DECOMPO_ESP_EchSamp$observed, 
+               Guild="Detritivore")
+M4<-data.frame(Ecological=GDM_DECOMPO_ESP_EchSamp$ecological,
+               Observed=GDM_DECOMPO_ESP_EchSamp$observed, 
+               Guild="Parasitoid")
+
+Sample<-bind_rows(M1, M2, M3, M4)
+
+M5<-data.frame(Ecological= GDM_HERBI_ESP_EchPlot$ecological,
+               Observed= GDM_HERBI_ESP_EchPlot$observed,
+               Guild="Herbivore")
+M6<-data.frame(Ecological=GDM_PREDAT_ESP_EchPlot$ecological,
+               Observed=GDM_PREDAT_ESP_EchPlot$observed, 
+               Guild="Predator")
+M7<-data.frame(Ecological=GDM_DECOMPO_ESP_EchPlot$ecological,
+               Observed=GDM_DECOMPO_ESP_EchPlot$observed, 
+               Guild="Detritivore")
+M8<-data.frame(Ecological=GDM_DECOMPO_ESP_EchPlot$ecological,
+               Observed=GDM_DECOMPO_ESP_EchPlot$observed, 
+               Guild="Parasitoid")
+
+Plot<-bind_rows(M5, M6, M7, M8)
+
+M9<-data.frame(Ecological= GDM_HERBI_ESP_EchGrad$ecological,
+               Observed= GDM_HERBI_ESP_EchGrad$observed,
+               Guild="Herbivore")
+M10<-data.frame(Ecological=GDM_PREDAT_ESP_EchGrad$ecological,
+               Observed=GDM_PREDAT_ESP_EchGrad$observed, 
+               Guild="Predator")
+M11<-data.frame(Ecological=GDM_DECOMPO_ESP_EchGrad$ecological,
+               Observed=GDM_DECOMPO_ESP_EchGrad$observed, 
+               Guild="Detritivore")
+M12<-data.frame(Ecological=GDM_DECOMPO_ESP_EchGrad$ecological,
+               Observed=GDM_DECOMPO_ESP_EchGrad$observed, 
+               Guild="Parasitoid")
+
+Gradient<-bind_rows(M9, M10, M11, M12)
+
+
+ggplot(Sample, aes(x = Ecological, y = Observed, color = Guild)) +
+  geom_smooth(method = NULL,aes(group = Guild), fill = "#69b3a2", se = TRUE) +
+  theme_minimal()
+
+ggplot(Plot, aes(x = Ecological, y = Observed, color = Guild)) +
+  geom_smooth(method = NULL,aes(group = Guild), fill = "#69b3a2", se = TRUE) +
+  theme_minimal() #Changer les methodes
+
+ggplot(Gradient, aes(x = Ecological, y = Observed, color = Guild)) +
+  geom_smooth(method = NULL,aes(group = Guild), fill = "#69b3a2", se = TRUE) +
+  theme_minimal() #changer les methodes
+
+
+
+
+
+
+
+
+####GAMMA DIV#####
+ESP[ESP$orderName %in% "Hymenoptera"&!ESP$familyName %in%"Formicidae",]->Herbi
+Herbi%>%
+  filter(method==c("barber"))%>%
+  filter(rankName=="Espèce")->Herbi
+tp<-Herbi %>%
+  mutate(name2 = ifelse(name == "", "unid", name)) %>% ##supression des vides 
+  group_by(X, name2)%>%
+  summarise(tot = sum(abundance)) 
+#---------------------------------------
+
+#####transformation en matrice#### 
+pivot_wider(tp,
+            id_cols = c('X'),
+            names_from = 'name2', 
+            values_from = 'tot',
+            values_fill = 0)->matrice
+
+# Calcul de la somme des lignes
+as.data.frame(colSums(matrice))->somme
+t(somme)->matrice2
+matrice2[,-1]->matrice3
+
+
+vegan::diversity(matrice3, index="shannon")->GPa  #shannon index pour chaque site et chaque methode     
+
+data.frame(Guild=c("Herbivore","Predator","Detritivore","Parasitoid"),
+           Gamma = c(GH, GPr, GD, GPa))->GAMMA
+write.csv(GAMMA, file = paste0("outputs/GAMMA/GAMMA" , ".csv"))

@@ -97,15 +97,15 @@ write.csv(HYMENO_nullmod$statistic, file = paste0("outputs/PartitionVariance_fic
 ##Comparaison entre groupes ------
 
 resum <- tibble(
-  echelle = c("1.Alpha", "2.Beta-échantillons","3.Beta-stations","4.Beta-gradients", "5.Beta-massifs"), 
-  Parasits = HYMENO_addipart$Variance_expliquee,
+  echelle = c("1.Alpha", "β1_Sample","β2_Plots","β3_Gradients", "β4_Mountains"), 
+  Parasitoids = HYMENO_addipart$Variance_expliquee,
   Detritivores = DECOMPO_addipart$Variance_explique,
   Predators = CARAB_addipart$Variance_expliquee,
   Herbivores = ORTHO_addipart$Variance_expliquee)
 
 resum <- resum %>%
   pivot_longer(cols = 2:5, names_to = "taxo")
-
+resum<-resum[-c(17,18,19,20),]
 ggplot(resum) +
   aes(x = taxo, y = value, fill = echelle) +
   geom_bar(stat = "identity", color = "black") +
@@ -113,9 +113,7 @@ ggplot(resum) +
   facet_grid(echelle~., scales="free_y")+
   labs(
     x = "",
-    y = "Explain Variance (%)",
-    title = "Taxonomic Variance Partitionning",
-    subtitle = "Orchamp observatory, 2021-2022, 11 gradients"
+    y = "Diversity explained (%) "
   ) +
   theme_minimal()+
   theme(legend.position = "none")
