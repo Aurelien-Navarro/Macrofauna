@@ -16,7 +16,7 @@ library(ggplot2)
 
 #Importation des donnees 
 #tableau especes
-read.csv("data/derived-data/Esp/clean_data_2023-05-24.csv", h=T, sep=',')->ESP
+read.csv("data/derived-data/Esp/clean_data_2023-05-30.csv", h=T, sep=',')->ESP
 ESP%>%
   filter(!gradient %in% c("BOU","CAU"))->ESP #Forêts du bout et Cauteret non terminés
 #tableau des echelles 
@@ -31,7 +31,7 @@ source("analyses/functions/my_null_model_function.R")
 #utilisation des fonctions
 
 ##Orthopteres----
-ORTHO_nullmod<-my_null_model_function(ESP = ESP[ESP$orderName == "Orthoptera",], 
+my_null_model_function(ESP = ESP[ESP$orderName == "Orthoptera",], 
                                       ECHELLE = echelle0,
                                       Methode = "barber",
                                       habit0=habit0)
@@ -46,7 +46,7 @@ write.csv(ORTHO_nullmod$statistic, file = paste0("outputs/PartitionVariance_fich
 
 
 ##Carabidae----
-CARAB_nullmod<-my_null_model_function(ESP = ESP[ESP$familyName == "Carabidae",], 
+my_null_model_function(ESP = ESP[ESP$familyName == "Carabidae",], 
                                       ECHELLE = echelle0,
                                       Methode = "barber",
                                       habit0=habit0)
@@ -61,9 +61,8 @@ write.csv(CARAB_nullmod$statistic, file = paste0("outputs/PartitionVariance_fich
 
 
 ##Decomposeurs----
-DECOMPO_nullmod<-my_null_model_function(ESP = ESP[ESP$orderName %in% "Isopoda"|
-                                                    ESP$className %in% c("Diplopoda","Clitellata")|
-                                                    ESP$familyName %in% "Geotrupidae",], 
+my_null_model_function(ESP = ESP[ESP$orderName %in% "Isopoda"|
+                                   ESP$className %in% c("Diplopoda","Clitellata"),], 
                                       ECHELLE = echelle0,
                                       Methode = c("tri manuel","chasse à vue","tri manuel qualitatif"),
                                       habit0=habit0)
@@ -80,7 +79,7 @@ write.csv(DECOMPO_nullmod$statistic, file = paste0("outputs/PartitionVariance_fi
 
 
 ##Hymenoptera----
-HYMENO_nullmod<-my_null_model_function(ESP = ESP[ESP$orderName %in% "Hymenoptera"
+my_null_model_function(ESP = ESP[ESP$orderName %in% "Hymenoptera"
                                        |!ESP$familyName %in%"Formicidae",], 
                                         ECHELLE = echelle0,
                                         Methode = "barber",
