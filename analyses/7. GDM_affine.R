@@ -369,7 +369,6 @@ recode(Total$Categorie,
 library(RColorBrewer)
 palette_colors <- rep(brewer.pal(9, "Greys"), length.out = 30)
 
-library(dplyr)
 
 ggplot(Total, aes(x = Guild, y = Valeur, fill = Categorie, color = Predictors)) +
   geom_bar(stat = "identity", position = position_stack(), linewidth=0.1) +
